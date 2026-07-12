@@ -11,8 +11,7 @@ const REDUCED = matchMedia("(prefers-reduced-motion: reduce)").matches;
 /* ------------------------------------------------------------
    Language
    ------------------------------------------------------------ */
-let lang = localStorage.getItem("aa-lang")
-  || ((navigator.language || "").toLowerCase().startsWith("ar") ? "ar" : "en");
+let lang = localStorage.getItem("aa-lang") || "ar"; // Arabic-first site
 
 const t = (key) => I18N[lang][key] ?? key;
 const pick = (v) => (v && typeof v === "object" && ("en" in v || "ar" in v)) ? (v[lang] ?? v.en) : v;
@@ -69,21 +68,18 @@ const revealIO = new IntersectionObserver(entries => {
 function watchReveals(scope = document) { $$(".reveal", scope).forEach(el => revealIO.observe(el)); }
 watchReveals();
 
-const countIO = new IntersectionObserver(entries => {
-  entries.forEach(en => {
-    if (!en.isIntersecting) return;
-    countIO.unobserve(en.target);
-    const el = en.target, target = +el.dataset.count, suffix = el.dataset.suffix || "";
-    if (REDUCED) { el.textContent = target + suffix; return; }
-    const t0 = performance.now(), dur = 1400;
-    (function tick(now) {
-      const p = Math.min((now - t0) / dur, 1), eased = 1 - Math.pow(1 - p, 3);
-      el.textContent = Math.round(target * eased) + suffix;
-      if (p < 1) requestAnimationFrame(tick);
-    })(t0);
-  });
-}, { threshold: 0.6 });
-$$(".count").forEach(el => countIO.observe(el));
+/* helper: run a rAF loop only while `el` is on screen and the tab is visible */
+function visibleLoop(el, frame) {
+  let onScreen = false, rafId = 0;
+  const loop = (now) => { frame(now); rafId = requestAnimationFrame(loop); };
+  const start = () => { if (!rafId && onScreen && !document.hidden) rafId = requestAnimationFrame(loop); };
+  const stop = () => { if (rafId) { cancelAnimationFrame(rafId); rafId = 0; } };
+  new IntersectionObserver(es => {
+    onScreen = es[0].isIntersecting;
+    onScreen ? start() : stop();
+  }, { rootMargin: "80px" }).observe(el);
+  document.addEventListener("visibilitychange", () => document.hidden ? stop() : start());
+}
 
 /* ------------------------------------------------------------
    Marquee — tool & partner logos
@@ -91,7 +87,7 @@ $$(".count").forEach(el => countIO.observe(el));
 function renderMarquee() {
   const track = $("#marqueeTrack");
   const half = TOOLS.concat(TOOLS).map(x =>
-    `<span><i><img src="${x.img}" alt="" loading="lazy">${x.label}</i></span>`).join("");
+    `<span><i><img src="${x.img}" alt="" width="26" height="26" loading="lazy">${x.label}</i></span>`).join("");
   track.innerHTML = half + half; // 2 identical halves → seamless loop
 }
 
@@ -155,11 +151,10 @@ function drawRoadline() {
   roadPath = svg.firstElementChild;
 }
 addEventListener("resize", () => drawRoadline());
-if (!REDUCED) (function marchRoad() {
+if (!REDUCED) visibleLoop($("#academies"), () => {
   roadDash -= 0.12;
   if (roadPath) roadPath.style.strokeDashoffset = roadDash;
-  requestAnimationFrame(marchRoad);
-})();
+});
 
 /* sheet */
 const sheet = $("#sheet"), backdrop = $("#sheetBackdrop"), sheetContent = $("#sheetContent");
@@ -238,7 +233,7 @@ function tCard(x) {
       <span class="t-stars" aria-hidden="true">★★★★★</span>
       <blockquote>${x[lang]}</blockquote>
       <footer>
-        <img class="t-avatar" src="assets/testimonials/avatars/${x.img}" alt="" loading="lazy">
+        <img class="t-avatar" src="assets/testimonials/avatars/${x.img}" alt="" width="38" height="38" loading="lazy">
         <span><strong>${x.name}</strong><span>${x.handle}</span></span>
       </footer>
     </a>`;
@@ -254,7 +249,7 @@ function renderTestimonials() {
   $("#featuredRow").innerHTML = FEATURED.map(f => `
     <a class="featured" href="${igUrl(f.handle)}" target="_blank" rel="noopener" title="${t("t_view")}">
       <div class="featured-head">
-        <img class="featured-avatar" src="assets/testimonials/avatars/${f.img}" alt="">
+        <img class="featured-avatar" src="assets/testimonials/avatars/${f.img}" alt="" width="52" height="52" loading="lazy">
         <div>
           <strong>${f.name}</strong>
           <span class="featured-badge">${pick(f.badge)}</span>
@@ -365,7 +360,7 @@ function renderFooter() {
   size();
   addEventListener("resize", size);
   if (REDUCED) { draw(t0 + 99000); return; }
-  (function loop(now) { draw(now); requestAnimationFrame(loop); })(t0);
+  visibleLoop(cv, draw); // animate only while the hero is on screen
 })();
 
 /* ============================================================
@@ -509,8 +504,6 @@ function renderFooter() {
         tip.classList.toggle("below", p[1] < W * .52);
       } else setHover(null);
     }
-
-    requestAnimationFrame(draw);
   }
 
   function fmtMarket(m) {
@@ -621,7 +614,7 @@ function renderFooter() {
 
   size();
   addEventListener("resize", size);
-  requestAnimationFrame(draw);
+  visibleLoop(cv, draw); // draw only while the globe is on screen
 })();
 
 /* ------------------------------------------------------------
@@ -645,6 +638,15 @@ function loadMetaPixel() {
   fbq("track", "PageView");
 }
 
+/* load the pixel out of the critical path: on first interaction, or after 5s */
+function schedulePixel() {
+  let done = false;
+  const go = () => { if (done) return; done = true; loadMetaPixel(); };
+  ["pointerdown", "keydown", "scroll", "touchstart"].forEach(ev =>
+    addEventListener(ev, go, { once: true, passive: true }));
+  setTimeout(go, 5000);
+}
+
 // pixel events: WhatsApp = Contact, Skool/Instagram join = InitiateCheckout
 document.addEventListener("click", e => {
   if (!window.fbq) return;
@@ -666,7 +668,7 @@ document.addEventListener("click", e => {
     ["Atlantic/Reykjavik", "Atlantic/Canary", "Atlantic/Madeira", "Atlantic/Azores"].includes(tz);
   const consented = !!localStorage.getItem("aa-cookies-ok");
 
-  if (!regulated || consented) loadMetaPixel();
+  if (!regulated || consented) schedulePixel();
   if (!bar || !regulated || consented) return;
 
   bar.hidden = false;

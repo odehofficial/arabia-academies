@@ -9,7 +9,7 @@ const ACADEMIES = [
     id: "ecom-arabia",
     color: "#2E9AD6",
     flagship: true,
-    logo: "assets/logos/skool-ecomarabia.png",
+    logo: "assets/logos/skool-ecomarabia.webp",
     name: { en: "eCom Arabia +", ar: "eCom Arabia +" },
     tag: {
       en: "E-commerce & dropshipping — in the Arab world and beyond",
@@ -51,7 +51,7 @@ const ACADEMIES = [
   {
     id: "zambeel-dropshipping",
     color: "#37C6A0",
-    logo: "assets/logos/skool-dropshipping.png",
+    logo: "assets/logos/skool-dropshipping.webp",
     name: { en: "Zambeel Dropshipping", ar: "دروبشيبينغ زنبيل" },
     tag: {
       en: "COD dropshipping in Arab markets — no inventory needed",
@@ -133,7 +133,7 @@ const ACADEMIES = [
   {
     id: "ai-arabia",
     color: "#D6F62B",
-    logo: "assets/logos/skool-aiarabia.png",
+    logo: "assets/logos/skool-aiarabia.webp",
     name: { en: "Ai Arabia", ar: "Ai Arabia" },
     tag: {
       en: "Content, ads, automation & websites — with AI, in Arabic",
@@ -170,7 +170,7 @@ const ACADEMIES = [
   {
     id: "ene-ecom",
     color: "#8A7DF5",
-    logo: "assets/logos/skool-ene-ecom.png",
+    logo: "assets/logos/skool-ene-ecom.webp",
     name: { en: "ENE X eCom", ar: "ENE X eCom" },
     tag: {
       en: "Generate high-value leads with Meta Ads — in Arabic",
