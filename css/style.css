@@ -261,6 +261,7 @@ html[dir="rtl"] .nav-word em{ letter-spacing:.02em; font-size:12px }
   font-family:var(--f-body);
 }
 .lang-btn:hover{ border-color:var(--gold); color:var(--gold-2) }
+.lang-btn-menu{ display:none }
 .nav-burger{ display:none; flex-direction:column; gap:5px; padding:8px }
 .nav-burger span{ width:22px; height:2px; background:var(--text); transition:transform .3s, opacity .3s }
 
@@ -417,7 +418,7 @@ html[dir="rtl"] .acad-card:hover .acad-open::after{ transform:translate(-3px,-3p
   max-width:1180px; margin-inline:auto; align-items:center;
 }
 .globe-box{ position:relative; aspect-ratio:1; max-width:640px; margin-inline:auto; width:100% }
-#globeCanvas{ width:100%; height:100%; display:block; cursor:grab }
+#globeCanvas{ width:100%; height:100%; display:block; cursor:grab; touch-action:none }
 #globeCanvas.dragging{ cursor:grabbing }
 .globe-hint{
   text-align:center; color:var(--muted); font-family:var(--f-mono);
@@ -746,11 +747,13 @@ html[dir="rtl"] .t-track{ animation-name:marquee-rtl }
   box-shadow:0 -40px 120px -30px rgba(0,0,0,.9);
 }
 .sheet.show{ transform:translateY(0) }
-.sheet::before{
-  content:""; position:absolute; inset-block-start:12px; inset-inline-start:50%;
-  transform:translateX(-50%); width:52px; height:5px; border-radius:99px;
-  background:var(--line-2);
+.sheet-grip{
+  position:absolute; inset-block-start:0; inset-inline:0; height:38px; z-index:4;
+  display:flex; align-items:center; justify-content:center;
+  cursor:grab; touch-action:none;
 }
+.sheet-grip:active{ cursor:grabbing }
+.sheet-grip i{ width:52px; height:5px; border-radius:99px; background:var(--line-2) }
 .sheet-close{
   position:absolute; inset-block-start:18px; inset-inline-end:20px; z-index:5;
   width:42px; height:42px; border-radius:50%;
@@ -851,6 +854,11 @@ html[dir="rtl"] .t-track{ animation-name:marquee-rtl }
   }
   .nav-links.open a{ padding:12px 14px; border-radius:10px; font-size:17px }
   .nav-links.open a:hover{ background:rgba(244,239,226,.05) }
+  .nav-actions > .lang-btn{ display:none }        /* language switch lives in the menu */
+  .nav-links.open .lang-btn-menu{
+    display:block; text-align:center; margin-block-start:8px; padding:12px 14px; font-size:16px;
+  }
+  .footer-grid > div:nth-child(3){ display:none } /* no partners column on mobile */
   .nav-burger{ display:flex }
   .nav-burger[aria-expanded="true"] span:first-child{ transform:translateY(7px) rotate(45deg) }
   .nav-burger[aria-expanded="true"] span:nth-child(2){ transform:rotate(-45deg) }

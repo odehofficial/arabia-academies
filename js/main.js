@@ -33,11 +33,12 @@ function applyLang() {
   if (sheetOpenId) fillSheet(sheetOpenId); // live-translate an open sheet
 }
 
-$("#langBtn").addEventListener("click", () => {
+function toggleLang() {
   lang = lang === "en" ? "ar" : "en";
   localStorage.setItem("aa-lang", lang);
   applyLang();
-});
+}
+$("#langBtn").addEventListener("click", toggleLang);
 
 /* ------------------------------------------------------------
    Nav
@@ -52,6 +53,11 @@ burger.addEventListener("click", () => {
 });
 navLinks.addEventListener("click", e => {
   if (e.target.tagName === "A") { navLinks.classList.remove("open"); burger.setAttribute("aria-expanded", "false"); }
+});
+$("#langBtnMenu")?.addEventListener("click", () => {
+  toggleLang();
+  navLinks.classList.remove("open");
+  burger.setAttribute("aria-expanded", "false");
 });
 
 /* ------------------------------------------------------------
@@ -204,11 +210,38 @@ function closeSheet() {
   sheetOpenId = null;
   sheet.classList.remove("show"); backdrop.classList.remove("show");
   document.body.style.overflow = "";
-  setTimeout(() => { sheet.hidden = true; backdrop.hidden = true; }, 560);
+  setTimeout(() => { sheet.hidden = true; backdrop.hidden = true; sheet.style.transform = ""; }, 560);
   lastFocus?.focus();
 }
 $("#sheetClose").addEventListener("click", closeSheet);
 backdrop.addEventListener("click", closeSheet);
+
+/* drag the top handle to pull the sheet closed */
+const grip = $("#sheetGrip");
+let gripY = 0, gripDrag = false;
+grip.addEventListener("pointerdown", e => {
+  gripDrag = true; gripY = e.clientY;
+  sheet.style.transition = "none";
+  try { grip.setPointerCapture(e.pointerId); } catch (err) {}
+});
+grip.addEventListener("pointermove", e => {
+  if (!gripDrag) return;
+  sheet.style.transform = `translateY(${Math.max(0, e.clientY - gripY)}px)`;
+});
+const gripEnd = e => {
+  if (!gripDrag) return;
+  gripDrag = false;
+  const dy = Math.max(0, e.clientY - gripY);
+  sheet.style.transition = "";
+  if (dy > 100) {
+    sheet.style.transform = "translateY(103%)"; // finish the slide down
+    closeSheet();
+  } else {
+    sheet.style.transform = ""; // snap back up
+  }
+};
+grip.addEventListener("pointerup", gripEnd);
+grip.addEventListener("pointercancel", gripEnd);
 addEventListener("keydown", e => { if (e.key === "Escape" && sheetOpenId) closeSheet(); });
 
 /* ------------------------------------------------------------
@@ -381,6 +414,9 @@ function renderFooter() {
   // rotation: [lambda, phi] in degrees; phi = -centerLatitude
   let rot = [-32, -22];
   let zoom = 1;
+  let vel = 0; // spin momentum after a fast swipe (deg/frame)
+  const LITE = matchMedia("(pointer: coarse), (max-width: 820px)").matches;
+  let skipFrame = false;
   let targetLng = null, targetPhi = null;
   let hovered = null, dragging = false, lastX = 0, lastY = 0, autoPauseUntil = 0;
   const markerPos = new Map();
@@ -407,10 +443,14 @@ function renderFooter() {
   function markerR(c) { return 2.2 + Math.log10(c.market + 1) * 2.4; }
 
   function draw(now) {
+    if (LITE && (skipFrame = !skipFrame)) return; // 30fps on phones
     ctx.clearRect(0, 0, W, W);
 
     if (!dragging) {
-      if (targetLng !== null) {
+      if (Math.abs(vel) > .05) {          // momentum from a fast swipe
+        rot[0] += vel;
+        vel *= .95;                        // friction
+      } else if (targetLng !== null) {
         let d = targetLng - rot[0];
         d = ((d + 180) % 360 + 360) % 360 - 180; // shortest way around
         rot[0] += d * .06;
@@ -468,11 +508,16 @@ function renderFooter() {
       const hot = hovered === c.iso;
       const pulse = c.hub ? 1 + Math.sin(now / 400) * .18 : 1;
       const col = c.arab ? "227,169,79" : "46,154,214";
-      const gg = ctx.createRadialGradient(p[0], p[1], 0, p[0], p[1], base * 3);
-      gg.addColorStop(0, `rgba(${col},${hot ? .85 : .5})`);
-      gg.addColorStop(1, "transparent");
-      ctx.fillStyle = gg;
-      ctx.beginPath(); ctx.arc(p[0], p[1], base * 3, 0, 7); ctx.fill();
+      if (LITE) { // flat glow — gradients are costly on phones
+        ctx.fillStyle = `rgba(${col},${hot ? .4 : .22})`;
+        ctx.beginPath(); ctx.arc(p[0], p[1], base * 2.2, 0, 7); ctx.fill();
+      } else {
+        const gg = ctx.createRadialGradient(p[0], p[1], 0, p[0], p[1], base * 3);
+        gg.addColorStop(0, `rgba(${col},${hot ? .85 : .5})`);
+        gg.addColorStop(1, "transparent");
+        ctx.fillStyle = gg;
+        ctx.beginPath(); ctx.arc(p[0], p[1], base * 3, 0, 7); ctx.fill();
+      }
       ctx.fillStyle = c.arab ? (hot ? "#F0C878" : "#E3A94F") : (hot ? "#8FD2F8" : "#5BB4E5");
       ctx.beginPath(); ctx.arc(p[0], p[1], base * pulse * (hot ? 1.25 : 1), 0, 7); ctx.fill();
       ctx.strokeStyle = "rgba(8,12,28,.85)"; ctx.lineWidth = 1.4; ctx.stroke();
@@ -552,28 +597,55 @@ function renderFooter() {
     return best;
   }
 
+  // drag to rotate (with momentum) + two-finger pinch zoom
+  const pointers = new Map();
+  let pinchDist = 0;
+
+  cv.addEventListener("pointerdown", e => {
+    try { cv.setPointerCapture(e.pointerId); } catch (err) {}
+    pointers.set(e.pointerId, [e.clientX, e.clientY]);
+    if (pointers.size === 1) {
+      dragging = true; lastX = e.clientX; lastY = e.clientY; vel = 0;
+      cv.classList.add("dragging");
+    } else if (pointers.size === 2) {
+      dragging = false; // pinch takes over
+      const [a, b] = [...pointers.values()];
+      pinchDist = Math.hypot(a[0] - b[0], a[1] - b[1]);
+    }
+  });
   cv.addEventListener("pointermove", e => {
-    const r = cv.getBoundingClientRect();
-    const mx = e.clientX - r.left, my = e.clientY - r.top;
+    if (pointers.has(e.pointerId)) pointers.set(e.pointerId, [e.clientX, e.clientY]);
+    if (pointers.size === 2) {
+      const [a, b] = [...pointers.values()];
+      const d = Math.hypot(a[0] - b[0], a[1] - b[1]);
+      if (pinchDist) setZoom(zoom * d / pinchDist);
+      pinchDist = d;
+      return;
+    }
     if (dragging) {
-      rot[0] += (e.clientX - lastX) * .3;
+      const dx = e.clientX - lastX;
+      rot[0] += dx * .3;
       rot[1] = Math.max(-65, Math.min(20, rot[1] - (e.clientY - lastY) * .3));
+      vel = dx * .3; // remember swipe speed for the momentum spin
       lastX = e.clientX; lastY = e.clientY;
       targetLng = null; targetPhi = null;
       return;
     }
-    setHover(countryAt(mx, my));
+    const r = cv.getBoundingClientRect();
+    setHover(countryAt(e.clientX - r.left, e.clientY - r.top));
   });
-  cv.addEventListener("pointerdown", e => {
-    dragging = true; lastX = e.clientX; lastY = e.clientY;
-    cv.classList.add("dragging");
-    cv.setPointerCapture(e.pointerId);
-  });
-  cv.addEventListener("pointerup", () => {
-    dragging = false;
-    cv.classList.remove("dragging");
-    autoPauseUntil = performance.now() + 2500;
-  });
+  const release = e => {
+    pointers.delete(e.pointerId);
+    if (pointers.size < 2) pinchDist = 0;
+    if (pointers.size === 0 && dragging) {
+      dragging = false;
+      cv.classList.remove("dragging");
+      vel = Math.max(-14, Math.min(14, vel)); // cap the spin speed
+      autoPauseUntil = performance.now() + 2500;
+    }
+  };
+  cv.addEventListener("pointerup", release);
+  cv.addEventListener("pointercancel", release);
   cv.addEventListener("pointerleave", () => { if (!dragging) setHover(null); });
 
   // zoom: wheel over the globe + the +/− buttons
