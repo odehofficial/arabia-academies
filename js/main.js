@@ -597,15 +597,16 @@ function renderFooter() {
     return best;
   }
 
-  // drag to rotate (with momentum) + two-finger pinch zoom
+  // drag to rotate (with momentum) + two-finger pinch zoom + tap for stats
   const pointers = new Map();
-  let pinchDist = 0;
+  let pinchDist = 0, tapMoved = true;
 
   cv.addEventListener("pointerdown", e => {
     try { cv.setPointerCapture(e.pointerId); } catch (err) {}
     pointers.set(e.pointerId, [e.clientX, e.clientY]);
     if (pointers.size === 1) {
       dragging = true; lastX = e.clientX; lastY = e.clientY; vel = 0;
+      tapMoved = false;
       cv.classList.add("dragging");
     } else if (pointers.size === 2) {
       dragging = false; // pinch takes over
@@ -623,9 +624,10 @@ function renderFooter() {
       return;
     }
     if (dragging) {
-      const dx = e.clientX - lastX;
+      const dx = e.clientX - lastX, dy = e.clientY - lastY;
+      if (Math.abs(dx) + Math.abs(dy) > 4) tapMoved = true;
       rot[0] += dx * .3;
-      rot[1] = Math.max(-65, Math.min(20, rot[1] - (e.clientY - lastY) * .3));
+      rot[1] = Math.max(-65, Math.min(20, rot[1] - dy * .3));
       vel = dx * .3; // remember swipe speed for the momentum spin
       lastX = e.clientX; lastY = e.clientY;
       targetLng = null; targetPhi = null;
@@ -642,6 +644,12 @@ function renderFooter() {
       cv.classList.remove("dragging");
       vel = Math.max(-14, Math.min(14, vel)); // cap the spin speed
       autoPauseUntil = performance.now() + 2500;
+      if (!tapMoved) { // a tap, not a swipe — toggle the country stats card
+        vel = 0;
+        const r = cv.getBoundingClientRect();
+        const iso = countryAt(e.clientX - r.left, e.clientY - r.top);
+        setHover(iso === hovered ? null : iso);
+      }
     }
   };
   cv.addEventListener("pointerup", release);

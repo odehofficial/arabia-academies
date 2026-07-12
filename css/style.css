@@ -322,11 +322,14 @@ html[dir="rtl"] .hero-scroll{ font-family:var(--f-body); letter-spacing:.02em; f
   padding-block:18px; overflow:hidden;
   background:var(--bg-2);
 }
+.marquee{ direction:ltr } /* scroll geometry always LTR — RTL overflow is buggy on mobile Safari */
 .marquee-track{
   display:flex; gap:72px; width:max-content; min-height:26px;
   animation:marquee 90s linear infinite;
 }
-.marquee:hover .marquee-track{ animation-play-state:paused }
+@media (hover:hover){
+  .marquee:hover .marquee-track{ animation-play-state:paused }
+}
 .marquee-track span{
   font-family:var(--f-display); font-size:15px; font-weight:600;
   color:var(--muted); white-space:nowrap; display:flex; align-items:center;
@@ -337,8 +340,6 @@ html[dir="rtl"] .hero-scroll{ font-family:var(--f-body); letter-spacing:.02em; f
   background:#fff; border-radius:7px; padding:2px;
 }
 @keyframes marquee{ to{ transform:translateX(-50%) } }
-html[dir="rtl"] .marquee-track{ animation-name:marquee-rtl }
-@keyframes marquee-rtl{ to{ transform:translateX(50%) } }
 
 /* ============================================================
    Academies
@@ -611,12 +612,13 @@ html[dir="rtl"] .mentor-facts dt{ font-size:16px } /* fits «عشرات المل
   -webkit-mask-image:linear-gradient(90deg, transparent, #000 6%, #000 94%, transparent);
   mask-image:linear-gradient(90deg, transparent, #000 6%, #000 94%, transparent);
 }
-.t-row{ overflow:hidden; padding-block:5px } /* headroom so the hover lift doesn't clip the top border */
+.t-row{ overflow:hidden; padding-block:5px; direction:ltr } /* LTR scroll geometry (see .marquee) */
+html[dir="rtl"] .t-card{ direction:rtl } /* the cards themselves stay Arabic */
 .t-track{ display:flex; gap:22px; width:max-content; animation:marquee 80s linear infinite }
 .t-row-rev .t-track{ animation-direction:reverse }
-.t-row:hover .t-track{ animation-play-state:paused }
-/* in RTL the track overflows to the left, so it must slide the other way */
-html[dir="rtl"] .t-track{ animation-name:marquee-rtl }
+@media (hover:hover){
+  .t-row:hover .t-track{ animation-play-state:paused } /* hover-pause only where real hover exists */
+}
 .t-card{
   width:340px; flex:none; text-align:start; text-decoration:none;
   background:var(--surface); border:1px solid var(--line);
@@ -854,6 +856,8 @@ html[dir="rtl"] .t-track{ animation-name:marquee-rtl }
   }
   .nav-links.open a{ padding:12px 14px; border-radius:10px; font-size:17px }
   .nav-links.open a:hover{ background:rgba(244,239,226,.05) }
+  .nav{ justify-content:center }                  /* logo sits in the middle of the header */
+  .nav-actions{ position:absolute; left:16px; top:50%; transform:translateY(-50%) }
   .nav-actions > .lang-btn{ display:none }        /* language switch lives in the menu */
   .nav-links.open .lang-btn-menu{
     display:block; text-align:center; margin-block-start:8px; padding:12px 14px; font-size:16px;
