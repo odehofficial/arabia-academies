@@ -684,14 +684,14 @@ html[dir="rtl"] .t-track{ animation-name:marquee-rtl }
   display:grid; grid-template-columns:1.3fr 1fr 1fr 1.1fr; gap:40px;
   max-width:1180px; margin-inline:auto;
 }
-.socials{ display:flex; flex-wrap:wrap; gap:10px }
+.socials{ display:flex; flex-wrap:nowrap; gap:6px } /* all 7 icons on one line */
 .socials a{
-  width:38px; height:38px; border:1px solid var(--line-2); border-radius:11px;
+  width:32px; height:32px; flex:none; border:1px solid var(--line-2); border-radius:9px;
   display:flex; align-items:center; justify-content:center;
   color:var(--muted); transition:color .2s, border-color .2s, transform .2s;
 }
 .socials a:hover{ color:var(--gold-2); border-color:var(--gold); transform:translateY(-2px) }
-.socials svg{ width:17px; height:17px }
+.socials svg{ width:15px; height:15px }
 .footer h3{ font-size:15px; margin-block-end:16px; color:var(--gold-2) }
 .footer ul{ list-style:none; display:flex; flex-direction:column; gap:10px }
 .footer li a{ color:var(--muted); text-decoration:none; font-size:15px; transition:color .2s }
@@ -838,6 +838,7 @@ html[dir="rtl"] .t-track{ animation-name:marquee-rtl }
   .road-steps{ grid-template-columns:repeat(2,1fr) }
   .road-steps::before{ display:none }
   .footer-grid{ grid-template-columns:1fr 1fr }
+  .footer-grid > div:last-child{ grid-column:1 / -1 } /* room for the one-line social icons */
 }
 @media (max-width: 860px){
   .nav-links{ display:none; }

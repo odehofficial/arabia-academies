@@ -287,10 +287,12 @@ document.addEventListener("click", e => {
    Footer
    ------------------------------------------------------------ */
 function renderFooter() {
-  $("#footAcademies").innerHTML = ACADEMIES.map(a => a.join
-    ? `<li><a href="${a.join}" target="_blank" rel="noopener">${pick(a.name)}</a></li>`
-    : `<li><a href="#academies">${pick(a.name)}<span class="soon-tag">${t("f_soon")}</span></a></li>`
-  ).join("");
+  $("#footAcademies").innerHTML = ACADEMIES.map(a => {
+    const label = pick(a.footName || a.name);
+    return a.join
+      ? `<li><a href="${a.join}" target="_blank" rel="noopener">${label}</a></li>`
+      : `<li><a href="#academies">${label}<span class="soon-tag">${t("f_soon")}</span></a></li>`;
+  }).join("");
 }
 
 /* ============================================================

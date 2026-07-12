@@ -135,6 +135,7 @@ const ACADEMIES = [
     color: "#D6F62B",
     logo: "assets/logos/skool-aiarabia.webp",
     name: { en: "Ai Arabia", ar: "Ai Arabia" },
+    footName: { en: "Ai Arabia", ar: "أكاديمية الذكاء الاصطناعي" },
     tag: {
       en: "Content, ads, automation & websites — with AI, in Arabic",
       ar: "احترف صناعة المحتوى والإعلانات وأتمتة الأعمال وبناء المواقع مع الذكاء الاصطناعي"
