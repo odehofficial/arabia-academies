@@ -525,11 +525,13 @@ html[dir="rtl"] .market-chips .chips-label{ letter-spacing:0 }
 .mentor-side{ flex:none; width:clamp(220px,26vw,300px); display:flex; flex-direction:column; gap:20px }
 .mentor-photo{ position:relative }
 .mentor-photo img{
-  width:100%; aspect-ratio:4/5; object-fit:cover; object-position:top;
+  width:100%; height:auto; /* natural photo proportions — no cropping */
   border-radius:22px; border:1px solid color-mix(in srgb, var(--gold) 45%, transparent);
   box-shadow:0 30px 60px -25px rgba(0,0,0,.8);
   display:block;
 }
+/* he points right in the photo — mirror it in RTL so he points toward the text */
+html[dir="rtl"] .mentor-photo img{ transform:scaleX(-1) }
 .mentor-fallback{ display:none }
 .mentor-photo.no-photo img{ display:none }
 .mentor-photo.no-photo .mentor-fallback{
