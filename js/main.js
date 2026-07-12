@@ -599,14 +599,14 @@ function renderFooter() {
 
   // drag to rotate (with momentum) + two-finger pinch zoom + tap for stats
   const pointers = new Map();
-  let pinchDist = 0, tapMoved = true;
+  let pinchDist = 0, tapMoved = true, downX = 0, downY = 0;
 
   cv.addEventListener("pointerdown", e => {
     try { cv.setPointerCapture(e.pointerId); } catch (err) {}
     pointers.set(e.pointerId, [e.clientX, e.clientY]);
     if (pointers.size === 1) {
       dragging = true; lastX = e.clientX; lastY = e.clientY; vel = 0;
-      tapMoved = false;
+      tapMoved = false; downX = e.clientX; downY = e.clientY;
       cv.classList.add("dragging");
     } else if (pointers.size === 2) {
       dragging = false; // pinch takes over
@@ -625,7 +625,8 @@ function renderFooter() {
     }
     if (dragging) {
       const dx = e.clientX - lastX, dy = e.clientY - lastY;
-      if (Math.abs(dx) + Math.abs(dy) > 4) tapMoved = true;
+      // a finger tap wobbles a little — only a real swipe cancels the tap
+      if (Math.hypot(e.clientX - downX, e.clientY - downY) > 12) tapMoved = true;
       rot[0] += dx * .3;
       rot[1] = Math.max(-65, Math.min(20, rot[1] - dy * .3));
       vel = dx * .3; // remember swipe speed for the momentum spin
@@ -654,7 +655,10 @@ function renderFooter() {
   };
   cv.addEventListener("pointerup", release);
   cv.addEventListener("pointercancel", release);
-  cv.addEventListener("pointerleave", () => { if (!dragging) setHover(null); });
+  // touch pointers "leave" the screen right after a tap — only mice should clear the card
+  cv.addEventListener("pointerleave", e => {
+    if (e.pointerType === "mouse" && !dragging) setHover(null);
+  });
 
   // zoom: wheel over the globe + the +/− buttons
   const setZoom = (z) => { zoom = Math.min(2.4, Math.max(0.7, z)); };
