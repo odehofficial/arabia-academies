@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 220" role="img" aria-label="ENE X eCom">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&amp;display=swap');
+    .w1  { font-family: 'Montserrat', sans-serif; font-weight: 700; font-size: 58px; fill: #F4EFE2; }
+    .w2  { font-family: 'Montserrat', sans-serif; font-weight: 700; font-size: 58px; fill: #8A7DF5; }
+    .tag { font-family: 'Montserrat', sans-serif; font-weight: 600; font-size: 22px; fill: #8A7DF5; letter-spacing: 2px; }
+  </style>
+
+  <!-- Mark: violet circle, lead funnel + spark -->
+  <g transform="translate(110,110)">
+    <circle r="92" fill="#8A7DF5"/>
+    <g fill="#FFFFFF">
+      <path d="M-58,-52 L58,-52 L18,4 L18,44 L-18,58 L-18,4 Z" opacity=".95"/>
+    </g>
+    <circle cx="44" cy="40" r="14" fill="#1B1440"/>
+    <circle cx="44" cy="40" r="24" fill="none" stroke="#1B1440" stroke-width="7" opacity=".55"/>
+  </g>
+
+  <!-- Wordmark -->
+  <text x="238" y="112" class="w1">ENE <tspan class="w2">X eCom</tspan></text>
+  <text x="242" y="164" class="tag">High-value leads with Meta Ads</text>
+</svg>

@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 220" role="img" aria-label="Iraq e-Com — Road to success">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&amp;display=swap');
+    .w1  { font-family: 'Montserrat', sans-serif; font-weight: 700; font-size: 62px; fill: #F4EFE2; }
+    .w2  { font-family: 'Montserrat', sans-serif; font-weight: 700; font-size: 62px; fill: #CE1126; }
+    .tag { font-family: 'Montserrat', sans-serif; font-weight: 600; font-size: 22px; fill: #4CBB6C; letter-spacing: 2px; }
+  </style>
+  <defs>
+    <marker id="ah" viewBox="0 0 10 10" refX="6.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4CBB6C"/>
+    </marker>
+  </defs>
+
+  <!-- Mark: ziggurat rising like a chart, arrow of growth, red ring (Iraqi flag) -->
+  <g transform="translate(110,110)">
+    <circle r="92" fill="#10182E"/>
+    <circle r="92" fill="none" stroke="#CE1126" stroke-width="6"/>
+    <!-- ziggurat tiers -->
+    <g fill="#F4EFE2">
+      <rect x="-56" y="30"  width="112" height="16" rx="3"/>
+      <rect x="-42" y="8"   width="84"  height="16" rx="3"/>
+      <rect x="-28" y="-14" width="56"  height="16" rx="3"/>
+      <rect x="-14" y="-36" width="28"  height="16" rx="3"/>
+    </g>
+    <!-- growth arrow -->
+    <path d="M-58,46 C -30,44 -20,12 2,-8 C 18,-22 30,-38 52,-56" fill="none" stroke="#4CBB6C"
+          stroke-width="9" stroke-linecap="round" marker-end="url(#ah)"/>
+  </g>
+
+  <!-- Wordmark -->
+  <text x="238" y="118" class="w1">Iraq <tspan class="w2">e-Com</tspan></text>
+  <text x="242" y="168" class="tag">Road to success</text>
+</svg>

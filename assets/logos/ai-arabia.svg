@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 220" role="img" aria-label="Ai Arabia">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&amp;display=swap');
+    .w1 { font-family: 'Montserrat', sans-serif; font-weight: 700; font-size: 62px; fill: #D6F62B; }
+  </style>
+
+  <!-- Mark: open loop + kick leg + dot (Ai monogram) -->
+  <g transform="translate(112,118)" stroke="#D6F62B" stroke-width="25" stroke-linecap="round" fill="none">
+    <path d="M 34,-64 L -50,-6 A 44,44 0 1 0 2,52 L 44,-20"/>
+    <path d="M 16,14 L 58,64"/>
+  </g>
+  <circle cx="172" cy="24" r="15" fill="#D6F62B"/>
+
+  <!-- Wordmark -->
+  <text x="238" y="134" class="w1">Ai Arabia</text>
+</svg>

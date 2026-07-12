@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Arabia Academies — Road to success | أكاديميات أرابيا</title>
+  <meta name="description" content="E-commerce, dropshipping and AI academies for the Arab world. eCom Arabia+, Dropshipping Arabia, Ai Arabia, ENE X eCom — taught in Arabic, hosted on Skool.">
+  <link rel="icon" type="image/png" href="assets/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Cairo:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <a class="skip" href="#academies" data-i18n="skip">Skip to content</a>
+
+  <!-- Shared SVG marks -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <defs>
+      <marker id="mk-ah" viewBox="0 0 10 10" refX="6.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+        <path d="M0,0 L10,5 L0,10 z" fill="currentColor"/>
+      </marker>
+
+      <symbol id="mark-star" viewBox="0 0 200 200">
+        <g transform="translate(100,100)" fill="none" stroke="currentColor" stroke-width="9" stroke-linejoin="round">
+          <rect x="-46" y="-46" width="92" height="92"/>
+          <rect x="-46" y="-46" width="92" height="92" transform="rotate(45)"/>
+          <circle r="9" fill="currentColor" stroke="none"/>
+        </g>
+      </symbol>
+
+      <symbol id="mark-ecom" viewBox="0 0 200 200">
+        <circle cx="100" cy="100" r="92" fill="#2E9AD6"/>
+        <g fill="#fff">
+          <rect x="42"  y="110" width="22" height="44" rx="4"/>
+          <rect x="72"  y="94"  width="22" height="60" rx="4"/>
+          <rect x="102" y="78"  width="22" height="76" rx="4"/>
+          <rect x="132" y="62"  width="22" height="92" rx="4"/>
+        </g>
+        <path d="M38,84 C 66,80 84,62 106,48 L 140,30" fill="none" stroke="#fff" stroke-width="10" stroke-linecap="round" style="color:#fff" marker-end="url(#mk-ah)"/>
+      </symbol>
+
+      <symbol id="mark-drop" viewBox="0 0 200 200">
+        <circle cx="100" cy="100" r="92" fill="#37C6A0"/>
+        <g stroke="#0B3F32" stroke-width="10" stroke-linecap="round" opacity=".5">
+          <path d="M28,90 L66,90"/><path d="M36,114 L70,114"/><path d="M44,138 L74,138"/>
+        </g>
+        <g transform="translate(118,106) rotate(-8)">
+          <rect x="-38" y="-38" width="80" height="76" rx="10" fill="#fff"/>
+          <path d="M-38,-12 L42,-12" stroke="#37C6A0" stroke-width="7"/>
+          <path d="M2,-38 L2,-12" stroke="#37C6A0" stroke-width="7"/>
+          <path d="M2,-60 L2,-88 M2,-88 L-14,-72 M2,-88 L18,-72" stroke="#fff" stroke-width="10" stroke-linecap="round" fill="none"/>
+        </g>
+      </symbol>
+
+      <symbol id="mark-ai" viewBox="0 0 200 200">
+        <circle cx="100" cy="100" r="92" fill="#151A0A"/>
+        <g transform="translate(96,104)" stroke="#D6F62B" stroke-width="20" stroke-linecap="round" fill="none">
+          <path d="M 28,-52 L -40,-6 A 36,36 0 1 0 2,42 L 36,-16"/>
+          <path d="M 14,12 L 48,52"/>
+        </g>
+        <circle cx="144" cy="26" r="12" fill="#D6F62B"/>
+      </symbol>
+
+      <symbol id="mark-ene" viewBox="0 0 200 200">
+        <circle cx="100" cy="100" r="92" fill="#8A7DF5"/>
+        <path d="M42,48 L158,48 L118,104 L118,144 L82,158 L82,104 Z" fill="#fff" opacity=".95"/>
+        <circle cx="144" cy="140" r="14" fill="#1B1440"/>
+        <circle cx="144" cy="140" r="24" fill="none" stroke="#1B1440" stroke-width="7" opacity=".55"/>
+      </symbol>
+
+      <!-- Social icons (simple-icons) -->
+      <symbol id="so-youtube" viewBox="0 0 24 24"><path fill="currentColor" d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></symbol>
+      <symbol id="so-instagram" viewBox="0 0 24 24"><path fill="currentColor" d="M7.0301.084c-1.2768.0602-2.1487.264-2.911.5634-.7888.3075-1.4575.72-2.1228 1.3877-.6652.6677-1.075 1.3368-1.3802 2.127-.2954.7638-.4956 1.6365-.552 2.914-.0564 1.2775-.0689 1.6882-.0626 4.947.0062 3.2586.0206 3.6671.0825 4.9473.061 1.2765.264 2.1482.5635 2.9107.308.7889.72 1.4573 1.388 2.1228.6679.6655 1.3365 1.0743 2.1285 1.38.7632.295 1.6361.4961 2.9134.552 1.2773.056 1.6884.069 4.9462.0627 3.2578-.0062 3.668-.0207 4.9478-.0814 1.28-.0607 2.147-.2652 2.9098-.5633.7889-.3086 1.4578-.72 2.1228-1.3881.665-.6682 1.0745-1.3378 1.3795-2.1284.2957-.7632.4966-1.636.552-2.9124.056-1.2809.0692-1.6898.063-4.948-.0063-3.2583-.021-3.6668-.0817-4.9465-.0607-1.2797-.264-2.1487-.5633-2.9117-.3084-.7889-.72-1.4568-1.3876-2.1228C21.2982 1.33 20.628.9208 19.8378.6165 19.074.321 18.2017.1197 16.9244.0645 15.6471.0093 15.236-.005 11.977.0014 8.718.0076 8.31.0215 7.0301.0839m.1402 21.6932c-1.17-.0509-1.8053-.2453-2.2287-.408-.5606-.216-.96-.4771-1.3819-.895-.422-.4178-.6811-.8186-.9-1.378-.1644-.4234-.3624-1.058-.4171-2.228-.0595-1.2645-.072-1.6442-.079-4.848-.007-3.2037.0053-3.583.0607-4.848.05-1.169.2456-1.805.408-2.2282.216-.5613.4762-.96.895-1.3816.4188-.4217.8184-.6814 1.3783-.9003.423-.1651 1.0575-.3614 2.227-.4171 1.2655-.06 1.6447-.072 4.848-.079 3.2033-.007 3.5835.005 4.8495.0608 1.169.0508 1.8053.2445 2.228.408.5608.216.96.4754 1.3816.895.4217.4194.6816.8176.9005 1.3787.1653.4217.3617 1.056.4169 2.2263.0602 1.2655.0739 1.645.0796 4.848.0058 3.203-.0055 3.5834-.061 4.848-.051 1.17-.245 1.8055-.408 2.2294-.216.5604-.4763.96-.8954 1.3814-.419.4215-.8181.6811-1.3783.9-.4224.1649-1.0577.3617-2.2262.4174-1.2656.0595-1.6448.072-4.8493.079-3.2045.007-3.5825-.006-4.848-.0608M16.953 5.5864A1.44 1.44 0 1 0 18.39 4.144a1.44 1.44 0 0 0-1.437 1.4424M5.8385 12.012c.0067 3.4032 2.7706 6.1557 6.173 6.1493 3.4026-.0065 6.157-2.7701 6.1506-6.1733-.0065-3.4032-2.771-6.1565-6.174-6.1498-3.403.0067-6.156 2.771-6.1496 6.1738M8 12.0077a4 4 0 1 1 4.008 3.9921A3.9996 3.9996 0 0 1 8 12.0077"/></symbol>
+      <symbol id="so-tiktok" viewBox="0 0 24 24"><path fill="currentColor" d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></symbol>
+      <symbol id="so-facebook" viewBox="0 0 24 24"><path fill="currentColor" d="M9.101 23.691v-7.98H6.627v-3.667h2.474v-1.58c0-4.085 1.848-5.978 5.858-5.978.401 0 .955.042 1.468.103a8.68 8.68 0 0 1 1.141.195v3.325a8.623 8.623 0 0 0-.653-.036 26.805 26.805 0 0 0-.733-.009c-.707 0-1.259.096-1.675.309a1.686 1.686 0 0 0-.679.622c-.258.42-.374.995-.374 1.752v1.297h3.919l-.386 2.103-.287 1.564h-3.246v8.245C19.396 23.238 24 18.179 24 12.044c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.628 3.874 10.35 9.101 11.647Z"/></symbol>
+      <symbol id="so-linkedin" viewBox="0 0 24 24"><path fill="currentColor" d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></symbol>
+      <symbol id="so-threads" viewBox="0 0 24 24"><path fill="currentColor" d="M12.186 24h-.007c-3.581-.024-6.334-1.205-8.184-3.509C2.35 18.44 1.5 15.586 1.472 12.01v-.017c.03-3.579.879-6.43 2.525-8.482C5.845 1.205 8.6.024 12.18 0h.014c2.746.02 5.043.725 6.826 2.098 1.677 1.29 2.858 3.13 3.509 5.467l-2.04.569c-1.104-3.96-3.898-5.984-8.304-6.015-2.91.022-5.11.936-6.54 2.717C4.307 6.504 3.616 8.914 3.589 12c.027 3.086.718 5.496 2.057 7.164 1.43 1.783 3.631 2.698 6.54 2.717 2.623-.02 4.358-.631 5.8-2.045 1.647-1.613 1.618-3.593 1.09-4.798-.31-.71-.873-1.3-1.634-1.75-.192 1.352-.622 2.446-1.284 3.272-.886 1.102-2.14 1.704-3.73 1.79-1.202.065-2.361-.218-3.259-.801-1.063-.689-1.685-1.74-1.752-2.964-.065-1.19.408-2.285 1.33-3.082.88-.76 2.119-1.207 3.583-1.291a13.853 13.853 0 0 1 3.02.142c-.126-.742-.375-1.332-.75-1.757-.513-.586-1.308-.883-2.359-.89h-.029c-.844 0-1.992.232-2.721 1.32L7.734 7.847c.98-1.454 2.568-2.256 4.478-2.256h.044c3.194.02 5.097 1.975 5.287 5.388.108.046.216.094.321.142 1.49.7 2.58 1.761 3.154 3.07.797 1.82.871 4.79-1.548 7.158-1.85 1.81-4.094 2.628-7.277 2.65Zm1.003-11.69c-.242 0-.487.007-.739.021-1.836.103-2.98.946-2.916 2.143.067 1.256 1.452 1.839 2.784 1.767 1.224-.065 2.818-.543 3.086-3.71a10.5 10.5 0 0 0-2.215-.221z"/></symbol>
+      <symbol id="so-x" viewBox="0 0 24 24"><path fill="currentColor" d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932ZM17.61 20.644h2.039L6.486 3.24H4.298Z"/></symbol>
+
+      <!-- Tool / platform marks for the marquee (monochrome, currentColor) -->
+      <symbol id="ico-meta" viewBox="0 0 24 24">
+        <path d="M6.4,16 C3.6,16 3.6,8 6.4,8 C9.6,8 14.4,16 17.6,16 C20.4,16 20.4,8 17.6,8 C14.4,8 9.6,16 6.4,16 Z" fill="none" stroke="currentColor" stroke-width="1.9"/>
+      </symbol>
+      <symbol id="ico-tiktok" viewBox="0 0 24 24">
+        <path d="M13.4,17 L13.4,4.6 C14.5,6.8 16.6,8.2 19,8.4" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/>
+        <circle cx="10" cy="17" r="3.4" fill="currentColor"/>
+      </symbol>
+      <symbol id="ico-instagram" viewBox="0 0 24 24">
+        <rect x="4" y="4" width="16" height="16" rx="4.5" fill="none" stroke="currentColor" stroke-width="1.9"/>
+        <circle cx="12" cy="12" r="3.6" fill="none" stroke="currentColor" stroke-width="1.9"/>
+        <circle cx="16.8" cy="7.2" r="1.2" fill="currentColor"/>
+      </symbol>
+      <symbol id="ico-lightfunnels" viewBox="0 0 24 24">
+        <path d="M4,5 L20,5 L14,12 L14,16.6 L10,18.8 L10,12 Z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
+        <path d="M12.7,7 L10.9,9.8 L13.1,9.8 L11.3,12.6" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+      </symbol>
+      <symbol id="ico-shopify" viewBox="0 0 24 24">
+        <path d="M6.8,8 L17.2,8 L18.4,19 L5.6,19 Z" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linejoin="round"/>
+        <path d="M9.4,8 C9.4,4.6 14.6,4.6 14.6,8" fill="none" stroke="currentColor" stroke-width="1.9"/>
+      </symbol>
+      <symbol id="ico-zambeel" viewBox="0 0 24 24">
+        <path d="M4.5,8 L12,4.5 L19.5,8 L19.5,16 L12,19.5 L4.5,16 Z M4.5,8 L12,11.5 L19.5,8 M12,11.5 L12,19.5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
+      </symbol>
+      <symbol id="ico-exporta" viewBox="0 0 24 24">
+        <rect x="4" y="9" width="10.5" height="9.5" rx="1.6" fill="none" stroke="currentColor" stroke-width="1.9"/>
+        <path d="M13,5.5 L20,5.5 M20,5.5 L17.4,3 M20,5.5 L17.4,8" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/>
+      </symbol>
+      <symbol id="ico-mutual" viewBox="0 0 24 24">
+        <path d="M17.8,9.2 A6.6,6.6 0 0 0 6.2,9.2 M6.2,9.2 L6.2,5 M6.2,9.2 L10.4,9.2" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M6.2,14.8 A6.6,6.6 0 0 0 17.8,14.8 M17.8,14.8 L17.8,19 M17.8,14.8 L13.6,14.8" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/>
+      </symbol>
+      <symbol id="ico-transfer" viewBox="0 0 24 24">
+        <path d="M5,8.5 L19,8.5 M19,8.5 L15.8,5.4 M5,15.5 L19,15.5 M5,15.5 L8.2,18.6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      </symbol>
+      <symbol id="ico-googleads" viewBox="0 0 24 24">
+        <rect x="9.7" y="3.5" width="4.6" height="15" rx="2.3" fill="currentColor" transform="rotate(30 12 11)"/>
+        <rect x="9.7" y="3.5" width="4.6" height="15" rx="2.3" fill="currentColor" opacity=".55" transform="rotate(-30 12 11)"/>
+        <circle cx="5.8" cy="17.6" r="2.6" fill="currentColor" opacity=".8"/>
+      </symbol>
+      <symbol id="ico-manychat" viewBox="0 0 24 24">
+        <path d="M12,4.5 C7.2,4.5 3.5,7.7 3.5,11.8 C3.5,13.9 4.4,15.7 5.9,17 L5.2,20 L8.6,18.5 C9.7,18.9 10.8,19.1 12,19.1 C16.8,19.1 20.5,15.9 20.5,11.8 C20.5,7.7 16.8,4.5 12,4.5 Z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
+        <circle cx="8.4" cy="11.8" r="1.15" fill="currentColor"/>
+        <circle cx="12" cy="11.8" r="1.15" fill="currentColor"/>
+        <circle cx="15.6" cy="11.8" r="1.15" fill="currentColor"/>
+      </symbol>
+      <symbol id="ico-higgsfield" viewBox="0 0 24 24">
+        <rect x="4" y="4" width="16" height="16" rx="4.5" fill="none" stroke="currentColor" stroke-width="1.8"/>
+        <path d="M9,8.5 L9,15.5 M15,8.5 L15,15.5 M9,12 L15,12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+      </symbol>
+      <symbol id="ico-canva" viewBox="0 0 24 24">
+        <circle cx="12" cy="12" r="8.5" fill="none" stroke="currentColor" stroke-width="1.8"/>
+        <path d="M14.8,9.6 C14,8.7 13,8.3 12,8.3 C9.9,8.3 8.4,9.9 8.4,12 C8.4,14.1 9.9,15.7 12,15.7 C13,15.7 14,15.3 14.8,14.4" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"/>
+      </symbol>
+      <symbol id="ico-claude" viewBox="0 0 24 24">
+        <path d="M12,4 L12,20 M4,12 L20,12 M6.6,6.6 L17.4,17.4 M17.4,6.6 L6.6,17.4" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linecap="round"/>
+      </symbol>
+
+      <symbol id="mark-iraq" viewBox="0 0 200 200">
+        <circle cx="100" cy="100" r="92" fill="#10182E"/>
+        <circle cx="100" cy="100" r="88" fill="none" stroke="#CE1126" stroke-width="6"/>
+        <g fill="#F4EFE2">
+          <rect x="44" y="130" width="112" height="16" rx="3"/>
+          <rect x="58" y="108" width="84"  height="16" rx="3"/>
+          <rect x="72" y="86"  width="56"  height="16" rx="3"/>
+          <rect x="86" y="64"  width="28"  height="16" rx="3"/>
+        </g>
+        <path d="M42,146 C 70,144 80,112 102,92 C 118,78 130,62 152,44" fill="none" stroke="#4CBB6C" stroke-width="9" stroke-linecap="round" style="color:#4CBB6C" marker-end="url(#mk-ah)"/>
+      </symbol>
+    </defs>
+  </svg>
+
+  <!-- ===== Nav ===== -->
+  <header class="nav" id="nav">
+    <a class="nav-logo" href="#top" aria-label="Arabia Academies">
+      <svg class="nav-mark" viewBox="0 0 200 200" aria-hidden="true"><use href="#mark-star"/></svg>
+      <span class="nav-word">Arabia<em data-i18n="f_tag">Road to success</em></span>
+    </a>
+    <nav class="nav-links" aria-label="Main">
+      <a href="#academies" data-i18n="nav_academies">Academies</a>
+      <a href="#market" data-i18n="nav_reach">The market</a>
+      <a href="#road" data-i18n="nav_road">The road</a>
+      <a href="#reviews" data-i18n="nav_reviews">Reviews</a>
+      <a href="#faq" data-i18n="nav_faq">FAQ</a>
+    </nav>
+    <div class="nav-actions">
+      <button class="lang-btn" id="langBtn" type="button" aria-label="Switch language"><span data-i18n="lang_btn">عربي</span></button>
+      <a class="btn btn-gold btn-sm" href="https://www.skool.com/ecomarabia/about" target="_blank" rel="noopener" data-i18n="nav_join">Join now</a>
+      <button class="nav-burger" id="navBurger" type="button" aria-label="Menu" aria-expanded="false"><span></span><span></span></button>
+    </div>
+  </header>
+
+  <main id="top">
+    <!-- ===== Hero ===== -->
+    <section class="hero">
+      <canvas id="skyCanvas" aria-hidden="true"></canvas>
+      <div class="hero-glow" aria-hidden="true"></div>
+      <div class="hero-inner">
+        <p class="eyebrow reveal" data-i18n="hero_eyebrow">Arabia Academies · Amman → the Arab world</p>
+        <h1 class="hero-h1">
+          <span class="reveal" data-i18n="hero_h1_a">Four academies.</span>
+          <span class="reveal gold" data-i18n="hero_h1_b">One road to success.</span>
+        </h1>
+        <p class="hero-sub reveal" data-i18n="hero_sub"></p>
+        <div class="hero-ctas reveal">
+          <a class="btn btn-gold" href="#academies" data-i18n="hero_cta1">Explore the academies</a>
+          <a class="btn btn-ghost" href="#reviews" data-i18n="hero_cta2">Watch students' results</a>
+        </div>
+        <dl class="hero-stats reveal">
+          <div><dt class="count" data-count="3500" data-suffix="+">0</dt><dd data-i18n="hero_stat1">students &amp; members</dd></div>
+          <div><dt class="count" data-count="30" data-suffix="+">0</dt><dd data-i18n="hero_stat2">practical courses</dd></div>
+          <div><dt class="count" data-count="10" data-suffix="">0</dt><dd data-i18n="hero_stat3">live calls every week</dd></div>
+          <div><dt class="count" data-count="4" data-suffix="+1">0</dt><dd data-i18n="hero_stat4">academies, one family</dd></div>
+        </dl>
+      </div>
+      <a class="hero-scroll" href="#academies"><span data-i18n="hero_scroll">The road starts here</span><i aria-hidden="true"></i></a>
+    </section>
+
+    <!-- ===== Marquee ===== -->
+    <div class="marquee" aria-hidden="true"><div class="marquee-track" id="marqueeTrack"></div></div>
+
+    <!-- ===== Academies ===== -->
+    <section class="section academies" id="academies">
+      <svg class="roadline" id="roadline" aria-hidden="true" preserveAspectRatio="none"></svg>
+      <div class="section-head">
+        <p class="eyebrow reveal" data-i18n="acad_eyebrow">Stations on the road</p>
+        <h2 class="reveal" data-i18n="acad_h2">Choose your starting point</h2>
+        <p class="section-sub reveal" data-i18n="acad_sub"></p>
+      </div>
+      <div class="acad-grid" id="acadGrid"></div>
+    </section>
+
+    <!-- ===== Globe / market ===== -->
+    <section class="section market" id="market">
+      <div class="section-head">
+        <p class="eyebrow reveal" data-i18n="globe_eyebrow">Why the Arab world</p>
+        <h2 class="reveal" data-i18n="globe_h2">One language. 400 million buyers.</h2>
+        <p class="section-sub reveal" data-i18n="globe_sub"></p>
+      </div>
+      <div class="market-wrap">
+        <div class="globe-box reveal">
+          <canvas id="globeCanvas"></canvas>
+          <div class="globe-zoom" aria-hidden="false">
+            <button id="zoomIn" type="button" aria-label="Zoom in">＋</button>
+            <button id="zoomOut" type="button" aria-label="Zoom out">−</button>
+          </div>
+          <div class="globe-tip" id="globeTip" role="status" aria-live="polite" hidden></div>
+          <p class="globe-hint" data-i18n="globe_hint">Drag to spin · hover a marker</p>
+        </div>
+        <div class="market-side">
+          <div class="market-stat reveal"><strong data-i18n="globe_stat1_v">$60B+</strong><span data-i18n="globe_stat1_l"></span></div>
+          <div class="market-stat reveal"><strong data-i18n="globe_stat2_v">400M+</strong><span data-i18n="globe_stat2_l"></span></div>
+          <div class="market-stat reveal"><strong data-i18n="globe_stat3_v">70%+</strong><span data-i18n="globe_stat3_l"></span></div>
+          <div class="market-chips reveal" id="countryChips"></div>
+          <p class="market-note" data-i18n="globe_est">Rounded public estimates, 2025–2026</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Roadmap ===== -->
+    <section class="section road" id="road">
+      <div class="section-head">
+        <p class="eyebrow reveal" data-i18n="road_eyebrow">The method</p>
+        <h2 class="reveal" data-i18n="road_h2">The road to success</h2>
+        <p class="section-sub reveal" data-i18n="road_sub"></p>
+      </div>
+      <div class="road-steps" id="roadSteps"></div>
+    </section>
+
+    <!-- ===== Mentor ===== -->
+    <section class="section mentor" id="mentor">
+      <div class="mentor-card reveal">
+        <div class="mentor-side">
+          <div class="mentor-photo">
+            <img src="assets/mentor/mohammad.jpg" alt="Mohammad Odeh"
+                 onerror="this.closest('.mentor-photo').classList.add('no-photo')">
+            <span class="mentor-fallback" aria-hidden="true">
+              <svg viewBox="0 0 200 200"><use href="#mark-star"/></svg>MO
+            </span>
+          </div>
+          <dl class="mentor-facts">
+            <div><dt>2012</dt><dd data-i18n="m_f1">in e-commerce since</dd></div>
+            <div><dt>5</dt><dd data-i18n="m_f2">brands of his own</dd></div>
+            <div><dt data-i18n="m_f3_v">Tens of $M</dt><dd data-i18n="m_f3">spent on ads</dd></div>
+            <div><dt>15–20h</dt><dd data-i18n="m_f4">with students, weekly</dd></div>
+          </dl>
+        </div>
+        <div class="mentor-body">
+          <p class="eyebrow" data-i18n="mentor_eyebrow">Your mentor</p>
+          <h2 data-i18n="mentor_h2">Mohammad Odeh</h2>
+          <p class="mentor-title" data-i18n="m_title">Founder of Arabia Academies &amp; Arabia Pay</p>
+          <p data-i18n="mentor_p1"></p>
+          <p data-i18n="mentor_p2"></p>
+          <p class="mentor-goal" data-i18n="m_goal"></p>
+          <blockquote class="mentor-quote" data-i18n="mentor_q"></blockquote>
+          <div class="mentor-links">
+            <a class="btn btn-ghost btn-sm" href="https://www.instagram.com/odehofficial" target="_blank" rel="noopener" data-i18n="m_ig">Instagram</a>
+            <a class="btn btn-ghost btn-sm" href="https://www.youtube.com/@MohammadOdeh" target="_blank" rel="noopener" data-i18n="m_yt">YouTube — free courses</a>
+          </div>
+          <p class="mentor-featured">
+            <span data-i18n="m_featured">Watch him talk:</span>
+            <a href="https://www.youtube.com/watch?v=Kw-Z2pFcWH8&t=1510s" target="_blank" rel="noopener">▶ <span data-i18n="m_pod1">Podcast interview</span></a>
+            <a href="https://www.youtube.com/watch?v=_3Mw7qJuy_4" target="_blank" rel="noopener">▶ <span data-i18n="m_pod2">Podcast interview 2</span></a>
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Testimonials ===== -->
+    <section class="section reviews" id="reviews">
+      <div class="section-head">
+        <p class="eyebrow reveal" data-i18n="t_eyebrow">Student reviews</p>
+        <h2 class="reveal" data-i18n="t_h2">Real students. Real screenshots.</h2>
+        <p class="section-sub reveal" data-i18n="t_sub"></p>
+      </div>
+
+      <div class="featured-row reveal" id="featuredRow"></div>
+
+      <div class="t-rows reveal">
+        <div class="t-row" id="tRow1"><div class="t-track"></div></div>
+        <div class="t-row t-row-rev" id="tRow2"><div class="t-track"></div></div>
+      </div>
+    </section>
+
+    <!-- ===== FAQ ===== -->
+    <section class="section faq" id="faq">
+      <div class="section-head">
+        <p class="eyebrow reveal" data-i18n="faq_eyebrow">Before you ask</p>
+        <h2 class="reveal" data-i18n="faq_h2">Questions, answered</h2>
+      </div>
+      <div class="faq-list" id="faqList"></div>
+    </section>
+
+    <!-- ===== CTA ===== -->
+    <section class="section cta-final">
+      <div class="cta-card reveal">
+        <svg class="cta-star" viewBox="0 0 200 200" aria-hidden="true"><use href="#mark-star"/></svg>
+        <h2><span data-i18n="cta_h2_a">Your road starts</span> <span class="gold" data-i18n="cta_h2_b">today.</span></h2>
+        <p data-i18n="cta_sub"></p>
+        <div class="hero-ctas">
+          <a class="btn btn-gold" href="https://www.skool.com/ecomarabia/about" target="_blank" rel="noopener" data-i18n="cta_main">Join eCom Arabia +</a>
+          <a class="btn btn-ghost wa-link" href="https://wa.me/962770754512" target="_blank" rel="noopener" data-i18n="cta_chat">Chat on WhatsApp</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===== Footer ===== -->
+  <footer class="footer">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a class="nav-logo" href="#top">
+          <svg class="nav-mark" viewBox="0 0 200 200" aria-hidden="true"><use href="#mark-star"/></svg>
+          <span class="nav-word">Arabia<em data-i18n="f_tag">Road to success</em></span>
+        </a>
+        <p class="footer-note" data-i18n="f_est"></p>
+      </div>
+      <div>
+        <h3 data-i18n="f_academies">Academies</h3>
+        <ul id="footAcademies"></ul>
+      </div>
+      <div>
+        <h3 data-i18n="f_partners">Partners</h3>
+        <ul>
+          <li><a href="https://www.myzambeel.com/" target="_blank" rel="noopener">Zambeel</a></li>
+          <li><a href="https://exporta.company/" target="_blank" rel="noopener">Exporta</a></li>
+          <li><a href="https://www.instagram.com/ask.hsaleh" target="_blank" rel="noopener">H. Saleh</a></li>
+          <li><a href="https://arabia-transfer.com/" target="_blank" rel="noopener">Arabia Pay</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3 data-i18n="f_follow">Follow Mohammad</h3>
+        <div class="socials">
+          <a href="https://www.youtube.com/@MohammadOdeh" target="_blank" rel="noopener" aria-label="YouTube"><svg viewBox="0 0 24 24"><use href="#so-youtube"/></svg></a>
+          <a href="https://www.instagram.com/odehofficial" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24"><use href="#so-instagram"/></svg></a>
+          <a href="https://www.tiktok.com/@odeh.official" target="_blank" rel="noopener" aria-label="TikTok"><svg viewBox="0 0 24 24"><use href="#so-tiktok"/></svg></a>
+          <a href="https://www.facebook.com/odeh.ads" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24"><use href="#so-facebook"/></svg></a>
+          <a href="https://x.com/odeh_official" target="_blank" rel="noopener" aria-label="X"><svg viewBox="0 0 24 24"><use href="#so-x"/></svg></a>
+          <a href="https://www.threads.net/@odehofficial" target="_blank" rel="noopener" aria-label="Threads"><svg viewBox="0 0 24 24"><use href="#so-threads"/></svg></a>
+          <a href="https://www.linkedin.com/in/mohammad-odeh-4342932a1/" target="_blank" rel="noopener" aria-label="LinkedIn"><svg viewBox="0 0 24 24"><use href="#so-linkedin"/></svg></a>
+        </div>
+      </div>
+    </div>
+    <p class="footer-rights">
+      <span data-i18n="f_rights"></span>
+      <span class="footer-legal">
+        <a href="privacy.html" data-i18n="f_privacy">Privacy Policy</a>
+        <a href="terms.html" data-i18n="f_terms">Terms of Use</a>
+      </span>
+    </p>
+  </footer>
+
+  <!-- ===== Cookie notice (shown only where cookie laws apply) ===== -->
+  <div class="cookie-bar" id="cookieBar" hidden>
+    <p data-i18n="cookie_text">We use cookies to improve your experience and understand how the site is used.</p>
+    <button class="btn btn-gold btn-sm" id="cookieOk" type="button" data-i18n="cookie_ok">OK</button>
+  </div>
+
+  <!-- ===== Academy sheet (slides up) ===== -->
+  <div class="sheet-backdrop" id="sheetBackdrop" hidden></div>
+  <section class="sheet" id="sheet" role="dialog" aria-modal="true" aria-labelledby="sheetTitle" hidden>
+    <button class="sheet-close" id="sheetClose" type="button" data-i18n-aria="sheet_close" aria-label="Close">✕</button>
+    <div class="sheet-scroll" id="sheetContent"></div>
+  </section>
+
+  <!-- ===== WhatsApp bubble ===== -->
+  <a class="wa-bubble wa-link" href="https://wa.me/962770754512" target="_blank" rel="noopener" data-i18n-aria="wa_label" aria-label="Chat on WhatsApp">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+  </a>
+
+  <script src="js/vendor/d3-array.min.js"></script>
+  <script src="js/vendor/d3-geo.min.js"></script>
+  <script src="js/data.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

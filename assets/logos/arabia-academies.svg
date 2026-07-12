@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 220" role="img" aria-label="Arabia Academies — Road to success">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&amp;display=swap');
+    .word  { font-family: 'Montserrat', sans-serif; font-weight: 700; font-size: 64px; fill: #E3A94F; letter-spacing: 1px; }
+    .word2 { font-family: 'Montserrat', sans-serif; font-weight: 600; font-size: 26px; fill: #F4EFE2; letter-spacing: 14px; }
+    .tag   { font-family: 'Montserrat', sans-serif; font-weight: 600; font-size: 22px; fill: #E3A94F; letter-spacing: 2px; }
+  </style>
+  <defs>
+    <linearGradient id="gold" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#F0C878"/>
+      <stop offset="1" stop-color="#D89434"/>
+    </linearGradient>
+    <marker id="arrow" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#E3A94F"/>
+    </marker>
+  </defs>
+
+  <!-- Mark: eight-pointed star (Rub el Hizb) with the road passing through -->
+  <g transform="translate(110,110)">
+    <path d="M-92,58 C -50,58 -44,10 0,0 C 44,-10 50,-58 96,-58" fill="none" stroke="#E3A94F"
+          stroke-width="4" stroke-linecap="round" stroke-dasharray="1 14" marker-end="url(#arrow)"/>
+    <rect x="-52" y="-52" width="104" height="104" fill="none" stroke="url(#gold)" stroke-width="6" stroke-linejoin="round"/>
+    <rect x="-52" y="-52" width="104" height="104" fill="none" stroke="url(#gold)" stroke-width="6" stroke-linejoin="round" transform="rotate(45)"/>
+    <circle r="10" fill="#E3A94F"/>
+  </g>
+
+  <!-- Wordmark -->
+  <text x="238" y="106" class="word">Arabia</text>
+  <text x="242" y="150" class="word2">ACADEMIES</text>
+  <text x="242" y="192" class="tag">Road to success</text>
+</svg>

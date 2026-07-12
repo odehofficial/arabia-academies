@@ -1,0 +1,6 @@
+# local Claude Code config — not part of the site
+.claude/
+
+# source material not served by the site
+assets/mentor/mohammad-original.jpg
+assets/testimonials/*.jpg
