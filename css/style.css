@@ -876,6 +876,11 @@ html[dir="rtl"] .t-card{ direction:rtl } /* the cards themselves stay Arabic */
 }
 @media (max-width: 560px){
   body{ font-size:16px }
+  /* sheet perk stats: stacked list with a separator between each */
+  .sheet-stats{ flex-direction:column; gap:0; align-items:stretch }
+  .sheet-stats > div{ padding-block:12px; border-block-end:1px solid var(--line) }
+  .sheet-stats > div:last-child{ border-block-end:0; padding-block-end:2px }
+  .sheet-stats > div:first-child{ padding-block-start:2px }
   .t-card{ width:290px }
   .road-steps{ grid-template-columns:1fr }
   .hero-scroll{ display:none }

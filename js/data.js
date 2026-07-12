@@ -17,13 +17,13 @@ const ACADEMIES = [
     },
     desc: {
       en: "14 practical courses and 8 live meetings every week. Local COD dropshipping and international dropshipping, powered by today's AI tools — with direct answers from Mohammad Odeh.",
-      ar: "١٤ كورس عملي و٨ اجتماعات مباشرة أسبوعياً. دروبشيبينغ محلي بالدفع عند الاستلام ودروبشيبينغ عالمي، مدعوم بأحدث أدوات الذكاء الاصطناعي — مع إجابات مباشرة من محمد عودة."
+      ar: "١٤ كورس عملي و٨ اجتماعات مباشرة أسبوعية. دروبشيبينغ محلي بالدفع عند الاستلام ودروبشيبينغ عالمي، مدعوم بأحدث أدوات الذكاء الاصطناعي — مع إجابات مباشرة من محمد عودة."
     },
     price: "$1,860",
     per: { en: "/year", ar: "/سنوياً" },
     stats: [
       { v: "14", l: { en: "courses", ar: "كورس" } },
-      { v: "8",  l: { en: "live calls / week", ar: "لقاءات مباشرة أسبوعياً" } },
+      { v: "8",  l: { en: "live calls / week", ar: "اجتماعات مباشرة أسبوعية" } },
       { v: "160+", l: { en: "members", ar: "عضو" } },
       { v: "20%", l: { en: "affiliate program", ar: "برنامج عمولة" } }
     ],
@@ -43,7 +43,7 @@ const ACADEMIES = [
     ],
     includes: {
       en: ["8 weekly live expert meetings", "Direct answers from Mohammad", "20% affiliate program", "Private community on Skool"],
-      ar: ["٨ اجتماعات مباشرة أسبوعياً مع خبراء", "إجابات مباشرة من محمد", "برنامج عمولة ٢٠٪", "مجتمع خاص على Skool"]
+      ar: ["٨ اجتماعات مباشرة أسبوعية مع خبراء", "إجابات مباشرة من محمد", "برنامج عمولة ٢٠٪", "مجتمع خاص على Skool"]
     },
     join: "https://www.skool.com/ecomarabia/about",
     badge: { en: "Flagship", ar: "الأكاديمية الرئيسية" }
@@ -58,13 +58,13 @@ const ACADEMIES = [
       ar: "دروبشيبينغ بالدفع عند الاستلام في الأسواق العربية — بدون مخزون"
     },
     desc: {
-      en: "Sell to Arab markets with cash on delivery, without buying inventory upfront. Includes 3 weekly follow-up calls and a Gold subscription to Zambeel fulfillment.",
-      ar: "بيع للأسواق العربية بالدفع عند الاستلام، دون شراء مخزون مسبقاً. يشمل ٣ جلسات متابعة أسبوعياً واشتراك Gold في منصة زنبيل للتوصيل."
+      en: "Sell to Arab markets with cash on delivery, without buying inventory upfront. Includes 3 weekly follow-up Zoom meetings and a Gold subscription to Zambeel fulfillment.",
+      ar: "بيع للأسواق العربية بالدفع عند الاستلام، دون شراء مخزون مسبقاً. يشمل ٣ اجتماعات زوم للمتابعة أسبوعياً واشتراك Gold في منصة زنبيل للتوصيل."
     },
     price: "$99",
     per: { en: "/month", ar: "/شهرياً" },
     stats: [
-      { v: "3", l: { en: "follow-up calls / week", ar: "جلسات متابعة أسبوعياً" } },
+      { v: "3", l: { en: "follow-up Zoom meetings / week", ar: "اجتماعات زوم للمتابعة أسبوعياً" } },
       { v: "8", l: { en: "COD countries", ar: "دول دفع عند الاستلام" } },
       { v: "Gold", l: { en: "Zambeel plan included", ar: "اشتراك زنبيل مشمول" } }
     ],
@@ -77,8 +77,8 @@ const ACADEMIES = [
       { en: "COD fulfillment with Zambeel", ar: "التوصيل والدفع عند الاستلام مع زنبيل" }
     ],
     includes: {
-      en: ["3 weekly follow-up sessions", "Zambeel Gold subscription", "COD fulfillment across 8 countries"],
-      ar: ["٣ جلسات متابعة أسبوعياً", "اشتراك زنبيل Gold", "توصيل بالدفع عند الاستلام في ٨ دول"]
+      en: ["3 weekly follow-up Zoom meetings", "Zambeel Gold subscription", "COD fulfillment across 8 countries"],
+      ar: ["٣ اجتماعات زوم للمتابعة أسبوعياً", "اشتراك زنبيل Gold", "توصيل بالدفع عند الاستلام في ٨ دول"]
     },
     collab: {
       name: "Zambeel",
@@ -106,7 +106,7 @@ const ACADEMIES = [
     price: "$49",
     per: { en: "/month", ar: "/شهرياً" },
     stats: [
-      { v: "2", l: { en: "weekly meetings", ar: "لقاءان أسبوعياً" } },
+      { v: "2", l: { en: "weekly meetings", ar: "اجتماعان أسبوعيان" } },
       { v: "100%", l: { en: "cash on delivery", ar: "دفع عند الاستلام" } },
       { v: "2026", l: { en: "opening", ar: "الافتتاح" } }
     ],
@@ -119,8 +119,8 @@ const ACADEMIES = [
       { en: "COD fulfillment with Exporta", ar: "التوصيل والدفع عند الاستلام مع Exporta" }
     ],
     includes: {
-      en: ["2 weekly follow-up meetings", "100% cash on delivery", "Warehousing in Iraq via Exporta", "Opening 2026"],
-      ar: ["لقاءا متابعة أسبوعياً", "١٠٠٪ دفع عند الاستلام", "تخزين داخل العراق عبر Exporta", "الإطلاق 2026"]
+      en: ["2 weekly follow-up Zoom meetings", "100% cash on delivery", "Warehousing in Iraq via Exporta", "Opening 2026"],
+      ar: ["اجتماعان أسبوعيان للمتابعة عبر زوم", "١٠٠٪ دفع عند الاستلام", "تخزين داخل العراق عبر Exporta", "الإطلاق 2026"]
     },
     collab: {
       name: "Exporta",
@@ -428,7 +428,7 @@ const ROADMAP = [
     n: "03",
     t: { en: "Launch", ar: "أطلق" },
     d: { en: "Go live and get your first sales, with up to 8 live calls a week and direct answers when problems appear.",
-         ar: "انطلق وحقق مبيعاتك الأولى، مع ما يصل إلى ٨ لقاءات مباشرة أسبوعياً وإجابات فورية عند أي مشكلة." }
+         ar: "انطلق وحقق مبيعاتك الأولى، مع ما يصل إلى ٨ اجتماعات مباشرة أسبوعية وإجابات فورية عند أي مشكلة." }
   },
   {
     n: "04",
@@ -461,13 +461,13 @@ const FAQ = [
   },
   {
     q: { en: "Will I get direct support?", ar: "هل سأحصل على دعم مباشر؟" },
-    a: { en: "This is what students mention most in reviews: up to 8 live calls a week in eCom Arabia +, 3 follow-up calls in Zambeel Dropshipping, and direct answers from Mohammad when you hit a problem — before and after you finish the courses.",
-         ar: "هذا أكثر ما يذكره الطلاب في تقييماتهم: حتى ٨ لقاءات مباشرة أسبوعياً في eCom Arabia +، و٣ جلسات متابعة في دروبشيبينغ زنبيل، وإجابات مباشرة من محمد عند أي مشكلة — قبل إنهاء الكورسات وبعدها." }
+    a: { en: "This is what students mention most in reviews: up to 8 live calls a week in eCom Arabia +, 3 follow-up Zoom meetings in Zambeel Dropshipping, and direct answers from Mohammad when you hit a problem — before and after you finish the courses.",
+         ar: "هذا أكثر ما يذكره الطلاب في تقييماتهم: حتى ٨ اجتماعات مباشرة أسبوعية في eCom Arabia +، و٣ اجتماعات زوم للمتابعة في دروبشيبينغ زنبيل، وإجابات مباشرة من محمد عند أي مشكلة — قبل إنهاء الكورسات وبعدها." }
   },
   {
     q: { en: "When does Iraq e-Com open?", ar: "متى تفتتح أكاديمية التجارة الإلكترونية في العراق؟" },
     a: { en: "Iraq e-Com launches in 2026 at $49/month, in collaboration with Exporta — sourcing and shipping from China into Iraq, 100% cash on delivery, with 2 weekly meetings. Until then, eCom Arabia + already covers Arab logistics — including Iraq.",
-         ar: "تنطلق أكاديمية العراق في 2026 بسعر ٤٩$ شهرياً، بالتعاون مع Exporta — توريد وشحن من الصين إلى داخل العراق، و١٠٠٪ دفع عند الاستلام، مع لقاءين أسبوعياً. وحتى ذلك الحين، تغطي eCom Arabia + اللوجستيات العربية — بما فيها العراق." }
+         ar: "تنطلق أكاديمية العراق في 2026 بسعر ٤٩$ شهرياً، بالتعاون مع Exporta — توريد وشحن من الصين إلى داخل العراق، و١٠٠٪ دفع عند الاستلام، مع اجتماعين أسبوعيين. وحتى ذلك الحين، تغطي eCom Arabia + اللوجستيات العربية — بما فيها العراق." }
   }
 ];
 
@@ -605,7 +605,7 @@ const I18N = {
     hero_cta2: "شاهد نتائج الطلاب",
     hero_stat1: "طالب وعضو",
     hero_stat2: "كورس عملي",
-    hero_stat3: "لقاء مباشر أسبوعياً",
+    hero_stat3: "اجتماعات مباشرة أسبوعية",
     hero_stat4: "أكاديميات، عائلة واحدة",
     hero_scroll: "الطريق يبدأ من هنا",
     acad_eyebrow: "محطات الطريق",
