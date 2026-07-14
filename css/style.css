@@ -614,7 +614,7 @@ html[dir="rtl"] .mentor-facts dt{ font-size:16px } /* fits «عشرات المل
 }
 .t-row{ overflow:hidden; padding-block:5px; direction:ltr } /* LTR scroll geometry (see .marquee) */
 html[dir="rtl"] .t-card{ direction:rtl } /* the cards themselves stay Arabic */
-.t-track{ display:flex; gap:22px; width:max-content; animation:marquee 80s linear infinite }
+.t-track{ display:flex; gap:22px; width:max-content; animation:marquee 180s linear infinite }
 .t-row-rev .t-track{ animation-direction:reverse }
 @media (hover:hover){
   .t-row:hover .t-track{ animation-play-state:paused } /* hover-pause only where real hover exists */
