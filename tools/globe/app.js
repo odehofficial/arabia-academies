@@ -1,6 +1,6 @@
 /* ============================================================
    Planet E-commerce — the standalone globe tool
-   Reuses: /js/data.js (COUNTRIES, ACADEMIES, I18N), d3-geo,
+   Reuses: /js/data.js (COUNTRIES, I18N), d3-geo,
    /assets/data/world.geo.json, site styles.
    ============================================================ */
 (() => {
@@ -34,22 +34,23 @@ const TL = {
     tg_home: "Home",
     tg_arab: "Arab market", tg_world: "Global market",
     tg_since: "Spent online here since you opened this card",
+    tg_since_niche: "Spent on this niche here since you picked it",
+    tg_niche_label: "Pick a niche",
     tg_market: "Market / yr", tg_growth: "Yearly growth",
-    tg_buyers: "Online buyers", tg_sellers: "Active sellers",
-    tg_newstore: "A new store every", tg_spendper: "Spend per shopper / yr",
+    tg_buyers: "Online buyers", tg_newbuyers: "New buyers every day",
+    tg_spendper: "Spend per shopper / yr",
+    tg_yourcut: "Your cut at just 0.001% of it",
     tg_persec: "Spent every second",
-    tg_niches: "Top-selling niches", tg_stores: "Top marketplaces",
+    tg_peryr: "/yr",
     tg_cta_lead: "This market grows {g}% every year — and you're still outside?",
     tg_cta_btn: "Start selling in {c}",
-    tg_cta_iraq: "The Iraq academy launches soon — 100% cash on delivery. Until then, thousands of students already sell to Iraq from eCom Arabia+.",
-    tg_alt_gulf: "Want ready-made Gulf dropshipping? → Zambeel Dropshipping",
+    tg_cta_iraq: "The Iraq academy launches soon — 100% cash on delivery, built for the Iraqi market.",
+    tg_cta_iraq_btn: "Iraq e-Com Academy — coming soon",
     tg_share: "Share these numbers",
     tg_copied: "Link copied!",
-    tg_nodata_t: "We haven't profiled this market yet",
     tg_nodata: "No detailed stats here yet — but trust us: people in this country are buying online every single day 😉",
     tg_disc: "Rounded estimates from public 2025–2026 reports",
     tg_hover_hint: "Tap for full details",
-    tg_toast: "New order in",
   },
   ar: {
     tg_eyebrow: "أداة مجانية من أكاديميات أرابيا",
@@ -67,90 +68,82 @@ const TL = {
     tg_home: "الرئيسية",
     tg_arab: "سوق عربي", tg_world: "سوق عالمي",
     tg_since: "انصرف أونلاين هنا منذ فتحت هذي البطاقة",
+    tg_since_niche: "انصرف على هالنيش هنا منذ اخترته",
+    tg_niche_label: "اختر النيش",
     tg_market: "السوق / سنة", tg_growth: "النمو السنوي",
-    tg_buyers: "مشترون أونلاين", tg_sellers: "بائعون نشطون",
-    tg_newstore: "متجر جديد كل", tg_spendper: "إنفاق المتسوق / سنة",
+    tg_buyers: "مشترون أونلاين", tg_newbuyers: "مشترون جدد كل يوم",
+    tg_spendper: "إنفاق المتسوق / سنة",
+    tg_yourcut: "نصيبك لو أخذت فقط 0.001٪ منه",
     tg_persec: "ينصرف كل ثانية",
-    tg_niches: "أكثر النيشات مبيعاً", tg_stores: "أشهر المنصات والمتاجر",
+    tg_peryr: "/سنة",
     tg_cta_lead: "هالسوق يكبر {g}٪ كل سنة — وأنت لسا برّا؟",
     tg_cta_btn: "ابدأ البيع في {c}",
-    tg_cta_iraq: "أكاديمية العراق تنطلق قريباً — دفع عند الاستلام ١٠٠٪. ولحد ما تنطلق، آلاف الطلاب يبيعون للعراق الآن من eCom Arabia+.",
-    tg_alt_gulf: "تبي دروبشيبينغ خليجي بمنتجات جاهزة؟ ← دروبشيبينغ زنبيل",
+    tg_cta_iraq: "أكاديمية العراق تنطلق قريباً — دفع عند الاستلام ١٠٠٪، مبنية خصيصاً للسوق العراقي.",
+    tg_cta_iraq_btn: "أكاديمية التجارة الإلكترونية في العراق — قريباً",
     tg_share: "شارك هالأرقام",
     tg_copied: "تم نسخ الرابط!",
-    tg_nodata_t: "لسا ما حللنا هالسوق",
     tg_nodata: "ما عندنا إحصائيات مفصلة لهالدولة بعد — بس صدقنا: الناس هنا يشترون أونلاين كل يوم 😉",
     tg_disc: "أرقام تقريبية من تقارير عامة ٢٠٢٥–٢٠٢٦",
     tg_hover_hint: "اضغط للتفاصيل الكاملة",
-    tg_toast: "طلب جديد في",
   }
 };
 const t = (k) => TL[lang][k] ?? I18N[lang][k] ?? k;
 const pick = (v) => (v && typeof v === "object" && ("en" in v || "ar" in v)) ? (v[lang] ?? v.en) : v;
 
 /* ------------------------------------------------------------
-   Curated per-country extras: niches, marketplaces, cities
+   Niches — global share of e-commerce + growth delta vs average
    ------------------------------------------------------------ */
-const XT = {
-  SAU: { n: { ar: ["عطور وجمال", "أزياء", "إلكترونيات"], en: ["Perfume & beauty", "Fashion", "Electronics"] },
-         s: ["Amazon.sa", "Noon", "Shein"], c: { ar: ["الرياض", "جدة", "الدمام"], en: ["Riyadh", "Jeddah", "Dammam"] } },
-  ARE: { n: { ar: ["إلكترونيات", "أزياء فاخرة", "عطور"], en: ["Electronics", "Luxury fashion", "Perfume"] },
-         s: ["Amazon.ae", "Noon", "Namshi"], c: { ar: ["دبي", "أبوظبي", "الشارقة"], en: ["Dubai", "Abu Dhabi", "Sharjah"] } },
-  EGY: { n: { ar: ["أزياء", "مستلزمات منزل", "موبايلات"], en: ["Fashion", "Home goods", "Phones"] },
-         s: ["Amazon.eg", "Jumia", "Noon"], c: { ar: ["القاهرة", "الإسكندرية", "الجيزة"], en: ["Cairo", "Alexandria", "Giza"] } },
-  IRQ: { n: { ar: ["أزياء", "عناية شخصية", "إكسسوارات"], en: ["Fashion", "Personal care", "Accessories"] },
-         s: ["Miswag", "Orisdi", "Temu"], c: { ar: ["بغداد", "البصرة", "أربيل"], en: ["Baghdad", "Basra", "Erbil"] } },
-  JOR: { n: { ar: ["أزياء", "جمال", "إلكترونيات"], en: ["Fashion", "Beauty", "Electronics"] },
-         s: ["OpenSooq", "Shein", "Amazon"], c: { ar: ["عمّان", "إربد", "الزرقاء"], en: ["Amman", "Irbid", "Zarqa"] } },
-  PSE: { n: { ar: ["أزياء", "عناية شخصية", "منزل"], en: ["Fashion", "Personal care", "Home"] },
-         s: ["Shein", "AliExpress", "متاجر محلية"], c: { ar: ["رام الله", "نابلس", "الخليل"], en: ["Ramallah", "Nablus", "Hebron"] } },
-  KWT: { n: { ar: ["جمال ومكياج", "عطور", "إلكترونيات"], en: ["Beauty & makeup", "Perfume", "Electronics"] },
-         s: ["Boutiqaat", "Xcite", "Amazon"], c: { ar: ["مدينة الكويت", "حولي"], en: ["Kuwait City", "Hawalli"] } },
-  QAT: { n: { ar: ["إلكترونيات", "أزياء", "عطور"], en: ["Electronics", "Fashion", "Perfume"] },
-         s: ["Lulu", "Amazon", "Shein"], c: { ar: ["الدوحة", "الريان"], en: ["Doha", "Al Rayyan"] } },
-  OMN: { n: { ar: ["أزياء", "عطور", "منزل"], en: ["Fashion", "Perfume", "Home"] },
-         s: ["Lulu", "Amazon", "Shein"], c: { ar: ["مسقط", "صلالة"], en: ["Muscat", "Salalah"] } },
-  MAR: { n: { ar: ["أزياء وقفاطين", "جمال", "منزل"], en: ["Fashion & caftans", "Beauty", "Home"] },
-         s: ["Jumia", "Avito", "AliExpress"], c: { ar: ["الدار البيضاء", "الرباط", "مراكش"], en: ["Casablanca", "Rabat", "Marrakesh"] } },
-  DZA: { n: { ar: ["أزياء", "إلكترونيات", "عناية"], en: ["Fashion", "Electronics", "Care"] },
-         s: ["Ouedkniss", "Jumia", "AliExpress"], c: { ar: ["الجزائر", "وهران"], en: ["Algiers", "Oran"] } },
-  LBN: { n: { ar: ["أزياء", "جمال", "إلكترونيات"], en: ["Fashion", "Beauty", "Electronics"] },
-         s: ["Shein", "AliExpress", "OLX"], c: { ar: ["بيروت", "طرابلس"], en: ["Beirut", "Tripoli"] } },
-  CHN: { n: { ar: ["كل شيء تقريباً", "إلكترونيات", "منزل"], en: ["Almost everything", "Electronics", "Home"] }, s: ["Taobao", "JD.com", "Pinduoduo"] },
-  USA: { n: { ar: ["أزياء", "إلكترونيات", "صحة ولياقة"], en: ["Fashion", "Electronics", "Health & fitness"] }, s: ["Amazon", "Walmart", "Temu"] },
-  GBR: { n: { ar: ["أزياء", "بقالة", "جمال"], en: ["Fashion", "Groceries", "Beauty"] }, s: ["Amazon.uk", "ASOS", "Tesco"] },
-  DEU: { n: { ar: ["أزياء", "إلكترونيات", "منزل"], en: ["Fashion", "Electronics", "Home"] }, s: ["Amazon.de", "Otto", "Zalando"] },
-  FRA: { n: { ar: ["أزياء", "جمال", "منزل"], en: ["Fashion", "Beauty", "Home"] }, s: ["Amazon.fr", "Cdiscount", "Zalando"] },
-  JPN: { n: { ar: ["إلكترونيات", "ألعاب", "أزياء"], en: ["Electronics", "Games", "Fashion"] }, s: ["Amazon.jp", "Rakuten", "Yahoo! Japan"] },
-  KOR: { n: { ar: ["جمال كوري", "إلكترونيات", "أزياء"], en: ["K-beauty", "Electronics", "Fashion"] }, s: ["Coupang", "Naver", "Gmarket"] },
-  IND: { n: { ar: ["موبايلات", "أزياء", "منزل"], en: ["Phones", "Fashion", "Home"] }, s: ["Amazon.in", "Flipkart", "Meesho"] },
-  BRA: { n: { ar: ["أزياء", "إلكترونيات", "جمال"], en: ["Fashion", "Electronics", "Beauty"] }, s: ["Mercado Livre", "Shopee", "Amazon"] },
-  TUR: { n: { ar: ["أزياء", "منزل", "جمال"], en: ["Fashion", "Home", "Beauty"] }, s: ["Trendyol", "Hepsiburada", "Amazon.tr"] },
-};
-const XT_FB_AR = { n: { ar: ["أزياء", "إلكترونيات", "جمال"], en: ["Fashion", "Electronics", "Beauty"] }, s: ["Noon", "Shein", "Amazon"] };
-const XT_FB_W  = { n: { ar: ["أزياء", "إلكترونيات", "منزل"], en: ["Fashion", "Electronics", "Home"] }, s: ["Amazon", "AliExpress", "Shein"] };
-const xt = (c) => XT[c.iso] || (c.arab ? XT_FB_AR : XT_FB_W);
-const GULF = ["SAU", "ARE", "KWT", "QAT", "OMN"];
-
-const JOIN_ECOM = "https://www.skool.com/ecomarabia/about";
-const JOIN_ZAMBEEL = "https://www.skool.com/dropshipping/about";
+const NICHES = [
+  { id: "all",     share: 1,    g: 0,  ar: "كل النيشات",          en: "All niches" },
+  { id: "fashion", share: .24,  g: 2,  ar: "أزياء وموضة",          en: "Fashion" },
+  { id: "elec",    share: .20,  g: -1, ar: "إلكترونيات",           en: "Electronics" },
+  { id: "beauty",  share: .12,  g: 6,  ar: "جمال وعناية",          en: "Beauty & care" },
+  { id: "home",    share: .11,  g: 3,  ar: "منزل ومطبخ",           en: "Home & kitchen" },
+  { id: "health",  share: .08,  g: 7,  ar: "صحة ورياضة",           en: "Health & fitness" },
+  { id: "baby",    share: .06,  g: 4,  ar: "أطفال ومواليد",        en: "Baby & kids" },
+  { id: "toys",    share: .06,  g: 4,  ar: "ألعاب وهوايات",        en: "Toys & hobbies" },
+  { id: "perfume", share: .05,  g: 9,  ar: "عطور",                 en: "Perfumes" },
+  { id: "acc",     share: .05,  g: 5,  ar: "إكسسوارات وساعات",     en: "Accessories & watches" },
+  { id: "pets",    share: .03,  g: 11, ar: "مستلزمات حيوانات",     en: "Pet supplies" },
+];
+let curNiche = "all";
 
 /* ------------------------------------------------------------
-   Derived stats — everything computed from the same base data
-   the homepage globe uses (rounded public estimates)
+   CTA routing — which academy fits which market
+   Gulf -> Zambeel · Iraq -> Iraq academy (soon, no link yet)
+   everything else -> flagship eCom Arabia+
    ------------------------------------------------------------ */
-function parsePop(p) { const n = parseFloat(p); return /B/i.test(p) ? n * 1e9 : n * 1e6; }
-function statsFor(c) {
-  const pop = parsePop(c.pop);
-  const buyers = pop * c.shoppers / 100;
-  const sellers = buyers * (c.arab ? 0.022 : 0.03);
-  const perSec = c.market * 1e9 / 31536000;
-  const newPerYear = Math.max(200, sellers * (c.growth / 100) * 1.8);
-  const storeEveryMin = 525600 / newPerYear;
-  return { buyers, sellers, perSec, storeEveryMin };
+const JOIN_ECOM = "https://www.skool.com/ecomarabia/about";
+const JOIN_ZAMBEEL = "https://www.skool.com/dropshipping/about";
+const ZAMBEEL_ISO = ["SAU", "ARE", "KWT", "QAT", "OMN"];
+function ctaFor(c) {
+  if (c.iso === "IRQ") return { iraq: true };
+  if (ZAMBEEL_ISO.includes(c.iso)) return { href: JOIN_ZAMBEEL };
+  return { href: JOIN_ECOM };
 }
 
-/* number formatting (western digits everywhere — money reads best that way) */
+/* ------------------------------------------------------------
+   Derived stats (rounded public estimates, computed live)
+   ------------------------------------------------------------ */
+function parsePop(p) { const n = parseFloat(p); return /B/i.test(p) ? n * 1e9 : n * 1e6; }
+function baseBuyers(c) { return parsePop(c.pop) * c.shoppers / 100; }
+
+function nicheStats(c, id) {
+  const n = NICHES.find(x => x.id === id) || NICHES[0];
+  const all = id === "all";
+  const marketB = c.market * n.share;
+  const growth = all ? c.growth : Math.max(2, c.growth + n.g);
+  const buyers = baseBuyers(c) * (all ? 1 : Math.pow(n.share, .55));
+  return {
+    marketB, growth, buyers,
+    perSec: marketB * 1e9 / 31536000,
+    spendPer: marketB * 1e9 / buyers,
+    newDaily: buyers * (growth / 100) / 365,
+    cut: marketB * 1e9 * 1e-5
+  };
+}
+
+/* number formatting (western digits — money reads best that way) */
 const tr1 = (x) => (x >= 10 ? Math.round(x) : Math.round(x * 10) / 10);
 function big(n) {
   if (lang === "ar") {
@@ -165,21 +158,21 @@ function big(n) {
   return "" + Math.round(n);
 }
 function fmtMarket(m) {
-  if (lang === "ar") return m >= 1000 ? `${(m / 1000).toFixed(1)} تريليون $` : `${m} مليار $`;
-  return m >= 1000 ? `$${(m / 1000).toFixed(1)}T` : `$${m}B`;
-}
-function fmtEvery(min) {
-  if (min < 1) return lang === "ar" ? `~${Math.max(2, Math.round(min * 60))} ثانية` : `~${Math.max(2, Math.round(min * 60))} sec`;
-  if (min < 90) return lang === "ar" ? `~${Math.round(min)} دقيقة` : `~${Math.round(min)} min`;
-  const h = Math.round(min / 60);
-  return lang === "ar" ? `~${h} ساعة` : `~${h} h`;
+  if (lang === "ar") {
+    if (m >= 1000) return `${(m / 1000).toFixed(1)} تريليون $`;
+    if (m >= 1) return `${tr1(m)} مليار $`;
+    return `${Math.round(m * 1000)} مليون $`;
+  }
+  if (m >= 1000) return `$${(m / 1000).toFixed(1)}T`;
+  if (m >= 1) return `$${tr1(m)}B`;
+  return `$${Math.round(m * 1000)}M`;
 }
 const money = (n) => "$" + Math.round(n).toLocaleString("en-US");
 
 /* ------------------------------------------------------------
    Starfield
    ------------------------------------------------------------ */
-(function stars() {
+(function starfield() {
   const cv = $("#stars"), ctx = cv.getContext("2d");
   let stars = [];
   function size() {
@@ -217,10 +210,10 @@ const money = (n) => "$" + Math.round(n).toLocaleString("en-US");
    ------------------------------------------------------------ */
 const cv = $("#globeCanvas"), ctx = cv.getContext("2d");
 const box = cv.parentElement, tip = $("#globeTip");
-let W, R, CX, CY;
+let W, Hc, R, CX, CY;
 let projection = null, geoPath = null;
 const graticule = d3.geoGraticule10();
-let world = null;
+let world = null, genericFeats = [];
 const featByIso = {}, dataByIso = {};
 COUNTRIES.forEach(c => dataByIso[c.iso] = c);
 
@@ -232,17 +225,25 @@ const markerPos = new Map();
 function size() {
   const r = box.getBoundingClientRect();
   const dpr = Math.min(devicePixelRatio || 1, 2);
-  W = r.width;
-  cv.width = W * dpr; cv.height = W * dpr;
+  W = r.width; Hc = r.height;
+  cv.width = W * dpr; cv.height = Hc * dpr;
   ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
-  R = W * .46; CX = W / 2; CY = W / 2;
+  R = Math.min(W, Hc) * .46; CX = W / 2; CY = Hc / 2;
   projection = d3.geoOrthographic().translate([CX, CY]).scale(R).clipAngle(90);
   geoPath = d3.geoPath(projection, ctx);
 }
 
 fetch("/assets/data/world.geo.json")
   .then(r => r.json())
-  .then(j => { world = j; j.features.forEach(f => { featByIso[f.id] = f; }); draw(performance.now()); })
+  .then(j => {
+    world = j;
+    j.features.forEach(f => { featByIso[f.id] = f; });
+    // countries we have no stats for, kept clickable — but only sane polygons:
+    // a reversed-winding sliver (like Bermuda) "contains" the whole ocean, so
+    // anything covering more than ~8% of the sphere is dropped.
+    genericFeats = j.features.filter(f => !dataByIso[f.id] && d3.geoArea(f) < 1);
+    draw(performance.now());
+  })
   .catch(() => { world = null; });
 
 const visibleC = (c) => d3.geoDistance([c.lng, c.lat], [-rot[0], -rot[1]]) < 1.55;
@@ -250,7 +251,7 @@ const markerR = (c) => 2.2 + Math.log10(c.market + 1) * 2.4;
 
 function draw(now) {
   if (LITE && (skipFrame = !skipFrame)) return;
-  ctx.clearRect(0, 0, W, W);
+  ctx.clearRect(0, 0, W, Hc);
 
   if (!dragging) {
     if (Math.abs(vel) > .05) { rot[0] += vel; vel *= .95; }
@@ -331,33 +332,18 @@ function draw(now) {
     ctx.strokeStyle = "rgba(5,8,20,.85)"; ctx.lineWidth = 1.4; ctx.stroke();
   }
 
-  // order pings (ambient buying activity)
+  // order pings (ambient buying activity on the globe itself)
   for (const ping of pings) {
     const c = dataByIso[ping.iso];
     if (!c || !visibleC(c)) continue;
     const p = projection([c.lng, c.lat]);
     if (!p) continue;
-    const age = (now - ping.t0) / 1400; // 0..1
+    const age = (now - ping.t0) / 1400;
     if (age >= 1) continue;
     const col = c.arab ? "227,169,79" : "143,210,248";
     ctx.strokeStyle = `rgba(${col},${(1 - age) * .9})`;
     ctx.lineWidth = 1.6;
     ctx.beginPath(); ctx.arc(p[0], p[1], markerR(c) + age * 26, 0, 7); ctx.stroke();
-  }
-
-  // soften square clipping when zoomed past the canvas
-  if (R * zoom > W * .5) {
-    const f = Math.max(28, W * .05);
-    ctx.globalCompositeOperation = "destination-out";
-    const edges = [[0, 0, f, 0], [W, 0, W - f, 0], [0, 0, 0, f], [0, W, 0, W - f]];
-    for (const [x0, y0, x1, y1] of edges) {
-      const gr = ctx.createLinearGradient(x0, y0, x1, y1);
-      gr.addColorStop(0, "rgba(0,0,0,1)");
-      gr.addColorStop(1, "rgba(0,0,0,0)");
-      ctx.fillStyle = gr;
-      ctx.fillRect(0, 0, W, W);
-    }
-    ctx.globalCompositeOperation = "source-over";
   }
 
   // hover tooltip follows its country
@@ -367,7 +353,7 @@ function draw(now) {
       const p = projection([c.lng, c.lat]);
       tip.style.left = Math.min(Math.max(p[0], 145), W - 145) + "px";
       tip.style.top = p[1] + "px";
-      tip.classList.toggle("below", p[1] < W * .52);
+      tip.classList.toggle("below", p[1] < Hc * .52);
     } else setHover(null);
   }
 }
@@ -377,7 +363,7 @@ function setHover(iso) {
   $$("#countryChips button").forEach(b => b.classList.toggle("active", b.dataset.iso === iso));
   if (!iso) { tip.hidden = true; return; }
   const c = dataByIso[iso];
-  const st = statsFor(c);
+  const st = nicheStats(c, "all");
   const growth = lang === "ar" ? `${c.growth}٪ سنوياً` : `+${c.growth}% / yr`;
   tip.classList.toggle("world", !c.arab);
   tip.innerHTML = `
@@ -399,11 +385,8 @@ function countryAt(mx, my) {
       const f = featByIso[c.iso];
       if (f && d3.geoContains(f, ll)) return { iso: c.iso };
     }
-    if (world) {
-      for (const f of world.features) {
-        if (!dataByIso[f.id] && d3.geoContains(f, ll))
-          return { feat: f };
-      }
+    for (const f of genericFeats) {
+      if (d3.geoContains(f, ll)) return { feat: f };
     }
   }
   let best = null, bd = 20;
@@ -481,7 +464,7 @@ cv.addEventListener("pointerleave", e => {
   if (e.pointerType === "mouse" && !dragging) setHover(null);
 });
 
-const setZoom = (z) => { zoom = Math.min(2.6, Math.max(0.7, z)); };
+const setZoom = (z) => { zoom = Math.min(3.4, Math.max(0.7, z)); };
 cv.addEventListener("wheel", e => {
   e.preventDefault();
   setZoom(zoom * (e.deltaY < 0 ? 1.12 : 0.89));
@@ -493,7 +476,7 @@ $("#zoomOut").addEventListener("click", () => setZoom(zoom * 0.8));
    Country panel
    ------------------------------------------------------------ */
 const panel = $("#cPanel");
-let tickerTimer = 0, firstOpen = true;
+let tickerTimer = 0, firstOpen = true, panelCountry = null;
 
 function focusCountry(c) {
   targetLng = -c.lng;
@@ -501,12 +484,34 @@ function focusCountry(c) {
   autoPauseUntil = performance.now() + 6000;
 }
 
+/* fill the stats grid + ticker for the current niche (resets the ticker) */
+function renderStats(c) {
+  const st = nicheStats(c, curNiche);
+  const growth = lang === "ar" ? `+${st.growth}٪` : `+${st.growth}%`;
+  $("#tgTickLabel").textContent = curNiche === "all" ? t("tg_since") : t("tg_since_niche");
+  $("#tgGrid").innerHTML = `
+    <div class="tg-stat gold"><small>${t("tg_market")}</small><b>${fmtMarket(st.marketB)}</b></div>
+    <div class="tg-stat"><small>${t("tg_growth")}</small><b>${growth}</b></div>
+    <div class="tg-stat"><small>${t("tg_buyers")}</small><b>${big(st.buyers)}</b></div>
+    <div class="tg-stat"><small>${t("tg_newbuyers")}</small><b>+${big(st.newDaily)}</b></div>
+    <div class="tg-stat"><small>${t("tg_spendper")}</small><b>$${Math.round(st.spendPer).toLocaleString("en-US")}</b></div>
+    <div class="tg-stat gold"><small>${t("tg_yourcut")}</small><b>${money(st.cut)}${t("tg_peryr")}</b></div>`;
+
+  clearInterval(tickerTimer);
+  const tEl = $("#tgTicker");
+  tEl.textContent = "$0";
+  const t0 = performance.now();
+  tickerTimer = setInterval(() => {
+    tEl.textContent = money(st.perSec * (performance.now() - t0) / 1000);
+  }, 100);
+}
+
 function openPanel(hit) {
   clearInterval(tickerTimer);
   if (firstOpen) { firstOpen = false; if (window.fbq) fbq("trackCustom", "ToolGlobe"); }
 
   if (hit.feat) { // a country we have no stats for
-    selected = null;
+    selected = null; panelCountry = null;
     const name = hit.feat.properties?.name || hit.feat.id;
     panel.classList.add("world");
     panel.innerHTML = `
@@ -523,62 +528,56 @@ function openPanel(hit) {
   }
 
   const c = dataByIso[hit.iso];
-  selected = c.iso;
+  const keepNiche = panelCountry === c.iso;
+  if (!keepNiche) curNiche = "all";
+  selected = c.iso; panelCountry = c.iso;
   focusCountry(c);
-  const st = statsFor(c);
-  const x = xt(c);
   const name = pick(c.name);
-  const growth = lang === "ar" ? `+${c.growth}٪` : `+${c.growth}%`;
-  const isGulf = GULF.includes(c.iso);
+  const cta = ctaFor(c);
 
   panel.classList.toggle("world", !c.arab);
   panel.innerHTML = `
     <button class="tg-close" type="button" aria-label="Close">✕</button>
     <div class="tg-p-head"><i></i><h3>${name}</h3><span class="tg-p-tag">${c.arab ? t("tg_arab") : t("tg_world")}</span></div>
 
+    <div class="tg-niche-row">
+      <label for="tgNiche">${t("tg_niche_label")}</label>
+      <select id="tgNiche">
+        ${NICHES.map(n => `<option value="${n.id}"${n.id === curNiche ? " selected" : ""}>${n[lang]}</option>`).join("")}
+      </select>
+    </div>
+
     <div class="tg-ticker">
-      <small>${t("tg_since")}</small>
+      <small id="tgTickLabel"></small>
       <b id="tgTicker">$0</b>
     </div>
 
-    <div class="tg-grid">
-      <div class="tg-stat gold"><small>${t("tg_market")}</small><b>${fmtMarket(c.market)}</b></div>
-      <div class="tg-stat"><small>${t("tg_growth")}</small><b>${growth}</b></div>
-      <div class="tg-stat"><small>${t("tg_buyers")}</small><b>${big(st.buyers)}</b></div>
-      <div class="tg-stat"><small>${t("tg_sellers")}</small><b>~${big(st.sellers)}</b></div>
-      <div class="tg-stat gold"><small>${t("tg_newstore")}</small><b>${fmtEvery(st.storeEveryMin)}</b></div>
-      <div class="tg-stat"><small>${t("tg_spendper")}</small><b>$${c.spend.toLocaleString("en-US")}</b></div>
-    </div>
-
-    <p class="tg-chips-t">${t("tg_niches")}</p>
-    <div class="tg-tags">${pick(x.n).map(n => `<span>${n}</span>`).join("")}</div>
-    <p class="tg-chips-t">${t("tg_stores")}</p>
-    <div class="tg-tags">${x.s.map(s => `<span>${s}</span>`).join("")}</div>
+    <div class="tg-grid" id="tgGrid"></div>
 
     ${c.note ? `<p class="tg-note">${pick(c.note)}</p>` : ""}
 
     <div class="tg-cta">
-      <p>${c.iso === "IRQ" ? t("tg_cta_iraq") : `<b>${t("tg_cta_lead").replace("{g}", c.growth)}</b>`}</p>
-      <a class="btn btn-gold" href="${JOIN_ECOM}" target="_blank" rel="noopener">${t("tg_cta_btn").replace("{c}", name)}</a>
-      ${isGulf ? `<a class="tg-alt" href="${JOIN_ZAMBEEL}" target="_blank" rel="noopener">${t("tg_alt_gulf")}</a>` : ""}
+      <p><b>${cta.iraq ? t("tg_cta_iraq") : t("tg_cta_lead").replace("{g}", c.growth)}</b></p>
+      ${cta.iraq
+        ? `<span class="btn btn-gold tg-btn-soon">🔒 ${t("tg_cta_iraq_btn")}</span>`
+        : `<a class="btn btn-gold" href="${cta.href}" target="_blank" rel="noopener">${t("tg_cta_btn").replace("{c}", name)}</a>`}
       <button class="tg-share" id="tgShare" type="button">📤 ${t("tg_share")}</button>
     </div>
     <p class="tg-disc">${t("tg_disc")}</p>`;
   panel.hidden = false;
   bindPanel();
+  renderStats(c);
 
-  // the hypnotic part: money accumulating live for this market
-  const tEl = $("#tgTicker");
-  const t0 = performance.now();
-  tickerTimer = setInterval(() => {
-    tEl.textContent = money(st.perSec * (performance.now() - t0) / 1000);
-  }, 100);
+  $("#tgNiche").addEventListener("change", e => {
+    curNiche = e.target.value;
+    renderStats(c);
+  });
 
-  // share
   $("#tgShare")?.addEventListener("click", async () => {
+    const st = nicheStats(c, curNiche);
     const text = lang === "ar"
-      ? `🌍 ${name}: سوق ${fmtMarket(c.market)} أونلاين، ${big(st.buyers)} مشتري، ومتجر جديد ${fmtEvery(st.storeEveryMin)}. شوف كوكب التجارة الإلكترونية:`
-      : `🌍 ${name}: a ${fmtMarket(c.market)} online market, ${big(st.buyers)} buyers, a new store every ${fmtEvery(st.storeEveryMin)}. See Planet E-commerce:`;
+      ? `🌍 ${name}: سوق ${fmtMarket(st.marketB)} أونلاين، ${big(st.buyers)} مشتري، وينمو +${st.growth}٪ كل سنة. شوف كوكب التجارة الإلكترونية:`
+      : `🌍 ${name}: a ${fmtMarket(st.marketB)} online market, ${big(st.buyers)} buyers, growing +${st.growth}% a year. See Planet E-commerce:`;
     const url = "https://odehofficial.com/tools/globe/";
     if (navigator.share) { try { await navigator.share({ text, url }); } catch (e) {} }
     else {
@@ -594,7 +593,7 @@ function bindPanel() {
 }
 function closePanel() {
   panel.hidden = true;
-  selected = null;
+  selected = null; panelCountry = null;
   clearInterval(tickerTimer);
 }
 addEventListener("keydown", e => { if (e.key === "Escape") closePanel(); });
@@ -625,10 +624,9 @@ $("#countryChips").addEventListener("click", e => {
 });
 
 /* ------------------------------------------------------------
-   Ambient life: order pings on the globe + toasts
+   Ambient order pings on the globe
    ------------------------------------------------------------ */
 const pings = [];
-const toastBox = $("#toasts");
 const weights = COUNTRIES.map(c => Math.sqrt(c.market));
 const wSum = weights.reduce((a, b) => a + b, 0);
 function randomCountry() {
@@ -636,24 +634,11 @@ function randomCountry() {
   for (let i = 0; i < COUNTRIES.length; i++) { r -= weights[i]; if (r <= 0) return COUNTRIES[i]; }
   return COUNTRIES[0];
 }
-function orderBeat() {
-  const c = randomCountry();
-  pings.push({ iso: c.iso, t0: performance.now() });
+if (!REDUCED) setInterval(() => {
+  if (document.hidden) return;
+  pings.push({ iso: randomCountry().iso, t0: performance.now() });
   if (pings.length > 6) pings.shift();
-
-  const x = XT[c.iso];
-  const cities = x && x.c ? x.c[lang] || x.c.ar : null;
-  const place = cities ? cities[Math.floor(Math.random() * cities.length)] : pick(c.name);
-  const amt = Math.round(15 + Math.pow(Math.random(), 2) * 305);
-  const el = document.createElement("div");
-  el.className = "tg-toast";
-  el.innerHTML = `🛒 ${t("tg_toast")} ${place} · <b>$${amt}</b>`;
-  toastBox.appendChild(el);
-  requestAnimationFrame(() => el.classList.add("on"));
-  setTimeout(() => { el.classList.remove("on"); setTimeout(() => el.remove(), 450); }, 3400);
-  while (toastBox.children.length > 3) toastBox.firstChild.remove();
-}
-if (!REDUCED) setInterval(() => { if (!document.hidden) orderBeat(); }, 3000);
+}, 2600);
 
 /* ------------------------------------------------------------
    Live world counter under the hero sub
