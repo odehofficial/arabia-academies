@@ -897,3 +897,55 @@ html[dir="rtl"] .t-card{ direction:rtl } /* the cards themselves stay Arabic */
   .reveal{ opacity:1; transform:none }
   .t-track, .marquee-track{ animation:none; flex-wrap:wrap; width:auto }
 }
+
+/* ============================================================
+   Free-tools dropdown (nav)
+   ============================================================ */
+.nav-drop{ position:relative }
+.nav-drop-btn{
+  display:flex; align-items:center; gap:7px;
+  color:var(--muted); font-size:15px; font-weight:500; font-family:var(--f-body);
+  transition:color .2s;
+}
+.nav-drop-btn:hover{ color:var(--gold-2) }
+.drop-new{
+  font-style:normal; font-size:10px; font-weight:800; letter-spacing:.04em;
+  color:#080C1C; background:var(--gold); border-radius:999px; padding:2.5px 8px; line-height:1.4;
+}
+.drop-caret{
+  width:7px; height:7px; flex:none;
+  border-inline-end:1.6px solid currentColor; border-block-end:1.6px solid currentColor;
+  transform:rotate(45deg) translateY(-2px); transition:transform .2s;
+}
+.nav-drop.open .drop-caret{ transform:rotate(225deg) translateY(2px) }
+.nav-drop-menu{
+  position:absolute; top:calc(100% + 14px); inset-inline-start:-12px;
+  min-width:305px; padding:8px;
+  background:rgba(10,15,32,.97); border:1px solid var(--line-2); border-radius:16px;
+  box-shadow:0 24px 60px rgba(0,0,0,.5);
+  display:none;
+}
+.nav-drop-menu::before{ /* hover bridge so the menu survives crossing the gap */
+  content:""; position:absolute; inset-block-start:-14px; inset-inline:0; height:14px;
+}
+.nav-drop.open .nav-drop-menu{ display:block }
+@media (hover:hover){
+  .nav-drop:hover .nav-drop-menu{ display:block }
+  .nav-drop:hover .drop-caret{ transform:rotate(225deg) translateY(2px) }
+}
+.nav-drop-menu a{
+  display:flex; flex-direction:column; gap:3px;
+  padding:12px 14px; border-radius:11px; text-decoration:none;
+}
+.nav-drop-menu a strong{ color:var(--text); font-size:14.5px; font-weight:700; transition:color .2s }
+.nav-drop-menu a span{ color:var(--muted); font-size:12.5px; line-height:1.5 }
+.nav-drop-menu a:hover{ background:rgba(244,239,226,.05) }
+.nav-drop-menu a:hover strong{ color:var(--gold-2) }
+@media (max-width:860px){
+  .nav-drop{ order:-1 }
+  .nav-drop-btn{ pointer-events:none; padding:10px 14px 2px; font-size:13px; color:var(--gold) }
+  .drop-caret, .drop-new{ display:none }
+  .nav-drop-menu{ position:static; display:block; min-width:0; padding:0; background:none; border:none; box-shadow:none }
+  .nav-drop-menu::before{ display:none }
+  .nav-drop-menu a{ padding:10px 14px }
+}

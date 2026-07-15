@@ -60,6 +60,20 @@ $("#langBtnMenu")?.addEventListener("click", () => {
   burger.setAttribute("aria-expanded", "false");
 });
 
+/* free-tools dropdown (click for touch; :hover handles desktop) */
+const navDrop = $("#navDrop"), navDropBtn = $("#navDropBtn");
+navDropBtn?.addEventListener("click", e => {
+  e.stopPropagation();
+  const open = navDrop.classList.toggle("open");
+  navDropBtn.setAttribute("aria-expanded", open);
+});
+document.addEventListener("click", e => {
+  if (navDrop && navDrop.classList.contains("open") && !navDrop.contains(e.target)) {
+    navDrop.classList.remove("open");
+    navDropBtn.setAttribute("aria-expanded", "false");
+  }
+});
+
 /* ------------------------------------------------------------
    Reveal on scroll + counters
    ------------------------------------------------------------ */
