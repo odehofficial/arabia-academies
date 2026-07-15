@@ -21,8 +21,8 @@ const TL = {
   en: {
     tg_eyebrow: "A free tool by Arabia Academies",
     tg_h1a: "Planet", tg_h1b: "E-commerce",
-    tg_sub1: "Every second, the world spends",
-    tg_sub2: "online. Spin the globe, zoom in, and tap any country — see who sells, who buys, and how much money is moving.",
+    tg_leg_arab: "Arab markets", tg_leg_world: "Global markets",
+    tg_cta_china: "Start finding products to sell",
     tg_hint: "Drag to spin · wheel or pinch to zoom · tap a country for details",
     tg_live: "Since you opened this page, the world bought",
     tg_live2: "online",
@@ -55,8 +55,8 @@ const TL = {
   ar: {
     tg_eyebrow: "أداة مجانية من أكاديميات أرابيا",
     tg_h1a: "كوكب", tg_h1b: "التجارة الإلكترونية",
-    tg_sub1: "كل ثانية، العالم ينفق",
-    tg_sub2: "أونلاين. لف الكرة، كبّر، واضغط على أي دولة — شوف من يبيع، من يشتري، وكم المال اللي يتحرك.",
+    tg_leg_arab: "الأسواق العربية", tg_leg_world: "الأسواق العالمية",
+    tg_cta_china: "ابدأ إيجاد منتجات للبيع",
     tg_hint: "اسحب للف · عجلة أو إصبعين للتكبير · اضغط على دولة للتفاصيل",
     tg_live: "منذ فتحت هالصفحة، العالم اشترى أونلاين بـ",
     tg_live2: "",
@@ -360,7 +360,6 @@ function draw(now) {
 
 function setHover(iso) {
   hovered = iso;
-  $$("#countryChips button").forEach(b => b.classList.toggle("active", b.dataset.iso === iso));
   if (!iso) { tip.hidden = true; return; }
   const c = dataByIso[iso];
   const st = nicheStats(c, "all");
@@ -515,6 +514,7 @@ function openPanel(hit) {
     const name = hit.feat.properties?.name || hit.feat.id;
     panel.classList.add("world");
     panel.innerHTML = `
+      <div class="tg-grip" aria-hidden="true"><i></i></div>
       <button class="tg-close" type="button" aria-label="Close">✕</button>
       <div class="tg-p-head"><i></i><h3>${name}</h3></div>
       <p class="tg-note" style="border:none;padding-top:4px">${t("tg_nodata")}</p>
@@ -537,6 +537,7 @@ function openPanel(hit) {
 
   panel.classList.toggle("world", !c.arab);
   panel.innerHTML = `
+    <div class="tg-grip" aria-hidden="true"><i></i></div>
     <button class="tg-close" type="button" aria-label="Close">✕</button>
     <div class="tg-p-head"><i></i><h3>${name}</h3><span class="tg-p-tag">${c.arab ? t("tg_arab") : t("tg_world")}</span></div>
 
@@ -560,7 +561,7 @@ function openPanel(hit) {
       <p><b>${cta.iraq ? t("tg_cta_iraq") : t("tg_cta_lead").replace("{g}", c.growth)}</b></p>
       ${cta.iraq
         ? `<span class="btn btn-gold tg-btn-soon">🔒 ${t("tg_cta_iraq_btn")}</span>`
-        : `<a class="btn btn-gold" href="${cta.href}" target="_blank" rel="noopener">${t("tg_cta_btn").replace("{c}", name)}</a>`}
+        : `<a class="btn btn-gold" href="${cta.href}" target="_blank" rel="noopener">${c.iso === "CHN" ? t("tg_cta_china") : t("tg_cta_btn").replace("{c}", name)}</a>`}
       <button class="tg-share" id="tgShare" type="button">📤 ${t("tg_share")}</button>
     </div>
     <p class="tg-disc">${t("tg_disc")}</p>`;
@@ -590,38 +591,51 @@ function openPanel(hit) {
 
 function bindPanel() {
   panel.querySelector(".tg-close").addEventListener("click", closePanel);
+
+  // swipe the sheet down to close (mobile — the grip is hidden on desktop)
+  const grip = panel.querySelector(".tg-grip");
+  if (grip) {
+    let y0 = 0, dy = 0, on = false;
+    grip.addEventListener("pointerdown", e => {
+      on = true; y0 = e.clientY; dy = 0;
+      try { grip.setPointerCapture(e.pointerId); } catch (err) {}
+      panel.style.transition = "none";
+    });
+    grip.addEventListener("pointermove", e => {
+      if (!on) return;
+      dy = Math.max(0, e.clientY - y0);
+      panel.style.transform = `translateY(${dy}px)`;
+    });
+    const end = () => {
+      if (!on) return;
+      on = false;
+      if (dy > 100) closePanel();
+      else {
+        panel.style.transition = "transform .25s";
+        panel.style.transform = "";
+      }
+    };
+    grip.addEventListener("pointerup", end);
+    grip.addEventListener("pointercancel", end);
+  }
 }
 function closePanel() {
   panel.hidden = true;
+  panel.style.transform = "";
+  panel.style.transition = "";
   selected = null; panelCountry = null;
   clearInterval(tickerTimer);
 }
 addEventListener("keydown", e => { if (e.key === "Escape") closePanel(); });
 
 /* ------------------------------------------------------------
-   Chips — quick-jump to the biggest markets
+   Color legend under the globe
    ------------------------------------------------------------ */
-function renderChips() {
-  const chip = (c) => `<button type="button" data-iso="${c.iso}">${pick(c.name)}</button>`;
-  const top = (arab, n) => {
-    const list = COUNTRIES.filter(c => c.arab === arab).sort((a, b) => b.market - a.market).slice(0, n);
-    const hub = COUNTRIES.find(c => c.hub);
-    if (arab && hub && !list.includes(hub)) { list.pop(); list.push(hub); }
-    return list;
-  };
+function renderLegend() {
   $("#countryChips").innerHTML = `
-    <p class="chips-label"><i class="dot dot-arab"></i>${I18N[lang].globe_legend_arab || ""}</p>
-    <div class="chips-row">${top(true, 10).map(chip).join("")}</div>
-    <p class="chips-label"><i class="dot dot-world"></i>${I18N[lang].globe_legend_world || ""}</p>
-    <div class="chips-row">${top(false, 10).map(chip).join("")}</div>`;
+    <p class="chips-label"><i class="dot dot-arab"></i>${t("tg_leg_arab")}</p>
+    <p class="chips-label"><i class="dot dot-world"></i>${t("tg_leg_world")}</p>`;
 }
-$("#countryChips").addEventListener("click", e => {
-  const b = e.target.closest("button");
-  if (!b) return;
-  const c = dataByIso[b.dataset.iso];
-  focusCountry(c);
-  setTimeout(() => openPanel({ iso: c.iso }), 850);
-});
 
 /* ------------------------------------------------------------
    Ambient order pings on the globe
@@ -663,8 +677,7 @@ function applyLang() {
   document.documentElement.lang = lang;
   document.documentElement.dir = lang === "ar" ? "rtl" : "ltr";
   $$("[data-i18n]").forEach(el => { el.textContent = t(el.dataset.i18n); });
-  $("#worldSec").textContent = money(WORLD_PER_SEC);
-  renderChips();
+  renderLegend();
   updLive();
   if (!panel.hidden && selected) openPanel({ iso: selected });
   if (hovered) setHover(hovered);
