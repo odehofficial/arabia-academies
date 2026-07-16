@@ -41,6 +41,22 @@
     }
     .cm-stats b{ color:var(--gold-2); font-family:var(--f-mono) }
 
+    /* ---------- search ---------- */
+    .cm-search{ display:flex; justify-content:center; margin:24px auto 0; padding-inline:var(--pad) }
+    .cm-search label{
+      display:flex; align-items:center; gap:10px;
+      width:min(480px, 100%);
+      background:rgba(13,19,42,.65); border:1px solid var(--line-2); border-radius:999px;
+      padding:11px 18px; transition:border-color .2s;
+    }
+    .cm-search label:focus-within{ border-color:var(--gold) }
+    .cm-search i{ font-style:normal; opacity:.7; flex:none }
+    .cm-search input{
+      flex:1; min-width:0; background:none; border:none; outline:none;
+      color:var(--text); font-family:var(--f-body); font-size:14.5px;
+    }
+    .cm-search input::placeholder{ color:rgba(169,176,197,.65) }
+
     /* ---------- category filters ---------- */
     .cm-filters{
       display:flex; flex-wrap:wrap; justify-content:center; gap:8px;
@@ -56,9 +72,10 @@
 
     /* ---------- cards grid ---------- */
     .cm-grid{
-      display:grid; grid-template-columns:repeat(auto-fill, minmax(305px, 1fr));
-      gap:18px; max-width:1280px; margin:26px auto 0; padding-inline:var(--pad);
+      display:grid; grid-template-columns:repeat(4, 1fr);
+      gap:16px; max-width:1420px; margin:26px auto 0; padding-inline:var(--pad);
     }
+    .cm-empty{ grid-column:1/-1; text-align:center; color:var(--muted); padding:50px 0 }
     .cm-card{
       background:rgba(13,19,42,.55); border:1px solid var(--line); border-radius:18px;
       overflow:hidden; content-visibility:auto; contain-intrinsic-size: 420px;
@@ -293,6 +310,9 @@
     .cm-foot a{ color:var(--muted); text-decoration:none }
     .cm-foot a:hover{ color:var(--gold-2) }
 
+    @media (max-width:1180px){
+      .cm-grid{ grid-template-columns:repeat(3, 1fr) }
+    }
     @media (max-width:860px){
       .nav{ justify-content:space-between }
       .nav-actions{ position:static; transform:none }
@@ -337,6 +357,9 @@
       </div>
     </section>
 
+    <div class="cm-search">
+      <label><i>🔍</i><input id="cmSearch" type="search" autocomplete="off" spellcheck="false"></label>
+    </div>
     <div class="cm-filters" id="cmFilters"></div>
     <div class="cm-grid" id="cmGrid"></div>
     <p class="cm-note" data-i18n="cm_note">البرومبتات بالإنجليزية عمداً — هي اللغة التي تفهمها أدوات الفيديو. المعاينات توضيحية لاتجاه وإيقاع كل حركة.</p>
