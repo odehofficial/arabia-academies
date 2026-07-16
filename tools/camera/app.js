@@ -25,9 +25,11 @@ const TL = {
     cm_b3: "Inside Ai Arabia we teach you to create complete cinematic AI videos and images — from the idea to the finished ad — in Arabic, step by step.",
     cm_b_cta1: "Join Ai Arabia", cm_b_cta2: "See all academies",
     cm_home: "Home", cm_globe: "Planet E-commerce",
+    f_tag: "Road to success", nav_join: "Join now", lang_btn: "عربي",
+    f_privacy: "Privacy Policy", f_terms: "Terms of Use",
+    cookie_text: "We use cookies — including Meta's tools — to improve your experience and measure how the site is used.",
+    cookie_ok: "OK",
     cm_all: "All", cm_copy: "Copy prompt", cm_copied: "Copied!", cm_try: "Turn into video ↗",
-    cm_search_ph: "Search movements… (e.g. dolly, whip, orbit)",
-    cm_noresults: "No movements match your search.",
     cm_shot: "Shot",
   },
   ar: {
@@ -40,13 +42,15 @@ const TL = {
     cm_b3: "في أكاديمية Ai Arabia نعلّمك تصنع فيديوهات وصور سينمائية كاملة بالذكاء الاصطناعي — من الفكرة إلى الإعلان الجاهز — بالعربي وخطوة بخطوة.",
     cm_b_cta1: "انضم إلى Ai Arabia", cm_b_cta2: "شاهد كل الأكاديميات",
     cm_home: "الرئيسية", cm_globe: "كوكب التجارة الإلكترونية",
+    f_tag: "طريقك إلى النجاح", nav_join: "انضم الآن", lang_btn: "EN",
+    f_privacy: "سياسة الخصوصية", f_terms: "شروط الاستخدام",
+    cookie_text: "نستخدم ملفات تعريف الارتباط (كوكيز) — بما فيها أدوات ميتا — لتحسين تجربتك وقياس كيفية استخدام الموقع.",
+    cookie_ok: "حسناً",
     cm_all: "الكل", cm_copy: "انسخ البرومبت", cm_copied: "تم النسخ!", cm_try: "حوّله لفيديو ↗",
-    cm_search_ph: "ابحث عن حركة… (مثلاً: دوللي، زوم، أوربت)",
-    cm_noresults: "لا توجد حركة تطابق بحثك.",
     cm_shot: "لقطة",
   }
 };
-const t = (k) => TL[lang][k] ?? I18N[lang][k] ?? k;
+const t = (k) => TL[lang][k] ?? k;
 
 /* ------------------------------------------------------------
    Categories
@@ -245,7 +249,7 @@ const MOVES = [
 /* ------------------------------------------------------------
    Render
    ------------------------------------------------------------ */
-let curCat = "all", query = "";
+let curCat = "all";
 const grid = $("#cmGrid"), filters = $("#cmFilters");
 
 function card(x, i) {
@@ -270,7 +274,7 @@ function card(x, i) {
       <p class="cm-desc">${x.d[lang]}</p>
       <div class="cm-prompt">${x.p}</div>
       <div class="cm-actions">
-        <button class="cm-copy" type="button" data-i="${i}">📋 ${t("cm_copy")}</button>
+        <button class="cm-copy" type="button" data-i="${i}">${t("cm_copy")}</button>
         <a class="cm-try" href="https://higgsfield.ai/" target="_blank" rel="noopener">${t("cm_try")}</a>
       </div>
     </div>
@@ -284,26 +288,11 @@ function renderFilters() {
     Object.keys(CATS).map(k => b(k, CATS[k][lang])).join("");
 }
 
-function matches(x) {
-  if (curCat !== "all" && x.cat !== curCat) return false;
-  if (!query) return true;
-  const hay = (x.n.ar + " " + x.n.en + " " + x.d.ar + " " + x.d.en + " " + x.p + " " +
-    CATS[x.cat].ar + " " + CATS[x.cat].en).toLowerCase();
-  return query.split(/\s+/).every(w => hay.includes(w));
-}
-
 function renderGrid() {
-  const list = MOVES.map((x, i) => ({ x, i })).filter(({ x }) => matches(x));
-  grid.innerHTML = list.length
-    ? list.map(({ x, i }) => card(x, i)).join("")
-    : `<p class="cm-empty">${t("cm_noresults")}</p>`;
+  const list = MOVES.map((x, i) => ({ x, i })).filter(({ x }) => curCat === "all" || x.cat === curCat);
+  grid.innerHTML = list.map(({ x, i }) => card(x, i)).join("");
   watchCards();
 }
-
-$("#cmSearch").addEventListener("input", e => {
-  query = e.target.value.trim().toLowerCase();
-  renderGrid();
-});
 
 filters.addEventListener("click", e => {
   const b = e.target.closest("button");
@@ -326,7 +315,7 @@ grid.addEventListener("click", async e => {
   }
   b.classList.add("ok");
   b.textContent = "✓ " + t("cm_copied");
-  setTimeout(() => { b.classList.remove("ok"); b.textContent = "📋 " + t("cm_copy"); }, 1500);
+  setTimeout(() => { b.classList.remove("ok"); b.textContent = t("cm_copy"); }, 1500);
   if (!usedOnce) { usedOnce = true; if (window.fbq) fbq("trackCustom", "ToolCamera"); }
 });
 
@@ -344,7 +333,6 @@ function applyLang() {
   document.documentElement.dir = lang === "ar" ? "rtl" : "ltr";
   $$("[data-i18n]").forEach(el => { el.textContent = t(el.dataset.i18n); });
   $("#cmCount").textContent = MOVES.length;
-  $("#cmSearch").placeholder = t("cm_search_ph");
   renderFilters();
   renderGrid();
 }

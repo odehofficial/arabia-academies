@@ -41,22 +41,6 @@
     }
     .cm-stats b{ color:var(--gold-2); font-family:var(--f-mono) }
 
-    /* ---------- search ---------- */
-    .cm-search{ display:flex; justify-content:center; margin:24px auto 0; padding-inline:var(--pad) }
-    .cm-search label{
-      display:flex; align-items:center; gap:10px;
-      width:min(480px, 100%);
-      background:rgba(13,19,42,.65); border:1px solid var(--line-2); border-radius:999px;
-      padding:11px 18px; transition:border-color .2s;
-    }
-    .cm-search label:focus-within{ border-color:var(--gold) }
-    .cm-search i{ font-style:normal; opacity:.7; flex:none }
-    .cm-search input{
-      flex:1; min-width:0; background:none; border:none; outline:none;
-      color:var(--text); font-family:var(--f-body); font-size:14.5px;
-    }
-    .cm-search input::placeholder{ color:rgba(169,176,197,.65) }
-
     /* ---------- category filters ---------- */
     .cm-filters{
       display:flex; flex-wrap:wrap; justify-content:center; gap:8px;
@@ -100,20 +84,20 @@
       font-family:var(--f-mono); font-size:11.5px; line-height:1.65; color:#C9D2E8;
       max-height:88px; overflow:auto;
     }
-    .cm-actions{ display:flex; gap:8px; margin-top:10px }
+    .cm-actions{ display:flex; gap:6px; margin-top:10px }
     .cm-copy{
-      flex:1; display:flex; align-items:center; justify-content:center; gap:6px;
-      background:var(--gold); color:#080C1C; border-radius:10px;
-      padding:9px; font-size:13px; font-weight:800; font-family:var(--f-body);
-      transition:filter .2s;
+      flex:1; min-width:0; display:flex; align-items:center; justify-content:center;
+      background:var(--gold); color:#080C1C; border-radius:9px;
+      padding:8px 6px; font-size:12px; font-weight:800; font-family:var(--f-body);
+      white-space:nowrap; transition:filter .2s;
     }
     .cm-copy:hover{ filter:brightness(1.08) }
     .cm-copy.ok{ background:#37C6A0 }
     .cm-try{
-      display:flex; align-items:center; justify-content:center;
-      border:1px solid var(--line-2); border-radius:10px; padding:9px 13px;
-      color:var(--muted); font-size:12.5px; font-weight:600; text-decoration:none;
-      transition:border-color .2s, color .2s;
+      flex:none; display:flex; align-items:center; justify-content:center;
+      border:1px solid var(--line-2); border-radius:9px; padding:8px 9px;
+      color:var(--muted); font-size:11px; font-weight:600; text-decoration:none;
+      white-space:nowrap; transition:border-color .2s, color .2s;
     }
     .cm-try:hover{ border-color:var(--gold); color:var(--gold-2) }
 
@@ -357,11 +341,1008 @@
       </div>
     </section>
 
-    <div class="cm-search">
-      <label><i>🔍</i><input id="cmSearch" type="search" autocomplete="off" spellcheck="false"></label>
+    <div class="cm-filters" id="cmFilters"><button type="button" data-cat="all" class="active">الكل</button><button type="button" data-cat="dolly" class="">دوللي وتراك</button><button type="button" data-cat="zoom" class="">زوم وعدسة</button><button type="button" data-cat="pan" class="">بان وتيلت</button><button type="button" data-cat="drone" class="">درون وكرين</button><button type="button" data-cat="moves" class="">حركات تتبّع</button><button type="button" data-cat="human" class="">كاميرا بشرية</button><button type="button" data-cat="special" class="">حركات خاصة</button></div>
+    <div class="cm-grid" id="cmGrid">
+  <article class="cm-card" data-cat="dolly">
+    <div class="cam-view m-dollyin">
+      <div class="cam-scene">
+        <div class="ly ly-sky"></div>
+        <div class="ly ly-moon"></div>
+        <div class="ly ly-far"></div>
+        <div class="ly ly-near"></div>
+        <div class="ly ly-subj"><i></i></div>
+      </div>
+      
     </div>
-    <div class="cm-filters" id="cmFilters"></div>
-    <div class="cm-grid" id="cmGrid"></div>
+    <div class="cm-card-body">
+      <div class="cm-meta">
+        <span class="cm-num">لقطة 01</span>
+        <span class="cm-cat">دوللي وتراك</span>
+      </div>
+      <h3>دوللي للداخل<span>Dolly In</span></h3>
+      <p class="cm-desc">الكاميرا تتقدّم فيزيائياً نحو العنصر — العمق يتغيّر وتحس أنك تدخل المشهد. مثالية للحظات الكشف والتركيز.</p>
+      <div class="cm-prompt">Camera movement: slow dolly in. The camera physically moves forward toward the subject at a steady pace, background parallax deepens, framing tightens from medium shot to close-up. Smooth, cinematic, stabilized.</div>
+      <div class="cm-actions">
+        <button class="cm-copy" type="button" data-i="0">انسخ البرومبت</button>
+        <a class="cm-try" href="https://higgsfield.ai/" target="_blank" rel="noopener">حوّله لفيديو ↗</a>
+      </div>
+    </div>
+  </article>
+  <article class="cm-card" data-cat="dolly">
+    <div class="cam-view m-dollyout">
+      <div class="cam-scene">
+        <div class="ly ly-sky"></div>
+        <div class="ly ly-moon"></div>
+        <div class="ly ly-far"></div>
+        <div class="ly ly-near"></div>
+        <div class="ly ly-subj"><i></i></div>
+      </div>
+      
+    </div>
+    <div class="cm-card-body">
+      <div class="cm-meta">
+        <span class="cm-num">لقطة 02</span>
+        <span class="cm-cat">دوللي وتراك</span>
+      </div>
+      <h3>دوللي للخارج<span>Dolly Out</span></h3>
+      <p class="cm-desc">الكاميرا تتراجع للخلف وتكشف المكان حول العنصر. ممتازة للنهايات ولإظهار حجم المشهد.</p>
+      <div class="cm-prompt">Camera movement: slow dolly out. The camera physically moves backward away from the subject, gradually revealing the surrounding environment, framing widens from close-up to wide shot. Smooth, cinematic, stabilized.</div>
+      <div class="cm-actions">
+        <button class="cm-copy" type="button" data-i="1">انسخ البرومبت</button>
+        <a class="cm-try" href="https://higgsfield.ai/" target="_blank" rel="noopener">حوّله لفيديو ↗</a>
+      </div>
+    </div>
+  </article>
+  <article class="cm-card" data-cat="dolly">
+    <div class="cam-view m-truck">
+      <div class="cam-scene">
+        <div class="ly ly-sky"></div>
+        <div class="ly ly-moon"></div>
+        <div class="ly ly-far"></div>
+        <div class="ly ly-near"></div>
+        <div class="ly ly-subj"><i></i></div>
+      </div>
+      
+    </div>
+    <div class="cm-card-body">
+      <div class="cm-meta">
+        <span class="cm-num">لقطة 03</span>
+        <span class="cm-cat">دوللي وتراك</span>
+      </div>
+      <h3>تراك يمين<span>Truck Right</span></h3>
+      <p class="cm-desc">الكاميرا تنزلق جانبياً على مسار وهي موجّهة للأمام — المشهد يمرّ من جنبك مثل نافذة قطار.</p>
+      <div class="cm-prompt">Camera movement: truck right. The camera slides laterally to the right on a dolly track while facing the scene, foreground elements pass faster than the background, constant height and framing. Smooth, cinematic.</div>
+      <div class="cm-actions">
+        <button class="cm-copy" type="button" data-i="2">انسخ البرومبت</button>
+        <a class="cm-try" href="https://higgsfield.ai/" target="_blank" rel="noopener">حوّله لفيديو ↗</a>
+      </div>
+    </div>
+  </article>
+  <article class="cm-card" data-cat="dolly">
+    <div class="cam-view m-truck flip">
+      <div class="cam-scene">
+        <div class="ly ly-sky"></div>
+        <div class="ly ly-moon"></div>
+        <div class="ly ly-far"></div>
+        <div class="ly ly-near"></div>
+        <div class="ly ly-subj"><i></i></div>
+      </div>
+      
+    </div>
+    <div class="cm-card-body">
+      <div class="cm-meta">
+        <span class="cm-num">لقطة 04</span>
+        <span class="cm-cat">دوللي وتراك</span>
+      </div>
+      <h3>تراك يسار<span>Truck Left</span></h3>
+      <p class="cm-desc">نفس الانزلاق الجانبي لكن باتجاه اليسار. جرّب الاتجاهين وشوف أيهما يخدم قصتك.</p>
+      <div class="cm-prompt">Camera movement: truck left. The camera slides laterally to the left on a dolly track while facing the scene, foreground elements pass faster than the background, constant height and framing. Smooth, cinematic.</div>
+      <div class="cm-actions">
+        <button class="cm-copy" type="button" data-i="3">انسخ البرومبت</button>
+        <a class="cm-try" href="https://higgsfield.ai/" target="_blank" rel="noopener">حوّله لفيديو ↗</a>
+      </div>
+    </div>
+  </article>
+  <article class="cm-card" data-cat="dolly">
+    <div class="cam-view m-arc">
+      <div class="cam-scene">
+        <div class="ly ly-sky"></div>
+        <div class="ly ly-moon"></div>
+        <div class="ly ly-far"></div>
+        <div class="ly ly-near"></div>
+        <div class="ly ly-subj"><i></i></div>
+      </div>
+      
+    </div>
+    <div class="cm-card-body">
+      <div class="cm-meta">
+        <span class="cm-num">لقطة 05</span>
+        <span class="cm-cat">دوللي وتراك</span>
+      </div>
+      <h3>آرك (قوس)<span>Arc Shot</span></h3>
+      <p class="cm-desc">الكاميرا ترسم قوساً حول العنصر — مزيج من الانزلاق والدوران يعطي إحساس ثلاثي الأبعاد قوي.</p>
+      <div class="cm-prompt">Camera movement: arc shot. The camera moves along a curved path around the subject while keeping it centered in frame, background rotates behind the subject, medium framing. Smooth, cinematic.</div>
+      <div class="cm-actions">
+        <button class="cm-copy" type="button" data-i="4">انسخ البرومبت</button>
+        <a class="cm-try" href="https://higgsfield.ai/" target="_blank" rel="noopener">حوّله لفيديو ↗</a>
+      </div>
+    </div>
+  </article>
+  <article class="cm-card" data-cat="dolly">
+    <div class="cam-view m-pass">
+      <div class="cam-scene">
+        <div class="ly ly-sky"></div>
+        <div class="ly ly-moon"></div>
+        <div class="ly ly-far"></div>
+        <div class="ly ly-near"></div>
+        <div class="ly ly-subj"><i></i></div>
+      </div>
+      
+    </div>
+    <div class="cm-card-body">
+      <div class="cm-meta">
+        <span class="cm-num">لقطة 06</span>
+        <span class="cm-cat">دوللي وتراك</span>
+      </div>
+      <h3>تجاوز العنصر<span>Push Past</span></h3>
+      <p class="cm-desc">الكاميرا تتقدّم وتتجاوز العنصر نفسه لتكشف ما بعده — انتقال درامي بين موضوعين.</p>
+      <div class="cm-prompt">Camera movement: push past. The camera dollies forward, moves directly past the main subject with a brief close fly-by, and continues to reveal the scene behind it. Smooth, cinematic, continuous take.</div>
+      <div class="cm-actions">
+        <button class="cm-copy" type="button" data-i="5">انسخ البرومبت</button>
+        <a class="cm-try" href="https://higgsfield.ai/" target="_blank" rel="noopener">حوّله لفيديو ↗</a>
+      </div>
+    </div>
+  </article>
+  <article class="cm-card" data-cat="zoom">
+    <div class="cam-view m-zoomin">
+      <div class="cam-scene">
+        <div class="ly ly-sky"></div>
+        <div class="ly ly-moon"></div>
+        <div class="ly ly-far"></div>
+        <div class="ly ly-near"></div>
+        <div class="ly ly-subj"><i></i></div>
+      </div>
+      
+    </div>
+    <div class="cm-card-body">
+      <div class="cm-meta">
+        <span class="cm-num">لقطة 07</span>
+        <span class="cm-cat">زوم وعدسة</span>
+      </div>
+      <h3>زوم بطيء للداخل<span>Slow Zoom In</span></h3>
+      <p class="cm-desc">العدسة تقرّب بدون أن تتحرك الكاميرا — توتّر هادئ يتراكم. الفرق عن الدوللي: العمق يبقى مسطّحاً.</p>
+      <div class="cm-prompt">Camera movement: slow zoom in. The camera stays fixed while the lens focal length increases gradually, image magnifies toward the subject, perspective stays flat. Steady, cinematic.</div>
+      <div class="cm-actions">
+        <button class="cm-copy" type="button" data-i="6">انسخ البرومبت</button>
+        <a class="cm-try" href="https://higgsfield.ai/" target="_blank" rel="noopener">حوّله لفيديو ↗</a>
+      </div>
+    </div>
+  </article>
+  <article class="cm-card" data-cat="zoom">
+    <div class="cam-view m-zoomout">
+      <div class="cam-scene">
+        <div class="ly ly-sky"></div>
+        <div class="ly ly-moon"></div>
+        <div class="ly ly-far"></div>
+        <div class="ly ly-near"></div>
+        <div class="ly ly-subj"><i></i></div>
+      </div>
+      
+    </div>
+    <div class="cm-card-body">
+      <div class="cm-meta">
+        <span class="cm-num">لقطة 08</span>
+        <span class="cm-cat">زوم وعدسة</span>
+      </div>
+      <h3>زوم بطيء للخارج<span>Slow Zoom Out</span></h3>
+      <p class="cm-desc">العدسة توسّع الكادر تدريجياً وتضع العنصر في سياقه. النسخة الأهدأ من الكشف.</p>
+      <div class="cm-prompt">Camera movement: slow zoom out. The camera stays fixed while the lens focal length decreases gradually, the frame widens to reveal the environment, perspective stays flat. Steady, cinematic.</div>
+      <div class="cm-actions">
+        <button class="cm-copy" type="button" data-i="7">انسخ البرومبت</button>
+        <a class="cm-try" href="https://higgsfield.ai/" target="_blank" rel="noopener">حوّله لفيديو ↗</a>
+      </div>
+    </div>
+  </article>
+  <article class="cm-card" data-cat="zoom">
+    <div class="cam-view m-crashin">
+      <div class="cam-scene">
+        <div class="ly ly-sky"></div>
+        <div class="ly ly-moon"></div>
+        <div class="ly ly-far"></div>
+        <div class="ly ly-near"></div>
+        <div class="ly ly-subj"><i></i></div>
+      </div>
+      
+    </div>
+    <div class="cm-card-body">
+      <div class="cm-meta">
+        <span class="cm-num">لقطة 09</span>
+        <span class="cm-cat">زوم وعدسة</span>
+      </div>
+      <h3>كراش زوم للداخل<span>Crash Zoom In</span></h3>
+      <p class="cm-desc">زوم عنيف وسريع نحو العنصر — صدمة بصرية. ممتاز للحظات الكوميدية أو الدرامية المفاجئة.</p>
+      <div class="cm-prompt">Camera movement: crash zoom in. An extremely fast, aggressive zoom punches in from wide to tight close-up in a fraction of a second, slight motion blur during the move, abrupt stop.</div>
+      <div class="cm-actions">
+        <button class="cm-copy" type="button" data-i="8">انسخ البرومبت</button>
+        <a class="cm-try" href="https://higgsfield.ai/" target="_blank" rel="noopener">حوّله لفيديو ↗</a>
+      </div>
+    </div>
+  </article>
+  <article class="cm-card" data-cat="zoom">
+    <div class="cam-view m-crashout">
+      <div class="cam-scene">
+        <div class="ly ly-sky"></div>
+        <div class="ly ly-moon"></div>
+        <div class="ly ly-far"></div>
+        <div class="ly ly-near"></div>
+        <div class="ly ly-subj"><i></i></div>
+      </div>
+      
+    </div>
+    <div class="cm-card-body">
+      <div class="cm-meta">
+        <span class="cm-num">لقطة 10</span>
+        <span class="cm-cat">زوم وعدسة</span>
+      </div>
+      <h3>كراش زوم للخارج<span>Crash Zoom Out</span></h3>
+      <p class="cm-desc">العكس: انسحاب صاعق من التفصيلة إلى الصورة الكاملة في جزء من الثانية.</p>
+      <div class="cm-prompt">Camera movement: crash zoom out. An extremely fast, aggressive zoom snaps from tight close-up to wide shot in a fraction of a second, slight motion blur during the move, abrupt stop.</div>
+      <div class="cm-actions">
+        <button class="cm-copy" type="button" data-i="9">انسخ البرومبت</button>
+        <a class="cm-try" href="https://higgsfield.ai/" target="_blank" rel="noopener">حوّله لفيديو ↗</a>
+      </div>
+    </div>
+  </article>
+  <article class="cm-card" data-cat="zoom">
+    <div class="cam-view m-vertigo">
+      <div class="cam-scene">
+        <div class="ly ly-sky"></div>
+        <div class="ly ly-moon"></div>
+        <div class="ly ly-far"></div>
+        <div class="ly ly-near"></div>
+        <div class="ly ly-subj"><i></i></div>
+      </div>
+      
+    </div>
+    <div class="cm-card-body">
+      <div class="cm-meta">
+        <span class="cm-num">لقطة 11</span>
+        <span class="cm-cat">زوم وعدسة</span>
+      </div>
+      <h3>دوللي زوم (فيرتيغو)<span>Dolly Zoom (Vertigo)</span></h3>
+      <p class="cm-desc">الكاميرا تتقدّم والعدسة تبعّد بنفس الوقت — العنصر ثابت والخلفية تتشوّه. إحساس الدوار الشهير.</p>
+      <div class="cm-prompt">Camera movement: dolly zoom (vertigo effect). The camera dollies toward the subject while the lens zooms out at a matching rate, the subject stays the same size as the background stretches and warps behind it. Unsettling, cinematic.</div>
+      <div class="cm-actions">
+        <button class="cm-copy" type="button" data-i="10">انسخ البرومبت</button>
+        <a class="cm-try" href="https://higgsfield.ai/" target="_blank" rel="noopener">حوّله لفيديو ↗</a>
+      </div>
+    </div>
+  </article>
+  <article class="cm-card" data-cat="zoom">
+    <div class="cam-view m-infzoom">
+      <div class="cam-scene">
+        <div class="ly ly-sky"></div>
+        <div class="ly ly-moon"></div>
+        <div class="ly ly-far"></div>
+        <div class="ly ly-near"></div>
+        <div class="ly ly-subj"><i></i></div>
+      </div>
+      
+    </div>
+    <div class="cm-card-body">
+      <div class="cm-meta">
+        <span class="cm-num">لقطة 12</span>
+        <span class="cm-cat">زوم وعدسة</span>
+      </div>
+      <h3>زوم لا نهائي<span>Infinite Zoom</span></h3>
+      <p class="cm-desc">زوم متواصل يفتح مشهداً داخل مشهد بلا توقف — أسلوب انتقالات الريلز الشهير.</p>
+      <div class="cm-prompt">Camera movement: infinite zoom. The camera zooms forward continuously, seamlessly diving from one scene into the next in an endless tunnel motion, hypnotic constant speed, match-cut transitions.</div>
+      <div class="cm-actions">
+        <button class="cm-copy" type="button" data-i="11">انسخ البرومبت</button>
+        <a class="cm-try" href="https://higgsfield.ai/" target="_blank" rel="noopener">حوّله لفيديو ↗</a>
+      </div>
+    </div>
+  </article>
+  <article class="cm-card" data-cat="pan">
+    <div class="cam-view m-static">
+      <div class="cam-scene">
+        <div class="ly ly-sky"></div>
+        <div class="ly ly-moon"></div>
+        <div class="ly ly-far"></div>
+        <div class="ly ly-near"></div>
+        <div class="ly ly-subj"><i></i></div>
+      </div>
+      
+    </div>
+    <div class="cm-card-body">
+      <div class="cm-meta">
+        <span class="cm-num">لقطة 13</span>
+        <span class="cm-cat">بان وتيلت</span>
+      </div>
+      <h3>لقطة ثابتة<span>Static Shot</span></h3>
+      <p class="cm-desc">لا حركة إطلاقاً — الثبات الكامل يعطي هيبة ويترك المشهد نفسه يتكلم. نقطة البداية لكل مقارنة.</p>
+      <div class="cm-prompt">Camera movement: static shot, locked-off tripod. The camera does not move at all — no pan, no zoom, no handheld drift. Perfectly still frame, cinematic composition.</div>
+      <div class="cm-actions">
+        <button class="cm-copy" type="button" data-i="12">انسخ البرومبت</button>
+        <a class="cm-try" href="https://higgsfield.ai/" target="_blank" rel="noopener">حوّله لفيديو ↗</a>
+      </div>
+    </div>
+  </article>
+  <article class="cm-card" data-cat="pan">
+    <div class="cam-view m-pan flip">
+      <div class="cam-scene">
+        <div class="ly ly-sky"></div>
+        <div class="ly ly-moon"></div>
+        <div class="ly ly-far"></div>
+        <div class="ly ly-near"></div>
+        <div class="ly ly-subj"><i></i></div>
+      </div>
+      
+    </div>
+    <div class="cm-card-body">
+      <div class="cm-meta">
+        <span class="cm-num">لقطة 14</span>
+        <span class="cm-cat">بان وتيلت</span>
+      </div>
+      <h3>بان يمين<span>Pan Right</span></h3>
+      <p class="cm-desc">الكاميرا تدور حول محورها نحو اليمين من نقطة ثابتة — مسح هادئ للمكان.</p>
+      <div class="cm-prompt">Camera movement: pan right. The camera rotates horizontally to the right from a fixed position, smoothly sweeping across the scene at constant speed, no physical travel. Cinematic.</div>
+      <div class="cm-actions">
+        <button class="cm-copy" type="button" data-i="13">انسخ البرومبت</button>
+        <a class="cm-try" href="https://higgsfield.ai/" target="_blank" rel="noopener">حوّله لفيديو ↗</a>
+      </div>
+    </div>
+  </article>
+  <article class="cm-card" data-cat="pan">
+    <div class="cam-view m-pan">
+      <div class="cam-scene">
+        <div class="ly ly-sky"></div>
+        <div class="ly ly-moon"></div>
+        <div class="ly ly-far"></div>
+        <div class="ly ly-near"></div>
+        <div class="ly ly-subj"><i></i></div>
+      </div>
+      
+    </div>
+    <div class="cm-card-body">
+      <div class="cm-meta">
+        <span class="cm-num">لقطة 15</span>
+        <span class="cm-cat">بان وتيلت</span>
+      </div>
+      <h3>بان يسار<span>Pan Left</span></h3>
+      <p class="cm-desc">نفس الدوران الأفقي باتجاه اليسار. استخدمه لربط عنصرين في نفس المكان.</p>
+      <div class="cm-prompt">Camera movement: pan left. The camera rotates horizontally to the left from a fixed position, smoothly sweeping across the scene at constant speed, no physical travel. Cinematic.</div>
+      <div class="cm-actions">
+        <button class="cm-copy" type="button" data-i="14">انسخ البرومبت</button>
+        <a class="cm-try" href="https://higgsfield.ai/" target="_blank" rel="noopener">حوّله لفيديو ↗</a>
+      </div>
+    </div>
+  </article>
+  <article class="cm-card" data-cat="pan">
+    <div class="cam-view m-whip flip">
+      <div class="cam-scene">
+        <div class="ly ly-sky"></div>
+        <div class="ly ly-moon"></div>
+        <div class="ly ly-far"></div>
+        <div class="ly ly-near"></div>
+        <div class="ly ly-subj"><i></i></div>
+      </div>
+      
+    </div>
+    <div class="cm-card-body">
+      <div class="cm-meta">
+        <span class="cm-num">لقطة 16</span>
+        <span class="cm-cat">بان وتيلت</span>
+      </div>
+      <h3>ويب بان يمين<span>Whip Pan Right</span></h3>
+      <p class="cm-desc">دوران خاطف يموّه الصورة لحظة — أشهر انتقال حماسي بين مشهدين.</p>
+      <div class="cm-prompt">Camera movement: whip pan right. The camera whips horizontally to the right at extreme speed, heavy motion blur streaks the frame mid-move, then snaps to a clean stop on the new subject.</div>
+      <div class="cm-actions">
+        <button class="cm-copy" type="button" data-i="15">انسخ البرومبت</button>
+        <a class="cm-try" href="https://higgsfield.ai/" target="_blank" rel="noopener">حوّله لفيديو ↗</a>
+      </div>
+    </div>
+  </article>
+  <article class="cm-card" data-cat="pan">
+    <div class="cam-view m-whip">
+      <div class="cam-scene">
+        <div class="ly ly-sky"></div>
+        <div class="ly ly-moon"></div>
+        <div class="ly ly-far"></div>
+        <div class="ly ly-near"></div>
+        <div class="ly ly-subj"><i></i></div>
+      </div>
+      
+    </div>
+    <div class="cm-card-body">
+      <div class="cm-meta">
+        <span class="cm-num">لقطة 17</span>
+        <span class="cm-cat">بان وتيلت</span>
+      </div>
+      <h3>ويب بان يسار<span>Whip Pan Left</span></h3>
+      <p class="cm-desc">نفس اللقطة الخاطفة بالاتجاه المعاكس — للمونتاج السريع والإيقاع العالي.</p>
+      <div class="cm-prompt">Camera movement: whip pan left. The camera whips horizontally to the left at extreme speed, heavy motion blur streaks the frame mid-move, then snaps to a clean stop on the new subject.</div>
+      <div class="cm-actions">
+        <button class="cm-copy" type="button" data-i="16">انسخ البرومبت</button>
+        <a class="cm-try" href="https://higgsfield.ai/" target="_blank" rel="noopener">حوّله لفيديو ↗</a>
+      </div>
+    </div>
+  </article>
+  <article class="cm-card" data-cat="pan">
+    <div class="cam-view m-tiltup">
+      <div class="cam-scene">
+        <div class="ly ly-sky"></div>
+        <div class="ly ly-moon"></div>
+        <div class="ly ly-far"></div>
+        <div class="ly ly-near"></div>
+        <div class="ly ly-subj"><i></i></div>
+      </div>
+      
+    </div>
+    <div class="cm-card-body">
+      <div class="cm-meta">
+        <span class="cm-num">لقطة 18</span>
+        <span class="cm-cat">بان وتيلت</span>
+      </div>
+      <h3>تيلت لأعلى<span>Tilt Up</span></h3>
+      <p class="cm-desc">الكاميرا ترفع نظرها من نقطة ثابتة — من الأرض إلى الأفق. كشف كلاسيكي للارتفاع والعظمة.</p>
+      <div class="cm-prompt">Camera movement: tilt up. The camera rotates vertically upward from a fixed position, starting low on the subject and rising to reveal what stands above, steady constant speed. Cinematic.</div>
+      <div class="cm-actions">
+        <button class="cm-copy" type="button" data-i="17">انسخ البرومبت</button>
+        <a class="cm-try" href="https://higgsfield.ai/" target="_blank" rel="noopener">حوّله لفيديو ↗</a>
+      </div>
+    </div>
+  </article>
+  <article class="cm-card" data-cat="pan">
+    <div class="cam-view m-tiltdown">
+      <div class="cam-scene">
+        <div class="ly ly-sky"></div>
+        <div class="ly ly-moon"></div>
+        <div class="ly ly-far"></div>
+        <div class="ly ly-near"></div>
+        <div class="ly ly-subj"><i></i></div>
+      </div>
+      
+    </div>
+    <div class="cm-card-body">
+      <div class="cm-meta">
+        <span class="cm-num">لقطة 19</span>
+        <span class="cm-cat">بان وتيلت</span>
+      </div>
+      <h3>تيلت لأسفل<span>Tilt Down</span></h3>
+      <p class="cm-desc">النظرة تهبط من الأعلى نحو التفاصيل — مثالية للانتقال من المكان إلى الشخصية.</p>
+      <div class="cm-prompt">Camera movement: tilt down. The camera rotates vertically downward from a fixed position, starting high on the scene and settling onto the subject below, steady constant speed. Cinematic.</div>
+      <div class="cm-actions">
+        <button class="cm-copy" type="button" data-i="18">انسخ البرومبت</button>
+        <a class="cm-try" href="https://higgsfield.ai/" target="_blank" rel="noopener">حوّله لفيديو ↗</a>
+      </div>
+    </div>
+  </article>
+  <article class="cm-card" data-cat="pan">
+    <div class="cam-view m-roll">
+      <div class="cam-scene">
+        <div class="ly ly-sky"></div>
+        <div class="ly ly-moon"></div>
+        <div class="ly ly-far"></div>
+        <div class="ly ly-near"></div>
+        <div class="ly ly-subj"><i></i></div>
+      </div>
+      
+    </div>
+    <div class="cm-card-body">
+      <div class="cm-meta">
+        <span class="cm-num">لقطة 20</span>
+        <span class="cm-cat">بان وتيلت</span>
+      </div>
+      <h3>ميلان هولندي<span>Dutch Roll</span></h3>
+      <p class="cm-desc">الكادر يميل حول محوره — العالم مش متوازن. توتر نفسي فوري بدون أي حركة أخرى.</p>
+      <div class="cm-prompt">Camera movement: dutch angle roll. The camera slowly rolls around its lens axis, tilting the horizon diagonally from one side to the other, creating unease and disorientation. Cinematic.</div>
+      <div class="cm-actions">
+        <button class="cm-copy" type="button" data-i="19">انسخ البرومبت</button>
+        <a class="cm-try" href="https://higgsfield.ai/" target="_blank" rel="noopener">حوّله لفيديو ↗</a>
+      </div>
+    </div>
+  </article>
+  <article class="cm-card" data-cat="drone">
+    <div class="cam-view m-craneup">
+      <div class="cam-scene">
+        <div class="ly ly-sky"></div>
+        <div class="ly ly-moon"></div>
+        <div class="ly ly-far"></div>
+        <div class="ly ly-near"></div>
+        <div class="ly ly-subj"><i></i></div>
+      </div>
+      
+    </div>
+    <div class="cm-card-body">
+      <div class="cm-meta">
+        <span class="cm-num">لقطة 21</span>
+        <span class="cm-cat">درون وكرين</span>
+      </div>
+      <h3>كرين لأعلى<span>Crane Up</span></h3>
+      <p class="cm-desc">الكاميرا ترتفع بسلاسة فوق المشهد وتكبر الصورة — نهاية ملحمية لأي فيديو.</p>
+      <div class="cm-prompt">Camera movement: crane up. The camera rises vertically on a crane while tilting down slightly to keep the subject framed, the scene widens below as altitude increases. Smooth, majestic, cinematic.</div>
+      <div class="cm-actions">
+        <button class="cm-copy" type="button" data-i="20">انسخ البرومبت</button>
+        <a class="cm-try" href="https://higgsfield.ai/" target="_blank" rel="noopener">حوّله لفيديو ↗</a>
+      </div>
+    </div>
+  </article>
+  <article class="cm-card" data-cat="drone">
+    <div class="cam-view m-cranedown">
+      <div class="cam-scene">
+        <div class="ly ly-sky"></div>
+        <div class="ly ly-moon"></div>
+        <div class="ly ly-far"></div>
+        <div class="ly ly-near"></div>
+        <div class="ly ly-subj"><i></i></div>
+      </div>
+      
+    </div>
+    <div class="cm-card-body">
+      <div class="cm-meta">
+        <span class="cm-num">لقطة 22</span>
+        <span class="cm-cat">درون وكرين</span>
+      </div>
+      <h3>كرين لأسفل<span>Crane Down</span></h3>
+      <p class="cm-desc">النزول من الأعلى نحو مستوى العين — من الصورة الكبيرة إلى قلب الحدث.</p>
+      <div class="cm-prompt">Camera movement: crane down. The camera descends vertically from high above toward eye level, gradually closing in on the subject as the wide view narrows. Smooth, cinematic.</div>
+      <div class="cm-actions">
+        <button class="cm-copy" type="button" data-i="21">انسخ البرومبت</button>
+        <a class="cm-try" href="https://higgsfield.ai/" target="_blank" rel="noopener">حوّله لفيديو ↗</a>
+      </div>
+    </div>
+  </article>
+  <article class="cm-card" data-cat="drone">
+    <div class="cam-view m-fpv">
+      <div class="cam-scene">
+        <div class="ly ly-sky"></div>
+        <div class="ly ly-moon"></div>
+        <div class="ly ly-far"></div>
+        <div class="ly ly-near"></div>
+        <div class="ly ly-subj"><i></i></div>
+      </div>
+      
+    </div>
+    <div class="cm-card-body">
+      <div class="cm-meta">
+        <span class="cm-num">لقطة 23</span>
+        <span class="cm-cat">درون وكرين</span>
+      </div>
+      <h3>درون FPV<span>FPV Drone Dive</span></h3>
+      <p class="cm-desc">طيران سريع بميلان حاد مثل درونات السباق — أدرينالين خالص، المفضّلة في إعلانات المنتجات الجريئة.</p>
+      <div class="cm-prompt">Camera movement: FPV drone shot. The camera flies forward at high speed with aggressive banking and diving like a racing drone, sweeping close past obstacles toward the subject, dynamic motion. Energetic, immersive.</div>
+      <div class="cm-actions">
+        <button class="cm-copy" type="button" data-i="22">انسخ البرومبت</button>
+        <a class="cm-try" href="https://higgsfield.ai/" target="_blank" rel="noopener">حوّله لفيديو ↗</a>
+      </div>
+    </div>
+  </article>
+  <article class="cm-card" data-cat="drone">
+    <div class="cam-view m-zoomout">
+      <div class="cam-scene">
+        <div class="ly ly-sky"></div>
+        <div class="ly ly-moon"></div>
+        <div class="ly ly-far"></div>
+        <div class="ly ly-near"></div>
+        <div class="ly ly-subj"><i></i></div>
+      </div>
+      
+    </div>
+    <div class="cm-card-body">
+      <div class="cm-meta">
+        <span class="cm-num">لقطة 24</span>
+        <span class="cm-cat">درون وكرين</span>
+      </div>
+      <h3>سحب درون للخلف<span>Drone Pull Away</span></h3>
+      <p class="cm-desc">الدرون يبتعد ويرتفع ويكشف المشهد كاملاً — لقطة الختام الأشهر في السينما الجوية.</p>
+      <div class="cm-prompt">Camera movement: drone pull away. The camera flies backward and upward away from the subject, continuously revealing more of the landscape until the subject becomes small in a vast wide shot. Smooth aerial, cinematic.</div>
+      <div class="cm-actions">
+        <button class="cm-copy" type="button" data-i="23">انسخ البرومبت</button>
+        <a class="cm-try" href="https://higgsfield.ai/" target="_blank" rel="noopener">حوّله لفيديو ↗</a>
+      </div>
+    </div>
+  </article>
+  <article class="cm-card" data-cat="drone">
+    <div class="cam-view m-earthout">
+      <div class="cam-scene">
+        <div class="ly ly-sky"></div>
+        <div class="ly ly-moon"></div>
+        <div class="ly ly-far"></div>
+        <div class="ly ly-near"></div>
+        <div class="ly ly-subj"><i></i></div>
+      </div>
+      
+    </div>
+    <div class="cm-card-body">
+      <div class="cm-meta">
+        <span class="cm-num">لقطة 25</span>
+        <span class="cm-cat">درون وكرين</span>
+      </div>
+      <h3>زوم من الفضاء<span>Earth Zoom Out</span></h3>
+      <p class="cm-desc">انسحاب متواصل من العنصر حتى الغلاف الجوي — لقطة فيروسية بامتياز على السوشال.</p>
+      <div class="cm-prompt">Camera movement: earth zoom out. The camera pulls away from the subject vertically at exponential speed, rising through clouds and atmosphere until the whole city and then the planet is visible. Seamless continuous take.</div>
+      <div class="cm-actions">
+        <button class="cm-copy" type="button" data-i="24">انسخ البرومبت</button>
+        <a class="cm-try" href="https://higgsfield.ai/" target="_blank" rel="noopener">حوّله لفيديو ↗</a>
+      </div>
+    </div>
+  </article>
+  <article class="cm-card" data-cat="moves">
+    <div class="cam-view m-track">
+      <div class="cam-scene">
+        <div class="ly ly-sky"></div>
+        <div class="ly ly-moon"></div>
+        <div class="ly ly-far"></div>
+        <div class="ly ly-near"></div>
+        <div class="ly ly-subj"><i></i></div>
+      </div>
+      
+    </div>
+    <div class="cm-card-body">
+      <div class="cm-meta">
+        <span class="cm-num">لقطة 26</span>
+        <span class="cm-cat">حركات تتبّع</span>
+      </div>
+      <h3>لقطة تتبّع<span>Tracking Shot</span></h3>
+      <p class="cm-desc">الكاميرا تمشي مع العنصر جنباً إلى جنب وتحافظ عليه في منتصف الكادر — أساس كل مشاهد المشي والحوار.</p>
+      <div class="cm-prompt">Camera movement: side tracking shot. The camera moves parallel to the subject at matching speed, keeping it locked in the center of frame while the background streams past. Smooth, stabilized, cinematic.</div>
+      <div class="cm-actions">
+        <button class="cm-copy" type="button" data-i="25">انسخ البرومبت</button>
+        <a class="cm-try" href="https://higgsfield.ai/" target="_blank" rel="noopener">حوّله لفيديو ↗</a>
+      </div>
+    </div>
+  </article>
+  <article class="cm-card" data-cat="moves">
+    <div class="cam-view m-track flip">
+      <div class="cam-scene">
+        <div class="ly ly-sky"></div>
+        <div class="ly ly-moon"></div>
+        <div class="ly ly-far"></div>
+        <div class="ly ly-near"></div>
+        <div class="ly ly-subj"><i></i></div>
+      </div>
+      
+    </div>
+    <div class="cm-card-body">
+      <div class="cm-meta">
+        <span class="cm-num">لقطة 27</span>
+        <span class="cm-cat">حركات تتبّع</span>
+      </div>
+      <h3>تتبّع عكسي<span>Reverse Tracking</span></h3>
+      <p class="cm-desc">الكاميرا تتراجع أمام العنصر وهو يتقدّم نحوها — لقطة الأبطال في كل الأفلام.</p>
+      <div class="cm-prompt">Camera movement: reverse tracking shot. The camera moves backward directly in front of the subject as it walks toward the lens, keeping constant distance and framing. Smooth, confident, cinematic.</div>
+      <div class="cm-actions">
+        <button class="cm-copy" type="button" data-i="26">انسخ البرومبت</button>
+        <a class="cm-try" href="https://higgsfield.ai/" target="_blank" rel="noopener">حوّله لفيديو ↗</a>
+      </div>
+    </div>
+  </article>
+  <article class="cm-card" data-cat="moves">
+    <div class="cam-view m-lowtrack">
+      <div class="cam-scene">
+        <div class="ly ly-sky"></div>
+        <div class="ly ly-moon"></div>
+        <div class="ly ly-far"></div>
+        <div class="ly ly-near"></div>
+        <div class="ly ly-subj"><i></i></div>
+      </div>
+      
+    </div>
+    <div class="cm-card-body">
+      <div class="cm-meta">
+        <span class="cm-num">لقطة 28</span>
+        <span class="cm-cat">حركات تتبّع</span>
+      </div>
+      <h3>تتبّع منخفض<span>Low Tracking</span></h3>
+      <p class="cm-desc">نفس التتبّع لكن من مستوى الأرض — كل شيء يصير أضخم وأكثر مهابة.</p>
+      <div class="cm-prompt">Camera movement: low angle tracking shot. The camera travels alongside the subject from near ground level, tilted slightly upward, making the subject appear powerful and monumental. Smooth, cinematic.</div>
+      <div class="cm-actions">
+        <button class="cm-copy" type="button" data-i="27">انسخ البرومبت</button>
+        <a class="cm-try" href="https://higgsfield.ai/" target="_blank" rel="noopener">حوّله لفيديو ↗</a>
+      </div>
+    </div>
+  </article>
+  <article class="cm-card" data-cat="moves">
+    <div class="cam-view m-track-fast">
+      <div class="cam-scene">
+        <div class="ly ly-sky"></div>
+        <div class="ly ly-moon"></div>
+        <div class="ly ly-far"></div>
+        <div class="ly ly-near"></div>
+        <div class="ly ly-subj"><i></i></div>
+      </div>
+      
+    </div>
+    <div class="cm-card-body">
+      <div class="cm-meta">
+        <span class="cm-num">لقطة 29</span>
+        <span class="cm-cat">حركات تتبّع</span>
+      </div>
+      <h3>لقطة مطاردة<span>Chase Shot</span></h3>
+      <p class="cm-desc">تتبّع سريع بارتجاج خفيف — طاقة المطاردة الحقيقية. للإعلانات اللي تحتاج نبض عالي.</p>
+      <div class="cm-prompt">Camera movement: chase shot. The camera pursues the subject at high speed with slight handheld shake, urgent energy, background rushing past with motion blur. Fast, kinetic, intense.</div>
+      <div class="cm-actions">
+        <button class="cm-copy" type="button" data-i="28">انسخ البرومبت</button>
+        <a class="cm-try" href="https://higgsfield.ai/" target="_blank" rel="noopener">حوّله لفيديو ↗</a>
+      </div>
+    </div>
+  </article>
+  <article class="cm-card" data-cat="moves">
+    <div class="cam-view m-truck">
+      <div class="cam-scene">
+        <div class="ly ly-sky"></div>
+        <div class="ly ly-moon"></div>
+        <div class="ly ly-far"></div>
+        <div class="ly ly-near"></div>
+        <div class="ly ly-subj"><i></i></div>
+      </div>
+      
+    </div>
+    <div class="cm-card-body">
+      <div class="cm-meta">
+        <span class="cm-num">لقطة 30</span>
+        <span class="cm-cat">حركات تتبّع</span>
+      </div>
+      <h3>لقطة مركبة<span>Vehicle Shot</span></h3>
+      <p class="cm-desc">الكاميرا مثبّتة على مركبة تتحرك بسرعة ثابتة — انسياب ميكانيكي هادئ ومستمر.</p>
+      <div class="cm-prompt">Camera movement: vehicle-mounted shot. The camera is rigidly mounted to a moving vehicle traveling at constant speed, rock-steady horizon, scenery flowing past smoothly. Continuous, cinematic.</div>
+      <div class="cm-actions">
+        <button class="cm-copy" type="button" data-i="29">انسخ البرومبت</button>
+        <a class="cm-try" href="https://higgsfield.ai/" target="_blank" rel="noopener">حوّله لفيديو ↗</a>
+      </div>
+    </div>
+  </article>
+  <article class="cm-card" data-cat="moves">
+    <div class="cam-view m-pedup">
+      <div class="cam-scene">
+        <div class="ly ly-sky"></div>
+        <div class="ly ly-moon"></div>
+        <div class="ly ly-far"></div>
+        <div class="ly ly-near"></div>
+        <div class="ly ly-subj"><i></i></div>
+      </div>
+      
+    </div>
+    <div class="cm-card-body">
+      <div class="cm-meta">
+        <span class="cm-num">لقطة 31</span>
+        <span class="cm-cat">حركات تتبّع</span>
+      </div>
+      <h3>بيدستال لأعلى<span>Pedestal Up</span></h3>
+      <p class="cm-desc">الكاميرا كلها ترتفع عمودياً بدون دوران — مسح رأسي نظيف للعنصر من تحت لفوق.</p>
+      <div class="cm-prompt">Camera movement: pedestal up. The entire camera moves straight upward on a vertical column without tilting, framing slides evenly up the subject. Precise, controlled, cinematic.</div>
+      <div class="cm-actions">
+        <button class="cm-copy" type="button" data-i="30">انسخ البرومبت</button>
+        <a class="cm-try" href="https://higgsfield.ai/" target="_blank" rel="noopener">حوّله لفيديو ↗</a>
+      </div>
+    </div>
+  </article>
+  <article class="cm-card" data-cat="moves">
+    <div class="cam-view m-peddown">
+      <div class="cam-scene">
+        <div class="ly ly-sky"></div>
+        <div class="ly ly-moon"></div>
+        <div class="ly ly-far"></div>
+        <div class="ly ly-near"></div>
+        <div class="ly ly-subj"><i></i></div>
+      </div>
+      
+    </div>
+    <div class="cm-card-body">
+      <div class="cm-meta">
+        <span class="cm-num">لقطة 32</span>
+        <span class="cm-cat">حركات تتبّع</span>
+      </div>
+      <h3>بيدستال لأسفل<span>Pedestal Down</span></h3>
+      <p class="cm-desc">النزول العمودي المعاكس — من الوجه إلى التفاصيل، بدقة ميكانيكية.</p>
+      <div class="cm-prompt">Camera movement: pedestal down. The entire camera moves straight downward on a vertical column without tilting, framing slides evenly down the subject. Precise, controlled, cinematic.</div>
+      <div class="cm-actions">
+        <button class="cm-copy" type="button" data-i="31">انسخ البرومبت</button>
+        <a class="cm-try" href="https://higgsfield.ai/" target="_blank" rel="noopener">حوّله لفيديو ↗</a>
+      </div>
+    </div>
+  </article>
+  <article class="cm-card" data-cat="human">
+    <div class="cam-view m-shake">
+      <div class="cam-scene">
+        <div class="ly ly-sky"></div>
+        <div class="ly ly-moon"></div>
+        <div class="ly ly-far"></div>
+        <div class="ly ly-near"></div>
+        <div class="ly ly-subj"><i></i></div>
+      </div>
+      
+    </div>
+    <div class="cm-card-body">
+      <div class="cm-meta">
+        <span class="cm-num">لقطة 33</span>
+        <span class="cm-cat">كاميرا بشرية</span>
+      </div>
+      <h3>كاميرا محمولة<span>Handheld</span></h3>
+      <p class="cm-desc">اهتزاز اليد الطبيعي — واقعية وثائقية فورية. سر الإعلانات اللي تحس أنها 'حقيقية'.</p>
+      <div class="cm-prompt">Camera movement: handheld shot. The camera is held by hand with natural organic shake and micro-drift, slightly imperfect framing that breathes with the operator. Raw, documentary, realistic.</div>
+      <div class="cm-actions">
+        <button class="cm-copy" type="button" data-i="32">انسخ البرومبت</button>
+        <a class="cm-try" href="https://higgsfield.ai/" target="_blank" rel="noopener">حوّله لفيديو ↗</a>
+      </div>
+    </div>
+  </article>
+  <article class="cm-card" data-cat="human">
+    <div class="cam-view m-bob">
+      <div class="cam-scene">
+        <div class="ly ly-sky"></div>
+        <div class="ly ly-moon"></div>
+        <div class="ly ly-far"></div>
+        <div class="ly ly-near"></div>
+        <div class="ly ly-subj"><i></i></div>
+      </div>
+      
+    </div>
+    <div class="cm-card-body">
+      <div class="cm-meta">
+        <span class="cm-num">لقطة 34</span>
+        <span class="cm-cat">كاميرا بشرية</span>
+      </div>
+      <h3>كاميرا مثبّتة على الجسم<span>Body-Mounted</span></h3>
+      <p class="cm-desc">الكاميرا مربوطة بجسم يتحرك — اهتزاز إيقاعي مع كل خطوة. منظور الشخص نفسه.</p>
+      <div class="cm-prompt">Camera movement: body-mounted camera. The camera is rigged to the subject's body, bobbing rhythmically with each step, locked to their motion, immersive first-person energy.</div>
+      <div class="cm-actions">
+        <button class="cm-copy" type="button" data-i="33">انسخ البرومبت</button>
+        <a class="cm-try" href="https://higgsfield.ai/" target="_blank" rel="noopener">حوّله لفيديو ↗</a>
+      </div>
+    </div>
+  </article>
+  <article class="cm-card" data-cat="special">
+    <div class="cam-view m-orbit">
+      <div class="cam-scene">
+        <div class="ly ly-sky"></div>
+        <div class="ly ly-moon"></div>
+        <div class="ly ly-far"></div>
+        <div class="ly ly-near"></div>
+        <div class="ly ly-subj"><i></i></div>
+      </div>
+      
+    </div>
+    <div class="cm-card-body">
+      <div class="cm-meta">
+        <span class="cm-num">لقطة 35</span>
+        <span class="cm-cat">حركات خاصة</span>
+      </div>
+      <h3>أوربت (دوران)<span>Orbit</span></h3>
+      <p class="cm-desc">الكاميرا تدور دورة كاملة حول العنصر الثابت — اللقطة الملكية لعرض أي منتج.</p>
+      <div class="cm-prompt">Camera movement: orbit shot. The camera circles smoothly around the stationary subject in a full 360-degree path, keeping it perfectly centered while the background rotates behind it. Smooth, continuous, cinematic.</div>
+      <div class="cm-actions">
+        <button class="cm-copy" type="button" data-i="34">انسخ البرومبت</button>
+        <a class="cm-try" href="https://higgsfield.ai/" target="_blank" rel="noopener">حوّله لفيديو ↗</a>
+      </div>
+    </div>
+  </article>
+  <article class="cm-card" data-cat="special">
+    <div class="cam-view m-orbit flip">
+      <div class="cam-scene">
+        <div class="ly ly-sky"></div>
+        <div class="ly ly-moon"></div>
+        <div class="ly ly-far"></div>
+        <div class="ly ly-near"></div>
+        <div class="ly ly-subj"><i></i></div>
+      </div>
+      
+    </div>
+    <div class="cm-card-body">
+      <div class="cm-meta">
+        <span class="cm-num">لقطة 36</span>
+        <span class="cm-cat">حركات خاصة</span>
+      </div>
+      <h3>أوربت عكسي<span>Orbit Counter</span></h3>
+      <p class="cm-desc">نفس الدوران بعكس عقارب الساعة — جرّب الاتجاهين مع إضاءة مختلفة.</p>
+      <div class="cm-prompt">Camera movement: counter-clockwise orbit. The camera circles smoothly counter-clockwise around the stationary subject in a full 360-degree path, keeping it centered while the background rotates. Smooth, cinematic.</div>
+      <div class="cm-actions">
+        <button class="cm-copy" type="button" data-i="35">انسخ البرومبت</button>
+        <a class="cm-try" href="https://higgsfield.ai/" target="_blank" rel="noopener">حوّله لفيديو ↗</a>
+      </div>
+    </div>
+  </article>
+  <article class="cm-card" data-cat="special">
+    <div class="cam-view m-crashin">
+      <div class="cam-scene">
+        <div class="ly ly-sky"></div>
+        <div class="ly ly-moon"></div>
+        <div class="ly ly-far"></div>
+        <div class="ly ly-near"></div>
+        <div class="ly ly-subj"><i></i></div>
+      </div>
+      
+    </div>
+    <div class="cm-card-body">
+      <div class="cm-meta">
+        <span class="cm-num">لقطة 37</span>
+        <span class="cm-cat">حركات خاصة</span>
+      </div>
+      <h3>بوليت تايم<span>Bullet Time</span></h3>
+      <p class="cm-desc">الزمن يتجمّد والكاميرا تلف حول اللحظة المجمّدة — أيقونة الماتريكس، ولا تزال توقف السكرول.</p>
+      <div class="cm-prompt">Camera movement: bullet time. Time freezes completely — the subject and every particle hang motionless — while the camera sweeps rapidly around the frozen moment in a smooth arc. Iconic, dramatic.</div>
+      <div class="cm-actions">
+        <button class="cm-copy" type="button" data-i="36">انسخ البرومبت</button>
+        <a class="cm-try" href="https://higgsfield.ai/" target="_blank" rel="noopener">حوّله لفيديو ↗</a>
+      </div>
+    </div>
+  </article>
+  <article class="cm-card" data-cat="special">
+    <div class="cam-view m-timelapse">
+      <div class="cam-scene">
+        <div class="ly ly-sky"></div>
+        <div class="ly ly-moon"></div>
+        <div class="ly ly-far"></div>
+        <div class="ly ly-near"></div>
+        <div class="ly ly-subj"><i></i></div>
+      </div>
+      
+    </div>
+    <div class="cm-card-body">
+      <div class="cm-meta">
+        <span class="cm-num">لقطة 38</span>
+        <span class="cm-cat">حركات خاصة</span>
+      </div>
+      <h3>تايم لابس<span>Time-Lapse</span></h3>
+      <p class="cm-desc">ساعات تنضغط في ثوانٍ — السماء تجري والضوء يتبدّل والعنصر ثابت في المنتصف.</p>
+      <div class="cm-prompt">Camera movement: static time-lapse. The camera is locked off while time accelerates — clouds streak across the sky, light sweeps from day to night, shadows rotate — the subject remains fixed. Compressed time, cinematic.</div>
+      <div class="cm-actions">
+        <button class="cm-copy" type="button" data-i="37">انسخ البرومبت</button>
+        <a class="cm-try" href="https://higgsfield.ai/" target="_blank" rel="noopener">حوّله لفيديو ↗</a>
+      </div>
+    </div>
+  </article>
+  <article class="cm-card" data-cat="special">
+    <div class="cam-view m-tiltshift">
+      <div class="cam-scene">
+        <div class="ly ly-sky"></div>
+        <div class="ly ly-moon"></div>
+        <div class="ly ly-far"></div>
+        <div class="ly ly-near"></div>
+        <div class="ly ly-subj"><i></i></div>
+      </div>
+      <div class="tilt-top"></div><div class="tilt-bot"></div>
+    </div>
+    <div class="cm-card-body">
+      <div class="cm-meta">
+        <span class="cm-num">لقطة 39</span>
+        <span class="cm-cat">حركات خاصة</span>
+      </div>
+      <h3>تيلت شيفت<span>Tilt-Shift</span></h3>
+      <p class="cm-desc">ضبابية أعلى وأسفل الكادر تحوّل العالم الحقيقي إلى مجسّم مصغّر لطيف.</p>
+      <div class="cm-prompt">Camera style: tilt-shift miniature effect. High vantage point with a narrow band of sharp focus across the middle of frame and strong blur above and below, making the scene look like a tiny toy model. Whimsical.</div>
+      <div class="cm-actions">
+        <button class="cm-copy" type="button" data-i="38">انسخ البرومبت</button>
+        <a class="cm-try" href="https://higgsfield.ai/" target="_blank" rel="noopener">حوّله لفيديو ↗</a>
+      </div>
+    </div>
+  </article>
+  <article class="cm-card" data-cat="special">
+    <div class="cam-view m-fpv">
+      <div class="cam-scene">
+        <div class="ly ly-sky"></div>
+        <div class="ly ly-moon"></div>
+        <div class="ly ly-far"></div>
+        <div class="ly ly-near"></div>
+        <div class="ly ly-subj"><i></i></div>
+      </div>
+      
+    </div>
+    <div class="cm-card-body">
+      <div class="cm-meta">
+        <span class="cm-num">لقطة 40</span>
+        <span class="cm-cat">حركات خاصة</span>
+      </div>
+      <h3>عبور المستحيل<span>Impossible Pass-Through</span></h3>
+      <p class="cm-desc">الكاميرا تعبر من فتحة أو زجاج أو جدار وكأن لا شيء يوقفها — انتقال مستحيل إلا بالـ AI.</p>
+      <div class="cm-prompt">Camera movement: impossible pass-through. The camera flies forward and passes seamlessly through a solid obstacle — a keyhole, a window, a wall — emerging into a new scene in one continuous unbroken take.</div>
+      <div class="cm-actions">
+        <button class="cm-copy" type="button" data-i="39">انسخ البرومبت</button>
+        <a class="cm-try" href="https://higgsfield.ai/" target="_blank" rel="noopener">حوّله لفيديو ↗</a>
+      </div>
+    </div>
+  </article></div>
     <p class="cm-note" data-i18n="cm_note">البرومبتات بالإنجليزية عمداً — هي اللغة التي تفهمها أدوات الفيديو. المعاينات توضيحية لاتجاه وإيقاع كل حركة.</p>
 
     <section class="cm-bottom">
@@ -387,7 +1368,6 @@
     <button class="btn btn-gold btn-sm" id="cookieOk" type="button" data-i18n="cookie_ok">حسناً</button>
   </div>
 
-  <script defer src="/js/data.js"></script>
   <script defer src="app.js"></script>
 </body>
 </html>
