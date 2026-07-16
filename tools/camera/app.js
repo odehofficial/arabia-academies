@@ -1,6 +1,6 @@
 /* ============================================================
    Camera Movement Prompts — free reference for AI filmmakers
-   46 movements · real AI-generated preview clips (self-hosted,
+   64 movements · real AI-generated preview clips (self-hosted,
    compressed 640x360, lazy-loaded, play only while visible)
    ============================================================ */
 (() => {
@@ -67,7 +67,7 @@ const CATS = {
 };
 
 /* ------------------------------------------------------------
-   The 46 movements — v: video file in ./v/<v>.mp4
+   The 64 movements — v: video file in ./v/<v>.mp4
    ------------------------------------------------------------ */
 const MOVES = [
   /* ---- Dolly & Track (9) ---- */
@@ -133,8 +133,16 @@ const MOVES = [
     d:{ar:"العكس: انسحاب صاعق من التفصيلة إلى الصورة الكاملة في جزء من الثانية.",
        en:"The reverse: a jolting snap from the detail out to the full picture in a split second."},
     p:"Camera movement: crash zoom out. An extremely fast, aggressive zoom snaps from tight close-up to wide shot in a fraction of a second, slight motion blur during the move, abrupt stop." },
+  { cat:"zoom", v:"dolly-zoom", n:{ar:"دوللي زوم (فيرتيغو)", en:"Dolly Zoom (Vertigo)"},
+    d:{ar:"الكاميرا تتقدّم والعدسة تبعّد بنفس الوقت — العنصر ثابت والخلفية تتشوّه خلفه. إحساس الدوار السينمائي الشهير.",
+       en:"The camera moves in while the lens zooms out — the subject stays constant as the background warps behind it. The famous cinematic vertigo."},
+    p:"Camera movement: dolly zoom (vertigo effect). The camera dollies toward the subject while the lens zooms out at a matching rate, keeping the subject the same size while the background stretches and warps behind it. Unsettling, cinematic." },
+  { cat:"zoom", v:"rack-focus", n:{ar:"نقل البؤرة", en:"Rack Focus Shift"},
+    d:{ar:"الكاميرا لا تتحرك أبداً — البؤرة هي اللي تسافر من العنصر القريب إلى البعيد. القصة تنتقل مع الوضوح.",
+       en:"The camera never moves — the focus travels from the near subject to the far one. The story shifts with the sharpness."},
+    p:"Camera movement: rack focus. The camera stays locked while focus travels smoothly from the sharp foreground subject to a distant background subject, shallow depth of field, the story shifting with the focal plane. Deliberate, cinematic." },
 
-  /* ---- Pan & Tilt (7) ---- */
+  /* ---- Pan & Tilt (8) ---- */
   { cat:"pan", v:"static", n:{ar:"لقطة ثابتة", en:"Static Shot"},
     d:{ar:"لا حركة إطلاقاً — الثبات الكامل يعطي هيبة ويترك المشهد نفسه يتكلم. نقطة البداية لكل مقارنة.",
        en:"No movement at all — total stillness carries authority and lets the scene speak. The baseline every other move is measured against."},
@@ -163,8 +171,12 @@ const MOVES = [
     d:{ar:"النظرة تهبط من الأعلى نحو التفاصيل — مثالية للانتقال من المكان إلى الشخصية.",
        en:"The gaze descends from above toward the details — ideal for moving from the setting to the character."},
     p:"Camera movement: tilt down. The camera rotates vertically downward from a fixed position, starting high on the scene and settling onto the subject below, steady constant speed. Cinematic." },
+  { cat:"pan", v:"dutch-roll", n:{ar:"ميلان هولندي", en:"Dutch Angle Roll"},
+    d:{ar:"الكادر يميل حول محوره ببطء — العالم يفقد توازنه. توتر نفسي فوري بدون أي حركة أخرى.",
+       en:"The frame slowly tips around its axis — the world loses its balance. Instant psychological tension with no other movement."},
+    p:"Camera movement: dutch angle roll. The camera slowly rolls around its lens axis, tilting the horizon diagonally from level to a strong dutch angle, creating unease and disorientation. Slow, deliberate, cinematic." },
 
-  /* ---- Drone & Crane (6) ---- */
+  /* ---- Drone & Crane (10) ---- */
   { cat:"drone", v:"crane-up", n:{ar:"كرين لأعلى", en:"Crane Up"},
     d:{ar:"الكاميرا ترتفع بسلاسة فوق المشهد وتكبر الصورة — نهاية ملحمية لأي فيديو.",
        en:"The camera rises smoothly above the scene as the picture opens up — an epic ending for any video."},
@@ -189,8 +201,24 @@ const MOVES = [
     d:{ar:"طيران سريع بميلان حاد مثل درونات السباق — أدرينالين خالص، المفضّلة في الإعلانات الجريئة.",
        en:"Fast flight with aggressive banking like a racing drone — pure adrenaline, a favorite for bold ads."},
     p:"Camera movement: FPV drone shot. The camera flies forward at high speed with aggressive banking and diving like a racing drone, sweeping close past obstacles toward the subject, dynamic motion. Energetic, immersive." },
+  { cat:"drone", v:"birds-eye-plunge", n:{ar:"انقضاض عمودي", en:"Bird's-Eye Plunge"},
+    d:{ar:"من الأعلى تماماً، الكاميرا تنقضّ عمودياً نحو الهدف — الأرض تكبر بسرعة تحبس النفس.",
+       en:"From directly overhead, the camera plunges straight down toward the target — the ground grows at breath-holding speed."},
+    p:"Camera movement: bird's-eye plunge. From a perfectly top-down overhead angle high above, the camera descends rapidly straight toward the subject below, ground details growing fast, ending in a tight overhead close-up. Vertigo-inducing, cinematic." },
+  { cat:"drone", v:"falling-pov", n:{ar:"سقوط حر", en:"Falling Camera POV"},
+    d:{ar:"الكاميرا تسقط من السماء سقوطاً حراً نحو الأرض — أدرينالين خالص يتوقف قبل الاصطدام بلحظة.",
+       en:"The camera free-falls from the sky toward the ground — pure adrenaline that stops a beat before impact."},
+    p:"Camera movement: falling camera POV. The camera free-falls from high in the sky straight down toward the ground, wind-shake intensifying, the earth rushing up — ending with a sudden stop just before impact. Adrenaline, immersive." },
+  { cat:"drone", v:"barrel-roll", n:{ar:"دورة كاملة حول المحور", en:"360° Barrel Roll"},
+    d:{ar:"الكاميرا تطير للأمام وتدور دورة كاملة حول محورها — العالم ينقلب ويعتدل في حركة واحدة.",
+       en:"The camera flies forward while rolling a full 360° around its axis — the world flips upside down and rights itself in one motion."},
+    p:"Camera movement: 360-degree barrel roll. The camera flies forward while rolling a full 360 degrees around its lens axis, the world turning upside down and righting itself in one smooth continuous motion. Dynamic, aerial." },
+  { cat:"drone", v:"wall-peek", n:{ar:"إطلالة فوق الحاجز", en:"Wall Peek Crane-Over"},
+    d:{ar:"الكاميرا ترتفع أمام جدار، تتجاوز حافته، وتميل لتكشف المخفي خلفه — كشف تصاعدي مُرضٍ جداً.",
+       en:"The camera rises in front of a wall, crests its edge, and tilts down to reveal what hides behind — a deeply satisfying rising reveal."},
+    p:"Camera movement: wall peek crane-over. The camera rises vertically in front of a wall, crests over its top edge, and tilts down to reveal the hidden scene behind it — one smooth rising reveal. Curious, satisfying." },
 
-  /* ---- Tracking Moves (9) ---- */
+  /* ---- Tracking Moves (11) ---- */
   { cat:"moves", v:"tracking", n:{ar:"لقطة تتبّع", en:"Tracking Shot"},
     d:{ar:"الكاميرا تلاحق العنصر المتحرك وتحافظ عليه في الكادر بمسافة ثابتة — أساس مشاهد الحركة.",
        en:"The camera follows the moving subject, keeping it framed at a constant distance — the backbone of action coverage."},
@@ -227,6 +255,14 @@ const MOVES = [
     d:{ar:"النزول العمودي المعاكس — من الوجه إلى التفاصيل، بدقة ميكانيكية.",
        en:"The opposite vertical descent — from the face down to the details, with mechanical precision."},
     p:"Camera movement: pedestal down. The entire camera moves straight downward on a vertical column without tilting, framing slides evenly down the subject. Precise, controlled, cinematic." },
+  { cat:"moves", v:"speed-ramp", n:{ar:"تتبّع بسرعة متغيّرة", en:"Speed Ramp Tracking"},
+    d:{ar:"تتبّع يتنقّل بين السلوموشن والسرعة الخاطفة — الإيقاع اللي يمسك عين المشاهد ولا يفلتها.",
+       en:"Tracking that snaps between slow motion and hyper speed — the rhythm that grabs the viewer's eye and never lets go."},
+    p:"Camera movement: speed ramp tracking shot. The camera tracks the moving subject while time ramps dramatically — ultra slow motion for a beat, then snapping to hyper speed and back — motion blur surging on the fast ramps. Stylized, high energy." },
+  { cat:"moves", v:"product-pov", n:{ar:"منظور المنتج", en:"Product POV"},
+    d:{ar:"الكاميرا مثبّتة على المنتج نفسه وهو يتحرك — هو الثابت والعالم كله يدور حوله.",
+       en:"The camera is mounted on the product itself as it moves — the object stays locked while the whole world swings around it."},
+    p:"Camera movement: object-mounted POV. The camera is rigidly attached to the product itself as it moves through the scene, the object locked perfectly in frame while the world sweeps and swings around it. Dynamic, attention-grabbing." },
 
   /* ---- Human Camera (2) ---- */
   { cat:"human", v:"handheld", n:{ar:"كاميرا محمولة", en:"Handheld Shot"},
@@ -238,7 +274,7 @@ const MOVES = [
        en:"The camera is rigged to the subject's body facing them — they stay locked while the world shakes behind them. A powerful psychological effect."},
     p:"Camera movement: body-mounted Snorricam. The camera is rigged to the subject's torso facing them, so the subject stays perfectly locked in frame while the background bounces and sways with every step. Disorienting, intense." },
 
-  /* ---- Specials (7) ---- */
+  /* ---- Specials (16) ---- */
   { cat:"special", v:"orbit-cw", n:{ar:"أوربت مع عقارب الساعة", en:"Orbit Clockwise"},
     d:{ar:"الكاميرا تدور دورة كاملة حول العنصر الثابت — اللقطة الملكية لعرض أي منتج.",
        en:"The camera circles fully around a fixed subject — the royal shot for showcasing any product."},
@@ -267,6 +303,42 @@ const MOVES = [
     d:{ar:"الكاميرا تعبر من فتحة أو زجاج أو جدار وكأن لا شيء يوقفها — انتقال مستحيل إلا بالـ AI.",
        en:"The camera passes through a keyhole, glass, or wall as if nothing can stop it — a transition only AI makes possible."},
     p:"Camera movement: pass-through objects. The camera flies forward and passes seamlessly through a solid obstacle — a keyhole, a window, a wall — emerging into a new scene in one continuous unbroken take." },
+  { cat:"special", v:"probe-lens", n:{ar:"عدسة مجهرية تعبر التفاصيل", en:"Probe Lens Macro Fly-Through"},
+    d:{ar:"الكاميرا تصغر لحجم حشرة وتطير عبر فتحة ضيقة مستحيلة — الأسطح العادية تتحوّل لجدران عملاقة تمرّ من حولك.",
+       en:"The camera shrinks to insect size and flies through an impossibly tight gap — ordinary surfaces become giant walls gliding past you."},
+    p:"Camera movement: probe lens macro fly-through. The camera shrinks to insect scale and flies forward through an impossibly tight gap in an everyday object, the surrounding surfaces towering past like giant walls on both sides, extreme close-up detail with shallow depth of field and fine dust particles floating in the light, then emerges out the other side into open space. One continuous unbroken take, immersive, hyper-detailed." },
+  { cat:"special", v:"bullet-time", n:{ar:"بوليت تايم", en:"Bullet Time Orbit"},
+    d:{ar:"الزمن يتجمّد تماماً والكاميرا تدور حول اللحظة المجمّدة — أيقونة الماتريكس، ولا تزال توقف السكرول.",
+       en:"Time freezes completely while the camera sweeps around the frozen moment — the Matrix icon, and it still stops the scroll."},
+    p:"Camera movement: bullet time. Time freezes completely — the subject and every particle hang motionless in mid-air — while the camera sweeps rapidly around the frozen moment in a smooth arc. Iconic, dramatic." },
+  { cat:"special", v:"frozen-push", n:{ar:"عبور اللحظة المجمّدة", en:"Frozen Moment Push-Through"},
+    d:{ar:"الزمن واقف والكاميرا تسافر داخل المشهد المجمّد — بين قطرات معلّقة وناس متوقفين في منتصف الحركة.",
+       en:"Time stands still while the camera travels through the frozen scene — between suspended droplets and people caught mid-motion."},
+    p:"Camera movement: frozen moment push-through. Time is completely frozen — droplets, debris and people suspended mid-motion — while the camera dollies forward weaving between the frozen elements. Continuous take, surreal, cinematic." },
+  { cat:"special", v:"through-mirror", n:{ar:"عبور المرآة", en:"Through the Mirror"},
+    d:{ar:"الكاميرا تدخل في سطح المرآة وتخرج داخل العالم المنعكس — انتقال مستحيل إلا بالذكاء الاصطناعي.",
+       en:"The camera pushes into the mirror's surface and emerges inside the reflected world — a transition only AI makes possible."},
+    p:"Camera movement: through the mirror. The camera dollies toward a mirror, passes through its surface with a liquid ripple, and emerges inside the mirrored world where everything is subtly reversed. Continuous take, surreal." },
+  { cat:"special", v:"periscope", n:{ar:"خروج من الماء", en:"Periscope Breach"},
+    d:{ar:"الكاميرا تصعد من تحت الماء وتخترق السطح — قطرات على العدسة ومشهد جديد يفتح فوق الماء.",
+       en:"The camera rises from underwater and breaks the surface — droplets streak the lens as a new scene opens above the waterline."},
+    p:"Camera movement: periscope breach. The camera rises vertically from beneath water, breaking through the surface with droplets streaking the lens, and settles on the scene above the waterline in one continuous move. Refreshing, cinematic." },
+  { cat:"special", v:"macro-orbit", n:{ar:"أوربت مجهري", en:"Macro Product Orbit"},
+    d:{ar:"دوران بطيء وقريب جداً حول عنصر صغير — بؤرة حادّة رفيعة وتفاصيل فاخرة تلمع وهي تدور.",
+       en:"A slow, extremely close circle around a small object — razor-thin focus and premium details glinting as they rotate."},
+    p:"Camera movement: macro orbit. An extreme close-up camera circles slowly around a small object, razor-thin depth of field, surface textures and light reflections rotating past in fine detail. Luxurious, premium product shot." },
+  { cat:"special", v:"hyperspace-warp", n:{ar:"نفق الانطلاق", en:"Hyperspace Corridor Warp"},
+    d:{ar:"اندفاع متسارع في ممر طويل حتى تتحوّل الجدران لخطوط ضوء — انتقال انفجاري بين مشهدين.",
+       en:"An accelerating rush down a long corridor until the walls streak into light — an explosive transition between scenes."},
+    p:"Camera movement: hyperspace corridor warp. The camera accelerates forward down a long corridor, speed building until the walls stretch and streak into light trails like a jump to hyperspace, then snaps out into a new scene. Explosive transition." },
+  { cat:"special", v:"match-cut", n:{ar:"انتقال مطابق", en:"Match-Cut Morph Move"},
+    d:{ar:"الحركة تنتهي على شكل معيّن… يتحوّل بسلاسة لنفس الشكل في مشهد مختلف تماماً. مونتاج بلا قصّ.",
+       en:"The move ends on a shape… that morphs seamlessly into the same shape in a completely different scene. Editing without a cut."},
+    p:"Camera movement: match-cut morph. The camera pushes in on a circular object until it fills the frame, and the shape seamlessly morphs into a matching circular object in a completely different scene as the camera pulls back out. Seamless transition." },
+  { cat:"special", v:"screen-dive", n:{ar:"الغوص داخل الشاشة", en:"Screen Dive"},
+    d:{ar:"الكاميرا تندفع نحو شاشة الهاتف وتغوص داخلها إلى عالم المحتوى — اللقطة المثالية لإعلانات المتاجر.",
+       en:"The camera rushes at a phone screen and dives inside it into the content's world — the perfect shot for e-commerce ads."},
+    p:"Camera movement: screen dive. The camera pushes toward a smartphone screen, dives through the glass, and emerges inside the world shown on the display — one continuous take from real world to digital world. Impossible, modern." },
 ];
 
 /* ------------------------------------------------------------
