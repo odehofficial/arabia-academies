@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>برومبتات حركات الكاميرا — مرجع مجاني لصنّاع أفلام الذكاء الاصطناعي | Arabia Academies</title>
+  <meta name="description" content="مكتبة مرجعية مجانية: 40 حركة كاميرا مع معاينة حية وبرومبت جاهز للنسخ يعمل مع كل أدوات فيديو الذكاء الاصطناعي — Veo، Kling، Runway، Higgsfield وغيرها.">
+  <link rel="canonical" href="https://odehofficial.com/tools/camera/">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://odehofficial.com/tools/camera/">
+  <meta property="og:title" content="🎬 برومبتات حركات الكاميرا — 40 حركة جاهزة للنسخ لفيديوهات الذكاء الاصطناعي">
+  <meta property="og:description" content="شوف كل حركة كاميرا قدامك، انسخ برومبتها، والصقه في أي أداة فيديو AI. مجاناً.">
+  <meta property="og:image" content="https://odehofficial.com/assets/og/camera.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" type="image/png" href="/assets/favicon.png">
+  <link rel="preload" href="/assets/fonts/cairo-800-arabic.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/assets/fonts/cairo-600-arabic.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/assets/fonts/cairo-400-arabic.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="/css/style.css">
+  <script>
+    try { if (localStorage.getItem("aa-lang") === "en") {
+      document.documentElement.lang = "en"; document.documentElement.dir = "ltr";
+    } } catch (e) {}
+  </script>
+  <style>
+    .cm-main{ position:relative; padding-top:86px }
+    .cm-hero{ text-align:center; padding:30px var(--pad) 10px; max-width:880px; margin-inline:auto }
+    .cm-hero h1{
+      font-family:var(--f-display); font-weight:800;
+      font-size:clamp(28px, 4.8vw, 50px); line-height:1.18;
+    }
+    .cm-hero h1 b{ color:var(--gold); font-weight:800 }
+    .cm-hero .eyebrow{ margin-bottom:10px }
+    .cm-sub{ color:var(--muted); font-size:clamp(14.5px,1.8vw,17px); line-height:1.85; margin-top:14px }
+    .cm-stats{
+      display:flex; justify-content:center; gap:10px; flex-wrap:wrap; margin-top:18px;
+      color:var(--muted); font-size:13px;
+    }
+    .cm-stats span{
+      border:1px solid var(--line-2); border-radius:999px; padding:6px 14px;
+    }
+    .cm-stats b{ color:var(--gold-2); font-family:var(--f-mono) }
+
+    /* ---------- category filters ---------- */
+    .cm-filters{
+      display:flex; flex-wrap:wrap; justify-content:center; gap:8px;
+      max-width:900px; margin:26px auto 6px; padding-inline:var(--pad);
+    }
+    .cm-filters button{
+      border:1px solid var(--line-2); border-radius:999px;
+      padding:7px 16px; color:var(--muted); font-size:13.5px; font-weight:600; font-family:var(--f-body);
+      transition:border-color .2s, color .2s, background .2s;
+    }
+    .cm-filters button:hover{ border-color:var(--gold); color:var(--gold-2) }
+    .cm-filters button.active{ background:var(--gold); border-color:var(--gold); color:#080C1C }
+
+    /* ---------- cards grid ---------- */
+    .cm-grid{
+      display:grid; grid-template-columns:repeat(auto-fill, minmax(305px, 1fr));
+      gap:18px; max-width:1280px; margin:26px auto 0; padding-inline:var(--pad);
+    }
+    .cm-card{
+      background:rgba(13,19,42,.55); border:1px solid var(--line); border-radius:18px;
+      overflow:hidden; content-visibility:auto; contain-intrinsic-size: 420px;
+      transition:border-color .25s, transform .25s;
+    }
+    .cm-card:hover{ border-color:var(--line-2); transform:translateY(-3px) }
+    .cm-card-body{ padding:14px 16px 16px }
+    .cm-meta{ display:flex; align-items:center; gap:8px; margin-bottom:6px }
+    .cm-num{ font-family:var(--f-mono); font-size:11px; color:rgba(169,176,197,.7) }
+    .cm-cat{
+      font-size:10.5px; font-weight:700; color:var(--gold);
+      border:1px solid var(--line-2); border-radius:999px; padding:2px 9px;
+    }
+    .cm-card h3{ font-family:var(--f-display); font-size:18px; font-weight:800; line-height:1.3 }
+    .cm-card h3 span{ display:block; font-family:var(--f-body); font-size:12px; font-weight:600; color:var(--muted); margin-top:2px; letter-spacing:.03em }
+    .cm-desc{ color:var(--muted); font-size:13px; line-height:1.75; margin-top:8px; min-height:3.4em }
+
+    .cm-prompt{
+      direction:ltr; text-align:left;
+      background:rgba(5,8,20,.7); border:1px solid var(--line); border-radius:11px;
+      padding:10px 12px; margin-top:12px;
+      font-family:var(--f-mono); font-size:11.5px; line-height:1.65; color:#C9D2E8;
+      max-height:88px; overflow:auto;
+    }
+    .cm-actions{ display:flex; gap:8px; margin-top:10px }
+    .cm-copy{
+      flex:1; display:flex; align-items:center; justify-content:center; gap:6px;
+      background:var(--gold); color:#080C1C; border-radius:10px;
+      padding:9px; font-size:13px; font-weight:800; font-family:var(--f-body);
+      transition:filter .2s;
+    }
+    .cm-copy:hover{ filter:brightness(1.08) }
+    .cm-copy.ok{ background:#37C6A0 }
+    .cm-try{
+      display:flex; align-items:center; justify-content:center;
+      border:1px solid var(--line-2); border-radius:10px; padding:9px 13px;
+      color:var(--muted); font-size:12.5px; font-weight:600; text-decoration:none;
+      transition:border-color .2s, color .2s;
+    }
+    .cm-try:hover{ border-color:var(--gold); color:var(--gold-2) }
+
+    /* ---------- animated preview scene ---------- */
+    .cam-view{
+      position:relative; aspect-ratio:16/9; overflow:hidden;
+      background:#050814; border-bottom:1px solid var(--line);
+      perspective:600px;
+    }
+    .cam-scene{ position:absolute; inset:-22%; transform-origin:50% 55% }
+    .ly{ position:absolute; inset:0; background-repeat:repeat-x; background-position:0 100% }
+    .ly-sky{
+      background:
+        radial-gradient(1.5px 1.5px at 12% 22%, rgba(244,239,226,.9), transparent 60%),
+        radial-gradient(1px 1px at 28% 48%, rgba(244,239,226,.7), transparent 60%),
+        radial-gradient(1.5px 1.5px at 43% 15%, rgba(244,239,226,.8), transparent 60%),
+        radial-gradient(1px 1px at 58% 38%, rgba(244,239,226,.6), transparent 60%),
+        radial-gradient(1.5px 1.5px at 71% 20%, rgba(244,239,226,.85), transparent 60%),
+        radial-gradient(1px 1px at 84% 44%, rgba(244,239,226,.65), transparent 60%),
+        radial-gradient(1px 1px at 93% 12%, rgba(244,239,226,.7), transparent 60%),
+        linear-gradient(180deg, #060A1A 0%, #0B1230 68%, #131B3E 100%);
+      background-size:340px 100%, 340px 100%, 340px 100%, 340px 100%, 340px 100%, 340px 100%, 340px 100%, 100% 100%;
+    }
+    .ly-moon{
+      background:radial-gradient(circle at 78% 26%, rgba(240,200,120,.95) 0 1.6%, rgba(240,200,120,.28) 2.4%, transparent 3.6%);
+      background-size:100% 100%; background-repeat:no-repeat;
+    }
+    .ly-far{
+      background-image:
+        linear-gradient(180deg, transparent 62%, #10173A 63%, #0D1330 100%);
+      background-size:100% 100%;
+    }
+    .ly-far::after{
+      content:""; position:absolute; inset:0; background-repeat:repeat-x;
+      background-image:radial-gradient(60% 26% at 30% 66%, #131B44 0 49%, transparent 50%),
+                       radial-gradient(48% 20% at 74% 68%, #121A40 0 49%, transparent 50%);
+      background-size:520px 100%;
+    }
+    .ly-near{
+      background-image:radial-gradient(70% 30% at 22% 96%, #1A2352 0 49%, transparent 50%),
+                       radial-gradient(85% 34% at 68% 102%, #161E48 0 49%, transparent 50%),
+                       linear-gradient(180deg, transparent 82%, #1A2352 92%, #1D2658 100%);
+      background-size:460px 100%, 460px 100%, 100% 100%;
+    }
+    .ly-subj{ display:flex; align-items:center; justify-content:center }
+    .ly-subj i{
+      display:block; width:13%; aspect-ratio:1; position:relative; margin-top:8%;
+      filter:drop-shadow(0 0 14px rgba(227,169,79,.55));
+    }
+    .ly-subj i::before, .ly-subj i::after{
+      content:""; position:absolute; inset:12%;
+      border:2.5px solid var(--gold); border-radius:6%;
+    }
+    .ly-subj i::after{ transform:rotate(45deg) }
+
+    /* motion blur helper */
+    .cam-view.blurable .cam-scene{ will-change:transform, filter }
+
+    /* play only while on screen */
+    .cam-scene, .cam-scene .ly, .cam-scene .ly::after, .ly-subj i{ animation-play-state:paused !important }
+    .cm-card.playing .cam-scene, .cm-card.playing .cam-scene .ly,
+    .cm-card.playing .cam-scene .ly::after, .cm-card.playing .ly-subj i{ animation-play-state:running !important }
+
+    /* ============ movement keyframes ============ */
+    @keyframes kfScaleIn   { 0%,8%{transform:scale(1)} 78%,100%{transform:scale(1.34)} }
+    @keyframes kfScaleOut  { 0%,8%{transform:scale(1.34)} 78%,100%{transform:scale(1)} }
+    @keyframes kfCrashIn   { 0%,55%{transform:scale(1); filter:blur(0)} 68%{filter:blur(2.5px)} 74%,100%{transform:scale(1.55); filter:blur(0)} }
+    @keyframes kfCrashOut  { 0%,55%{transform:scale(1.55); filter:blur(0)} 68%{filter:blur(2.5px)} 74%,100%{transform:scale(1); filter:blur(0)} }
+    @keyframes kfPan       { 0%,8%{transform:translateX(4%)} 82%,100%{transform:translateX(-9%)} }
+    @keyframes kfWhip      { 0%,52%{transform:translateX(6%); filter:blur(0)} 60%{filter:blur(5px)} 66%,100%{transform:translateX(-13%); filter:blur(0)} }
+    @keyframes kfTiltUp    { 0%,8%{transform:translateY(-2%)} 80%,100%{transform:translateY(9%)} }
+    @keyframes kfTiltDown  { 0%,8%{transform:translateY(9%)} 80%,100%{transform:translateY(-2%)} }
+    @keyframes kfRoll      { 0%{transform:rotate(-5deg) scale(1.08)} 100%{transform:rotate(5deg) scale(1.08)} }
+    @keyframes kfPedUp     { 0%,10%{transform:translateY(7%)} 85%,100%{transform:translateY(-7%)} }
+    @keyframes kfPedDown   { 0%,10%{transform:translateY(-7%)} 85%,100%{transform:translateY(7%)} }
+    @keyframes kfCraneUp   { 0%,8%{transform:translateY(-4%) scale(1.18)} 85%,100%{transform:translateY(10%) scale(1)} }
+    @keyframes kfCraneDown { 0%,8%{transform:translateY(10%) scale(1)} 85%,100%{transform:translateY(-4%) scale(1.18)} }
+    @keyframes kfShake{
+      0%{transform:translate(0,0) rotate(0)} 12%{transform:translate(-1.1%,.8%) rotate(-.5deg)}
+      25%{transform:translate(.9%,-.7%) rotate(.4deg)} 37%{transform:translate(-.7%,-.9%) rotate(-.3deg)}
+      50%{transform:translate(1%, .6%) rotate(.5deg)} 62%{transform:translate(-.9%,.9%) rotate(.3deg)}
+      75%{transform:translate(.7%,-1%) rotate(-.4deg)} 87%{transform:translate(-.5%,.5%) rotate(.2deg)}
+      100%{transform:translate(0,0) rotate(0)}
+    }
+    @keyframes kfBob{
+      0%{transform:translate(0,0) rotate(0)} 25%{transform:translate(-.6%,1.6%) rotate(-.6deg)}
+      50%{transform:translate(0,.2%) rotate(0)} 75%{transform:translate(.6%,1.6%) rotate(.6deg)}
+      100%{transform:translate(0,0) rotate(0)}
+    }
+    @keyframes kfFpv{ 0%,10%{transform:scale(1) rotate(0) translateY(0)} 55%{transform:scale(1.35) rotate(-3deg) translateY(5%)} 90%,100%{transform:scale(1.7) rotate(2deg) translateY(9%)} }
+    @keyframes kfEarthOut{ 0%,12%{transform:scale(1.6)} 80%,100%{transform:scale(.28)} }
+    @keyframes kfPassSubj{ 0%,20%{transform:scale(1); opacity:1; filter:blur(0)} 85%{transform:scale(6.5); opacity:.25; filter:blur(4px)} 100%{transform:scale(7); opacity:0; filter:blur(5px)} }
+    @keyframes kfPassScene{ 0%,20%{transform:scale(1)} 100%{transform:scale(1.25)} }
+    @keyframes kfInfZoom{ 0%{transform:scale(1); opacity:1} 82%{opacity:1} 100%{transform:scale(2.4); opacity:0} }
+    @keyframes kfArcR{ 0%,6%{transform:translateX(5%) rotateY(-9deg) scale(1.12)} 90%,100%{transform:translateX(-5%) rotateY(9deg) scale(1.12)} }
+    @keyframes kfVertigoBg{ 0%,10%{transform:scale(1)} 88%,100%{transform:scale(1.5)} }
+    @keyframes kfVertigoSubj{ 0%,10%{transform:scale(1)} 88%,100%{transform:scale(.68)} }
+    @keyframes kfBgSlow { from{background-position:0 100%} to{background-position:-460px 100%} }
+    @keyframes kfBgSlow2{ from{background-position:0 100%} to{background-position:-520px 100%} }
+    @keyframes kfSubjBob{ 0%,100%{transform:translateY(0)} 50%{transform:translateY(1.6%)} }
+    @keyframes kfMoonArc{
+      0%{background-position:-18% 78%} 25%{background-position:8% 30%}
+      50%{background-position:40% 12%} 75%{background-position:72% 30%} 100%{background-position:108% 78%}
+    }
+    @keyframes kfDollyFar { 0%,8%{transform:scale(1)} 78%,100%{transform:scale(1.12)} }
+    @keyframes kfDollyNear{ 0%,8%{transform:scale(1)} 78%,100%{transform:scale(1.5)} }
+    @keyframes kfDollySubj{ 0%,8%{transform:scale(1)} 78%,100%{transform:scale(1.3)} }
+    @keyframes kfDollyFarR { 0%,8%{transform:scale(1.12)} 78%,100%{transform:scale(1)} }
+    @keyframes kfDollyNearR{ 0%,8%{transform:scale(1.5)} 78%,100%{transform:scale(1)} }
+    @keyframes kfDollySubjR{ 0%,8%{transform:scale(1.3)} 78%,100%{transform:scale(1)} }
+
+    /* movement classes */
+    .m-static   .cam-scene{ }
+    .m-zoomin   .cam-scene{ animation:kfScaleIn 7s ease-in-out infinite alternate }
+    .m-zoomout  .cam-scene{ animation:kfScaleOut 7s ease-in-out infinite alternate }
+    .m-crashin  .cam-scene{ animation:kfCrashIn 3.4s ease-in infinite }
+    .m-crashout .cam-scene{ animation:kfCrashOut 3.4s ease-in infinite }
+    .m-pan      .cam-scene{ animation:kfPan 7s ease-in-out infinite alternate }
+    .m-whip     .cam-scene{ animation:kfWhip 3.6s ease-in infinite }
+    .m-tiltup   .cam-scene{ animation:kfTiltUp 6.5s ease-in-out infinite alternate }
+    .m-tiltdown .cam-scene{ animation:kfTiltDown 6.5s ease-in-out infinite alternate }
+    .m-roll     .cam-scene{ animation:kfRoll 5s ease-in-out infinite alternate }
+    .m-pedup    .cam-scene{ animation:kfPedUp 6.5s ease-in-out infinite alternate }
+    .m-peddown  .cam-scene{ animation:kfPedDown 6.5s ease-in-out infinite alternate }
+    .m-craneup  .cam-scene{ animation:kfCraneUp 7s ease-in-out infinite alternate }
+    .m-cranedown.cam-view .cam-scene, .m-cranedown .cam-scene{ animation:kfCraneDown 7s ease-in-out infinite alternate }
+    .m-shake    .cam-scene{ animation:kfShake 1.4s linear infinite }
+    .m-bob      .cam-scene{ animation:kfBob 1.15s ease-in-out infinite }
+    .m-fpv      .cam-scene{ animation:kfFpv 4.5s ease-in infinite alternate }
+    .m-earthout .cam-scene{ animation:kfEarthOut 6s ease-in-out infinite alternate }
+    .m-infzoom  .cam-scene{ animation:kfInfZoom 4.2s ease-in infinite }
+    .m-arc      .cam-scene{ animation:kfArcR 8s ease-in-out infinite alternate }
+    .m-vertigo  .ly-sky, .m-vertigo .ly-moon, .m-vertigo .ly-far, .m-vertigo .ly-near{ animation:kfVertigoBg 6.5s ease-in-out infinite alternate }
+    .m-vertigo  .ly-subj{ animation:kfVertigoSubj 6.5s ease-in-out infinite alternate }
+    .m-pass     .ly-subj{ animation:kfPassSubj 4.6s ease-in infinite }
+    .m-pass     .cam-scene{ animation:kfPassScene 4.6s ease-in infinite }
+    .m-dollyin  .ly-far{ animation:kfDollyFar 7s ease-in-out infinite alternate }
+    .m-dollyin  .ly-sky, .m-dollyin .ly-moon{ animation:kfDollyFar 7s ease-in-out infinite alternate }
+    .m-dollyin  .ly-near{ animation:kfDollyNear 7s ease-in-out infinite alternate }
+    .m-dollyin  .ly-subj{ animation:kfDollySubj 7s ease-in-out infinite alternate }
+    .m-dollyout .ly-far{ animation:kfDollyFarR 7s ease-in-out infinite alternate }
+    .m-dollyout .ly-sky, .m-dollyout .ly-moon{ animation:kfDollyFarR 7s ease-in-out infinite alternate }
+    .m-dollyout .ly-near{ animation:kfDollyNearR 7s ease-in-out infinite alternate }
+    .m-dollyout .ly-subj{ animation:kfDollySubjR 7s ease-in-out infinite alternate }
+    .m-track    .ly-far::after{ animation:kfBgSlow 7s linear infinite }
+    .m-track    .ly-near{ animation:kfBgSlow2 4.5s linear infinite }
+    .m-track    .ly-subj{ animation:kfSubjBob 1.2s ease-in-out infinite }
+    .m-track-fast .ly-far::after{ animation:kfBgSlow 3.2s linear infinite }
+    .m-track-fast .ly-near{ animation:kfBgSlow2 1.9s linear infinite }
+    .m-track-fast .ly-subj{ animation:kfSubjBob .8s ease-in-out infinite }
+    .m-track-fast .cam-scene{ animation:kfShake 1.1s linear infinite }
+    .m-truck    .ly-far::after{ animation:kfBgSlow 9s linear infinite }
+    .m-truck    .ly-near{ animation:kfBgSlow2 5.5s linear infinite }
+    .m-orbit    .ly-far::after{ animation:kfBgSlow 6.5s linear infinite }
+    .m-orbit    .ly-near{ animation:kfBgSlow2 4s linear infinite }
+    .m-orbit    .cam-scene{ animation:kfArcR 6.5s ease-in-out infinite alternate }
+    .m-lowtrack .ly-far::after{ animation:kfBgSlow 6.5s linear infinite }
+    .m-lowtrack .ly-near{ animation:kfBgSlow2 4s linear infinite }
+    .m-lowtrack .cam-scene{ transform:translateY(-9%) scale(1.15) }
+    .m-timelapse .ly-moon{ animation:kfMoonArc 5s linear infinite; background-position:-18% 78% }
+    .m-timelapse .ly-sky{ animation:kfBgSlow 9s linear infinite }
+    .m-tiltshift .cam-scene{ animation:kfSubjBob 3s ease-in-out infinite }
+    .m-tiltshift .tilt-mask{ position:absolute; inset:0; pointer-events:none;
+      backdrop-filter:blur(0); }
+    .m-tiltshift .tilt-top, .m-tiltshift .tilt-bot{
+      position:absolute; inset-inline:0; height:30%; backdrop-filter:blur(3px); -webkit-backdrop-filter:blur(3px);
+    }
+    .m-tiltshift .tilt-top{ top:0; mask-image:linear-gradient(180deg,#000 30%,transparent) }
+    .m-tiltshift .tilt-bot{ bottom:0; mask-image:linear-gradient(0deg,#000 30%,transparent) }
+
+    /* mirrored variants (left/right, up/down handled by flip) */
+    .cam-view.flip .cam-scene{ transform:scaleX(-1) }
+    .cam-view.flip .m-inner{ }
+
+    @media (prefers-reduced-motion: reduce){
+      .cam-scene, .cam-scene .ly, .cam-scene .ly::after, .ly-subj i{ animation:none !important }
+    }
+
+    /* ---------- bottom CTA ---------- */
+    .cm-bottom{ text-align:center; padding:64px var(--pad) 72px; max-width:780px; margin-inline:auto }
+    .cm-bottom h2{ font-family:var(--f-display); font-size:clamp(23px,3.4vw,34px); font-weight:800; line-height:1.35 }
+    .cm-bottom h2 b{ color:var(--gold) }
+    .cm-bottom p{ color:var(--muted); margin:14px 0 24px; line-height:1.85 }
+    .cm-bottom .hero-ctas{ justify-content:center }
+    .cm-price{ display:inline-block; margin-inline-start:8px; font-family:var(--f-mono) }
+
+    .cm-note{ text-align:center; color:rgba(169,176,197,.6); font-size:12px; margin-top:26px; padding-inline:var(--pad) }
+
+    .cm-foot{
+      border-top:1px solid var(--line); padding:22px var(--pad);
+      display:flex; flex-wrap:wrap; gap:10px 22px; align-items:center; justify-content:center;
+      color:var(--muted); font-size:13px;
+    }
+    .cm-foot a{ color:var(--muted); text-decoration:none }
+    .cm-foot a:hover{ color:var(--gold-2) }
+
+    @media (max-width:860px){
+      .nav{ justify-content:space-between }
+      .nav-actions{ position:static; transform:none }
+      .nav-actions > .lang-btn{ display:inline-block }
+      .cm-main{ padding-top:74px }
+      .cm-grid{ grid-template-columns:1fr 1fr; gap:12px }
+      .cm-card h3{ font-size:16px }
+    }
+    @media (max-width:620px){
+      .cm-grid{ grid-template-columns:1fr }
+    }
+  </style>
+</head>
+<body>
+  <!-- ===== Nav ===== -->
+  <header class="nav scrolled" id="nav">
+    <a class="nav-logo" href="/" aria-label="Arabia Academies">
+      <svg class="nav-mark" viewBox="0 0 200 200" aria-hidden="true">
+        <g transform="translate(100,100)" fill="none" stroke="currentColor" stroke-width="9" stroke-linejoin="round">
+          <rect x="-46" y="-46" width="92" height="92"/>
+          <rect x="-46" y="-46" width="92" height="92" transform="rotate(45)"/>
+          <circle r="9" fill="currentColor" stroke="none"/>
+        </g>
+      </svg>
+      <span class="nav-word">Arabia<em data-i18n="f_tag">طريقك إلى النجاح</em></span>
+    </a>
+    <div class="nav-actions">
+      <button class="lang-btn" id="langBtn" type="button" aria-label="Switch language"><span data-i18n="lang_btn">EN</span></button>
+      <a class="btn btn-gold btn-sm" href="https://www.skool.com/aiarabia" target="_blank" rel="noopener" data-i18n="nav_join">انضم الآن</a>
+    </div>
+  </header>
+
+  <main class="cm-main">
+    <section class="cm-hero">
+      <p class="eyebrow" data-i18n="cm_eyebrow">أداة مجانية من أكاديميات أرابيا</p>
+      <h1><span data-i18n="cm_h1a">برومبتات</span> <b data-i18n="cm_h1b">حركات الكاميرا</b></h1>
+      <p class="cm-sub" data-i18n="cm_sub">مرجع مجاني لصنّاع الأفلام بالذكاء الاصطناعي: شوف كل حركة قدامك مباشرة، انسخ برومبتها الجاهز، والصقه في أي أداة فيديو — Veo، Kling، Runway، Higgsfield وغيرها. المشهد من خيالك… والحركة من هنا.</p>
+      <div class="cm-stats">
+        <span><b id="cmCount">40</b> <i data-i18n="cm_stat1">حركة كاميرا</i></span>
+        <span><b>7</b> <i data-i18n="cm_stat2">فئات</i></span>
+        <span><b>1</b> <i data-i18n="cm_stat3">برومبت جاهز لكل حركة</i></span>
+      </div>
+    </section>
+
+    <div class="cm-filters" id="cmFilters"></div>
+    <div class="cm-grid" id="cmGrid"></div>
+    <p class="cm-note" data-i18n="cm_note">البرومبتات بالإنجليزية عمداً — هي اللغة التي تفهمها أدوات الفيديو. المعاينات توضيحية لاتجاه وإيقاع كل حركة.</p>
+
+    <section class="cm-bottom">
+      <h2><span data-i18n="cm_b1">نسخ البرومبت سهل —</span> <b data-i18n="cm_b2">صناعة فيديو يبيع هي المهارة.</b></h2>
+      <p data-i18n="cm_b3">في أكاديمية Ai Arabia نعلّمك تصنع فيديوهات وصور سينمائية كاملة بالذكاء الاصطناعي — من الفكرة إلى الإعلان الجاهز — بالعربي وخطوة بخطوة.</p>
+      <div class="hero-ctas">
+        <a class="btn btn-gold" href="https://www.skool.com/aiarabia" target="_blank" rel="noopener"><span data-i18n="cm_b_cta1">انضم إلى Ai Arabia</span><span class="cm-price">$9</span></a>
+        <a class="btn btn-ghost" href="/#academies" data-i18n="cm_b_cta2">شاهد كل الأكاديميات</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="cm-foot">
+    <span>© <span id="yr"></span> Arabia Academies</span>
+    <a href="/" data-i18n="cm_home">الرئيسية</a>
+    <a href="/tools/globe/" data-i18n="cm_globe">كوكب التجارة الإلكترونية</a>
+    <a href="/privacy.html" data-i18n="f_privacy">الخصوصية</a>
+    <a href="/terms.html" data-i18n="f_terms">الشروط</a>
+  </footer>
+
+  <div class="cookie-bar" id="cookieBar" hidden>
+    <p data-i18n="cookie_text">نستخدم ملفات تعريف الارتباط (كوكيز) — بما فيها أدوات ميتا — لتحسين تجربتك وقياس كيفية استخدام الموقع.</p>
+    <button class="btn btn-gold btn-sm" id="cookieOk" type="button" data-i18n="cookie_ok">حسناً</button>
+  </div>
+
+  <script defer src="/js/data.js"></script>
+  <script defer src="app.js"></script>
+</body>
+</html>
