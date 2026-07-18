@@ -4,12 +4,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>رحلة المنتج — من الإعلان حتى باب الزبون | Arabia Academies</title>
-  <meta name="description" content="أداة تفاعلية مجانية: اختر نموذج تجارتك — دروبشيبينغ من الصين، زنبيل الخليجي، أو Exporta العراق — وشوف رحلة المنتج كاملة: كم يوم تأخذ، من يخزّن، وكيف يوصلك الربح.">
+  <meta name="description" content="خريطة تفاعلية مجانية: اختر نموذج تجارتك — دروبشيبينغ من الصين، زنبيل الخليجي، أو Exporta العراق — وشوف رحلة المنتج تتحرك على الخريطة، وقرّب حتى بيت الزبون.">
   <link rel="canonical" href="https://odehofficial.com/tools/flow/">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://odehofficial.com/tools/flow/">
-  <meta property="og:title" content="📦 رحلة المنتج — شوف كيف يتحرك الطلب من الإعلان حتى باب الزبون">
-  <meta property="og:description" content="اختر نموذجك: الصين للعالم، زنبيل للخليج، أو Exporta للعراق — ورحلة المنتج تتحرك قدامك خطوة بخطوة.">
+  <meta property="og:title" content="📦 رحلة المنتج — خريطة تفاعلية من الإعلان حتى باب الزبون">
+  <meta property="og:description" content="شوف الطلب يسافر على الخريطة من الصين لباب الزبون — وقرّب بالزوم حتى تشوف الزبون يطلب من كنبته.">
   <meta property="og:image" content="https://odehofficial.com/assets/og/flow.png">
   <meta name="twitter:card" content="summary_large_image">
   <link rel="icon" type="image/png" href="/assets/favicon.png">
@@ -33,7 +33,6 @@
     .fl-hero .eyebrow{ margin-bottom:10px }
     .fl-sub{ color:var(--muted); font-size:clamp(14.5px,1.8vw,17px); line-height:1.85; margin-top:14px }
 
-    /* ---------- step labels ---------- */
     .fl-step-t{
       display:flex; align-items:center; justify-content:center; gap:10px;
       margin:34px auto 14px; color:var(--gold); font-weight:700; font-size:15px;
@@ -79,34 +78,23 @@
     .fl-dests button:hover{ border-color:var(--gold); color:var(--gold-2) }
     .fl-dests button.active{ background:var(--gold); border-color:var(--gold); color:#080C1C }
 
-    /* ---------- journey ---------- */
+    /* ---------- the two-level stage ---------- */
     .fl-wrap{
       max-width:1240px; margin:10px auto 0; padding-inline:var(--pad);
-      min-height:520px;
+      min-height:560px;
     }
     .fl-board{
       position:relative; background:rgba(13,19,42,.45);
       border:1px solid var(--line); border-radius:22px;
-      padding:26px 22px 30px; overflow:hidden;
-    }
-    .fl-board::before{ /* faint stars */
-      content:""; position:absolute; inset:0; pointer-events:none; opacity:.5;
-      background:
-        radial-gradient(1.4px 1.4px at 15% 20%, rgba(244,239,226,.5), transparent 60%),
-        radial-gradient(1px 1px at 55% 12%, rgba(244,239,226,.4), transparent 60%),
-        radial-gradient(1.4px 1.4px at 82% 26%, rgba(244,239,226,.45), transparent 60%),
-        radial-gradient(1px 1px at 32% 78%, rgba(244,239,226,.3), transparent 60%),
-        radial-gradient(1.2px 1.2px at 92% 70%, rgba(244,239,226,.35), transparent 60%);
+      padding:20px 20px 24px;
     }
     .fl-top{
-      position:relative; display:flex; align-items:center; justify-content:space-between;
-      flex-wrap:wrap; gap:10px; margin-bottom:18px;
+      display:flex; align-items:center; justify-content:space-between;
+      flex-wrap:wrap; gap:10px; margin-bottom:14px;
     }
     .fl-title{ font-family:var(--f-display); font-weight:800; font-size:18px }
     .fl-title small{ display:block; font-family:var(--f-body); font-weight:600; color:var(--muted); font-size:12px; margin-top:3px }
-    .fl-clock{
-      display:flex; align-items:center; gap:10px;
-    }
+    .fl-clock{ display:flex; align-items:center; gap:10px }
     .fl-day{
       background:rgba(227,169,79,.12); border:1px solid rgba(227,169,79,.35);
       border-radius:12px; padding:7px 16px;
@@ -120,68 +108,64 @@
     }
     .fl-replay:hover{ border-color:var(--gold); color:var(--gold-2) }
 
-    .fl-phase{
-      position:relative; color:var(--muted); font-size:12px; font-weight:700;
-      margin:16px 0 10px; display:flex; align-items:center; gap:10px;
+    .fl-stage{
+      position:relative; border-radius:16px; overflow:hidden;
+      background:#050814; border:1px solid var(--line);
+      height:min(58vh, 520px);
+      touch-action:none;
     }
-    .fl-phase::after{ content:""; flex:1; border-top:1px dashed var(--line-2) }
-    .fl-phase b{ color:var(--gold) }
+    #mapCv{ position:absolute; inset:0; width:100%; height:100%; display:block; cursor:grab }
+    #mapCv.dragging{ cursor:grabbing }
 
-    .fl-road{ position:relative; display:flex; flex-wrap:wrap; gap:0; row-gap:26px }
-    .fl-st{
-      position:relative; flex:1 1 0; min-width:118px;
-      display:flex; flex-direction:column; align-items:center; text-align:center;
-      padding:0 6px; cursor:pointer; opacity:.35; transition:opacity .4s;
+    /* street-level overlays */
+    .fl-street{
+      position:absolute; inset:0; pointer-events:none; opacity:0;
+      transition:opacity .45s ease;
+      display:flex; align-items:center; justify-content:center;
+      background:radial-gradient(120% 100% at 50% 100%, #0E1530 0%, #070B1C 70%);
     }
-    .fl-st.lit{ opacity:1 }
-    .fl-st .ic{
-      width:52px; height:52px; border-radius:50%; flex:none;
-      display:flex; align-items:center; justify-content:center; font-size:23px;
-      background:#0E1530; border:1.5px solid var(--line-2);
-      transition:border-color .3s, box-shadow .3s, transform .3s;
-    }
-    .fl-st.lit .ic{ border-color:var(--gold); box-shadow:0 0 22px rgba(227,169,79,.35) }
-    .fl-st.now .ic{ transform:scale(1.15); border-color:var(--gold-2) }
-    .fl-st h4{ font-size:12.5px; font-weight:700; margin-top:9px; line-height:1.5 }
-    .fl-st p{ color:var(--muted); font-size:10.5px; line-height:1.55; margin-top:2px }
-    .fl-st .dy{
-      margin-top:6px; font-family:var(--f-mono); font-size:10px; font-weight:800;
-      color:var(--gold); border:1px solid var(--line-2); border-radius:999px; padding:1.5px 8px;
+    .fl-street.on{ opacity:1 }
+    .fl-street svg{ width:100%; height:100%; display:block }
+
+    /* caption bar */
+    .fl-caption{
+      position:absolute; inset-inline:12px; bottom:12px; z-index:8;
+      background:rgba(8,12,28,.86); border:1px solid var(--line-2);
+      border-radius:13px; padding:10px 16px; text-align:center;
+      font-size:13.5px; font-weight:700; line-height:1.6;
+      backdrop-filter:blur(8px); -webkit-backdrop-filter:blur(8px);
       opacity:0; transition:opacity .3s;
     }
-    .fl-st.lit .dy{ opacity:1 }
-    /* dashed connector to the next station */
-    .fl-st::before{
-      content:""; position:absolute; top:26px; inset-inline-start:calc(50% + 30px);
-      width:calc(100% - 60px); border-top:2px dashed rgba(227,169,79,.25);
-    }
-    .fl-st:last-child::before{ display:none }
-    .fl-st.lit::before{ border-color:rgba(227,169,79,.6) }
+    .fl-caption.on{ opacity:1 }
+    .fl-caption small{ display:block; font-weight:600; color:var(--muted); font-size:11.5px }
 
-    /* the traveling package */
-    .fl-pkg{
-      position:absolute; z-index:5; font-size:26px; top:0; left:0;
-      transition:transform .75s cubic-bezier(.45,.05,.35,1);
-      filter:drop-shadow(0 6px 12px rgba(0,0,0,.5));
-      pointer-events:none; opacity:0;
+    /* zoom + pan controls */
+    .fl-ctl{
+      position:absolute; z-index:9; inset-inline-end:10px; top:10px;
+      display:grid; grid-template-columns:repeat(3, 34px); gap:4px;
+      direction:ltr;
     }
-    .fl-pkg.go{ opacity:1 }
-    @keyframes flHop{ 0%,100%{margin-top:0} 50%{margin-top:-14px} }
-    .fl-pkg.hop{ animation:flHop .75s ease-in-out }
-    @keyframes flCash{
-      0%{ transform:translateY(0); opacity:0 } 20%{ opacity:1 }
-      100%{ transform:translateY(-46px); opacity:0 }
+    .fl-ctl button{
+      width:34px; height:34px; border-radius:9px;
+      background:rgba(8,12,28,.85); border:1px solid var(--line-2);
+      color:var(--text); font-size:15px; font-weight:800; line-height:1;
+      display:flex; align-items:center; justify-content:center;
+      backdrop-filter:blur(6px); -webkit-backdrop-filter:blur(6px);
+      transition:border-color .2s, color .2s;
     }
-    .fl-profit{
-      position:absolute; z-index:6; font-family:var(--f-mono); font-weight:800;
-      color:#37C6A0; font-size:17px; pointer-events:none; opacity:0;
+    .fl-ctl button:hover{ border-color:var(--gold); color:var(--gold-2) }
+    .fl-ctl .ghost{ visibility:hidden }
+    .fl-hint{
+      position:absolute; z-index:8; inset-inline-start:12px; top:12px;
+      color:var(--muted); font-size:11px; background:rgba(8,12,28,.75);
+      border:1px solid var(--line); border-radius:999px; padding:5px 12px;
+      pointer-events:none;
     }
-    .fl-profit.go{ animation:flCash 1.6s ease-out forwards }
 
     /* ---------- stats panel ---------- */
     .fl-stats{
       display:grid; grid-template-columns:repeat(auto-fit, minmax(150px, 1fr)); gap:10px;
-      margin-top:22px; position:relative;
+      margin-top:18px;
     }
     .fl-stat{
       background:rgba(244,239,226,.035); border:1px solid var(--line);
@@ -190,16 +174,16 @@
     .fl-stat small{ display:block; color:var(--muted); font-size:11px; margin-bottom:3px; line-height:1.4 }
     .fl-stat b{ font-size:14.5px; font-weight:800; line-height:1.4 }
     .fl-stat.gold b{ color:var(--gold-2) }
-    .fl-partner{ position:relative; margin-top:14px; text-align:center; color:var(--muted); font-size:12px }
+    .fl-partner{ margin-top:14px; text-align:center; color:var(--muted); font-size:12px }
     .fl-partner a{ color:var(--gold); text-decoration:none; font-weight:700 }
     .fl-partner a:hover{ color:var(--gold-2) }
 
-    .fl-cta{ position:relative; margin-top:20px; text-align:center }
+    .fl-cta{ margin-top:20px; text-align:center }
     .fl-cta p{ font-size:14.5px; line-height:1.8; margin-bottom:14px }
     .fl-cta p b{ color:var(--gold-2) }
     .fl-cta .btn{ min-width:min(340px, 100%) }
     .fl-btn-soon{ opacity:.55; pointer-events:none }
-    .fl-disc{ text-align:center; color:rgba(169,176,197,.55); font-size:11px; margin-top:18px; position:relative }
+    .fl-disc{ text-align:center; color:rgba(169,176,197,.55); font-size:11px; margin-top:18px }
 
     /* ---------- bottom ---------- */
     .fl-bottom{ text-align:center; padding:64px var(--pad) 72px; max-width:780px; margin-inline:auto }
@@ -224,22 +208,11 @@
       .nav-actions{ position:static; transform:none }
       .nav-actions > .lang-btn{ display:inline-block }
       .fl-main{ padding-top:74px }
-      .fl-wrap{ min-height:420px }
-      /* vertical road on phones */
-      .fl-road{ flex-direction:column; row-gap:0 }
-      .fl-st{
-        flex-direction:row; text-align:start; align-items:flex-start;
-        gap:14px; padding:0 0 26px; min-width:0;
-      }
-      .fl-st .st-txt{ padding-top:4px }
-      .fl-st h4{ margin-top:0; font-size:13.5px }
-      .fl-st p{ font-size:11.5px }
-      .fl-st::before{
-        top:52px; inset-inline-start:25px; width:0;
-        height:calc(100% - 52px); border-top:none;
-        border-inline-start:2px dashed rgba(227,169,79,.25);
-      }
-      .fl-pkg{ font-size:23px }
+      .fl-wrap{ min-height:480px }
+      .fl-stage{ height:min(62vh, 460px) }
+      .fl-caption{ font-size:12.5px; padding:9px 12px }
+      .fl-ctl{ grid-template-columns:repeat(3, 38px) }
+      .fl-ctl button{ width:38px; height:38px }
     }
   </style>
 </head>
@@ -266,11 +239,30 @@
     <section class="fl-hero">
       <p class="eyebrow" data-i18n="fl_eyebrow">أداة مجانية من أكاديميات أرابيا</p>
       <h1><span data-i18n="fl_h1a">رحلة</span> <b data-i18n="fl_h1b">المنتج</b></h1>
-      <p class="fl-sub" data-i18n="fl_sub">من إعلان على السوشال ميديا… إلى كاش بيدك. اختر نموذج تجارتك ووجهتك، وشوف كيف يتحرك المنتج خطوة بخطوة — كم يوم يأخذ، من يخزّنه، ومتى يوصلك ربحك.</p>
+      <p class="fl-sub" data-i18n="fl_sub">من إعلان على السوشال ميديا… إلى كاش بيدك. اختر نموذجك ووجهتك، وشوف الطلب يسافر على الخريطة — وقرّب بالزوم حتى تدخل بيت الزبون وتشوفه يطلب بنفسك.</p>
     </section>
 
     <p class="fl-step-t"><i>1</i><span data-i18n="fl_step1">اختر نموذج تجارتك</span></p>
-    <div class="fl-models" id="flModels"></div>
+    <div class="fl-models" id="flModels">
+      <button class="fl-model" type="button" data-m="china">
+        <span class="fm-route">🏭 → 🌍</span>
+        <h3>دروبشيبينغ عالمي من الصين</h3>
+        <p>بدون أي مخزون — كل طلب يُشترى ويُشحن لحاله من الصين عبر وكيل توريد، والزبون يدفع أونلاين مقدماً.</p>
+        <span class="fm-partner">بالتعاون مع Mutual Dropshipping</span>
+      </button>
+      <button class="fl-model" type="button" data-m="zambeel">
+        <span class="fm-route">🏬 → 💵</span>
+        <h3>دروبشيبينغ خليجي مع زنبيل</h3>
+        <p>المنتجات جاهزة مسبقاً في مخزون منصة زنبيل — أنت تسوّق فقط، وهم يتكفلون بالتأكيد والتوصيل والدفع عند الاستلام في ٨ دول.</p>
+        <span class="fm-partner">بالتعاون مع زنبيل — myzambeel.com</span>
+      </button>
+      <button class="fl-model" type="button" data-m="exporta">
+        <span class="fm-route">🚢 → 🏬</span>
+        <h3>تجارة العراق مع Exporta</h3>
+        <p>تشحن بضاعتك مسبقاً من الصين إلى مخزن Exporta داخل العراق — وبعدها كل طلب يوصل خلال ٢٤–٧٢ ساعة بدفع ١٠٠٪ عند الاستلام.</p>
+        <span class="fm-partner">بالتعاون مع Exporta — exporta.company</span>
+      </button>
+    </div>
 
     <p class="fl-step-t"><i>2</i><span data-i18n="fl_step2">اختر وجهة البيع</span></p>
     <div class="fl-dests" id="flDests"></div>
@@ -284,8 +276,20 @@
             <button class="fl-replay" id="flReplay" type="button" data-i18n="fl_replay">▶ أعد الرحلة</button>
           </div>
         </div>
-        <div id="flRoads"></div>
-        <div class="fl-pkg" id="flPkg">📦</div>
+
+        <div class="fl-stage" id="flStage">
+          <canvas id="mapCv"></canvas>
+          <div class="fl-street" id="streetA"></div>
+          <div class="fl-street" id="streetB"></div>
+          <span class="fl-hint" data-i18n="fl_hint">🔍 قرّب على بيت الزبون · اسحب للتحرك</span>
+          <div class="fl-ctl" aria-hidden="false">
+            <button class="ghost"></button><button id="pUp" aria-label="Pan up">▲</button><button class="ghost"></button>
+            <button id="pLeft" aria-label="Pan left">◀</button><button id="zIn" aria-label="Zoom in">＋</button><button id="pRight" aria-label="Pan right">▶</button>
+            <button id="zOut" aria-label="Zoom out">－</button><button id="pDown" aria-label="Pan down">▼</button><button class="ghost"></button>
+          </div>
+          <p class="fl-caption" id="flCaption"></p>
+        </div>
+
         <div class="fl-stats" id="flStats"></div>
         <p class="fl-partner" id="flPartner"></p>
         <div class="fl-cta" id="flCta"></div>
@@ -317,6 +321,8 @@
     <button class="btn btn-gold btn-sm" id="cookieOk" type="button" data-i18n="cookie_ok">حسناً</button>
   </div>
 
+  <script defer src="/js/vendor/d3-array.min.js"></script>
+  <script defer src="/js/vendor/d3-geo.min.js"></script>
   <script defer src="app.js"></script>
 </body>
 </html>
