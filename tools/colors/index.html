@@ -1,0 +1,2874 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>باليتات ألوان الأفلام — 88 باليت سينمائي جاهز للنسخ | Arabia Academies</title>
+  <meta name="description" content="مكتبة مجانية: 88 باليت ألوان مستوحى من أشهر الأفلام المعروفة بتصويرها السينمائي — Dune، Batman، The Matrix وغيرها. اضغط أي لون لنسخ كوده واستخدمه في برومبتاتك وإعلاناتك.">
+  <link rel="canonical" href="https://odehofficial.com/tools/colors/">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://odehofficial.com/tools/colors/">
+  <meta property="og:title" content="🎨 باليتات ألوان الأفلام — 88 باليت سينمائي جاهز للنسخ">
+  <meta property="og:description" content="ألوان Dune وBatman وThe Matrix وأجمل أفلام السينما — كل كود جاهز للنسخ لبرومبتاتك وإعلاناتك. مجاناً.">
+  <meta property="og:image" content="https://odehofficial.com/assets/og/colors.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" type="image/png" href="/assets/favicon.png">
+  <link rel="preload" href="/assets/fonts/cairo-800-arabic.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/assets/fonts/cairo-600-arabic.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/assets/fonts/cairo-400-arabic.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="/css/style.css">
+  <script>
+    try { if (localStorage.getItem("aa-lang") === "en") {
+      document.documentElement.lang = "en"; document.documentElement.dir = "ltr";
+    } } catch (e) {}
+  </script>
+  <style>
+    .cl-main{ position:relative; padding-top:86px }
+    .cl-hero{ text-align:center; padding:30px var(--pad) 10px; max-width:880px; margin-inline:auto }
+    .cl-hero h1{
+      font-family:var(--f-display); font-weight:800;
+      font-size:clamp(28px, 4.8vw, 50px); line-height:1.18;
+    }
+    .cl-hero h1 b{ color:var(--gold); font-weight:800 }
+    .cl-hero .eyebrow{ margin-bottom:10px }
+    .cl-sub{ color:var(--muted); font-size:clamp(14.5px,1.8vw,17px); line-height:1.85; margin-top:14px }
+    .cl-stats{
+      display:flex; justify-content:center; gap:10px; flex-wrap:wrap; margin-top:18px;
+      color:var(--muted); font-size:13px;
+    }
+    .cl-stats span{ border:1px solid var(--line-2); border-radius:999px; padding:6px 14px }
+    .cl-stats b{ color:var(--gold-2); font-family:var(--f-mono) }
+
+    /* ---------- search ---------- */
+    .cl-search{ display:flex; justify-content:center; margin:24px auto 0; padding-inline:var(--pad) }
+    .cl-search label{
+      display:flex; align-items:center; gap:10px;
+      width:min(480px, 100%);
+      background:rgba(13,19,42,.65); border:1px solid var(--line-2); border-radius:999px;
+      padding:11px 18px; transition:border-color .2s;
+    }
+    .cl-search label:focus-within{ border-color:var(--gold) }
+    .cl-search input{
+      flex:1; min-width:0; background:none; border:none; outline:none;
+      color:var(--text); font-family:var(--f-body); font-size:14.5px;
+    }
+    .cl-search input::placeholder{ color:rgba(169,176,197,.65) }
+
+    /* ---------- category filters ---------- */
+    .cl-filters{
+      display:flex; flex-wrap:wrap; justify-content:center; gap:8px;
+      max-width:940px; margin:20px auto 6px; padding-inline:var(--pad);
+    }
+    .cl-filters button{
+      border:1px solid var(--line-2); border-radius:999px;
+      padding:7px 16px; color:var(--muted); font-size:13.5px; font-weight:600; font-family:var(--f-body);
+      transition:border-color .2s, color .2s, background .2s;
+    }
+    .cl-filters button:hover{ border-color:var(--gold); color:var(--gold-2) }
+    .cl-filters button.active{ background:var(--gold); border-color:var(--gold); color:#080C1C }
+
+    /* ---------- cards grid ---------- */
+    .cl-grid{
+      display:grid; grid-template-columns:repeat(4, 1fr);
+      gap:16px; max-width:1420px; margin:26px auto 0; padding-inline:var(--pad);
+    }
+    .cl-empty{ grid-column:1/-1; text-align:center; color:var(--muted); padding:50px 0 }
+    .cl-card{
+      background:rgba(13,19,42,.55); border:1px solid var(--line); border-radius:18px;
+      overflow:hidden; content-visibility:auto; contain-intrinsic-size: 400px;
+      transition:border-color .25s, transform .25s;
+    }
+    .cl-card:hover{ border-color:var(--line-2); transform:translateY(-3px) }
+
+    /* the cinematic mood frame */
+    .cl-frame{
+      position:relative; aspect-ratio:16/9; overflow:hidden;
+      border-bottom:1px solid var(--line);
+    }
+    .cl-frame::after{ /* vignette */
+      content:""; position:absolute; inset:0;
+      box-shadow:inset 0 0 70px 18px rgba(4,6,14,.55);
+    }
+    .cl-frame i, .cl-frame b{ /* letterbox bars */
+      position:absolute; inset-inline:0; height:9%;
+      background:#04060E;
+    }
+    .cl-frame i{ top:0 } .cl-frame b{ bottom:0 }
+
+    .cl-body{ padding:13px 15px 15px }
+    .cl-meta{ display:flex; align-items:center; gap:8px; margin-bottom:5px }
+    .cl-num{ font-family:var(--f-mono); font-size:11px; color:rgba(169,176,197,.7) }
+    .cl-cat{
+      font-size:10.5px; font-weight:700; color:var(--gold);
+      border:1px solid var(--line-2); border-radius:999px; padding:2px 9px;
+    }
+    .cl-card h3{
+      direction:ltr; text-align:start;
+      font-family:var(--f-display); font-size:15.5px; font-weight:800; line-height:1.35;
+    }
+    html[dir="rtl"] .cl-card h3{ text-align:end }
+    .cl-card h3 span{ display:block; font-family:var(--f-body); font-size:11.5px; font-weight:600; color:var(--muted); margin-top:1px }
+    .cl-mood{ color:var(--muted); font-size:12px; line-height:1.65; margin-top:6px; min-height:2.6em }
+
+    .cl-swatches{ display:flex; gap:5px; margin-top:10px; direction:ltr }
+    .sw{
+      flex:1; min-width:0; padding:0; font-family:var(--f-mono);
+      display:flex; flex-direction:column; align-items:center; gap:4px;
+    }
+    .sw i{
+      display:block; width:100%; height:34px; border-radius:8px;
+      border:1px solid rgba(244,239,226,.14);
+      transition:transform .15s;
+    }
+    .sw:hover i{ transform:translateY(-2px) }
+    .sw b{ font-size:8.5px; font-weight:700; color:var(--muted); letter-spacing:0 }
+
+    .cl-copy{
+      width:100%; margin-top:10px;
+      display:flex; align-items:center; justify-content:center;
+      background:var(--gold); color:#080C1C; border-radius:9px;
+      padding:8px 6px; font-size:12px; font-weight:800; font-family:var(--f-body);
+      white-space:nowrap; transition:filter .2s;
+    }
+    .cl-copy:hover{ filter:brightness(1.08) }
+    .cl-copy.ok{ background:#37C6A0 }
+
+    /* ---------- bottom CTA ---------- */
+    .cl-bottom{ text-align:center; padding:64px var(--pad) 72px; max-width:780px; margin-inline:auto }
+    .cl-bottom h2{ font-family:var(--f-display); font-size:clamp(23px,3.4vw,34px); font-weight:800; line-height:1.35 }
+    .cl-bottom h2 b{ color:var(--gold) }
+    .cl-bottom p{ color:var(--muted); margin:14px 0 24px; line-height:1.85 }
+    .cl-bottom .hero-ctas{ justify-content:center }
+    .cl-price{ display:inline-block; margin-inline-start:8px; font-family:var(--f-mono) }
+
+    .cl-note{ text-align:center; color:rgba(169,176,197,.6); font-size:12px; margin-top:26px; padding-inline:var(--pad) }
+
+    .cl-foot{
+      border-top:1px solid var(--line); padding:22px var(--pad);
+      display:flex; flex-wrap:wrap; gap:10px 22px; align-items:center; justify-content:center;
+      color:var(--muted); font-size:13px;
+    }
+    .cl-foot a{ color:var(--muted); text-decoration:none }
+    .cl-foot a:hover{ color:var(--gold-2) }
+
+    @media (max-width:1180px){
+      .cl-grid{ grid-template-columns:repeat(3, 1fr) }
+    }
+    @media (max-width:860px){
+      .nav{ justify-content:space-between }
+      .nav-actions{ position:static; transform:none }
+      .nav-actions > .lang-btn{ display:inline-block }
+      .cl-main{ padding-top:74px }
+      .cl-grid{ grid-template-columns:1fr 1fr; gap:12px }
+    }
+    @media (max-width:620px){
+      .cl-grid{ grid-template-columns:1fr }
+      .sw b{ font-size:9.5px }
+    }
+  </style>
+</head>
+<body>
+  <!-- ===== Nav ===== -->
+  <header class="nav scrolled" id="nav">
+    <a class="nav-logo" href="/" aria-label="Arabia Academies">
+      <svg class="nav-mark" viewBox="0 0 200 200" aria-hidden="true">
+        <g transform="translate(100,100)" fill="none" stroke="currentColor" stroke-width="9" stroke-linejoin="round">
+          <rect x="-46" y="-46" width="92" height="92"/>
+          <rect x="-46" y="-46" width="92" height="92" transform="rotate(45)"/>
+          <circle r="9" fill="currentColor" stroke="none"/>
+        </g>
+      </svg>
+      <span class="nav-word">Arabia<em data-i18n="f_tag">طريقك إلى النجاح</em></span>
+    </a>
+    <div class="nav-actions">
+      <button class="lang-btn" id="langBtn" type="button" aria-label="Switch language"><span data-i18n="lang_btn">EN</span></button>
+      <a class="btn btn-gold btn-sm" href="https://www.skool.com/aiarabia" target="_blank" rel="noopener" data-i18n="nav_join">انضم الآن</a>
+    </div>
+  </header>
+
+  <main class="cl-main">
+    <section class="cl-hero">
+      <p class="eyebrow" data-i18n="cl_eyebrow">أداة مجانية من أكاديميات أرابيا</p>
+      <h1><span data-i18n="cl_h1a">باليتات ألوان</span> <b data-i18n="cl_h1b">الأفلام</b></h1>
+      <p class="cl-sub" data-i18n="cl_sub">مرجع مجاني لصنّاع المحتوى بالذكاء الاصطناعي: أجواء الألوان لأجمل أفلام السينما — اضغط أي لون لنسخ كوده، أو انسخ الباليت كاملاً واستخدمه في برومبتاتك، إعلاناتك، أو هوية متجرك.</p>
+      <div class="cl-stats">
+        <span><b id="clCount">88</b> <i data-i18n="cl_stat1">باليت سينمائي</i></span>
+        <span><b>8</b> <i data-i18n="cl_stat2">فئات</i></span>
+        <span><i data-i18n="cl_stat3">كل الأكواد جاهزة للنسخ</i></span>
+      </div>
+    </section>
+
+    <div class="cl-search">
+      <label><input id="clSearch" type="search" autocomplete="off" spellcheck="false" placeholder="ابحث عن فيلم… (مثلاً: Dune، Batman، Matrix)"></label>
+    </div>
+    <div class="cl-filters" id="clFilters"><button type="button" data-cat="all" class="active">الكل</button><button type="button" data-cat="warm" class="">دافئ وذهبي</button><button type="button" data-cat="cool" class="">بارد وأزرق</button><button type="button" data-cat="neon" class="">نيون وسايبربانك</button><button type="button" data-cat="pastel" class="">باستيل وحالم</button><button type="button" data-cat="desert" class="">صحراوي وترابي</button><button type="button" data-cat="dark" class="">داكن ودرامي</button><button type="button" data-cat="green" class="">أخضر وطبيعي</button><button type="button" data-cat="retro" class="">كلاسيكي وريترو</button></div>
+    <div class="cl-grid" id="clGrid">
+  <article class="cl-card" data-cat="warm">
+    <div class="cl-frame" style="background:radial-gradient(95% 130% at 80% 15%, #3E7A45cc, transparent 60%),radial-gradient(85% 110% at 12% 88%, #DA9A31bb, transparent 55%),linear-gradient(158deg, #7A1F0C 0%, #B8500F 55%, #F2C879 100%)"><i></i><b></b></div>
+    <div class="cl-body">
+      <div class="cl-meta">
+        <span class="cl-num">باليت 01</span>
+        <span class="cl-cat">دافئ وذهبي</span>
+      </div>
+      <h3>Amélie (2001)<span>إيميلي</span></h3>
+      <p class="cl-mood">باريس الحالمة بعدسة ذهبية وخضرة غامضة</p>
+      <div class="cl-swatches">
+        
+        <button class="sw" type="button" data-hex="#7A1F0C">
+          <i style="background:#7A1F0C"></i><b>#7A1F0C</b>
+        </button>
+        <button class="sw" type="button" data-hex="#B8500F">
+          <i style="background:#B8500F"></i><b>#B8500F</b>
+        </button>
+        <button class="sw" type="button" data-hex="#DA9A31">
+          <i style="background:#DA9A31"></i><b>#DA9A31</b>
+        </button>
+        <button class="sw" type="button" data-hex="#3E7A45">
+          <i style="background:#3E7A45"></i><b>#3E7A45</b>
+        </button>
+        <button class="sw" type="button" data-hex="#F2C879">
+          <i style="background:#F2C879"></i><b>#F2C879</b>
+        </button>
+      </div>
+      <button class="cl-copy" type="button" data-i="0">انسخ الباليت</button>
+    </div>
+  </article>
+  <article class="cl-card" data-cat="warm">
+    <div class="cl-frame" style="background:radial-gradient(95% 130% at 80% 15%, #8C3A2Bcc, transparent 60%),radial-gradient(85% 110% at 12% 88%, #E8D8C8bb, transparent 55%),linear-gradient(158deg, #E5573F 0%, #F2A48E 55%, #5C7A8A 100%)"><i></i><b></b></div>
+    <div class="cl-body">
+      <div class="cl-meta">
+        <span class="cl-num">باليت 02</span>
+        <span class="cl-cat">دافئ وذهبي</span>
+      </div>
+      <h3>Her (2013)<span>هير</span></h3>
+      <p class="cl-mood">دفء المرجان والحنين في مستقبل ناعم</p>
+      <div class="cl-swatches">
+        
+        <button class="sw" type="button" data-hex="#E5573F">
+          <i style="background:#E5573F"></i><b>#E5573F</b>
+        </button>
+        <button class="sw" type="button" data-hex="#F2A48E">
+          <i style="background:#F2A48E"></i><b>#F2A48E</b>
+        </button>
+        <button class="sw" type="button" data-hex="#E8D8C8">
+          <i style="background:#E8D8C8"></i><b>#E8D8C8</b>
+        </button>
+        <button class="sw" type="button" data-hex="#8C3A2B">
+          <i style="background:#8C3A2B"></i><b>#8C3A2B</b>
+        </button>
+        <button class="sw" type="button" data-hex="#5C7A8A">
+          <i style="background:#5C7A8A"></i><b>#5C7A8A</b>
+        </button>
+      </div>
+      <button class="cl-copy" type="button" data-i="1">انسخ الباليت</button>
+    </div>
+  </article>
+  <article class="cl-card" data-cat="warm">
+    <div class="cl-frame" style="background:radial-gradient(95% 130% at 80% 15%, #5C6B4Fcc, transparent 60%),radial-gradient(85% 110% at 12% 88%, #8A4B2Abb, transparent 55%),linear-gradient(158deg, #D98E32 0%, #F2C879 55%, #2E2417 100%)"><i></i><b></b></div>
+    <div class="cl-body">
+      <div class="cl-meta">
+        <span class="cl-num">باليت 03</span>
+        <span class="cl-cat">دافئ وذهبي</span>
+      </div>
+      <h3>Once Upon a Time in Hollywood (2019)<span>ذات مرة في هوليوود</span></h3>
+      <p class="cl-mood">شمس كاليفورنيا الذهبية في نهاية الستينات</p>
+      <div class="cl-swatches">
+        
+        <button class="sw" type="button" data-hex="#D98E32">
+          <i style="background:#D98E32"></i><b>#D98E32</b>
+        </button>
+        <button class="sw" type="button" data-hex="#F2C879">
+          <i style="background:#F2C879"></i><b>#F2C879</b>
+        </button>
+        <button class="sw" type="button" data-hex="#8A4B2A">
+          <i style="background:#8A4B2A"></i><b>#8A4B2A</b>
+        </button>
+        <button class="sw" type="button" data-hex="#5C6B4F">
+          <i style="background:#5C6B4F"></i><b>#5C6B4F</b>
+        </button>
+        <button class="sw" type="button" data-hex="#2E2417">
+          <i style="background:#2E2417"></i><b>#2E2417</b>
+        </button>
+      </div>
+      <button class="cl-copy" type="button" data-i="2">انسخ الباليت</button>
+    </div>
+  </article>
+  <article class="cl-card" data-cat="warm">
+    <div class="cl-frame" style="background:radial-gradient(95% 130% at 80% 15%, #F2E4C9cc, transparent 60%),radial-gradient(85% 110% at 12% 88%, #D97E4Abb, transparent 55%),linear-gradient(158deg, #E8C46B 0%, #A8C08A 55%, #4A6B8A 100%)"><i></i><b></b></div>
+    <div class="cl-body">
+      <div class="cl-meta">
+        <span class="cl-num">باليت 04</span>
+        <span class="cl-cat">دافئ وذهبي</span>
+      </div>
+      <h3>Call Me by Your Name (2017)<span>نادني باسمك</span></h3>
+      <p class="cl-mood">صيف إيطالي طويل بضوء العسل</p>
+      <div class="cl-swatches">
+        
+        <button class="sw" type="button" data-hex="#E8C46B">
+          <i style="background:#E8C46B"></i><b>#E8C46B</b>
+        </button>
+        <button class="sw" type="button" data-hex="#A8C08A">
+          <i style="background:#A8C08A"></i><b>#A8C08A</b>
+        </button>
+        <button class="sw" type="button" data-hex="#D97E4A">
+          <i style="background:#D97E4A"></i><b>#D97E4A</b>
+        </button>
+        <button class="sw" type="button" data-hex="#F2E4C9">
+          <i style="background:#F2E4C9"></i><b>#F2E4C9</b>
+        </button>
+        <button class="sw" type="button" data-hex="#4A6B8A">
+          <i style="background:#4A6B8A"></i><b>#4A6B8A</b>
+        </button>
+      </div>
+      <button class="cl-copy" type="button" data-i="3">انسخ الباليت</button>
+    </div>
+  </article>
+  <article class="cl-card" data-cat="warm">
+    <div class="cl-frame" style="background:radial-gradient(95% 130% at 80% 15%, #D9B48Acc, transparent 60%),radial-gradient(85% 110% at 12% 88%, #3E3A45bb, transparent 55%),linear-gradient(158deg, #C8873F 0%, #8A5A2B 55%, #6B1F14 100%)"><i></i><b></b></div>
+    <div class="cl-body">
+      <div class="cl-meta">
+        <span class="cl-num">باليت 05</span>
+        <span class="cl-cat">دافئ وذهبي</span>
+      </div>
+      <h3>Gladiator (2000)<span>المصارع</span></h3>
+      <p class="cl-mood">ذهب روما وغبار الحلبة</p>
+      <div class="cl-swatches">
+        
+        <button class="sw" type="button" data-hex="#C8873F">
+          <i style="background:#C8873F"></i><b>#C8873F</b>
+        </button>
+        <button class="sw" type="button" data-hex="#8A5A2B">
+          <i style="background:#8A5A2B"></i><b>#8A5A2B</b>
+        </button>
+        <button class="sw" type="button" data-hex="#3E3A45">
+          <i style="background:#3E3A45"></i><b>#3E3A45</b>
+        </button>
+        <button class="sw" type="button" data-hex="#D9B48A">
+          <i style="background:#D9B48A"></i><b>#D9B48A</b>
+        </button>
+        <button class="sw" type="button" data-hex="#6B1F14">
+          <i style="background:#6B1F14"></i><b>#6B1F14</b>
+        </button>
+      </div>
+      <button class="cl-copy" type="button" data-i="4">انسخ الباليت</button>
+    </div>
+  </article>
+  <article class="cl-card" data-cat="warm">
+    <div class="cl-frame" style="background:radial-gradient(95% 130% at 80% 15%, #F2DCA8cc, transparent 60%),radial-gradient(85% 110% at 12% 88%, #3E4A6Bbb, transparent 55%),linear-gradient(158deg, #D9A441 0%, #8A5A2B 55%, #5C3A2B 100%)"><i></i><b></b></div>
+    <div class="cl-body">
+      <div class="cl-meta">
+        <span class="cl-num">باليت 06</span>
+        <span class="cl-cat">دافئ وذهبي</span>
+      </div>
+      <h3>Midnight in Paris (2011)<span>منتصف الليل في باريس</span></h3>
+      <p class="cl-mood">باريس الليلية بدفء المصابيح القديمة</p>
+      <div class="cl-swatches">
+        
+        <button class="sw" type="button" data-hex="#D9A441">
+          <i style="background:#D9A441"></i><b>#D9A441</b>
+        </button>
+        <button class="sw" type="button" data-hex="#8A5A2B">
+          <i style="background:#8A5A2B"></i><b>#8A5A2B</b>
+        </button>
+        <button class="sw" type="button" data-hex="#3E4A6B">
+          <i style="background:#3E4A6B"></i><b>#3E4A6B</b>
+        </button>
+        <button class="sw" type="button" data-hex="#F2DCA8">
+          <i style="background:#F2DCA8"></i><b>#F2DCA8</b>
+        </button>
+        <button class="sw" type="button" data-hex="#5C3A2B">
+          <i style="background:#5C3A2B"></i><b>#5C3A2B</b>
+        </button>
+      </div>
+      <button class="cl-copy" type="button" data-i="5">انسخ الباليت</button>
+    </div>
+  </article>
+  <article class="cl-card" data-cat="warm">
+    <div class="cl-frame" style="background:radial-gradient(95% 130% at 80% 15%, #F2E4C9cc, transparent 60%),radial-gradient(85% 110% at 12% 88%, #B85C3Fbb, transparent 55%),linear-gradient(158deg, #D9B48A 0%, #8A9A6B 55%, #4A5C7A 100%)"><i></i><b></b></div>
+    <div class="cl-body">
+      <div class="cl-meta">
+        <span class="cl-num">باليت 07</span>
+        <span class="cl-cat">دافئ وذهبي</span>
+      </div>
+      <h3>Little Women (2019)<span>نساء صغيرات</span></h3>
+      <p class="cl-mood">ذكريات عائلية بضوء الشموع والصوف</p>
+      <div class="cl-swatches">
+        
+        <button class="sw" type="button" data-hex="#D9B48A">
+          <i style="background:#D9B48A"></i><b>#D9B48A</b>
+        </button>
+        <button class="sw" type="button" data-hex="#8A9A6B">
+          <i style="background:#8A9A6B"></i><b>#8A9A6B</b>
+        </button>
+        <button class="sw" type="button" data-hex="#B85C3F">
+          <i style="background:#B85C3F"></i><b>#B85C3F</b>
+        </button>
+        <button class="sw" type="button" data-hex="#F2E4C9">
+          <i style="background:#F2E4C9"></i><b>#F2E4C9</b>
+        </button>
+        <button class="sw" type="button" data-hex="#4A5C7A">
+          <i style="background:#4A5C7A"></i><b>#4A5C7A</b>
+        </button>
+      </div>
+      <button class="cl-copy" type="button" data-i="6">انسخ الباليت</button>
+    </div>
+  </article>
+  <article class="cl-card" data-cat="warm">
+    <div class="cl-frame" style="background:radial-gradient(95% 130% at 80% 15%, #D9C8A8cc, transparent 60%),radial-gradient(85% 110% at 12% 88%, #3E2E22bb, transparent 55%),linear-gradient(158deg, #C8A05A 0%, #7A5C3A 55%, #5C4A6B 100%)"><i></i><b></b></div>
+    <div class="cl-body">
+      <div class="cl-meta">
+        <span class="cl-num">باليت 08</span>
+        <span class="cl-cat">دافئ وذهبي</span>
+      </div>
+      <h3>The Curious Case of Benjamin Button (2008)<span>بنجامين بتن</span></h3>
+      <p class="cl-mood">زمن يمشي بالعكس بلون السيبيا الدافئ</p>
+      <div class="cl-swatches">
+        
+        <button class="sw" type="button" data-hex="#C8A05A">
+          <i style="background:#C8A05A"></i><b>#C8A05A</b>
+        </button>
+        <button class="sw" type="button" data-hex="#7A5C3A">
+          <i style="background:#7A5C3A"></i><b>#7A5C3A</b>
+        </button>
+        <button class="sw" type="button" data-hex="#3E2E22">
+          <i style="background:#3E2E22"></i><b>#3E2E22</b>
+        </button>
+        <button class="sw" type="button" data-hex="#D9C8A8">
+          <i style="background:#D9C8A8"></i><b>#D9C8A8</b>
+        </button>
+        <button class="sw" type="button" data-hex="#5C4A6B">
+          <i style="background:#5C4A6B"></i><b>#5C4A6B</b>
+        </button>
+      </div>
+      <button class="cl-copy" type="button" data-i="7">انسخ الباليت</button>
+    </div>
+  </article>
+  <article class="cl-card" data-cat="warm">
+    <div class="cl-frame" style="background:radial-gradient(95% 130% at 80% 15%, #5C4A3Acc, transparent 60%),radial-gradient(85% 110% at 12% 88%, #F2DCA8bb, transparent 55%),linear-gradient(158deg, #D98E32 0%, #8A5A2B 55%, #2E2417 100%)"><i></i><b></b></div>
+    <div class="cl-body">
+      <div class="cl-meta">
+        <span class="cl-num">باليت 09</span>
+        <span class="cl-cat">دافئ وذهبي</span>
+      </div>
+      <h3>Cinema Paradiso (1988)<span>سينما باراديسو</span></h3>
+      <p class="cl-mood">حنين صالة السينما القديمة</p>
+      <div class="cl-swatches">
+        
+        <button class="sw" type="button" data-hex="#D98E32">
+          <i style="background:#D98E32"></i><b>#D98E32</b>
+        </button>
+        <button class="sw" type="button" data-hex="#8A5A2B">
+          <i style="background:#8A5A2B"></i><b>#8A5A2B</b>
+        </button>
+        <button class="sw" type="button" data-hex="#F2DCA8">
+          <i style="background:#F2DCA8"></i><b>#F2DCA8</b>
+        </button>
+        <button class="sw" type="button" data-hex="#5C4A3A">
+          <i style="background:#5C4A3A"></i><b>#5C4A3A</b>
+        </button>
+        <button class="sw" type="button" data-hex="#2E2417">
+          <i style="background:#2E2417"></i><b>#2E2417</b>
+        </button>
+      </div>
+      <button class="cl-copy" type="button" data-i="8">انسخ الباليت</button>
+    </div>
+  </article>
+  <article class="cl-card" data-cat="warm">
+    <div class="cl-frame" style="background:radial-gradient(95% 130% at 80% 15%, #3E7A8Acc, transparent 60%),radial-gradient(85% 110% at 12% 88%, #F2C845bb, transparent 55%),linear-gradient(158deg, #E87E2B 0%, #C84B2A 55%, #6B2E5C 100%)"><i></i><b></b></div>
+    <div class="cl-body">
+      <div class="cl-meta">
+        <span class="cl-num">باليت 10</span>
+        <span class="cl-cat">دافئ وذهبي</span>
+      </div>
+      <h3>Slumdog Millionaire (2008)<span>مليونير الأحياء الفقيرة</span></h3>
+      <p class="cl-mood">مومباي المشتعلة بالبرتقالي والحياة</p>
+      <div class="cl-swatches">
+        
+        <button class="sw" type="button" data-hex="#E87E2B">
+          <i style="background:#E87E2B"></i><b>#E87E2B</b>
+        </button>
+        <button class="sw" type="button" data-hex="#C84B2A">
+          <i style="background:#C84B2A"></i><b>#C84B2A</b>
+        </button>
+        <button class="sw" type="button" data-hex="#F2C845">
+          <i style="background:#F2C845"></i><b>#F2C845</b>
+        </button>
+        <button class="sw" type="button" data-hex="#3E7A8A">
+          <i style="background:#3E7A8A"></i><b>#3E7A8A</b>
+        </button>
+        <button class="sw" type="button" data-hex="#6B2E5C">
+          <i style="background:#6B2E5C"></i><b>#6B2E5C</b>
+        </button>
+      </div>
+      <button class="cl-copy" type="button" data-i="9">انسخ الباليت</button>
+    </div>
+  </article>
+  <article class="cl-card" data-cat="warm">
+    <div class="cl-frame" style="background:radial-gradient(95% 130% at 80% 15%, #3E3A2Ecc, transparent 60%),radial-gradient(85% 110% at 12% 88%, #8A9AA8bb, transparent 55%),linear-gradient(158deg, #C8873F 0%, #5C7A6B 55%, #E8D8B8 100%)"><i></i><b></b></div>
+    <div class="cl-body">
+      <div class="cl-meta">
+        <span class="cl-num">باليت 11</span>
+        <span class="cl-cat">دافئ وذهبي</span>
+      </div>
+      <h3>The Banshees of Inisherin (2022)<span>أشباح إنشيرين</span></h3>
+      <p class="cl-mood">جزيرة أيرلندية بدفء حزين</p>
+      <div class="cl-swatches">
+        
+        <button class="sw" type="button" data-hex="#C8873F">
+          <i style="background:#C8873F"></i><b>#C8873F</b>
+        </button>
+        <button class="sw" type="button" data-hex="#5C7A6B">
+          <i style="background:#5C7A6B"></i><b>#5C7A6B</b>
+        </button>
+        <button class="sw" type="button" data-hex="#8A9AA8">
+          <i style="background:#8A9AA8"></i><b>#8A9AA8</b>
+        </button>
+        <button class="sw" type="button" data-hex="#3E3A2E">
+          <i style="background:#3E3A2E"></i><b>#3E3A2E</b>
+        </button>
+        <button class="sw" type="button" data-hex="#E8D8B8">
+          <i style="background:#E8D8B8"></i><b>#E8D8B8</b>
+        </button>
+      </div>
+      <button class="cl-copy" type="button" data-i="10">انسخ الباليت</button>
+    </div>
+  </article>
+  <article class="cl-card" data-cat="cool">
+    <div class="cl-frame" style="background:radial-gradient(95% 130% at 80% 15%, #D9E4E8cc, transparent 60%),radial-gradient(85% 110% at 12% 88%, #2E3E45bb, transparent 55%),linear-gradient(158deg, #5C7A8A 0%, #A8BCC8 55%, #4A3A2E 100%)"><i></i><b></b></div>
+    <div class="cl-body">
+      <div class="cl-meta">
+        <span class="cl-num">باليت 12</span>
+        <span class="cl-cat">بارد وأزرق</span>
+      </div>
+      <h3>The Revenant (2015)<span>العائد</span></h3>
+      <p class="cl-mood">برد البرّية القاسي بضوء طبيعي فقط</p>
+      <div class="cl-swatches">
+        
+        <button class="sw" type="button" data-hex="#5C7A8A">
+          <i style="background:#5C7A8A"></i><b>#5C7A8A</b>
+        </button>
+        <button class="sw" type="button" data-hex="#A8BCC8">
+          <i style="background:#A8BCC8"></i><b>#A8BCC8</b>
+        </button>
+        <button class="sw" type="button" data-hex="#2E3E45">
+          <i style="background:#2E3E45"></i><b>#2E3E45</b>
+        </button>
+        <button class="sw" type="button" data-hex="#D9E4E8">
+          <i style="background:#D9E4E8"></i><b>#D9E4E8</b>
+        </button>
+        <button class="sw" type="button" data-hex="#4A3A2E">
+          <i style="background:#4A3A2E"></i><b>#4A3A2E</b>
+        </button>
+      </div>
+      <button class="cl-copy" type="button" data-i="11">انسخ الباليت</button>
+    </div>
+  </article>
+  <article class="cl-card" data-cat="cool">
+    <div class="cl-frame" style="background:radial-gradient(95% 130% at 80% 15%, #C8D2D9cc, transparent 60%),radial-gradient(85% 110% at 12% 88%, #2E3438bb, transparent 55%),linear-gradient(158deg, #4A5C6B 0%, #8A9AA8 55%, #5C4A3A 100%)"><i></i><b></b></div>
+    <div class="cl-body">
+      <div class="cl-meta">
+        <span class="cl-num">باليت 13</span>
+        <span class="cl-cat">بارد وأزرق</span>
+      </div>
+      <h3>Arrival (2016)<span>الوصول</span></h3>
+      <p class="cl-mood">ضباب رمادي أزرق ولقاء مع المجهول</p>
+      <div class="cl-swatches">
+        
+        <button class="sw" type="button" data-hex="#4A5C6B">
+          <i style="background:#4A5C6B"></i><b>#4A5C6B</b>
+        </button>
+        <button class="sw" type="button" data-hex="#8A9AA8">
+          <i style="background:#8A9AA8"></i><b>#8A9AA8</b>
+        </button>
+        <button class="sw" type="button" data-hex="#2E3438">
+          <i style="background:#2E3438"></i><b>#2E3438</b>
+        </button>
+        <button class="sw" type="button" data-hex="#C8D2D9">
+          <i style="background:#C8D2D9"></i><b>#C8D2D9</b>
+        </button>
+        <button class="sw" type="button" data-hex="#5C4A3A">
+          <i style="background:#5C4A3A"></i><b>#5C4A3A</b>
+        </button>
+      </div>
+      <button class="cl-copy" type="button" data-i="12">انسخ الباليت</button>
+    </div>
+  </article>
+  <article class="cl-card" data-cat="cool">
+    <div class="cl-frame" style="background:radial-gradient(95% 130% at 80% 15%, #1E2428cc, transparent 60%),radial-gradient(85% 110% at 12% 88%, #C8B48Abb, transparent 55%),linear-gradient(158deg, #3E4A55 0%, #7A8A96 55%, #96A8B4 100%)"><i></i><b></b></div>
+    <div class="cl-body">
+      <div class="cl-meta">
+        <span class="cl-num">باليت 14</span>
+        <span class="cl-cat">بارد وأزرق</span>
+      </div>
+      <h3>Gone Girl (2014)<span>الفتاة المفقودة</span></h3>
+      <p class="cl-mood">برود مريب تحت سطح مثالي</p>
+      <div class="cl-swatches">
+        
+        <button class="sw" type="button" data-hex="#3E4A55">
+          <i style="background:#3E4A55"></i><b>#3E4A55</b>
+        </button>
+        <button class="sw" type="button" data-hex="#7A8A96">
+          <i style="background:#7A8A96"></i><b>#7A8A96</b>
+        </button>
+        <button class="sw" type="button" data-hex="#C8B48A">
+          <i style="background:#C8B48A"></i><b>#C8B48A</b>
+        </button>
+        <button class="sw" type="button" data-hex="#1E2428">
+          <i style="background:#1E2428"></i><b>#1E2428</b>
+        </button>
+        <button class="sw" type="button" data-hex="#96A8B4">
+          <i style="background:#96A8B4"></i><b>#96A8B4</b>
+        </button>
+      </div>
+      <button class="cl-copy" type="button" data-i="13">انسخ الباليت</button>
+    </div>
+  </article>
+  <article class="cl-card" data-cat="cool">
+    <div class="cl-frame" style="background:radial-gradient(95% 130% at 80% 15%, #1E2422cc, transparent 60%),radial-gradient(85% 110% at 12% 88%, #C8A05Abb, transparent 55%),linear-gradient(158deg, #3E4A45 0%, #6B7A6B 55%, #8A96A8 100%)"><i></i><b></b></div>
+    <div class="cl-body">
+      <div class="cl-meta">
+        <span class="cl-num">باليت 15</span>
+        <span class="cl-cat">بارد وأزرق</span>
+      </div>
+      <h3>The Social Network (2010)<span>الشبكة الاجتماعية</span></h3>
+      <p class="cl-mood">غرف هارفارد الداكنة وطموح بارد</p>
+      <div class="cl-swatches">
+        
+        <button class="sw" type="button" data-hex="#3E4A45">
+          <i style="background:#3E4A45"></i><b>#3E4A45</b>
+        </button>
+        <button class="sw" type="button" data-hex="#6B7A6B">
+          <i style="background:#6B7A6B"></i><b>#6B7A6B</b>
+        </button>
+        <button class="sw" type="button" data-hex="#C8A05A">
+          <i style="background:#C8A05A"></i><b>#C8A05A</b>
+        </button>
+        <button class="sw" type="button" data-hex="#1E2422">
+          <i style="background:#1E2422"></i><b>#1E2422</b>
+        </button>
+        <button class="sw" type="button" data-hex="#8A96A8">
+          <i style="background:#8A96A8"></i><b>#8A96A8</b>
+        </button>
+      </div>
+      <button class="cl-copy" type="button" data-i="14">انسخ الباليت</button>
+    </div>
+  </article>
+  <article class="cl-card" data-cat="cool">
+    <div class="cl-frame" style="background:radial-gradient(95% 130% at 80% 15%, #5C4A3Acc, transparent 60%),radial-gradient(85% 110% at 12% 88%, #8A9AA8bb, transparent 55%),linear-gradient(158deg, #4A5560 0%, #2E3438 55%, #C8D2D9 100%)"><i></i><b></b></div>
+    <div class="cl-body">
+      <div class="cl-meta">
+        <span class="cl-num">باليت 16</span>
+        <span class="cl-cat">بارد وأزرق</span>
+      </div>
+      <h3>Prisoners (2013)<span>سجناء</span></h3>
+      <p class="cl-mood">مطر رمادي لا يتوقف وقلق دائم</p>
+      <div class="cl-swatches">
+        
+        <button class="sw" type="button" data-hex="#4A5560">
+          <i style="background:#4A5560"></i><b>#4A5560</b>
+        </button>
+        <button class="sw" type="button" data-hex="#2E3438">
+          <i style="background:#2E3438"></i><b>#2E3438</b>
+        </button>
+        <button class="sw" type="button" data-hex="#8A9AA8">
+          <i style="background:#8A9AA8"></i><b>#8A9AA8</b>
+        </button>
+        <button class="sw" type="button" data-hex="#5C4A3A">
+          <i style="background:#5C4A3A"></i><b>#5C4A3A</b>
+        </button>
+        <button class="sw" type="button" data-hex="#C8D2D9">
+          <i style="background:#C8D2D9"></i><b>#C8D2D9</b>
+        </button>
+      </div>
+      <button class="cl-copy" type="button" data-i="15">انسخ الباليت</button>
+    </div>
+  </article>
+  <article class="cl-card" data-cat="cool">
+    <div class="cl-frame" style="background:radial-gradient(95% 130% at 80% 15%, #C8873Fcc, transparent 60%),radial-gradient(85% 110% at 12% 88%, #2E3438bb, transparent 55%),linear-gradient(158deg, #3E5C7A 0%, #8AA8C8 55%, #96A8B4 100%)"><i></i><b></b></div>
+    <div class="cl-body">
+      <div class="cl-meta">
+        <span class="cl-num">باليت 17</span>
+        <span class="cl-cat">بارد وأزرق</span>
+      </div>
+      <h3>Inception (2010)<span>استهلال</span></h3>
+      <p class="cl-mood">أحلام فولاذية زرقاء داخل أحلام</p>
+      <div class="cl-swatches">
+        
+        <button class="sw" type="button" data-hex="#3E5C7A">
+          <i style="background:#3E5C7A"></i><b>#3E5C7A</b>
+        </button>
+        <button class="sw" type="button" data-hex="#8AA8C8">
+          <i style="background:#8AA8C8"></i><b>#8AA8C8</b>
+        </button>
+        <button class="sw" type="button" data-hex="#2E3438">
+          <i style="background:#2E3438"></i><b>#2E3438</b>
+        </button>
+        <button class="sw" type="button" data-hex="#C8873F">
+          <i style="background:#C8873F"></i><b>#C8873F</b>
+        </button>
+        <button class="sw" type="button" data-hex="#96A8B4">
+          <i style="background:#96A8B4"></i><b>#96A8B4</b>
+        </button>
+      </div>
+      <button class="cl-copy" type="button" data-i="16">انسخ الباليت</button>
+    </div>
+  </article>
+  <article class="cl-card" data-cat="cool">
+    <div class="cl-frame" style="background:radial-gradient(95% 130% at 80% 15%, #1E2428cc, transparent 60%),radial-gradient(85% 110% at 12% 88%, #D9C8A8bb, transparent 55%),linear-gradient(158deg, #4A5C6B 0%, #8A9AA8 55%, #5C7A8A 100%)"><i></i><b></b></div>
+    <div class="cl-body">
+      <div class="cl-meta">
+        <span class="cl-num">باليت 18</span>
+        <span class="cl-cat">بارد وأزرق</span>
+      </div>
+      <h3>Interstellar (2014)<span>بين النجوم</span></h3>
+      <p class="cl-mood">غبار الأرض وبرد الفضاء اللانهائي</p>
+      <div class="cl-swatches">
+        
+        <button class="sw" type="button" data-hex="#4A5C6B">
+          <i style="background:#4A5C6B"></i><b>#4A5C6B</b>
+        </button>
+        <button class="sw" type="button" data-hex="#8A9AA8">
+          <i style="background:#8A9AA8"></i><b>#8A9AA8</b>
+        </button>
+        <button class="sw" type="button" data-hex="#D9C8A8">
+          <i style="background:#D9C8A8"></i><b>#D9C8A8</b>
+        </button>
+        <button class="sw" type="button" data-hex="#1E2428">
+          <i style="background:#1E2428"></i><b>#1E2428</b>
+        </button>
+        <button class="sw" type="button" data-hex="#5C7A8A">
+          <i style="background:#5C7A8A"></i><b>#5C7A8A</b>
+        </button>
+      </div>
+      <button class="cl-copy" type="button" data-i="17">انسخ الباليت</button>
+    </div>
+  </article>
+  <article class="cl-card" data-cat="cool">
+    <div class="cl-frame" style="background:radial-gradient(95% 130% at 80% 15%, #5C6B7Acc, transparent 60%),radial-gradient(85% 110% at 12% 88%, #8A96A8bb, transparent 55%),linear-gradient(158deg, #3E4A55 0%, #1E2428 55%, #C8D2D9 100%)"><i></i><b></b></div>
+    <div class="cl-body">
+      <div class="cl-meta">
+        <span class="cl-num">باليت 19</span>
+        <span class="cl-cat">بارد وأزرق</span>
+      </div>
+      <h3>The Dark Knight (2008)<span>فارس الظلام</span></h3>
+      <p class="cl-mood">غوثام فولاذية بأزرق ليلي صارم</p>
+      <div class="cl-swatches">
+        
+        <button class="sw" type="button" data-hex="#3E4A55">
+          <i style="background:#3E4A55"></i><b>#3E4A55</b>
+        </button>
+        <button class="sw" type="button" data-hex="#1E2428">
+          <i style="background:#1E2428"></i><b>#1E2428</b>
+        </button>
+        <button class="sw" type="button" data-hex="#8A96A8">
+          <i style="background:#8A96A8"></i><b>#8A96A8</b>
+        </button>
+        <button class="sw" type="button" data-hex="#5C6B7A">
+          <i style="background:#5C6B7A"></i><b>#5C6B7A</b>
+        </button>
+        <button class="sw" type="button" data-hex="#C8D2D9">
+          <i style="background:#C8D2D9"></i><b>#C8D2D9</b>
+        </button>
+      </div>
+      <button class="cl-copy" type="button" data-i="18">انسخ الباليت</button>
+    </div>
+  </article>
+  <article class="cl-card" data-cat="cool">
+    <div class="cl-frame" style="background:radial-gradient(95% 130% at 80% 15%, #C8D2D9cc, transparent 60%),radial-gradient(85% 110% at 12% 88%, #2E3438bb, transparent 55%),linear-gradient(158deg, #3E4A45 0%, #96A8B4 55%, #5C4A3A 100%)"><i></i><b></b></div>
+    <div class="cl-body">
+      <div class="cl-meta">
+        <span class="cl-num">باليت 20</span>
+        <span class="cl-cat">بارد وأزرق</span>
+      </div>
+      <h3>The Girl with the Dragon Tattoo (2011)<span>فتاة بوشم التنين</span></h3>
+      <p class="cl-mood">شتاء سويدي قاسٍ بلا دفء</p>
+      <div class="cl-swatches">
+        
+        <button class="sw" type="button" data-hex="#3E4A45">
+          <i style="background:#3E4A45"></i><b>#3E4A45</b>
+        </button>
+        <button class="sw" type="button" data-hex="#96A8B4">
+          <i style="background:#96A8B4"></i><b>#96A8B4</b>
+        </button>
+        <button class="sw" type="button" data-hex="#2E3438">
+          <i style="background:#2E3438"></i><b>#2E3438</b>
+        </button>
+        <button class="sw" type="button" data-hex="#C8D2D9">
+          <i style="background:#C8D2D9"></i><b>#C8D2D9</b>
+        </button>
+        <button class="sw" type="button" data-hex="#5C4A3A">
+          <i style="background:#5C4A3A"></i><b>#5C4A3A</b>
+        </button>
+      </div>
+      <button class="cl-copy" type="button" data-i="19">انسخ الباليت</button>
+    </div>
+  </article>
+  <article class="cl-card" data-cat="cool">
+    <div class="cl-frame" style="background:radial-gradient(95% 130% at 80% 15%, #3E4A55cc, transparent 60%),radial-gradient(85% 110% at 12% 88%, #E8734Abb, transparent 55%),linear-gradient(158deg, #6B8AA8 0%, #C8D2D9 55%, #A8C0B4 100%)"><i></i><b></b></div>
+    <div class="cl-body">
+      <div class="cl-meta">
+        <span class="cl-num">باليت 21</span>
+        <span class="cl-cat">بارد وأزرق</span>
+      </div>
+      <h3>Eternal Sunshine of the Spotless Mind (2004)<span>إشراقة أبدية</span></h3>
+      <p class="cl-mood">ذكريات تذوب بأزرق شاحب</p>
+      <div class="cl-swatches">
+        
+        <button class="sw" type="button" data-hex="#6B8AA8">
+          <i style="background:#6B8AA8"></i><b>#6B8AA8</b>
+        </button>
+        <button class="sw" type="button" data-hex="#C8D2D9">
+          <i style="background:#C8D2D9"></i><b>#C8D2D9</b>
+        </button>
+        <button class="sw" type="button" data-hex="#E8734A">
+          <i style="background:#E8734A"></i><b>#E8734A</b>
+        </button>
+        <button class="sw" type="button" data-hex="#3E4A55">
+          <i style="background:#3E4A55"></i><b>#3E4A55</b>
+        </button>
+        <button class="sw" type="button" data-hex="#A8C0B4">
+          <i style="background:#A8C0B4"></i><b>#A8C0B4</b>
+        </button>
+      </div>
+      <button class="cl-copy" type="button" data-i="20">انسخ الباليت</button>
+    </div>
+  </article>
+  <article class="cl-card" data-cat="cool">
+    <div class="cl-frame" style="background:radial-gradient(95% 130% at 80% 15%, #1E2428cc, transparent 60%),radial-gradient(85% 110% at 12% 88%, #C8A05Abb, transparent 55%),linear-gradient(158deg, #2E3E55 0%, #6B8AA8 55%, #8AA8C8 100%)"><i></i><b></b></div>
+    <div class="cl-body">
+      <div class="cl-meta">
+        <span class="cl-num">باليت 22</span>
+        <span class="cl-cat">بارد وأزرق</span>
+      </div>
+      <h3>Skyfall (2012)<span>سكايفول</span></h3>
+      <p class="cl-mood">شنغهاي الزجاجية وأزرق الليل الأنيق</p>
+      <div class="cl-swatches">
+        
+        <button class="sw" type="button" data-hex="#2E3E55">
+          <i style="background:#2E3E55"></i><b>#2E3E55</b>
+        </button>
+        <button class="sw" type="button" data-hex="#6B8AA8">
+          <i style="background:#6B8AA8"></i><b>#6B8AA8</b>
+        </button>
+        <button class="sw" type="button" data-hex="#C8A05A">
+          <i style="background:#C8A05A"></i><b>#C8A05A</b>
+        </button>
+        <button class="sw" type="button" data-hex="#1E2428">
+          <i style="background:#1E2428"></i><b>#1E2428</b>
+        </button>
+        <button class="sw" type="button" data-hex="#8AA8C8">
+          <i style="background:#8AA8C8"></i><b>#8AA8C8</b>
+        </button>
+      </div>
+      <button class="cl-copy" type="button" data-i="21">انسخ الباليت</button>
+    </div>
+  </article>
+  <article class="cl-card" data-cat="neon">
+    <div class="cl-frame" style="background:radial-gradient(95% 130% at 80% 15%, #C8873Fcc, transparent 60%),radial-gradient(85% 110% at 12% 88%, #4AC8D9bb, transparent 55%),linear-gradient(158deg, #1E2438 0%, #E85C8A 55%, #3E2E5C 100%)"><i></i><b></b></div>
+    <div class="cl-body">
+      <div class="cl-meta">
+        <span class="cl-num">باليت 23</span>
+        <span class="cl-cat">نيون وسايبربانك</span>
+      </div>
+      <h3>Blade Runner (1982)<span>بليد رانر</span></h3>
+      <p class="cl-mood">مطر نيون في مدينة لا تنام</p>
+      <div class="cl-swatches">
+        
+        <button class="sw" type="button" data-hex="#1E2438">
+          <i style="background:#1E2438"></i><b>#1E2438</b>
+        </button>
+        <button class="sw" type="button" data-hex="#E85C8A">
+          <i style="background:#E85C8A"></i><b>#E85C8A</b>
+        </button>
+        <button class="sw" type="button" data-hex="#4AC8D9">
+          <i style="background:#4AC8D9"></i><b>#4AC8D9</b>
+        </button>
+        <button class="sw" type="button" data-hex="#C8873F">
+          <i style="background:#C8873F"></i><b>#C8873F</b>
+        </button>
+        <button class="sw" type="button" data-hex="#3E2E5C">
+          <i style="background:#3E2E5C"></i><b>#3E2E5C</b>
+        </button>
+      </div>
+      <button class="cl-copy" type="button" data-i="22">انسخ الباليت</button>
+    </div>
+  </article>
+  <article class="cl-card" data-cat="neon">
+    <div class="cl-frame" style="background:radial-gradient(95% 130% at 80% 15%, #2E3438cc, transparent 60%),radial-gradient(85% 110% at 12% 88%, #4AC8D9bb, transparent 55%),linear-gradient(158deg, #D97E2B 0%, #8A4B2A 55%, #E8B48A 100%)"><i></i><b></b></div>
+    <div class="cl-body">
+      <div class="cl-meta">
+        <span class="cl-num">باليت 24</span>
+        <span class="cl-cat">نيون وسايبربانك</span>
+      </div>
+      <h3>Blade Runner 2049 (2017)<span>بليد رانر 2049</span></h3>
+      <p class="cl-mood">ضباب برتقالي وسيان مستقبلي مهجور</p>
+      <div class="cl-swatches">
+        
+        <button class="sw" type="button" data-hex="#D97E2B">
+          <i style="background:#D97E2B"></i><b>#D97E2B</b>
+        </button>
+        <button class="sw" type="button" data-hex="#8A4B2A">
+          <i style="background:#8A4B2A"></i><b>#8A4B2A</b>
+        </button>
+        <button class="sw" type="button" data-hex="#4AC8D9">
+          <i style="background:#4AC8D9"></i><b>#4AC8D9</b>
+        </button>
+        <button class="sw" type="button" data-hex="#2E3438">
+          <i style="background:#2E3438"></i><b>#2E3438</b>
+        </button>
+        <button class="sw" type="button" data-hex="#E8B48A">
+          <i style="background:#E8B48A"></i><b>#E8B48A</b>
+        </button>
+      </div>
+      <button class="cl-copy" type="button" data-i="23">انسخ الباليت</button>
+    </div>
+  </article>
+  <article class="cl-card" data-cat="neon">
+    <div class="cl-frame" style="background:radial-gradient(95% 130% at 80% 15%, #F2C845cc, transparent 60%),radial-gradient(85% 110% at 12% 88%, #4AC8D9bb, transparent 55%),linear-gradient(158deg, #E85C8A 0%, #2E1E38 55%, #1E2428 100%)"><i></i><b></b></div>
+    <div class="cl-body">
+      <div class="cl-meta">
+        <span class="cl-num">باليت 25</span>
+        <span class="cl-cat">نيون وسايبربانك</span>
+      </div>
+      <h3>Drive (2011)<span>درايف</span></h3>
+      <p class="cl-mood">ليل لوس أنجلوس بوردي كهربائي</p>
+      <div class="cl-swatches">
+        
+        <button class="sw" type="button" data-hex="#E85C8A">
+          <i style="background:#E85C8A"></i><b>#E85C8A</b>
+        </button>
+        <button class="sw" type="button" data-hex="#2E1E38">
+          <i style="background:#2E1E38"></i><b>#2E1E38</b>
+        </button>
+        <button class="sw" type="button" data-hex="#4AC8D9">
+          <i style="background:#4AC8D9"></i><b>#4AC8D9</b>
+        </button>
+        <button class="sw" type="button" data-hex="#F2C845">
+          <i style="background:#F2C845"></i><b>#F2C845</b>
+        </button>
+        <button class="sw" type="button" data-hex="#1E2428">
+          <i style="background:#1E2428"></i><b>#1E2428</b>
+        </button>
+      </div>
+      <button class="cl-copy" type="button" data-i="24">انسخ الباليت</button>
+    </div>
+  </article>
+  <article class="cl-card" data-cat="neon">
+    <div class="cl-frame" style="background:radial-gradient(95% 130% at 80% 15%, #1E2428cc, transparent 60%),radial-gradient(85% 110% at 12% 88%, #4A8AC8bb, transparent 55%),linear-gradient(158deg, #3E2E5C 0%, #E85C8A 55%, #C84B5C 100%)"><i></i><b></b></div>
+    <div class="cl-body">
+      <div class="cl-meta">
+        <span class="cl-num">باليت 26</span>
+        <span class="cl-cat">نيون وسايبربانك</span>
+      </div>
+      <h3>John Wick (2014)<span>جون ويك</span></h3>
+      <p class="cl-mood">نوادٍ بنفسجية وأناقة قاتلة</p>
+      <div class="cl-swatches">
+        
+        <button class="sw" type="button" data-hex="#3E2E5C">
+          <i style="background:#3E2E5C"></i><b>#3E2E5C</b>
+        </button>
+        <button class="sw" type="button" data-hex="#E85C8A">
+          <i style="background:#E85C8A"></i><b>#E85C8A</b>
+        </button>
+        <button class="sw" type="button" data-hex="#4A8AC8">
+          <i style="background:#4A8AC8"></i><b>#4A8AC8</b>
+        </button>
+        <button class="sw" type="button" data-hex="#1E2428">
+          <i style="background:#1E2428"></i><b>#1E2428</b>
+        </button>
+        <button class="sw" type="button" data-hex="#C84B5C">
+          <i style="background:#C84B5C"></i><b>#C84B5C</b>
+        </button>
+      </div>
+      <button class="cl-copy" type="button" data-i="25">انسخ الباليت</button>
+    </div>
+  </article>
+  <article class="cl-card" data-cat="neon">
+    <div class="cl-frame" style="background:radial-gradient(95% 130% at 80% 15%, #2E3E55cc, transparent 60%),radial-gradient(85% 110% at 12% 88%, #E8732Bbb, transparent 55%),linear-gradient(158deg, #4AC8D9 0%, #1E2428 55%, #C8D2D9 100%)"><i></i><b></b></div>
+    <div class="cl-body">
+      <div class="cl-meta">
+        <span class="cl-num">باليت 27</span>
+        <span class="cl-cat">نيون وسايبربانك</span>
+      </div>
+      <h3>Tron: Legacy (2010)<span>ترون</span></h3>
+      <p class="cl-mood">شبكة رقمية بسيان متوهج</p>
+      <div class="cl-swatches">
+        
+        <button class="sw" type="button" data-hex="#4AC8D9">
+          <i style="background:#4AC8D9"></i><b>#4AC8D9</b>
+        </button>
+        <button class="sw" type="button" data-hex="#1E2428">
+          <i style="background:#1E2428"></i><b>#1E2428</b>
+        </button>
+        <button class="sw" type="button" data-hex="#E8732B">
+          <i style="background:#E8732B"></i><b>#E8732B</b>
+        </button>
+        <button class="sw" type="button" data-hex="#2E3E55">
+          <i style="background:#2E3E55"></i><b>#2E3E55</b>
+        </button>
+        <button class="sw" type="button" data-hex="#C8D2D9">
+          <i style="background:#C8D2D9"></i><b>#C8D2D9</b>
+        </button>
+      </div>
+      <button class="cl-copy" type="button" data-i="26">انسخ الباليت</button>
+    </div>
+  </article>
+  <article class="cl-card" data-cat="neon">
+    <div class="cl-frame" style="background:radial-gradient(95% 130% at 80% 15%, #6B3A8Acc, transparent 60%),radial-gradient(85% 110% at 12% 88%, #F2C845bb, transparent 55%),linear-gradient(158deg, #3E4A8A 0%, #E85C8A 55%, #4AC8D9 100%)"><i></i><b></b></div>
+    <div class="cl-body">
+      <div class="cl-meta">
+        <span class="cl-num">باليت 28</span>
+        <span class="cl-cat">نيون وسايبربانك</span>
+      </div>
+      <h3>La La Land (2016)<span>لا لا لاند</span></h3>
+      <p class="cl-mood">غسق الأحلام بين البنفسجي والذهب</p>
+      <div class="cl-swatches">
+        
+        <button class="sw" type="button" data-hex="#3E4A8A">
+          <i style="background:#3E4A8A"></i><b>#3E4A8A</b>
+        </button>
+        <button class="sw" type="button" data-hex="#E85C8A">
+          <i style="background:#E85C8A"></i><b>#E85C8A</b>
+        </button>
+        <button class="sw" type="button" data-hex="#F2C845">
+          <i style="background:#F2C845"></i><b>#F2C845</b>
+        </button>
+        <button class="sw" type="button" data-hex="#6B3A8A">
+          <i style="background:#6B3A8A"></i><b>#6B3A8A</b>
+        </button>
+        <button class="sw" type="button" data-hex="#4AC8D9">
+          <i style="background:#4AC8D9"></i><b>#4AC8D9</b>
+        </button>
+      </div>
+      <button class="cl-copy" type="button" data-i="27">انسخ الباليت</button>
+    </div>
+  </article>
+  <article class="cl-card" data-cat="neon">
+    <div class="cl-frame" style="background:radial-gradient(95% 130% at 80% 15%, #E85C8Acc, transparent 60%),radial-gradient(85% 110% at 12% 88%, #F2C845bb, transparent 55%),linear-gradient(158deg, #E8354A 0%, #2E3EC8 55%, #1E2428 100%)"><i></i><b></b></div>
+    <div class="cl-body">
+      <div class="cl-meta">
+        <span class="cl-num">باليت 29</span>
+        <span class="cl-cat">نيون وسايبربانك</span>
+      </div>
+      <h3>Spider-Man: Into the Spider-Verse (2018)<span>سبايدرفيرس</span></h3>
+      <p class="cl-mood">كوميكس حي بألوان صارخة</p>
+      <div class="cl-swatches">
+        
+        <button class="sw" type="button" data-hex="#E8354A">
+          <i style="background:#E8354A"></i><b>#E8354A</b>
+        </button>
+        <button class="sw" type="button" data-hex="#2E3EC8">
+          <i style="background:#2E3EC8"></i><b>#2E3EC8</b>
+        </button>
+        <button class="sw" type="button" data-hex="#F2C845">
+          <i style="background:#F2C845"></i><b>#F2C845</b>
+        </button>
+        <button class="sw" type="button" data-hex="#E85C8A">
+          <i style="background:#E85C8A"></i><b>#E85C8A</b>
+        </button>
+        <button class="sw" type="button" data-hex="#1E2428">
+          <i style="background:#1E2428"></i><b>#1E2428</b>
+        </button>
+      </div>
+      <button class="cl-copy" type="button" data-i="28">انسخ الباليت</button>
+    </div>
+  </article>
+  <article class="cl-card" data-cat="neon">
+    <div class="cl-frame" style="background:radial-gradient(95% 130% at 80% 15%, #E85C8Acc, transparent 60%),radial-gradient(85% 110% at 12% 88%, #4AC8D9bb, transparent 55%),linear-gradient(158deg, #6B3A8A 0%, #E8732B 55%, #2E2E45 100%)"><i></i><b></b></div>
+    <div class="cl-body">
+      <div class="cl-meta">
+        <span class="cl-num">باليت 30</span>
+        <span class="cl-cat">نيون وسايبربانك</span>
+      </div>
+      <h3>Guardians of the Galaxy (2014)<span>حراس المجرة</span></h3>
+      <p class="cl-mood">فضاء ملوّن بروح الثمانينات</p>
+      <div class="cl-swatches">
+        
+        <button class="sw" type="button" data-hex="#6B3A8A">
+          <i style="background:#6B3A8A"></i><b>#6B3A8A</b>
+        </button>
+        <button class="sw" type="button" data-hex="#E8732B">
+          <i style="background:#E8732B"></i><b>#E8732B</b>
+        </button>
+        <button class="sw" type="button" data-hex="#4AC8D9">
+          <i style="background:#4AC8D9"></i><b>#4AC8D9</b>
+        </button>
+        <button class="sw" type="button" data-hex="#E85C8A">
+          <i style="background:#E85C8A"></i><b>#E85C8A</b>
+        </button>
+        <button class="sw" type="button" data-hex="#2E2E45">
+          <i style="background:#2E2E45"></i><b>#2E2E45</b>
+        </button>
+      </div>
+      <button class="cl-copy" type="button" data-i="29">انسخ الباليت</button>
+    </div>
+  </article>
+  <article class="cl-card" data-cat="neon">
+    <div class="cl-frame" style="background:radial-gradient(95% 130% at 80% 15%, #8A96A8cc, transparent 60%),radial-gradient(85% 110% at 12% 88%, #1E2428bb, transparent 55%),linear-gradient(158deg, #4AC8D9 0%, #E85C8A 55%, #F2C845 100%)"><i></i><b></b></div>
+    <div class="cl-body">
+      <div class="cl-meta">
+        <span class="cl-num">باليت 31</span>
+        <span class="cl-cat">نيون وسايبربانك</span>
+      </div>
+      <h3>Atomic Blonde (2017)<span>العميلة الشقراء</span></h3>
+      <p class="cl-mood">برلين الحرب الباردة بنيون بارد</p>
+      <div class="cl-swatches">
+        
+        <button class="sw" type="button" data-hex="#4AC8D9">
+          <i style="background:#4AC8D9"></i><b>#4AC8D9</b>
+        </button>
+        <button class="sw" type="button" data-hex="#E85C8A">
+          <i style="background:#E85C8A"></i><b>#E85C8A</b>
+        </button>
+        <button class="sw" type="button" data-hex="#1E2428">
+          <i style="background:#1E2428"></i><b>#1E2428</b>
+        </button>
+        <button class="sw" type="button" data-hex="#8A96A8">
+          <i style="background:#8A96A8"></i><b>#8A96A8</b>
+        </button>
+        <button class="sw" type="button" data-hex="#F2C845">
+          <i style="background:#F2C845"></i><b>#F2C845</b>
+        </button>
+      </div>
+      <button class="cl-copy" type="button" data-i="30">انسخ الباليت</button>
+    </div>
+  </article>
+  <article class="cl-card" data-cat="neon">
+    <div class="cl-frame" style="background:radial-gradient(95% 130% at 80% 15%, #C8D2D9cc, transparent 60%),radial-gradient(85% 110% at 12% 88%, #4A5C8Abb, transparent 55%),linear-gradient(158deg, #1E2428 0%, #E8732B 55%, #8A3A2B 100%)"><i></i><b></b></div>
+    <div class="cl-body">
+      <div class="cl-meta">
+        <span class="cl-num">باليت 32</span>
+        <span class="cl-cat">نيون وسايبربانك</span>
+      </div>
+      <h3>Nightcrawler (2014)<span>المتسلل الليلي</span></h3>
+      <p class="cl-mood">لوس أنجلوس الليلية بعيون جائعة</p>
+      <div class="cl-swatches">
+        
+        <button class="sw" type="button" data-hex="#1E2428">
+          <i style="background:#1E2428"></i><b>#1E2428</b>
+        </button>
+        <button class="sw" type="button" data-hex="#E8732B">
+          <i style="background:#E8732B"></i><b>#E8732B</b>
+        </button>
+        <button class="sw" type="button" data-hex="#4A5C8A">
+          <i style="background:#4A5C8A"></i><b>#4A5C8A</b>
+        </button>
+        <button class="sw" type="button" data-hex="#C8D2D9">
+          <i style="background:#C8D2D9"></i><b>#C8D2D9</b>
+        </button>
+        <button class="sw" type="button" data-hex="#8A3A2B">
+          <i style="background:#8A3A2B"></i><b>#8A3A2B</b>
+        </button>
+      </div>
+      <button class="cl-copy" type="button" data-i="31">انسخ الباليت</button>
+    </div>
+  </article>
+  <article class="cl-card" data-cat="neon">
+    <div class="cl-frame" style="background:radial-gradient(95% 130% at 80% 15%, #E8B4C8cc, transparent 60%),radial-gradient(85% 110% at 12% 88%, #4A8AC8bb, transparent 55%),linear-gradient(158deg, #C8354A 0%, #2E1E38 55%, #1E2428 100%)"><i></i><b></b></div>
+    <div class="cl-body">
+      <div class="cl-meta">
+        <span class="cl-num">باليت 33</span>
+        <span class="cl-cat">نيون وسايبربانك</span>
+      </div>
+      <h3>Suspiria (1977)<span>سوسبيريا</span></h3>
+      <p class="cl-mood">كابوس أحمر بجرأة السبعينات</p>
+      <div class="cl-swatches">
+        
+        <button class="sw" type="button" data-hex="#C8354A">
+          <i style="background:#C8354A"></i><b>#C8354A</b>
+        </button>
+        <button class="sw" type="button" data-hex="#2E1E38">
+          <i style="background:#2E1E38"></i><b>#2E1E38</b>
+        </button>
+        <button class="sw" type="button" data-hex="#4A8AC8">
+          <i style="background:#4A8AC8"></i><b>#4A8AC8</b>
+        </button>
+        <button class="sw" type="button" data-hex="#E8B4C8">
+          <i style="background:#E8B4C8"></i><b>#E8B4C8</b>
+        </button>
+        <button class="sw" type="button" data-hex="#1E2428">
+          <i style="background:#1E2428"></i><b>#1E2428</b>
+        </button>
+      </div>
+      <button class="cl-copy" type="button" data-i="32">انسخ الباليت</button>
+    </div>
+  </article>
+  <article class="cl-card" data-cat="pastel">
+    <div class="cl-frame" style="background:radial-gradient(95% 130% at 80% 15%, #8AA8C8cc, transparent 60%),radial-gradient(85% 110% at 12% 88%, #F2DCA8bb, transparent 55%),linear-gradient(158deg, #E8A8B8 0%, #B85C6B 55%, #5C3A45 100%)"><i></i><b></b></div>
+    <div class="cl-body">
+      <div class="cl-meta">
+        <span class="cl-num">باليت 34</span>
+        <span class="cl-cat">باستيل وحالم</span>
+      </div>
+      <h3>The Grand Budapest Hotel (2014)<span>فندق بودابست الكبير</span></h3>
+      <p class="cl-mood">حلويات معمارية وردية بتناظر مثالي</p>
+      <div class="cl-swatches">
+        
+        <button class="sw" type="button" data-hex="#E8A8B8">
+          <i style="background:#E8A8B8"></i><b>#E8A8B8</b>
+        </button>
+        <button class="sw" type="button" data-hex="#B85C6B">
+          <i style="background:#B85C6B"></i><b>#B85C6B</b>
+        </button>
+        <button class="sw" type="button" data-hex="#F2DCA8">
+          <i style="background:#F2DCA8"></i><b>#F2DCA8</b>
+        </button>
+        <button class="sw" type="button" data-hex="#8AA8C8">
+          <i style="background:#8AA8C8"></i><b>#8AA8C8</b>
+        </button>
+        <button class="sw" type="button" data-hex="#5C3A45">
+          <i style="background:#5C3A45"></i><b>#5C3A45</b>
+        </button>
+      </div>
+      <button class="cl-copy" type="button" data-i="33">انسخ الباليت</button>
+    </div>
+  </article>
+  <article class="cl-card" data-cat="pastel">
+    <div class="cl-frame" style="background:radial-gradient(95% 130% at 80% 15%, #D9B48Acc, transparent 60%),radial-gradient(85% 110% at 12% 88%, #8A9A6Bbb, transparent 55%),linear-gradient(158deg, #E8D8A8 0%, #C8873F 55%, #5C6B4F 100%)"><i></i><b></b></div>
+    <div class="cl-body">
+      <div class="cl-meta">
+        <span class="cl-num">باليت 35</span>
+        <span class="cl-cat">باستيل وحالم</span>
+      </div>
+      <h3>Moonrise Kingdom (2012)<span>مملكة شروق القمر</span></h3>
+      <p class="cl-mood">صيف كشفي قديم بأصفر باهت</p>
+      <div class="cl-swatches">
+        
+        <button class="sw" type="button" data-hex="#E8D8A8">
+          <i style="background:#E8D8A8"></i><b>#E8D8A8</b>
+        </button>
+        <button class="sw" type="button" data-hex="#C8873F">
+          <i style="background:#C8873F"></i><b>#C8873F</b>
+        </button>
+        <button class="sw" type="button" data-hex="#8A9A6B">
+          <i style="background:#8A9A6B"></i><b>#8A9A6B</b>
+        </button>
+        <button class="sw" type="button" data-hex="#D9B48A">
+          <i style="background:#D9B48A"></i><b>#D9B48A</b>
+        </button>
+        <button class="sw" type="button" data-hex="#5C6B4F">
+          <i style="background:#5C6B4F"></i><b>#5C6B4F</b>
+        </button>
+      </div>
+      <button class="cl-copy" type="button" data-i="34">انسخ الباليت</button>
+    </div>
+  </article>
+  <article class="cl-card" data-cat="pastel">
+    <div class="cl-frame" style="background:radial-gradient(95% 130% at 80% 15%, #F2E4C9cc, transparent 60%),radial-gradient(85% 110% at 12% 88%, #C85C4Abb, transparent 55%),linear-gradient(158deg, #E8C8A8 0%, #8AA8C8 55%, #5C5C6B 100%)"><i></i><b></b></div>
+    <div class="cl-body">
+      <div class="cl-meta">
+        <span class="cl-num">باليت 36</span>
+        <span class="cl-cat">باستيل وحالم</span>
+      </div>
+      <h3>The French Dispatch (2021)<span>ذا فرنش ديسباتش</span></h3>
+      <p class="cl-mood">صحافة باريسية بلمسة أنيقة باهتة</p>
+      <div class="cl-swatches">
+        
+        <button class="sw" type="button" data-hex="#E8C8A8">
+          <i style="background:#E8C8A8"></i><b>#E8C8A8</b>
+        </button>
+        <button class="sw" type="button" data-hex="#8AA8C8">
+          <i style="background:#8AA8C8"></i><b>#8AA8C8</b>
+        </button>
+        <button class="sw" type="button" data-hex="#C85C4A">
+          <i style="background:#C85C4A"></i><b>#C85C4A</b>
+        </button>
+        <button class="sw" type="button" data-hex="#F2E4C9">
+          <i style="background:#F2E4C9"></i><b>#F2E4C9</b>
+        </button>
+        <button class="sw" type="button" data-hex="#5C5C6B">
+          <i style="background:#5C5C6B"></i><b>#5C5C6B</b>
+        </button>
+      </div>
+      <button class="cl-copy" type="button" data-i="35">انسخ الباليت</button>
+    </div>
+  </article>
+  <article class="cl-card" data-cat="pastel">
+    <div class="cl-frame" style="background:radial-gradient(95% 130% at 80% 15%, #F2DCA8cc, transparent 60%),radial-gradient(85% 110% at 12% 88%, #C8735Cbb, transparent 55%),linear-gradient(158deg, #4AA8C8 0%, #E8B84A 55%, #8A5A6B 100%)"><i></i><b></b></div>
+    <div class="cl-body">
+      <div class="cl-meta">
+        <span class="cl-num">باليت 37</span>
+        <span class="cl-cat">باستيل وحالم</span>
+      </div>
+      <h3>The Darjeeling Limited (2007)<span>قطار دارجيلنغ</span></h3>
+      <p class="cl-mood">رحلة هندية بألوان التوابل الفاتحة</p>
+      <div class="cl-swatches">
+        
+        <button class="sw" type="button" data-hex="#4AA8C8">
+          <i style="background:#4AA8C8"></i><b>#4AA8C8</b>
+        </button>
+        <button class="sw" type="button" data-hex="#E8B84A">
+          <i style="background:#E8B84A"></i><b>#E8B84A</b>
+        </button>
+        <button class="sw" type="button" data-hex="#C8735C">
+          <i style="background:#C8735C"></i><b>#C8735C</b>
+        </button>
+        <button class="sw" type="button" data-hex="#F2DCA8">
+          <i style="background:#F2DCA8"></i><b>#F2DCA8</b>
+        </button>
+        <button class="sw" type="button" data-hex="#8A5A6B">
+          <i style="background:#8A5A6B"></i><b>#8A5A6B</b>
+        </button>
+      </div>
+      <button class="cl-copy" type="button" data-i="36">انسخ الباليت</button>
+    </div>
+  </article>
+  <article class="cl-card" data-cat="pastel">
+    <div class="cl-frame" style="background:radial-gradient(95% 130% at 80% 15%, #F2E45Ccc, transparent 60%),radial-gradient(85% 110% at 12% 88%, #4AC8D9bb, transparent 55%),linear-gradient(158deg, #E86BA8 0%, #F2B8D2 55%, #C84B8A 100%)"><i></i><b></b></div>
+    <div class="cl-body">
+      <div class="cl-meta">
+        <span class="cl-num">باليت 38</span>
+        <span class="cl-cat">باستيل وحالم</span>
+      </div>
+      <h3>Barbie (2023)<span>باربي</span></h3>
+      <p class="cl-mood">عالم وردي كامل بلا اعتذار</p>
+      <div class="cl-swatches">
+        
+        <button class="sw" type="button" data-hex="#E86BA8">
+          <i style="background:#E86BA8"></i><b>#E86BA8</b>
+        </button>
+        <button class="sw" type="button" data-hex="#F2B8D2">
+          <i style="background:#F2B8D2"></i><b>#F2B8D2</b>
+        </button>
+        <button class="sw" type="button" data-hex="#4AC8D9">
+          <i style="background:#4AC8D9"></i><b>#4AC8D9</b>
+        </button>
+        <button class="sw" type="button" data-hex="#F2E45C">
+          <i style="background:#F2E45C"></i><b>#F2E45C</b>
+        </button>
+        <button class="sw" type="button" data-hex="#C84B8A">
+          <i style="background:#C84B8A"></i><b>#C84B8A</b>
+        </button>
+      </div>
+      <button class="cl-copy" type="button" data-i="37">انسخ الباليت</button>
+    </div>
+  </article>
+  <article class="cl-card" data-cat="pastel">
+    <div class="cl-frame" style="background:radial-gradient(95% 130% at 80% 15%, #C88A9Acc, transparent 60%),radial-gradient(85% 110% at 12% 88%, #E8E4C9bb, transparent 55%),linear-gradient(158deg, #F2C8D2 0%, #A8D2E8 55%, #8AA88A 100%)"><i></i><b></b></div>
+    <div class="cl-body">
+      <div class="cl-meta">
+        <span class="cl-num">باليت 39</span>
+        <span class="cl-cat">باستيل وحالم</span>
+      </div>
+      <h3>Marie Antoinette (2006)<span>ماري أنطوانيت</span></h3>
+      <p class="cl-mood">مكارون فرساي وترف ناعم</p>
+      <div class="cl-swatches">
+        
+        <button class="sw" type="button" data-hex="#F2C8D2">
+          <i style="background:#F2C8D2"></i><b>#F2C8D2</b>
+        </button>
+        <button class="sw" type="button" data-hex="#A8D2E8">
+          <i style="background:#A8D2E8"></i><b>#A8D2E8</b>
+        </button>
+        <button class="sw" type="button" data-hex="#E8E4C9">
+          <i style="background:#E8E4C9"></i><b>#E8E4C9</b>
+        </button>
+        <button class="sw" type="button" data-hex="#C88A9A">
+          <i style="background:#C88A9A"></i><b>#C88A9A</b>
+        </button>
+        <button class="sw" type="button" data-hex="#8AA88A">
+          <i style="background:#8AA88A"></i><b>#8AA88A</b>
+        </button>
+      </div>
+      <button class="cl-copy" type="button" data-i="38">انسخ الباليت</button>
+    </div>
+  </article>
+  <article class="cl-card" data-cat="pastel">
+    <div class="cl-frame" style="background:radial-gradient(95% 130% at 80% 15%, #A8C08Acc, transparent 60%),radial-gradient(85% 110% at 12% 88%, #E8A85Cbb, transparent 55%),linear-gradient(158deg, #8AC8D9 0%, #F2E4C9 55%, #4A6B8A 100%)"><i></i><b></b></div>
+    <div class="cl-body">
+      <div class="cl-meta">
+        <span class="cl-num">باليت 40</span>
+        <span class="cl-cat">باستيل وحالم</span>
+      </div>
+      <h3>The Truman Show (1998)<span>ترومان شو</span></h3>
+      <p class="cl-mood">مدينة مثالية أكثر من اللازم</p>
+      <div class="cl-swatches">
+        
+        <button class="sw" type="button" data-hex="#8AC8D9">
+          <i style="background:#8AC8D9"></i><b>#8AC8D9</b>
+        </button>
+        <button class="sw" type="button" data-hex="#F2E4C9">
+          <i style="background:#F2E4C9"></i><b>#F2E4C9</b>
+        </button>
+        <button class="sw" type="button" data-hex="#E8A85C">
+          <i style="background:#E8A85C"></i><b>#E8A85C</b>
+        </button>
+        <button class="sw" type="button" data-hex="#A8C08A">
+          <i style="background:#A8C08A"></i><b>#A8C08A</b>
+        </button>
+        <button class="sw" type="button" data-hex="#4A6B8A">
+          <i style="background:#4A6B8A"></i><b>#4A6B8A</b>
+        </button>
+      </div>
+      <button class="cl-copy" type="button" data-i="39">انسخ الباليت</button>
+    </div>
+  </article>
+  <article class="cl-card" data-cat="pastel">
+    <div class="cl-frame" style="background:radial-gradient(95% 130% at 80% 15%, #8A96C8cc, transparent 60%),radial-gradient(85% 110% at 12% 88%, #F2E48Abb, transparent 55%),linear-gradient(158deg, #A8D2C8 0%, #E8A8B8 55%, #3E3A45 100%)"><i></i><b></b></div>
+    <div class="cl-body">
+      <div class="cl-meta">
+        <span class="cl-num">باليت 41</span>
+        <span class="cl-cat">باستيل وحالم</span>
+      </div>
+      <h3>Edward Scissorhands (1990)<span>إدوارد ذو الأيدي المقصية</span></h3>
+      <p class="cl-mood">ضواحٍ ملونة تخفي حكاية قوطية</p>
+      <div class="cl-swatches">
+        
+        <button class="sw" type="button" data-hex="#A8D2C8">
+          <i style="background:#A8D2C8"></i><b>#A8D2C8</b>
+        </button>
+        <button class="sw" type="button" data-hex="#E8A8B8">
+          <i style="background:#E8A8B8"></i><b>#E8A8B8</b>
+        </button>
+        <button class="sw" type="button" data-hex="#F2E48A">
+          <i style="background:#F2E48A"></i><b>#F2E48A</b>
+        </button>
+        <button class="sw" type="button" data-hex="#8A96C8">
+          <i style="background:#8A96C8"></i><b>#8A96C8</b>
+        </button>
+        <button class="sw" type="button" data-hex="#3E3A45">
+          <i style="background:#3E3A45"></i><b>#3E3A45</b>
+        </button>
+      </div>
+      <button class="cl-copy" type="button" data-i="40">انسخ الباليت</button>
+    </div>
+  </article>
+  <article class="cl-card" data-cat="pastel">
+    <div class="cl-frame" style="background:radial-gradient(95% 130% at 80% 15%, #F2E4C9cc, transparent 60%),radial-gradient(85% 110% at 12% 88%, #D9B48Abb, transparent 55%),linear-gradient(158deg, #8AC8D9 0%, #E8B84A 55%, #C8735C 100%)"><i></i><b></b></div>
+    <div class="cl-body">
+      <div class="cl-meta">
+        <span class="cl-num">باليت 42</span>
+        <span class="cl-cat">باستيل وحالم</span>
+      </div>
+      <h3>Asteroid City (2023)<span>أستيرويد سيتي</span></h3>
+      <p class="cl-mood">صحراء باستيلية بسماء تركواز</p>
+      <div class="cl-swatches">
+        
+        <button class="sw" type="button" data-hex="#8AC8D9">
+          <i style="background:#8AC8D9"></i><b>#8AC8D9</b>
+        </button>
+        <button class="sw" type="button" data-hex="#E8B84A">
+          <i style="background:#E8B84A"></i><b>#E8B84A</b>
+        </button>
+        <button class="sw" type="button" data-hex="#D9B48A">
+          <i style="background:#D9B48A"></i><b>#D9B48A</b>
+        </button>
+        <button class="sw" type="button" data-hex="#F2E4C9">
+          <i style="background:#F2E4C9"></i><b>#F2E4C9</b>
+        </button>
+        <button class="sw" type="button" data-hex="#C8735C">
+          <i style="background:#C8735C"></i><b>#C8735C</b>
+        </button>
+      </div>
+      <button class="cl-copy" type="button" data-i="41">انسخ الباليت</button>
+    </div>
+  </article>
+  <article class="cl-card" data-cat="pastel">
+    <div class="cl-frame" style="background:radial-gradient(95% 130% at 80% 15%, #A85C6Bcc, transparent 60%),radial-gradient(85% 110% at 12% 88%, #E8C8A8bb, transparent 55%),linear-gradient(158deg, #C88A5C 0%, #8A5A45 55%, #5C4A3A 100%)"><i></i><b></b></div>
+    <div class="cl-body">
+      <div class="cl-meta">
+        <span class="cl-num">باليت 43</span>
+        <span class="cl-cat">باستيل وحالم</span>
+      </div>
+      <h3>Chocolat (2000)<span>شوكولا</span></h3>
+      <p class="cl-mood">كاكاو دافئ وقرية فرنسية محافظة</p>
+      <div class="cl-swatches">
+        
+        <button class="sw" type="button" data-hex="#C88A5C">
+          <i style="background:#C88A5C"></i><b>#C88A5C</b>
+        </button>
+        <button class="sw" type="button" data-hex="#8A5A45">
+          <i style="background:#8A5A45"></i><b>#8A5A45</b>
+        </button>
+        <button class="sw" type="button" data-hex="#E8C8A8">
+          <i style="background:#E8C8A8"></i><b>#E8C8A8</b>
+        </button>
+        <button class="sw" type="button" data-hex="#A85C6B">
+          <i style="background:#A85C6B"></i><b>#A85C6B</b>
+        </button>
+        <button class="sw" type="button" data-hex="#5C4A3A">
+          <i style="background:#5C4A3A"></i><b>#5C4A3A</b>
+        </button>
+      </div>
+      <button class="cl-copy" type="button" data-i="42">انسخ الباليت</button>
+    </div>
+  </article>
+  <article class="cl-card" data-cat="pastel">
+    <div class="cl-frame" style="background:radial-gradient(95% 130% at 80% 15%, #4AA8C8cc, transparent 60%),radial-gradient(85% 110% at 12% 88%, #C84B5Cbb, transparent 55%),linear-gradient(158deg, #8A5AA8 0%, #E8B84A 55%, #F2DCA8 100%)"><i></i><b></b></div>
+    <div class="cl-body">
+      <div class="cl-meta">
+        <span class="cl-num">باليت 44</span>
+        <span class="cl-cat">باستيل وحالم</span>
+      </div>
+      <h3>Wonka (2023)<span>ونكا</span></h3>
+      <p class="cl-mood">حلم حلواني بألوان سحرية</p>
+      <div class="cl-swatches">
+        
+        <button class="sw" type="button" data-hex="#8A5AA8">
+          <i style="background:#8A5AA8"></i><b>#8A5AA8</b>
+        </button>
+        <button class="sw" type="button" data-hex="#E8B84A">
+          <i style="background:#E8B84A"></i><b>#E8B84A</b>
+        </button>
+        <button class="sw" type="button" data-hex="#C84B5C">
+          <i style="background:#C84B5C"></i><b>#C84B5C</b>
+        </button>
+        <button class="sw" type="button" data-hex="#4AA8C8">
+          <i style="background:#4AA8C8"></i><b>#4AA8C8</b>
+        </button>
+        <button class="sw" type="button" data-hex="#F2DCA8">
+          <i style="background:#F2DCA8"></i><b>#F2DCA8</b>
+        </button>
+      </div>
+      <button class="cl-copy" type="button" data-i="43">انسخ الباليت</button>
+    </div>
+  </article>
+  <article class="cl-card" data-cat="desert">
+    <div class="cl-frame" style="background:radial-gradient(95% 130% at 80% 15%, #41474Fcc, transparent 60%),radial-gradient(85% 110% at 12% 88%, #D9B48Abb, transparent 55%),linear-gradient(158deg, #C8873F 0%, #8A5A2B 55%, #1E232B 100%)"><i></i><b></b></div>
+    <div class="cl-body">
+      <div class="cl-meta">
+        <span class="cl-num">باليت 45</span>
+        <span class="cl-cat">صحراوي وترابي</span>
+      </div>
+      <h3>Dune (2021)<span>ديون</span></h3>
+      <p class="cl-mood">رمال شاسعة وظلال باردة — ملحمية صامتة</p>
+      <div class="cl-swatches">
+        
+        <button class="sw" type="button" data-hex="#C8873F">
+          <i style="background:#C8873F"></i><b>#C8873F</b>
+        </button>
+        <button class="sw" type="button" data-hex="#8A5A2B">
+          <i style="background:#8A5A2B"></i><b>#8A5A2B</b>
+        </button>
+        <button class="sw" type="button" data-hex="#D9B48A">
+          <i style="background:#D9B48A"></i><b>#D9B48A</b>
+        </button>
+        <button class="sw" type="button" data-hex="#41474F">
+          <i style="background:#41474F"></i><b>#41474F</b>
+        </button>
+        <button class="sw" type="button" data-hex="#1E232B">
+          <i style="background:#1E232B"></i><b>#1E232B</b>
+        </button>
+      </div>
+      <button class="cl-copy" type="button" data-i="44">انسخ الباليت</button>
+    </div>
+  </article>
+  <article class="cl-card" data-cat="desert">
+    <div class="cl-frame" style="background:radial-gradient(95% 130% at 80% 15%, #E8C89Acc, transparent 60%),radial-gradient(85% 110% at 12% 88%, #3E3438bb, transparent 55%),linear-gradient(158deg, #B87A35 0%, #D9A85C 55%, #6B4A2B 100%)"><i></i><b></b></div>
+    <div class="cl-body">
+      <div class="cl-meta">
+        <span class="cl-num">باليت 46</span>
+        <span class="cl-cat">صحراوي وترابي</span>
+      </div>
+      <h3>Dune: Part Two (2024)<span>ديون 2</span></h3>
+      <p class="cl-mood">أراكيس أعمق وأقسى وأجمل</p>
+      <div class="cl-swatches">
+        
+        <button class="sw" type="button" data-hex="#B87A35">
+          <i style="background:#B87A35"></i><b>#B87A35</b>
+        </button>
+        <button class="sw" type="button" data-hex="#D9A85C">
+          <i style="background:#D9A85C"></i><b>#D9A85C</b>
+        </button>
+        <button class="sw" type="button" data-hex="#3E3438">
+          <i style="background:#3E3438"></i><b>#3E3438</b>
+        </button>
+        <button class="sw" type="button" data-hex="#E8C89A">
+          <i style="background:#E8C89A"></i><b>#E8C89A</b>
+        </button>
+        <button class="sw" type="button" data-hex="#6B4A2B">
+          <i style="background:#6B4A2B"></i><b>#6B4A2B</b>
+        </button>
+      </div>
+      <button class="cl-copy" type="button" data-i="45">انسخ الباليت</button>
+    </div>
+  </article>
+  <article class="cl-card" data-cat="desert">
+    <div class="cl-frame" style="background:radial-gradient(95% 130% at 80% 15%, #8A5A2Bcc, transparent 60%),radial-gradient(85% 110% at 12% 88%, #4AA8C8bb, transparent 55%),linear-gradient(158deg, #E8732B 0%, #C84B2A 55%, #F2C879 100%)"><i></i><b></b></div>
+    <div class="cl-body">
+      <div class="cl-meta">
+        <span class="cl-num">باليت 47</span>
+        <span class="cl-cat">صحراوي وترابي</span>
+      </div>
+      <h3>Mad Max: Fury Road (2015)<span>ماد ماكس</span></h3>
+      <p class="cl-mood">برتقالي محروق ضد أزرق ليلي — المطاردة الأشهر</p>
+      <div class="cl-swatches">
+        
+        <button class="sw" type="button" data-hex="#E8732B">
+          <i style="background:#E8732B"></i><b>#E8732B</b>
+        </button>
+        <button class="sw" type="button" data-hex="#C84B2A">
+          <i style="background:#C84B2A"></i><b>#C84B2A</b>
+        </button>
+        <button class="sw" type="button" data-hex="#4AA8C8">
+          <i style="background:#4AA8C8"></i><b>#4AA8C8</b>
+        </button>
+        <button class="sw" type="button" data-hex="#8A5A2B">
+          <i style="background:#8A5A2B"></i><b>#8A5A2B</b>
+        </button>
+        <button class="sw" type="button" data-hex="#F2C879">
+          <i style="background:#F2C879"></i><b>#F2C879</b>
+        </button>
+      </div>
+      <button class="cl-copy" type="button" data-i="46">انسخ الباليت</button>
+    </div>
+  </article>
+  <article class="cl-card" data-cat="desert">
+    <div class="cl-frame" style="background:radial-gradient(95% 130% at 80% 15%, #4A6B8Acc, transparent 60%),radial-gradient(85% 110% at 12% 88%, #B87A35bb, transparent 55%),linear-gradient(158deg, #D9A85C 0%, #E8C89A 55%, #8A5A2B 100%)"><i></i><b></b></div>
+    <div class="cl-body">
+      <div class="cl-meta">
+        <span class="cl-num">باليت 48</span>
+        <span class="cl-cat">صحراوي وترابي</span>
+      </div>
+      <h3>Lawrence of Arabia (1962)<span>لورنس العرب</span></h3>
+      <p class="cl-mood">الصحراء العربية بأعظم اتساع سينمائي</p>
+      <div class="cl-swatches">
+        
+        <button class="sw" type="button" data-hex="#D9A85C">
+          <i style="background:#D9A85C"></i><b>#D9A85C</b>
+        </button>
+        <button class="sw" type="button" data-hex="#E8C89A">
+          <i style="background:#E8C89A"></i><b>#E8C89A</b>
+        </button>
+        <button class="sw" type="button" data-hex="#B87A35">
+          <i style="background:#B87A35"></i><b>#B87A35</b>
+        </button>
+        <button class="sw" type="button" data-hex="#4A6B8A">
+          <i style="background:#4A6B8A"></i><b>#4A6B8A</b>
+        </button>
+        <button class="sw" type="button" data-hex="#8A5A2B">
+          <i style="background:#8A5A2B"></i><b>#8A5A2B</b>
+        </button>
+      </div>
+      <button class="cl-copy" type="button" data-i="47">انسخ الباليت</button>
+    </div>
+  </article>
+  <article class="cl-card" data-cat="desert">
+    <div class="cl-frame" style="background:radial-gradient(95% 130% at 80% 15%, #D9C8A8cc, transparent 60%),radial-gradient(85% 110% at 12% 88%, #5C4A3Abb, transparent 55%),linear-gradient(158deg, #C8A05A 0%, #8A7A5C 55%, #2E2822 100%)"><i></i><b></b></div>
+    <div class="cl-body">
+      <div class="cl-meta">
+        <span class="cl-num">باليت 49</span>
+        <span class="cl-cat">صحراوي وترابي</span>
+      </div>
+      <h3>No Country for Old Men (2007)<span>لا وطن للعجائز</span></h3>
+      <p class="cl-mood">تكساس الجافة وصمت الخطر</p>
+      <div class="cl-swatches">
+        
+        <button class="sw" type="button" data-hex="#C8A05A">
+          <i style="background:#C8A05A"></i><b>#C8A05A</b>
+        </button>
+        <button class="sw" type="button" data-hex="#8A7A5C">
+          <i style="background:#8A7A5C"></i><b>#8A7A5C</b>
+        </button>
+        <button class="sw" type="button" data-hex="#5C4A3A">
+          <i style="background:#5C4A3A"></i><b>#5C4A3A</b>
+        </button>
+        <button class="sw" type="button" data-hex="#D9C8A8">
+          <i style="background:#D9C8A8"></i><b>#D9C8A8</b>
+        </button>
+        <button class="sw" type="button" data-hex="#2E2822">
+          <i style="background:#2E2822"></i><b>#2E2822</b>
+        </button>
+      </div>
+      <button class="cl-copy" type="button" data-i="48">انسخ الباليت</button>
+    </div>
+  </article>
+  <article class="cl-card" data-cat="desert">
+    <div class="cl-frame" style="background:radial-gradient(95% 130% at 80% 15%, #D9B48Acc, transparent 60%),radial-gradient(85% 110% at 12% 88%, #2E3438bb, transparent 55%),linear-gradient(158deg, #C8873F 0%, #5C5C55 55%, #8A4B2A 100%)"><i></i><b></b></div>
+    <div class="cl-body">
+      <div class="cl-meta">
+        <span class="cl-num">باليت 50</span>
+        <span class="cl-cat">صحراوي وترابي</span>
+      </div>
+      <h3>Sicario (2015)<span>سيكاريو</span></h3>
+      <p class="cl-mood">حدود قاسية بغبار وظل</p>
+      <div class="cl-swatches">
+        
+        <button class="sw" type="button" data-hex="#C8873F">
+          <i style="background:#C8873F"></i><b>#C8873F</b>
+        </button>
+        <button class="sw" type="button" data-hex="#5C5C55">
+          <i style="background:#5C5C55"></i><b>#5C5C55</b>
+        </button>
+        <button class="sw" type="button" data-hex="#2E3438">
+          <i style="background:#2E3438"></i><b>#2E3438</b>
+        </button>
+        <button class="sw" type="button" data-hex="#D9B48A">
+          <i style="background:#D9B48A"></i><b>#D9B48A</b>
+        </button>
+        <button class="sw" type="button" data-hex="#8A4B2A">
+          <i style="background:#8A4B2A"></i><b>#8A4B2A</b>
+        </button>
+      </div>
+      <button class="cl-copy" type="button" data-i="49">انسخ الباليت</button>
+    </div>
+  </article>
+  <article class="cl-card" data-cat="desert">
+    <div class="cl-frame" style="background:radial-gradient(95% 130% at 80% 15%, #D9B48Acc, transparent 60%),radial-gradient(85% 110% at 12% 88%, #8A3A22bb, transparent 55%),linear-gradient(158deg, #C85C2B 0%, #E8955C 55%, #3E3438 100%)"><i></i><b></b></div>
+    <div class="cl-body">
+      <div class="cl-meta">
+        <span class="cl-num">باليت 51</span>
+        <span class="cl-cat">صحراوي وترابي</span>
+      </div>
+      <h3>The Martian (2015)<span>المريخي</span></h3>
+      <p class="cl-mood">صدأ المريخ ووحدة البقاء</p>
+      <div class="cl-swatches">
+        
+        <button class="sw" type="button" data-hex="#C85C2B">
+          <i style="background:#C85C2B"></i><b>#C85C2B</b>
+        </button>
+        <button class="sw" type="button" data-hex="#E8955C">
+          <i style="background:#E8955C"></i><b>#E8955C</b>
+        </button>
+        <button class="sw" type="button" data-hex="#8A3A22">
+          <i style="background:#8A3A22"></i><b>#8A3A22</b>
+        </button>
+        <button class="sw" type="button" data-hex="#D9B48A">
+          <i style="background:#D9B48A"></i><b>#D9B48A</b>
+        </button>
+        <button class="sw" type="button" data-hex="#3E3438">
+          <i style="background:#3E3438"></i><b>#3E3438</b>
+        </button>
+      </div>
+      <button class="cl-copy" type="button" data-i="50">انسخ الباليت</button>
+    </div>
+  </article>
+  <article class="cl-card" data-cat="desert">
+    <div class="cl-frame" style="background:radial-gradient(95% 130% at 80% 15%, #2E2417cc, transparent 60%),radial-gradient(85% 110% at 12% 88%, #C8A05Abb, transparent 55%),linear-gradient(158deg, #8A5A2B 0%, #5C4A3A 55%, #D9C8A8 100%)"><i></i><b></b></div>
+    <div class="cl-body">
+      <div class="cl-meta">
+        <span class="cl-num">باليت 52</span>
+        <span class="cl-cat">صحراوي وترابي</span>
+      </div>
+      <h3>There Will Be Blood (2007)<span>ستكون هناك دماء</span></h3>
+      <p class="cl-mood">نفط وتراب وطموح أسود</p>
+      <div class="cl-swatches">
+        
+        <button class="sw" type="button" data-hex="#8A5A2B">
+          <i style="background:#8A5A2B"></i><b>#8A5A2B</b>
+        </button>
+        <button class="sw" type="button" data-hex="#5C4A3A">
+          <i style="background:#5C4A3A"></i><b>#5C4A3A</b>
+        </button>
+        <button class="sw" type="button" data-hex="#C8A05A">
+          <i style="background:#C8A05A"></i><b>#C8A05A</b>
+        </button>
+        <button class="sw" type="button" data-hex="#2E2417">
+          <i style="background:#2E2417"></i><b>#2E2417</b>
+        </button>
+        <button class="sw" type="button" data-hex="#D9C8A8">
+          <i style="background:#D9C8A8"></i><b>#D9C8A8</b>
+        </button>
+      </div>
+      <button class="cl-copy" type="button" data-i="51">انسخ الباليت</button>
+    </div>
+  </article>
+  <article class="cl-card" data-cat="desert">
+    <div class="cl-frame" style="background:radial-gradient(95% 130% at 80% 15%, #E8DCC9cc, transparent 60%),radial-gradient(85% 110% at 12% 88%, #8A6B4Abb, transparent 55%),linear-gradient(158deg, #D9B48A 0%, #C8873F 55%, #4A5C6B 100%)"><i></i><b></b></div>
+    <div class="cl-body">
+      <div class="cl-meta">
+        <span class="cl-num">باليت 53</span>
+        <span class="cl-cat">صحراوي وترابي</span>
+      </div>
+      <h3>The English Patient (1996)<span>المريض الإنجليزي</span></h3>
+      <p class="cl-mood">كثبان ناعمة وحب في زمن الحرب</p>
+      <div class="cl-swatches">
+        
+        <button class="sw" type="button" data-hex="#D9B48A">
+          <i style="background:#D9B48A"></i><b>#D9B48A</b>
+        </button>
+        <button class="sw" type="button" data-hex="#C8873F">
+          <i style="background:#C8873F"></i><b>#C8873F</b>
+        </button>
+        <button class="sw" type="button" data-hex="#8A6B4A">
+          <i style="background:#8A6B4A"></i><b>#8A6B4A</b>
+        </button>
+        <button class="sw" type="button" data-hex="#E8DCC9">
+          <i style="background:#E8DCC9"></i><b>#E8DCC9</b>
+        </button>
+        <button class="sw" type="button" data-hex="#4A5C6B">
+          <i style="background:#4A5C6B"></i><b>#4A5C6B</b>
+        </button>
+      </div>
+      <button class="cl-copy" type="button" data-i="52">انسخ الباليت</button>
+    </div>
+  </article>
+  <article class="cl-card" data-cat="desert">
+    <div class="cl-frame" style="background:radial-gradient(95% 130% at 80% 15%, #D9A85Ccc, transparent 60%),radial-gradient(85% 110% at 12% 88%, #5C4A3Abb, transparent 55%),linear-gradient(158deg, #C8873F 0%, #8A5A2B 55%, #2E2822 100%)"><i></i><b></b></div>
+    <div class="cl-body">
+      <div class="cl-meta">
+        <span class="cl-num">باليت 54</span>
+        <span class="cl-cat">صحراوي وترابي</span>
+      </div>
+      <h3>Raiders of the Lost Ark (1981)<span>غزاة التابوت الضائع</span></h3>
+      <p class="cl-mood">مغامرة كلاسيكية بغبار ذهبي</p>
+      <div class="cl-swatches">
+        
+        <button class="sw" type="button" data-hex="#C8873F">
+          <i style="background:#C8873F"></i><b>#C8873F</b>
+        </button>
+        <button class="sw" type="button" data-hex="#8A5A2B">
+          <i style="background:#8A5A2B"></i><b>#8A5A2B</b>
+        </button>
+        <button class="sw" type="button" data-hex="#5C4A3A">
+          <i style="background:#5C4A3A"></i><b>#5C4A3A</b>
+        </button>
+        <button class="sw" type="button" data-hex="#D9A85C">
+          <i style="background:#D9A85C"></i><b>#D9A85C</b>
+        </button>
+        <button class="sw" type="button" data-hex="#2E2822">
+          <i style="background:#2E2822"></i><b>#2E2822</b>
+        </button>
+      </div>
+      <button class="cl-copy" type="button" data-i="53">انسخ الباليت</button>
+    </div>
+  </article>
+  <article class="cl-card" data-cat="desert">
+    <div class="cl-frame" style="background:radial-gradient(95% 130% at 80% 15%, #F2DCA8cc, transparent 60%),radial-gradient(85% 110% at 12% 88%, #8A5A2Bbb, transparent 55%),linear-gradient(158deg, #D9A85C 0%, #B87A35 55%, #3E3A2E 100%)"><i></i><b></b></div>
+    <div class="cl-body">
+      <div class="cl-meta">
+        <span class="cl-num">باليت 55</span>
+        <span class="cl-cat">صحراوي وترابي</span>
+      </div>
+      <h3>The Mummy (1999)<span>المومياء</span></h3>
+      <p class="cl-mood">مصر الغامضة بذهب المغامرات</p>
+      <div class="cl-swatches">
+        
+        <button class="sw" type="button" data-hex="#D9A85C">
+          <i style="background:#D9A85C"></i><b>#D9A85C</b>
+        </button>
+        <button class="sw" type="button" data-hex="#B87A35">
+          <i style="background:#B87A35"></i><b>#B87A35</b>
+        </button>
+        <button class="sw" type="button" data-hex="#8A5A2B">
+          <i style="background:#8A5A2B"></i><b>#8A5A2B</b>
+        </button>
+        <button class="sw" type="button" data-hex="#F2DCA8">
+          <i style="background:#F2DCA8"></i><b>#F2DCA8</b>
+        </button>
+        <button class="sw" type="button" data-hex="#3E3A2E">
+          <i style="background:#3E3A2E"></i><b>#3E3A2E</b>
+        </button>
+      </div>
+      <button class="cl-copy" type="button" data-i="54">انسخ الباليت</button>
+    </div>
+  </article>
+  <article class="cl-card" data-cat="dark">
+    <div class="cl-frame" style="background:radial-gradient(95% 130% at 80% 15%, #3E3438cc, transparent 60%),radial-gradient(85% 110% at 12% 88%, #8A6B3Fbb, transparent 55%),linear-gradient(158deg, #1E1E22 0%, #C8354A 55%, #5C5C6B 100%)"><i></i><b></b></div>
+    <div class="cl-body">
+      <div class="cl-meta">
+        <span class="cl-num">باليت 56</span>
+        <span class="cl-cat">داكن ودرامي</span>
+      </div>
+      <h3>The Batman (2022)<span>ذا باتمان</span></h3>
+      <p class="cl-mood">غوثام ممطرة بأحمر غاضب</p>
+      <div class="cl-swatches">
+        
+        <button class="sw" type="button" data-hex="#1E1E22">
+          <i style="background:#1E1E22"></i><b>#1E1E22</b>
+        </button>
+        <button class="sw" type="button" data-hex="#C8354A">
+          <i style="background:#C8354A"></i><b>#C8354A</b>
+        </button>
+        <button class="sw" type="button" data-hex="#8A6B3F">
+          <i style="background:#8A6B3F"></i><b>#8A6B3F</b>
+        </button>
+        <button class="sw" type="button" data-hex="#3E3438">
+          <i style="background:#3E3438"></i><b>#3E3438</b>
+        </button>
+        <button class="sw" type="button" data-hex="#5C5C6B">
+          <i style="background:#5C5C6B"></i><b>#5C5C6B</b>
+        </button>
+      </div>
+      <button class="cl-copy" type="button" data-i="55">انسخ الباليت</button>
+    </div>
+  </article>
+  <article class="cl-card" data-cat="dark">
+    <div class="cl-frame" style="background:radial-gradient(95% 130% at 80% 15%, #5C2E45cc, transparent 60%),radial-gradient(85% 110% at 12% 88%, #C8D2D9bb, transparent 55%),linear-gradient(158deg, #1E2428 0%, #4A5C8A 55%, #2E3438 100%)"><i></i><b></b></div>
+    <div class="cl-body">
+      <div class="cl-meta">
+        <span class="cl-num">باليت 57</span>
+        <span class="cl-cat">داكن ودرامي</span>
+      </div>
+      <h3>Batman Returns (1992)<span>عودة باتمان</span></h3>
+      <p class="cl-mood">شتاء قوطي بأزرق بارد وظلال</p>
+      <div class="cl-swatches">
+        
+        <button class="sw" type="button" data-hex="#1E2428">
+          <i style="background:#1E2428"></i><b>#1E2428</b>
+        </button>
+        <button class="sw" type="button" data-hex="#4A5C8A">
+          <i style="background:#4A5C8A"></i><b>#4A5C8A</b>
+        </button>
+        <button class="sw" type="button" data-hex="#C8D2D9">
+          <i style="background:#C8D2D9"></i><b>#C8D2D9</b>
+        </button>
+        <button class="sw" type="button" data-hex="#5C2E45">
+          <i style="background:#5C2E45"></i><b>#5C2E45</b>
+        </button>
+        <button class="sw" type="button" data-hex="#2E3438">
+          <i style="background:#2E3438"></i><b>#2E3438</b>
+        </button>
+      </div>
+      <button class="cl-copy" type="button" data-i="56">انسخ الباليت</button>
+    </div>
+  </article>
+  <article class="cl-card" data-cat="dark">
+    <div class="cl-frame" style="background:radial-gradient(95% 130% at 80% 15%, #2E2E38cc, transparent 60%),radial-gradient(85% 110% at 12% 88%, #E8B84Abb, transparent 55%),linear-gradient(158deg, #3E7A45 0%, #C84B5C 55%, #8A5A6B 100%)"><i></i><b></b></div>
+    <div class="cl-body">
+      <div class="cl-meta">
+        <span class="cl-num">باليت 58</span>
+        <span class="cl-cat">داكن ودرامي</span>
+      </div>
+      <h3>Joker (2019)<span>جوكر</span></h3>
+      <p class="cl-mood">مدينة مريضة بألوان مهرج حزين</p>
+      <div class="cl-swatches">
+        
+        <button class="sw" type="button" data-hex="#3E7A45">
+          <i style="background:#3E7A45"></i><b>#3E7A45</b>
+        </button>
+        <button class="sw" type="button" data-hex="#C84B5C">
+          <i style="background:#C84B5C"></i><b>#C84B5C</b>
+        </button>
+        <button class="sw" type="button" data-hex="#E8B84A">
+          <i style="background:#E8B84A"></i><b>#E8B84A</b>
+        </button>
+        <button class="sw" type="button" data-hex="#2E2E38">
+          <i style="background:#2E2E38"></i><b>#2E2E38</b>
+        </button>
+        <button class="sw" type="button" data-hex="#8A5A6B">
+          <i style="background:#8A5A6B"></i><b>#8A5A6B</b>
+        </button>
+      </div>
+      <button class="cl-copy" type="button" data-i="57">انسخ الباليت</button>
+    </div>
+  </article>
+  <article class="cl-card" data-cat="dark">
+    <div class="cl-frame" style="background:radial-gradient(95% 130% at 80% 15%, #1E1E1Ecc, transparent 60%),radial-gradient(85% 110% at 12% 88%, #8A7A5Cbb, transparent 55%),linear-gradient(158deg, #2E2822 0%, #5C5245 55%, #C8B48A 100%)"><i></i><b></b></div>
+    <div class="cl-body">
+      <div class="cl-meta">
+        <span class="cl-num">باليت 59</span>
+        <span class="cl-cat">داكن ودرامي</span>
+      </div>
+      <h3>Se7en (1995)<span>سبعة</span></h3>
+      <p class="cl-mood">ظلام رطب لا يغادر الشاشة</p>
+      <div class="cl-swatches">
+        
+        <button class="sw" type="button" data-hex="#2E2822">
+          <i style="background:#2E2822"></i><b>#2E2822</b>
+        </button>
+        <button class="sw" type="button" data-hex="#5C5245">
+          <i style="background:#5C5245"></i><b>#5C5245</b>
+        </button>
+        <button class="sw" type="button" data-hex="#8A7A5C">
+          <i style="background:#8A7A5C"></i><b>#8A7A5C</b>
+        </button>
+        <button class="sw" type="button" data-hex="#1E1E1E">
+          <i style="background:#1E1E1E"></i><b>#1E1E1E</b>
+        </button>
+        <button class="sw" type="button" data-hex="#C8B48A">
+          <i style="background:#C8B48A"></i><b>#C8B48A</b>
+        </button>
+      </div>
+      <button class="cl-copy" type="button" data-i="58">انسخ الباليت</button>
+    </div>
+  </article>
+  <article class="cl-card" data-cat="dark">
+    <div class="cl-frame" style="background:radial-gradient(95% 130% at 80% 15%, #1E1E1Ecc, transparent 60%),radial-gradient(85% 110% at 12% 88%, #8A5A2Bbb, transparent 55%),linear-gradient(158deg, #2E2417 0%, #C8873F 55%, #D9B48A 100%)"><i></i><b></b></div>
+    <div class="cl-body">
+      <div class="cl-meta">
+        <span class="cl-num">باليت 60</span>
+        <span class="cl-cat">داكن ودرامي</span>
+      </div>
+      <h3>The Godfather (1972)<span>العراب</span></h3>
+      <p class="cl-mood">عتمة المكاتب وذهب العائلة</p>
+      <div class="cl-swatches">
+        
+        <button class="sw" type="button" data-hex="#2E2417">
+          <i style="background:#2E2417"></i><b>#2E2417</b>
+        </button>
+        <button class="sw" type="button" data-hex="#C8873F">
+          <i style="background:#C8873F"></i><b>#C8873F</b>
+        </button>
+        <button class="sw" type="button" data-hex="#8A5A2B">
+          <i style="background:#8A5A2B"></i><b>#8A5A2B</b>
+        </button>
+        <button class="sw" type="button" data-hex="#1E1E1E">
+          <i style="background:#1E1E1E"></i><b>#1E1E1E</b>
+        </button>
+        <button class="sw" type="button" data-hex="#D9B48A">
+          <i style="background:#D9B48A"></i><b>#D9B48A</b>
+        </button>
+      </div>
+      <button class="cl-copy" type="button" data-i="59">انسخ الباليت</button>
+    </div>
+  </article>
+  <article class="cl-card" data-cat="dark">
+    <div class="cl-frame" style="background:radial-gradient(95% 130% at 80% 15%, #1E2422cc, transparent 60%),radial-gradient(85% 110% at 12% 88%, #C8735Cbb, transparent 55%),linear-gradient(158deg, #3E4A45 0%, #8A7A5C 55%, #5C6B5C 100%)"><i></i><b></b></div>
+    <div class="cl-body">
+      <div class="cl-meta">
+        <span class="cl-num">باليت 61</span>
+        <span class="cl-cat">داكن ودرامي</span>
+      </div>
+      <h3>Fight Club (1999)<span>نادي القتال</span></h3>
+      <p class="cl-mood">أخضر صناعي قذر وفوضى</p>
+      <div class="cl-swatches">
+        
+        <button class="sw" type="button" data-hex="#3E4A45">
+          <i style="background:#3E4A45"></i><b>#3E4A45</b>
+        </button>
+        <button class="sw" type="button" data-hex="#8A7A5C">
+          <i style="background:#8A7A5C"></i><b>#8A7A5C</b>
+        </button>
+        <button class="sw" type="button" data-hex="#C8735C">
+          <i style="background:#C8735C"></i><b>#C8735C</b>
+        </button>
+        <button class="sw" type="button" data-hex="#1E2422">
+          <i style="background:#1E2422"></i><b>#1E2422</b>
+        </button>
+        <button class="sw" type="button" data-hex="#5C6B5C">
+          <i style="background:#5C6B5C"></i><b>#5C6B5C</b>
+        </button>
+      </div>
+      <button class="cl-copy" type="button" data-i="60">انسخ الباليت</button>
+    </div>
+  </article>
+  <article class="cl-card" data-cat="dark">
+    <div class="cl-frame" style="background:radial-gradient(95% 130% at 80% 15%, #1E2422cc, transparent 60%),radial-gradient(85% 110% at 12% 88%, #5C4A3Abb, transparent 55%),linear-gradient(158deg, #3E4A45 0%, #8A9A8A 55%, #C8D2C8 100%)"><i></i><b></b></div>
+    <div class="cl-body">
+      <div class="cl-meta">
+        <span class="cl-num">باليت 62</span>
+        <span class="cl-cat">داكن ودرامي</span>
+      </div>
+      <h3>The Silence of the Lambs (1991)<span>صمت الحملان</span></h3>
+      <p class="cl-mood">برود مؤسسي يخفي وحشاً</p>
+      <div class="cl-swatches">
+        
+        <button class="sw" type="button" data-hex="#3E4A45">
+          <i style="background:#3E4A45"></i><b>#3E4A45</b>
+        </button>
+        <button class="sw" type="button" data-hex="#8A9A8A">
+          <i style="background:#8A9A8A"></i><b>#8A9A8A</b>
+        </button>
+        <button class="sw" type="button" data-hex="#5C4A3A">
+          <i style="background:#5C4A3A"></i><b>#5C4A3A</b>
+        </button>
+        <button class="sw" type="button" data-hex="#1E2422">
+          <i style="background:#1E2422"></i><b>#1E2422</b>
+        </button>
+        <button class="sw" type="button" data-hex="#C8D2C8">
+          <i style="background:#C8D2C8"></i><b>#C8D2C8</b>
+        </button>
+      </div>
+      <button class="cl-copy" type="button" data-i="61">انسخ الباليت</button>
+    </div>
+  </article>
+  <article class="cl-card" data-cat="dark">
+    <div class="cl-frame" style="background:radial-gradient(95% 130% at 80% 15%, #2E3438cc, transparent 60%),radial-gradient(85% 110% at 12% 88%, #C8B48Abb, transparent 55%),linear-gradient(158deg, #3E4A55 0%, #8A9AA8 55%, #5C6B5C 100%)"><i></i><b></b></div>
+    <div class="cl-body">
+      <div class="cl-meta">
+        <span class="cl-num">باليت 63</span>
+        <span class="cl-cat">داكن ودرامي</span>
+      </div>
+      <h3>Zodiac (2007)<span>زودياك</span></h3>
+      <p class="cl-mood">سبعينات رمادية وهوس لا ينتهي</p>
+      <div class="cl-swatches">
+        
+        <button class="sw" type="button" data-hex="#3E4A55">
+          <i style="background:#3E4A55"></i><b>#3E4A55</b>
+        </button>
+        <button class="sw" type="button" data-hex="#8A9AA8">
+          <i style="background:#8A9AA8"></i><b>#8A9AA8</b>
+        </button>
+        <button class="sw" type="button" data-hex="#C8B48A">
+          <i style="background:#C8B48A"></i><b>#C8B48A</b>
+        </button>
+        <button class="sw" type="button" data-hex="#2E3438">
+          <i style="background:#2E3438"></i><b>#2E3438</b>
+        </button>
+        <button class="sw" type="button" data-hex="#5C6B5C">
+          <i style="background:#5C6B5C"></i><b>#5C6B5C</b>
+        </button>
+      </div>
+      <button class="cl-copy" type="button" data-i="62">انسخ الباليت</button>
+    </div>
+  </article>
+  <article class="cl-card" data-cat="dark">
+    <div class="cl-frame" style="background:radial-gradient(95% 130% at 80% 15%, #8A96A8cc, transparent 60%),radial-gradient(85% 110% at 12% 88%, #C84B5Cbb, transparent 55%),linear-gradient(158deg, #1E1E22 0%, #E8E4E8 55%, #3E3438 100%)"><i></i><b></b></div>
+    <div class="cl-body">
+      <div class="cl-meta">
+        <span class="cl-num">باليت 64</span>
+        <span class="cl-cat">داكن ودرامي</span>
+      </div>
+      <h3>Black Swan (2010)<span>البجعة السوداء</span></h3>
+      <p class="cl-mood">أبيض وأسود يتصارعان بوردية جريحة</p>
+      <div class="cl-swatches">
+        
+        <button class="sw" type="button" data-hex="#1E1E22">
+          <i style="background:#1E1E22"></i><b>#1E1E22</b>
+        </button>
+        <button class="sw" type="button" data-hex="#E8E4E8">
+          <i style="background:#E8E4E8"></i><b>#E8E4E8</b>
+        </button>
+        <button class="sw" type="button" data-hex="#C84B5C">
+          <i style="background:#C84B5C"></i><b>#C84B5C</b>
+        </button>
+        <button class="sw" type="button" data-hex="#8A96A8">
+          <i style="background:#8A96A8"></i><b>#8A96A8</b>
+        </button>
+        <button class="sw" type="button" data-hex="#3E3438">
+          <i style="background:#3E3438"></i><b>#3E3438</b>
+        </button>
+      </div>
+      <button class="cl-copy" type="button" data-i="63">انسخ الباليت</button>
+    </div>
+  </article>
+  <article class="cl-card" data-cat="dark">
+    <div class="cl-frame" style="background:radial-gradient(95% 130% at 80% 15%, #8A5A2Bcc, transparent 60%),radial-gradient(85% 110% at 12% 88%, #3E3438bb, transparent 55%),linear-gradient(158deg, #5C2E45 0%, #C8735C 55%, #1E2428 100%)"><i></i><b></b></div>
+    <div class="cl-body">
+      <div class="cl-meta">
+        <span class="cl-num">باليت 65</span>
+        <span class="cl-cat">داكن ودرامي</span>
+      </div>
+      <h3>Oldboy (2003)<span>أولد بوي</span></h3>
+      <p class="cl-mood">انتقام كوري بنبيذي كابوسي</p>
+      <div class="cl-swatches">
+        
+        <button class="sw" type="button" data-hex="#5C2E45">
+          <i style="background:#5C2E45"></i><b>#5C2E45</b>
+        </button>
+        <button class="sw" type="button" data-hex="#C8735C">
+          <i style="background:#C8735C"></i><b>#C8735C</b>
+        </button>
+        <button class="sw" type="button" data-hex="#3E3438">
+          <i style="background:#3E3438"></i><b>#3E3438</b>
+        </button>
+        <button class="sw" type="button" data-hex="#8A5A2B">
+          <i style="background:#8A5A2B"></i><b>#8A5A2B</b>
+        </button>
+        <button class="sw" type="button" data-hex="#1E2428">
+          <i style="background:#1E2428"></i><b>#1E2428</b>
+        </button>
+      </div>
+      <button class="cl-copy" type="button" data-i="64">انسخ الباليت</button>
+    </div>
+  </article>
+  <article class="cl-card" data-cat="dark">
+    <div class="cl-frame" style="background:radial-gradient(95% 130% at 80% 15%, #1E1E22cc, transparent 60%),radial-gradient(85% 110% at 12% 88%, #8A96A8bb, transparent 55%),linear-gradient(158deg, #2E3438 0%, #C8354A 55%, #5C5C6B 100%)"><i></i><b></b></div>
+    <div class="cl-body">
+      <div class="cl-meta">
+        <span class="cl-num">باليت 66</span>
+        <span class="cl-cat">داكن ودرامي</span>
+      </div>
+      <h3>Sweeney Todd (2007)<span>سويني تود</span></h3>
+      <p class="cl-mood">لندن رمادية يقطعها أحمر الدم</p>
+      <div class="cl-swatches">
+        
+        <button class="sw" type="button" data-hex="#2E3438">
+          <i style="background:#2E3438"></i><b>#2E3438</b>
+        </button>
+        <button class="sw" type="button" data-hex="#C8354A">
+          <i style="background:#C8354A"></i><b>#C8354A</b>
+        </button>
+        <button class="sw" type="button" data-hex="#8A96A8">
+          <i style="background:#8A96A8"></i><b>#8A96A8</b>
+        </button>
+        <button class="sw" type="button" data-hex="#1E1E22">
+          <i style="background:#1E1E22"></i><b>#1E1E22</b>
+        </button>
+        <button class="sw" type="button" data-hex="#5C5C6B">
+          <i style="background:#5C5C6B"></i><b>#5C5C6B</b>
+        </button>
+      </div>
+      <button class="cl-copy" type="button" data-i="65">انسخ الباليت</button>
+    </div>
+  </article>
+  <article class="cl-card" data-cat="green">
+    <div class="cl-frame" style="background:radial-gradient(95% 130% at 80% 15%, #2E3438cc, transparent 60%),radial-gradient(85% 110% at 12% 88%, #8AC88Abb, transparent 55%),linear-gradient(158deg, #3E7A45 0%, #1E2E22 55%, #C8D9C8 100%)"><i></i><b></b></div>
+    <div class="cl-body">
+      <div class="cl-meta">
+        <span class="cl-num">باليت 67</span>
+        <span class="cl-cat">أخضر وطبيعي</span>
+      </div>
+      <h3>The Matrix (1999)<span>ذا ماتريكس</span></h3>
+      <p class="cl-mood">واقع رقمي مصبوغ بأخضر الشيفرة</p>
+      <div class="cl-swatches">
+        
+        <button class="sw" type="button" data-hex="#3E7A45">
+          <i style="background:#3E7A45"></i><b>#3E7A45</b>
+        </button>
+        <button class="sw" type="button" data-hex="#1E2E22">
+          <i style="background:#1E2E22"></i><b>#1E2E22</b>
+        </button>
+        <button class="sw" type="button" data-hex="#8AC88A">
+          <i style="background:#8AC88A"></i><b>#8AC88A</b>
+        </button>
+        <button class="sw" type="button" data-hex="#2E3438">
+          <i style="background:#2E3438"></i><b>#2E3438</b>
+        </button>
+        <button class="sw" type="button" data-hex="#C8D9C8">
+          <i style="background:#C8D9C8"></i><b>#C8D9C8</b>
+        </button>
+      </div>
+      <button class="cl-copy" type="button" data-i="66">انسخ الباليت</button>
+    </div>
+  </article>
+  <article class="cl-card" data-cat="green">
+    <div class="cl-frame" style="background:radial-gradient(95% 130% at 80% 15%, #1E3438cc, transparent 60%),radial-gradient(85% 110% at 12% 88%, #C8873Fbb, transparent 55%),linear-gradient(158deg, #2E5C55 0%, #4A8A7A 55%, #8AC8B4 100%)"><i></i><b></b></div>
+    <div class="cl-body">
+      <div class="cl-meta">
+        <span class="cl-num">باليت 68</span>
+        <span class="cl-cat">أخضر وطبيعي</span>
+      </div>
+      <h3>The Shape of Water (2017)<span>شكل الماء</span></h3>
+      <p class="cl-mood">حكاية خرافية تحت ماء أخضر</p>
+      <div class="cl-swatches">
+        
+        <button class="sw" type="button" data-hex="#2E5C55">
+          <i style="background:#2E5C55"></i><b>#2E5C55</b>
+        </button>
+        <button class="sw" type="button" data-hex="#4A8A7A">
+          <i style="background:#4A8A7A"></i><b>#4A8A7A</b>
+        </button>
+        <button class="sw" type="button" data-hex="#C8873F">
+          <i style="background:#C8873F"></i><b>#C8873F</b>
+        </button>
+        <button class="sw" type="button" data-hex="#1E3438">
+          <i style="background:#1E3438"></i><b>#1E3438</b>
+        </button>
+        <button class="sw" type="button" data-hex="#8AC8B4">
+          <i style="background:#8AC8B4"></i><b>#8AC8B4</b>
+        </button>
+      </div>
+      <button class="cl-copy" type="button" data-i="67">انسخ الباليت</button>
+    </div>
+  </article>
+  <article class="cl-card" data-cat="green">
+    <div class="cl-frame" style="background:radial-gradient(95% 130% at 80% 15%, #1E3428cc, transparent 60%),radial-gradient(85% 110% at 12% 88%, #8A3AC8bb, transparent 55%),linear-gradient(158deg, #2E7A55 0%, #4AC8D9 55%, #8AE8B4 100%)"><i></i><b></b></div>
+    <div class="cl-body">
+      <div class="cl-meta">
+        <span class="cl-num">باليت 69</span>
+        <span class="cl-cat">أخضر وطبيعي</span>
+      </div>
+      <h3>Avatar (2009)<span>أفاتار</span></h3>
+      <p class="cl-mood">غابة مضيئة من عالم آخر</p>
+      <div class="cl-swatches">
+        
+        <button class="sw" type="button" data-hex="#2E7A55">
+          <i style="background:#2E7A55"></i><b>#2E7A55</b>
+        </button>
+        <button class="sw" type="button" data-hex="#4AC8D9">
+          <i style="background:#4AC8D9"></i><b>#4AC8D9</b>
+        </button>
+        <button class="sw" type="button" data-hex="#8A3AC8">
+          <i style="background:#8A3AC8"></i><b>#8A3AC8</b>
+        </button>
+        <button class="sw" type="button" data-hex="#1E3428">
+          <i style="background:#1E3428"></i><b>#1E3428</b>
+        </button>
+        <button class="sw" type="button" data-hex="#8AE8B4">
+          <i style="background:#8AE8B4"></i><b>#8AE8B4</b>
+        </button>
+      </div>
+      <button class="cl-copy" type="button" data-i="68">انسخ الباليت</button>
+    </div>
+  </article>
+  <article class="cl-card" data-cat="green">
+    <div class="cl-frame" style="background:radial-gradient(95% 130% at 80% 15%, #2E3A28cc, transparent 60%),radial-gradient(85% 110% at 12% 88%, #C8A05Abb, transparent 55%),linear-gradient(158deg, #5C7A45 0%, #8A9A6B 55%, #D9C8A8 100%)"><i></i><b></b></div>
+    <div class="cl-body">
+      <div class="cl-meta">
+        <span class="cl-num">باليت 70</span>
+        <span class="cl-cat">أخضر وطبيعي</span>
+      </div>
+      <h3>The Lord of the Rings (2001)<span>سيد الخواتم</span></h3>
+      <p class="cl-mood">خضرة الشاير ودفء البيوت الصغيرة</p>
+      <div class="cl-swatches">
+        
+        <button class="sw" type="button" data-hex="#5C7A45">
+          <i style="background:#5C7A45"></i><b>#5C7A45</b>
+        </button>
+        <button class="sw" type="button" data-hex="#8A9A6B">
+          <i style="background:#8A9A6B"></i><b>#8A9A6B</b>
+        </button>
+        <button class="sw" type="button" data-hex="#C8A05A">
+          <i style="background:#C8A05A"></i><b>#C8A05A</b>
+        </button>
+        <button class="sw" type="button" data-hex="#2E3A28">
+          <i style="background:#2E3A28"></i><b>#2E3A28</b>
+        </button>
+        <button class="sw" type="button" data-hex="#D9C8A8">
+          <i style="background:#D9C8A8"></i><b>#D9C8A8</b>
+        </button>
+      </div>
+      <button class="cl-copy" type="button" data-i="69">انسخ الباليت</button>
+    </div>
+  </article>
+  <article class="cl-card" data-cat="green">
+    <div class="cl-frame" style="background:radial-gradient(95% 130% at 80% 15%, #2E3438cc, transparent 60%),radial-gradient(85% 110% at 12% 88%, #C8873Fbb, transparent 55%),linear-gradient(158deg, #3E5C45 0%, #8A9A6B 55%, #5C4A6B 100%)"><i></i><b></b></div>
+    <div class="cl-body">
+      <div class="cl-meta">
+        <span class="cl-num">باليت 71</span>
+        <span class="cl-cat">أخضر وطبيعي</span>
+      </div>
+      <h3>Pan's Labyrinth (2006)<span>متاهة بان</span></h3>
+      <p class="cl-mood">حكاية مظلمة بين جذور الغابة</p>
+      <div class="cl-swatches">
+        
+        <button class="sw" type="button" data-hex="#3E5C45">
+          <i style="background:#3E5C45"></i><b>#3E5C45</b>
+        </button>
+        <button class="sw" type="button" data-hex="#8A9A6B">
+          <i style="background:#8A9A6B"></i><b>#8A9A6B</b>
+        </button>
+        <button class="sw" type="button" data-hex="#C8873F">
+          <i style="background:#C8873F"></i><b>#C8873F</b>
+        </button>
+        <button class="sw" type="button" data-hex="#2E3438">
+          <i style="background:#2E3438"></i><b>#2E3438</b>
+        </button>
+        <button class="sw" type="button" data-hex="#5C4A6B">
+          <i style="background:#5C4A6B"></i><b>#5C4A6B</b>
+        </button>
+      </div>
+      <button class="cl-copy" type="button" data-i="70">انسخ الباليت</button>
+    </div>
+  </article>
+  <article class="cl-card" data-cat="green">
+    <div class="cl-frame" style="background:radial-gradient(95% 130% at 80% 15%, #2E3A28cc, transparent 60%),radial-gradient(85% 110% at 12% 88%, #C8B48Abb, transparent 55%),linear-gradient(158deg, #3E7A45 0%, #8A9A5C 55%, #E8DCA8 100%)"><i></i><b></b></div>
+    <div class="cl-body">
+      <div class="cl-meta">
+        <span class="cl-num">باليت 72</span>
+        <span class="cl-cat">أخضر وطبيعي</span>
+      </div>
+      <h3>Jurassic Park (1993)<span>الحديقة الجوراسية</span></h3>
+      <p class="cl-mood">أدغال حية بعصر مفقود</p>
+      <div class="cl-swatches">
+        
+        <button class="sw" type="button" data-hex="#3E7A45">
+          <i style="background:#3E7A45"></i><b>#3E7A45</b>
+        </button>
+        <button class="sw" type="button" data-hex="#8A9A5C">
+          <i style="background:#8A9A5C"></i><b>#8A9A5C</b>
+        </button>
+        <button class="sw" type="button" data-hex="#C8B48A">
+          <i style="background:#C8B48A"></i><b>#C8B48A</b>
+        </button>
+        <button class="sw" type="button" data-hex="#2E3A28">
+          <i style="background:#2E3A28"></i><b>#2E3A28</b>
+        </button>
+        <button class="sw" type="button" data-hex="#E8DCA8">
+          <i style="background:#E8DCA8"></i><b>#E8DCA8</b>
+        </button>
+      </div>
+      <button class="cl-copy" type="button" data-i="71">انسخ الباليت</button>
+    </div>
+  </article>
+  <article class="cl-card" data-cat="green">
+    <div class="cl-frame" style="background:radial-gradient(95% 130% at 80% 15%, #C87E8Acc, transparent 60%),radial-gradient(85% 110% at 12% 88%, #F2D2A8bb, transparent 55%),linear-gradient(158deg, #E8E4C9 0%, #A8C08A 55%, #5C7A45 100%)"><i></i><b></b></div>
+    <div class="cl-body">
+      <div class="cl-meta">
+        <span class="cl-num">باليت 73</span>
+        <span class="cl-cat">أخضر وطبيعي</span>
+      </div>
+      <h3>Midsommar (2019)<span>ميدسومار</span></h3>
+      <p class="cl-mood">رعب مشمس وسط الزهور</p>
+      <div class="cl-swatches">
+        
+        <button class="sw" type="button" data-hex="#E8E4C9">
+          <i style="background:#E8E4C9"></i><b>#E8E4C9</b>
+        </button>
+        <button class="sw" type="button" data-hex="#A8C08A">
+          <i style="background:#A8C08A"></i><b>#A8C08A</b>
+        </button>
+        <button class="sw" type="button" data-hex="#F2D2A8">
+          <i style="background:#F2D2A8"></i><b>#F2D2A8</b>
+        </button>
+        <button class="sw" type="button" data-hex="#C87E8A">
+          <i style="background:#C87E8A"></i><b>#C87E8A</b>
+        </button>
+        <button class="sw" type="button" data-hex="#5C7A45">
+          <i style="background:#5C7A45"></i><b>#5C7A45</b>
+        </button>
+      </div>
+      <button class="cl-copy" type="button" data-i="72">انسخ الباليت</button>
+    </div>
+  </article>
+  <article class="cl-card" data-cat="green">
+    <div class="cl-frame" style="background:radial-gradient(95% 130% at 80% 15%, #D9C8A8cc, transparent 60%),radial-gradient(85% 110% at 12% 88%, #5C7A5Cbb, transparent 55%),linear-gradient(158deg, #8AA86B 0%, #C8D9A8 55%, #3E4A38 100%)"><i></i><b></b></div>
+    <div class="cl-body">
+      <div class="cl-meta">
+        <span class="cl-num">باليت 74</span>
+        <span class="cl-cat">أخضر وطبيعي</span>
+      </div>
+      <h3>Crouching Tiger, Hidden Dragon (2000)<span>النمر الرابض</span></h3>
+      <p class="cl-mood">غابة الخيزران ورشاقة الحرير</p>
+      <div class="cl-swatches">
+        
+        <button class="sw" type="button" data-hex="#8AA86B">
+          <i style="background:#8AA86B"></i><b>#8AA86B</b>
+        </button>
+        <button class="sw" type="button" data-hex="#C8D9A8">
+          <i style="background:#C8D9A8"></i><b>#C8D9A8</b>
+        </button>
+        <button class="sw" type="button" data-hex="#5C7A5C">
+          <i style="background:#5C7A5C"></i><b>#5C7A5C</b>
+        </button>
+        <button class="sw" type="button" data-hex="#D9C8A8">
+          <i style="background:#D9C8A8"></i><b>#D9C8A8</b>
+        </button>
+        <button class="sw" type="button" data-hex="#3E4A38">
+          <i style="background:#3E4A38"></i><b>#3E4A38</b>
+        </button>
+      </div>
+      <button class="cl-copy" type="button" data-i="73">انسخ الباليت</button>
+    </div>
+  </article>
+  <article class="cl-card" data-cat="green">
+    <div class="cl-frame" style="background:radial-gradient(95% 130% at 80% 15%, #5C6B4Fcc, transparent 60%),radial-gradient(85% 110% at 12% 88%, #C8873Fbb, transparent 55%),linear-gradient(158deg, #4A8A7A 0%, #8AC8C8 55%, #D9E4E8 100%)"><i></i><b></b></div>
+    <div class="cl-body">
+      <div class="cl-meta">
+        <span class="cl-num">باليت 75</span>
+        <span class="cl-cat">أخضر وطبيعي</span>
+      </div>
+      <h3>The Secret Life of Walter Mitty (2013)<span>والتر ميتي</span></h3>
+      <p class="cl-mood">مغامرة آيسلندية بفيروزي منعش</p>
+      <div class="cl-swatches">
+        
+        <button class="sw" type="button" data-hex="#4A8A7A">
+          <i style="background:#4A8A7A"></i><b>#4A8A7A</b>
+        </button>
+        <button class="sw" type="button" data-hex="#8AC8C8">
+          <i style="background:#8AC8C8"></i><b>#8AC8C8</b>
+        </button>
+        <button class="sw" type="button" data-hex="#C8873F">
+          <i style="background:#C8873F"></i><b>#C8873F</b>
+        </button>
+        <button class="sw" type="button" data-hex="#5C6B4F">
+          <i style="background:#5C6B4F"></i><b>#5C6B4F</b>
+        </button>
+        <button class="sw" type="button" data-hex="#D9E4E8">
+          <i style="background:#D9E4E8"></i><b>#D9E4E8</b>
+        </button>
+      </div>
+      <button class="cl-copy" type="button" data-i="74">انسخ الباليت</button>
+    </div>
+  </article>
+  <article class="cl-card" data-cat="green">
+    <div class="cl-frame" style="background:radial-gradient(95% 130% at 80% 15%, #2E3A28cc, transparent 60%),radial-gradient(85% 110% at 12% 88%, #C8735Cbb, transparent 55%),linear-gradient(158deg, #4A7A55 0%, #8AA86B 55%, #D9C8A8 100%)"><i></i><b></b></div>
+    <div class="cl-body">
+      <div class="cl-meta">
+        <span class="cl-num">باليت 76</span>
+        <span class="cl-cat">أخضر وطبيعي</span>
+      </div>
+      <h3>Princess Mononoke (1997)<span>الأميرة مونونوكي</span></h3>
+      <p class="cl-mood">غابة مقدسة وروح الطبيعة</p>
+      <div class="cl-swatches">
+        
+        <button class="sw" type="button" data-hex="#4A7A55">
+          <i style="background:#4A7A55"></i><b>#4A7A55</b>
+        </button>
+        <button class="sw" type="button" data-hex="#8AA86B">
+          <i style="background:#8AA86B"></i><b>#8AA86B</b>
+        </button>
+        <button class="sw" type="button" data-hex="#C8735C">
+          <i style="background:#C8735C"></i><b>#C8735C</b>
+        </button>
+        <button class="sw" type="button" data-hex="#2E3A28">
+          <i style="background:#2E3A28"></i><b>#2E3A28</b>
+        </button>
+        <button class="sw" type="button" data-hex="#D9C8A8">
+          <i style="background:#D9C8A8"></i><b>#D9C8A8</b>
+        </button>
+      </div>
+      <button class="cl-copy" type="button" data-i="75">انسخ الباليت</button>
+    </div>
+  </article>
+  <article class="cl-card" data-cat="green">
+    <div class="cl-frame" style="background:radial-gradient(95% 130% at 80% 15%, #1E2422cc, transparent 60%),radial-gradient(85% 110% at 12% 88%, #5C4A3Abb, transparent 55%),linear-gradient(158deg, #3E4A38 0%, #8A9A8A 55%, #C8D2C8 100%)"><i></i><b></b></div>
+    <div class="cl-body">
+      <div class="cl-meta">
+        <span class="cl-num">باليت 77</span>
+        <span class="cl-cat">أخضر وطبيعي</span>
+      </div>
+      <h3>The Northman (2022)<span>الرجل الشمالي</span></h3>
+      <p class="cl-mood">شمال بارد بأخضر رمادي وحشي</p>
+      <div class="cl-swatches">
+        
+        <button class="sw" type="button" data-hex="#3E4A38">
+          <i style="background:#3E4A38"></i><b>#3E4A38</b>
+        </button>
+        <button class="sw" type="button" data-hex="#8A9A8A">
+          <i style="background:#8A9A8A"></i><b>#8A9A8A</b>
+        </button>
+        <button class="sw" type="button" data-hex="#5C4A3A">
+          <i style="background:#5C4A3A"></i><b>#5C4A3A</b>
+        </button>
+        <button class="sw" type="button" data-hex="#1E2422">
+          <i style="background:#1E2422"></i><b>#1E2422</b>
+        </button>
+        <button class="sw" type="button" data-hex="#C8D2C8">
+          <i style="background:#C8D2C8"></i><b>#C8D2C8</b>
+        </button>
+      </div>
+      <button class="cl-copy" type="button" data-i="76">انسخ الباليت</button>
+    </div>
+  </article>
+  <article class="cl-card" data-cat="retro">
+    <div class="cl-frame" style="background:radial-gradient(95% 130% at 80% 15%, #5C5245cc, transparent 60%),radial-gradient(85% 110% at 12% 88%, #C8B48Abb, transparent 55%),linear-gradient(158deg, #2E2822 0%, #8A7A5C 55%, #E8DCC9 100%)"><i></i><b></b></div>
+    <div class="cl-body">
+      <div class="cl-meta">
+        <span class="cl-num">باليت 78</span>
+        <span class="cl-cat">كلاسيكي وريترو</span>
+      </div>
+      <h3>Casablanca (1942)<span>كازابلانكا</span></h3>
+      <p class="cl-mood">أبيض وأسود بدفء الحنين</p>
+      <div class="cl-swatches">
+        
+        <button class="sw" type="button" data-hex="#2E2822">
+          <i style="background:#2E2822"></i><b>#2E2822</b>
+        </button>
+        <button class="sw" type="button" data-hex="#8A7A5C">
+          <i style="background:#8A7A5C"></i><b>#8A7A5C</b>
+        </button>
+        <button class="sw" type="button" data-hex="#C8B48A">
+          <i style="background:#C8B48A"></i><b>#C8B48A</b>
+        </button>
+        <button class="sw" type="button" data-hex="#5C5245">
+          <i style="background:#5C5245"></i><b>#5C5245</b>
+        </button>
+        <button class="sw" type="button" data-hex="#E8DCC9">
+          <i style="background:#E8DCC9"></i><b>#E8DCC9</b>
+        </button>
+      </div>
+      <button class="cl-copy" type="button" data-i="77">انسخ الباليت</button>
+    </div>
+  </article>
+  <article class="cl-card" data-cat="retro">
+    <div class="cl-frame" style="background:radial-gradient(95% 130% at 80% 15%, #E8E4E8cc, transparent 60%),radial-gradient(85% 110% at 12% 88%, #A8A8A8bb, transparent 55%),linear-gradient(158deg, #1E1E1E 0%, #5C5C5C 55%, #8A3A2B 100%)"><i></i><b></b></div>
+    <div class="cl-body">
+      <div class="cl-meta">
+        <span class="cl-num">باليت 79</span>
+        <span class="cl-cat">كلاسيكي وريترو</span>
+      </div>
+      <h3>Schindler's List (1993)<span>قائمة شندلر</span></h3>
+      <p class="cl-mood">رمادي التاريخ ومعطف أحمر واحد</p>
+      <div class="cl-swatches">
+        
+        <button class="sw" type="button" data-hex="#1E1E1E">
+          <i style="background:#1E1E1E"></i><b>#1E1E1E</b>
+        </button>
+        <button class="sw" type="button" data-hex="#5C5C5C">
+          <i style="background:#5C5C5C"></i><b>#5C5C5C</b>
+        </button>
+        <button class="sw" type="button" data-hex="#A8A8A8">
+          <i style="background:#A8A8A8"></i><b>#A8A8A8</b>
+        </button>
+        <button class="sw" type="button" data-hex="#E8E4E8">
+          <i style="background:#E8E4E8"></i><b>#E8E4E8</b>
+        </button>
+        <button class="sw" type="button" data-hex="#8A3A2B">
+          <i style="background:#8A3A2B"></i><b>#8A3A2B</b>
+        </button>
+      </div>
+      <button class="cl-copy" type="button" data-i="78">انسخ الباليت</button>
+    </div>
+  </article>
+  <article class="cl-card" data-cat="retro">
+    <div class="cl-frame" style="background:radial-gradient(95% 130% at 80% 15%, #5C5C5Ccc, transparent 60%),radial-gradient(85% 110% at 12% 88%, #C8354Abb, transparent 55%),linear-gradient(158deg, #1E1E1E 0%, #E8E4E8 55%, #F2C845 100%)"><i></i><b></b></div>
+    <div class="cl-body">
+      <div class="cl-meta">
+        <span class="cl-num">باليت 80</span>
+        <span class="cl-cat">كلاسيكي وريترو</span>
+      </div>
+      <h3>Sin City (2005)<span>مدينة الخطيئة</span></h3>
+      <p class="cl-mood">كوميكس نوار بلمسات لون صادمة</p>
+      <div class="cl-swatches">
+        
+        <button class="sw" type="button" data-hex="#1E1E1E">
+          <i style="background:#1E1E1E"></i><b>#1E1E1E</b>
+        </button>
+        <button class="sw" type="button" data-hex="#E8E4E8">
+          <i style="background:#E8E4E8"></i><b>#E8E4E8</b>
+        </button>
+        <button class="sw" type="button" data-hex="#C8354A">
+          <i style="background:#C8354A"></i><b>#C8354A</b>
+        </button>
+        <button class="sw" type="button" data-hex="#5C5C5C">
+          <i style="background:#5C5C5C"></i><b>#5C5C5C</b>
+        </button>
+        <button class="sw" type="button" data-hex="#F2C845">
+          <i style="background:#F2C845"></i><b>#F2C845</b>
+        </button>
+      </div>
+      <button class="cl-copy" type="button" data-i="79">انسخ الباليت</button>
+    </div>
+  </article>
+  <article class="cl-card" data-cat="retro">
+    <div class="cl-frame" style="background:radial-gradient(95% 130% at 80% 15%, #E8E4E8cc, transparent 60%),radial-gradient(85% 110% at 12% 88%, #C8C8C8bb, transparent 55%),linear-gradient(158deg, #3E3E3E 0%, #8A8A8A 55%, #1E1E1E 100%)"><i></i><b></b></div>
+    <div class="cl-body">
+      <div class="cl-meta">
+        <span class="cl-num">باليت 81</span>
+        <span class="cl-cat">كلاسيكي وريترو</span>
+      </div>
+      <h3>Roma (2018)<span>روما</span></h3>
+      <p class="cl-mood">ذاكرة مكسيكية بأبيض وأسود حديث</p>
+      <div class="cl-swatches">
+        
+        <button class="sw" type="button" data-hex="#3E3E3E">
+          <i style="background:#3E3E3E"></i><b>#3E3E3E</b>
+        </button>
+        <button class="sw" type="button" data-hex="#8A8A8A">
+          <i style="background:#8A8A8A"></i><b>#8A8A8A</b>
+        </button>
+        <button class="sw" type="button" data-hex="#C8C8C8">
+          <i style="background:#C8C8C8"></i><b>#C8C8C8</b>
+        </button>
+        <button class="sw" type="button" data-hex="#E8E4E8">
+          <i style="background:#E8E4E8"></i><b>#E8E4E8</b>
+        </button>
+        <button class="sw" type="button" data-hex="#1E1E1E">
+          <i style="background:#1E1E1E"></i><b>#1E1E1E</b>
+        </button>
+      </div>
+      <button class="cl-copy" type="button" data-i="80">انسخ الباليت</button>
+    </div>
+  </article>
+  <article class="cl-card" data-cat="retro">
+    <div class="cl-frame" style="background:radial-gradient(95% 130% at 80% 15%, #5C4A3Acc, transparent 60%),radial-gradient(85% 110% at 12% 88%, #E8B84Abb, transparent 55%),linear-gradient(158deg, #2E2822 0%, #C8354A 55%, #8A9A8A 100%)"><i></i><b></b></div>
+    <div class="cl-body">
+      <div class="cl-meta">
+        <span class="cl-num">باليت 82</span>
+        <span class="cl-cat">كلاسيكي وريترو</span>
+      </div>
+      <h3>Pulp Fiction (1994)<span>بالب فيكشن</span></h3>
+      <p class="cl-mood">تسعينات خام بروح السبعينات</p>
+      <div class="cl-swatches">
+        
+        <button class="sw" type="button" data-hex="#2E2822">
+          <i style="background:#2E2822"></i><b>#2E2822</b>
+        </button>
+        <button class="sw" type="button" data-hex="#C8354A">
+          <i style="background:#C8354A"></i><b>#C8354A</b>
+        </button>
+        <button class="sw" type="button" data-hex="#E8B84A">
+          <i style="background:#E8B84A"></i><b>#E8B84A</b>
+        </button>
+        <button class="sw" type="button" data-hex="#5C4A3A">
+          <i style="background:#5C4A3A"></i><b>#5C4A3A</b>
+        </button>
+        <button class="sw" type="button" data-hex="#8A9A8A">
+          <i style="background:#8A9A8A"></i><b>#8A9A8A</b>
+        </button>
+      </div>
+      <button class="cl-copy" type="button" data-i="81">انسخ الباليت</button>
+    </div>
+  </article>
+  <article class="cl-card" data-cat="retro">
+    <div class="cl-frame" style="background:radial-gradient(95% 130% at 80% 15%, #F2C845cc, transparent 60%),radial-gradient(85% 110% at 12% 88%, #C8354Abb, transparent 55%),linear-gradient(158deg, #E8732B 0%, #4AA8C8 55%, #2E3438 100%)"><i></i><b></b></div>
+    <div class="cl-body">
+      <div class="cl-meta">
+        <span class="cl-num">باليت 83</span>
+        <span class="cl-cat">كلاسيكي وريترو</span>
+      </div>
+      <h3>Back to the Future (1985)<span>العودة إلى المستقبل</span></h3>
+      <p class="cl-mood">ثمانينات مشرقة وسفر بالزمن</p>
+      <div class="cl-swatches">
+        
+        <button class="sw" type="button" data-hex="#E8732B">
+          <i style="background:#E8732B"></i><b>#E8732B</b>
+        </button>
+        <button class="sw" type="button" data-hex="#4AA8C8">
+          <i style="background:#4AA8C8"></i><b>#4AA8C8</b>
+        </button>
+        <button class="sw" type="button" data-hex="#C8354A">
+          <i style="background:#C8354A"></i><b>#C8354A</b>
+        </button>
+        <button class="sw" type="button" data-hex="#F2C845">
+          <i style="background:#F2C845"></i><b>#F2C845</b>
+        </button>
+        <button class="sw" type="button" data-hex="#2E3438">
+          <i style="background:#2E3438"></i><b>#2E3438</b>
+        </button>
+      </div>
+      <button class="cl-copy" type="button" data-i="82">انسخ الباليت</button>
+    </div>
+  </article>
+  <article class="cl-card" data-cat="retro">
+    <div class="cl-frame" style="background:radial-gradient(95% 130% at 80% 15%, #3E3438cc, transparent 60%),radial-gradient(85% 110% at 12% 88%, #8A5A2Bbb, transparent 55%),linear-gradient(158deg, #C84B2A 0%, #E8B84A 55%, #D9C8A8 100%)"><i></i><b></b></div>
+    <div class="cl-body">
+      <div class="cl-meta">
+        <span class="cl-num">باليت 84</span>
+        <span class="cl-cat">كلاسيكي وريترو</span>
+      </div>
+      <h3>The Shining (1980)<span>البريق</span></h3>
+      <p class="cl-mood">فندق مسكون بسجاد لا يُنسى</p>
+      <div class="cl-swatches">
+        
+        <button class="sw" type="button" data-hex="#C84B2A">
+          <i style="background:#C84B2A"></i><b>#C84B2A</b>
+        </button>
+        <button class="sw" type="button" data-hex="#E8B84A">
+          <i style="background:#E8B84A"></i><b>#E8B84A</b>
+        </button>
+        <button class="sw" type="button" data-hex="#8A5A2B">
+          <i style="background:#8A5A2B"></i><b>#8A5A2B</b>
+        </button>
+        <button class="sw" type="button" data-hex="#3E3438">
+          <i style="background:#3E3438"></i><b>#3E3438</b>
+        </button>
+        <button class="sw" type="button" data-hex="#D9C8A8">
+          <i style="background:#D9C8A8"></i><b>#D9C8A8</b>
+        </button>
+      </div>
+      <button class="cl-copy" type="button" data-i="83">انسخ الباليت</button>
+    </div>
+  </article>
+  <article class="cl-card" data-cat="retro">
+    <div class="cl-frame" style="background:radial-gradient(95% 130% at 80% 15%, #5C4A3Acc, transparent 60%),radial-gradient(85% 110% at 12% 88%, #E8B84Abb, transparent 55%),linear-gradient(158deg, #C8873F 0%, #8A5A6B 55%, #D9B48A 100%)"><i></i><b></b></div>
+    <div class="cl-body">
+      <div class="cl-meta">
+        <span class="cl-num">باليت 85</span>
+        <span class="cl-cat">كلاسيكي وريترو</span>
+      </div>
+      <h3>Almost Famous (2000)<span>مشهور تقريباً</span></h3>
+      <p class="cl-mood">جولة روك سبعينية بدفء بني</p>
+      <div class="cl-swatches">
+        
+        <button class="sw" type="button" data-hex="#C8873F">
+          <i style="background:#C8873F"></i><b>#C8873F</b>
+        </button>
+        <button class="sw" type="button" data-hex="#8A5A6B">
+          <i style="background:#8A5A6B"></i><b>#8A5A6B</b>
+        </button>
+        <button class="sw" type="button" data-hex="#E8B84A">
+          <i style="background:#E8B84A"></i><b>#E8B84A</b>
+        </button>
+        <button class="sw" type="button" data-hex="#5C4A3A">
+          <i style="background:#5C4A3A"></i><b>#5C4A3A</b>
+        </button>
+        <button class="sw" type="button" data-hex="#D9B48A">
+          <i style="background:#D9B48A"></i><b>#D9B48A</b>
+        </button>
+      </div>
+      <button class="cl-copy" type="button" data-i="84">انسخ الباليت</button>
+    </div>
+  </article>
+  <article class="cl-card" data-cat="retro">
+    <div class="cl-frame" style="background:radial-gradient(95% 130% at 80% 15%, #E8DCC9cc, transparent 60%),radial-gradient(85% 110% at 12% 88%, #5C7A45bb, transparent 55%),linear-gradient(158deg, #8AA8C8 0%, #C8B48A 55%, #C8735C 100%)"><i></i><b></b></div>
+    <div class="cl-body">
+      <div class="cl-meta">
+        <span class="cl-num">باليت 86</span>
+        <span class="cl-cat">كلاسيكي وريترو</span>
+      </div>
+      <h3>Forrest Gump (1994)<span>فورست غامب</span></h3>
+      <p class="cl-mood">أمريكا الحالمة عبر العقود</p>
+      <div class="cl-swatches">
+        
+        <button class="sw" type="button" data-hex="#8AA8C8">
+          <i style="background:#8AA8C8"></i><b>#8AA8C8</b>
+        </button>
+        <button class="sw" type="button" data-hex="#C8B48A">
+          <i style="background:#C8B48A"></i><b>#C8B48A</b>
+        </button>
+        <button class="sw" type="button" data-hex="#5C7A45">
+          <i style="background:#5C7A45"></i><b>#5C7A45</b>
+        </button>
+        <button class="sw" type="button" data-hex="#E8DCC9">
+          <i style="background:#E8DCC9"></i><b>#E8DCC9</b>
+        </button>
+        <button class="sw" type="button" data-hex="#C8735C">
+          <i style="background:#C8735C"></i><b>#C8735C</b>
+        </button>
+      </div>
+      <button class="cl-copy" type="button" data-i="85">انسخ الباليت</button>
+    </div>
+  </article>
+  <article class="cl-card" data-cat="retro">
+    <div class="cl-frame" style="background:radial-gradient(95% 130% at 80% 15%, #2E2822cc, transparent 60%),radial-gradient(85% 110% at 12% 88%, #C8A05Abb, transparent 55%),linear-gradient(158deg, #5C5C6B 0%, #8A7A5C 55%, #A8A8B4 100%)"><i></i><b></b></div>
+    <div class="cl-body">
+      <div class="cl-meta">
+        <span class="cl-num">باليت 87</span>
+        <span class="cl-cat">كلاسيكي وريترو</span>
+      </div>
+      <h3>Rocky (1976)<span>روكي</span></h3>
+      <p class="cl-mood">فيلادلفيا الرمادية وحلم الملاكم</p>
+      <div class="cl-swatches">
+        
+        <button class="sw" type="button" data-hex="#5C5C6B">
+          <i style="background:#5C5C6B"></i><b>#5C5C6B</b>
+        </button>
+        <button class="sw" type="button" data-hex="#8A7A5C">
+          <i style="background:#8A7A5C"></i><b>#8A7A5C</b>
+        </button>
+        <button class="sw" type="button" data-hex="#C8A05A">
+          <i style="background:#C8A05A"></i><b>#C8A05A</b>
+        </button>
+        <button class="sw" type="button" data-hex="#2E2822">
+          <i style="background:#2E2822"></i><b>#2E2822</b>
+        </button>
+        <button class="sw" type="button" data-hex="#A8A8B4">
+          <i style="background:#A8A8B4"></i><b>#A8A8B4</b>
+        </button>
+      </div>
+      <button class="cl-copy" type="button" data-i="86">انسخ الباليت</button>
+    </div>
+  </article>
+  <article class="cl-card" data-cat="retro">
+    <div class="cl-frame" style="background:radial-gradient(95% 130% at 80% 15%, #4AA8C8cc, transparent 60%),radial-gradient(85% 110% at 12% 88%, #C8354Abb, transparent 55%),linear-gradient(158deg, #4AA845 0%, #F2E45C 55%, #8A5AA8 100%)"><i></i><b></b></div>
+    <div class="cl-body">
+      <div class="cl-meta">
+        <span class="cl-num">باليت 88</span>
+        <span class="cl-cat">كلاسيكي وريترو</span>
+      </div>
+      <h3>The Wizard of Oz (1939)<span>ساحر أوز</span></h3>
+      <p class="cl-mood">أول انفجار تكنيكولور في التاريخ</p>
+      <div class="cl-swatches">
+        
+        <button class="sw" type="button" data-hex="#4AA845">
+          <i style="background:#4AA845"></i><b>#4AA845</b>
+        </button>
+        <button class="sw" type="button" data-hex="#F2E45C">
+          <i style="background:#F2E45C"></i><b>#F2E45C</b>
+        </button>
+        <button class="sw" type="button" data-hex="#C8354A">
+          <i style="background:#C8354A"></i><b>#C8354A</b>
+        </button>
+        <button class="sw" type="button" data-hex="#4AA8C8">
+          <i style="background:#4AA8C8"></i><b>#4AA8C8</b>
+        </button>
+        <button class="sw" type="button" data-hex="#8A5AA8">
+          <i style="background:#8A5AA8"></i><b>#8A5AA8</b>
+        </button>
+      </div>
+      <button class="cl-copy" type="button" data-i="87">انسخ الباليت</button>
+    </div>
+  </article></div>
+    <p class="cl-note" data-i18n="cl_note">الألوان تقديرات مختارة مستوحاة من أجواء كل فيلم — مثالية لبرومبتات الذكاء الاصطناعي، الصور المصغرة، الإعلانات، والهويات البصرية.</p>
+
+    <section class="cl-bottom">
+      <h2><span data-i18n="cl_b1">نسخ الباليت سهل —</span> <b data-i18n="cl_b2">صناعة صورة تبيع هي المهارة.</b></h2>
+      <p data-i18n="cl_b3">في أكاديمية Ai Arabia نعلّمك تصنع صوراً وفيديوهات سينمائية بالذكاء الاصطناعي — من اختيار الألوان إلى الإعلان الجاهز — بالعربي وخطوة بخطوة.</p>
+      <div class="hero-ctas">
+        <a class="btn btn-gold" href="https://www.skool.com/aiarabia" target="_blank" rel="noopener"><span data-i18n="cl_b_cta1">انضم إلى Ai Arabia</span><span class="cl-price">$9</span></a>
+        <a class="btn btn-ghost" href="/#academies" data-i18n="cl_b_cta2">شاهد كل الأكاديميات</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="cl-foot">
+    <span>© <span id="yr"></span> Arabia Academies</span>
+    <a href="/" data-i18n="cl_home">الرئيسية</a>
+    <a href="/tools/globe/" data-i18n="cl_globe">كوكب التجارة الإلكترونية</a>
+    <a href="/tools/camera/" data-i18n="cl_camera">برومبتات حركات الكاميرا</a>
+    <a href="/privacy.html" data-i18n="f_privacy">الخصوصية</a>
+    <a href="/terms.html" data-i18n="f_terms">الشروط</a>
+  </footer>
+
+  <div class="cookie-bar" id="cookieBar" hidden>
+    <p data-i18n="cookie_text">نستخدم ملفات تعريف الارتباط (كوكيز) — بما فيها أدوات ميتا — لتحسين تجربتك وقياس كيفية استخدام الموقع.</p>
+    <button class="btn btn-gold btn-sm" id="cookieOk" type="button" data-i18n="cookie_ok">حسناً</button>
+  </div>
+
+  <script defer src="app.js"></script>
+</body>
+</html>
