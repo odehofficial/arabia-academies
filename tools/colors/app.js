@@ -20,7 +20,6 @@ const TL = {
     cl_h1a: "Movie Color", cl_h1b: "Palettes",
     cl_sub: "A free reference for AI filmmakers and brand builders: the color moods of cinema's most beautiful films — tap any color to copy its code, or grab the whole palette and drop it into your prompts, your ads, or your store's identity.",
     cl_stat1: "movie palettes", cl_stat2: "categories", cl_stat3: "every code copy-ready",
-    cl_note: "Colors are curated approximations inspired by each film's look — perfect for AI prompts, thumbnails, ad creatives and brand identities. Stills on the classics cards are original public-domain frames (via Wikimedia Commons).",
     cl_b1: "Copying a palette is easy —", cl_b2: "building visuals that sell is the skill.",
     cl_b3: "Inside Ai Arabia we teach you to create cinematic AI images and videos — from the color mood to the finished ad — in Arabic, step by step.",
     cl_b_cta1: "Join Ai Arabia", cl_b_cta2: "See all academies",
@@ -39,7 +38,6 @@ const TL = {
     cl_h1a: "باليتات ألوان", cl_h1b: "الأفلام",
     cl_sub: "مرجع مجاني لصنّاع المحتوى بالذكاء الاصطناعي: أجواء الألوان لأجمل أفلام السينما — اضغط أي لون لنسخ كوده، أو انسخ الباليت كاملاً واستخدمه في برومبتاتك، إعلاناتك، أو هوية متجرك.",
     cl_stat1: "باليت سينمائي", cl_stat2: "فئات", cl_stat3: "كل الأكواد جاهزة للنسخ",
-    cl_note: "الألوان تقديرات مختارة مستوحاة من أجواء كل فيلم — مثالية لبرومبتات الذكاء الاصطناعي، الصور المصغرة، الإعلانات، والهويات البصرية. الصور على بطاقات الكلاسيكيات لقطات أصلية من الأفلام — ملكية عامة (عبر ويكيميديا كومنز).",
     cl_b1: "نسخ الباليت سهل —", cl_b2: "صناعة صورة تبيع هي المهارة.",
     cl_b3: "في أكاديمية Ai Arabia نعلّمك تصنع صوراً وفيديوهات سينمائية بالذكاء الاصطناعي — من اختيار الألوان إلى الإعلان الجاهز — بالعربي وخطوة بخطوة.",
     cl_b_cta1: "انضم إلى Ai Arabia", cl_b_cta2: "شاهد كل الأكاديميات",
@@ -71,7 +69,7 @@ const CATS = {
 };
 
 /* ------------------------------------------------------------
-   The 93 palettes — n: film · a: Arabic name · c: 5 hex colors
+   The 88 palettes — n: film · a: Arabic name · c: 5 hex colors
    m: one-line mood. Colors are our own curated approximations.
    ------------------------------------------------------------ */
 const PALS = [
@@ -266,23 +264,6 @@ const PALS = [
     m:{ar:"فيلادلفيا الرمادية وحلم الملاكم", en:"Grey Philadelphia and a boxer's dream"} },
   { cat:"retro", n:"The Wizard of Oz (1939)", a:"ذا ويزارد أوف أوز", c:["#4AA845","#F2E45C","#C8354A","#4AA8C8","#8A5AA8"],
     m:{ar:"أول انفجار تكنيكولور في التاريخ", en:"History's first Technicolor explosion"} },
-
-  /* ---- Public-domain classics — real stills via Wikimedia Commons ---- */
-  { cat:"retro", img:"a-trip-to-the-moon", n:"A Trip to the Moon (1902)", a:"آ تريب تو ذا مون",
-    c:["#2A260B","#4C593B","#966944","#BBA36B","#D5C8A0"],
-    m:{ar:"أول خيال علمي في التاريخ — ملوّن يدوياً إطاراً بإطار", en:"History's first sci-fi — hand-painted frame by frame"} },
-  { cat:"retro", img:"intolerance", n:"Intolerance (1916)", a:"إنتوليرانس",
-    c:["#151515","#484848","#909090","#B7B7B7","#F8F8F8"],
-    m:{ar:"بابل بُنيت في هوليوود — ضخامة لم تتكرر", en:"Babylon built in Hollywood — scale never repeated"} },
-  { cat:"retro", img:"the-cabinet-of-dr-caligari", n:"The Cabinet of Dr. Caligari (1920)", a:"ذا كابينيت أوف دكتور كاليغاري",
-    c:["#1E1E1E","#555555","#8C8C8C","#BABABA","#EFEFEF"],
-    m:{ar:"عالم مائل مرسوم بجنون تعبيري", en:"A tilted world drawn in expressionist madness"} },
-  { cat:"retro", img:"nosferatu", n:"Nosferatu (1922)", a:"نوسفيراتو",
-    c:["#0A0A0A","#202020","#2F2F2F","#434343","#838383"],
-    m:{ar:"أول رعب سينمائي — ظلال لا تُنسى", en:"Cinema's first horror — unforgettable shadows"} },
-  { cat:"retro", img:"the-phantom-of-the-opera", n:"The Phantom of the Opera (1925)", a:"ذا فانتوم أوف ذي أوبرا",
-    c:["#060606","#1D1D1D","#454545","#666666","#9F9F9F"],
-    m:{ar:"الوجه تحت القناع الذي صنع أسطورة", en:"The face beneath the mask that made a legend"} },
 ];
 
 /* ------------------------------------------------------------
