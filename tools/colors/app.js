@@ -1,6 +1,6 @@
 /* ============================================================
    Movie Color Palettes — free reference for AI filmmakers
-   88 palettes inspired by films famous for their color grading.
+   120 palettes inspired by films and series famous for their color grading.
    Colors are our own curated approximations of each film's mood.
    ============================================================ */
 (() => {
@@ -66,10 +66,11 @@ const CATS = {
   dark:   { ar: "داكن ودرامي",     en: "Dark & Moody" },
   green:  { ar: "أخضر وطبيعي",     en: "Green & Natural" },
   retro:  { ar: "كلاسيكي وريترو",  en: "Classic & Retro" },
+  series: { ar: "مسلسلات", en: "TV Series" },
 };
 
 /* ------------------------------------------------------------
-   The 88 palettes — n: film · a: Arabic name · c: 5 hex colors
+   The 120 palettes — n: film · a: Arabic name · c: 5 hex colors
    m: one-line mood. Colors are our own curated approximations.
    ------------------------------------------------------------ */
 const PALS = [
@@ -264,6 +265,76 @@ const PALS = [
     m:{ar:"فيلادلفيا الرمادية وحلم الملاكم", en:"Grey Philadelphia and a boxer's dream"} },
   { cat:"retro", n:"The Wizard of Oz (1939)", a:"ذا ويزارد أوف أوز", c:["#4AA845","#F2E45C","#C8354A","#4AA8C8","#8A5AA8"],
     m:{ar:"أول انفجار تكنيكولور في التاريخ", en:"History's first Technicolor explosion"} },
+
+  /* ---- 2026 box-office hits ---- */
+  { cat:"warm", n:"The Odyssey (2026)", a:"ذي أوديسي", c:["#1E3A4A","#4A7A8A","#C8955A","#8A5A3A","#E8D8B8"],
+    m:{ar:"بحر هوميروس الغاضب وبرونز المحاربين", en:"Homer's wrathful sea and warrior bronze"} },
+  { cat:"retro", n:"Michael (2026)", a:"مايكل", c:["#0F0F14","#C8354A","#E8C84A","#8A8AB4","#F2F2F2"],
+    m:{ar:"أضواء المسرح وقفاز يلمع في الظلام", en:"Stage lights and a glove glittering in the dark"} },
+  { cat:"neon", n:"The Super Mario Galaxy Movie (2026)", a:"ذا سوبر ماريو غالاكسي موفي", c:["#1E2A6B","#5C3AC8","#E8393E","#F2C845","#8AD2F8"],
+    m:{ar:"أحمر ماريو يسبح في مجرات بنفسجية", en:"Mario red floating through violet galaxies"} },
+  { cat:"pastel", n:"Toy Story 5 (2026)", a:"توي ستوري 5", c:["#4AA8E8","#F2C845","#8A5A3A","#5CBD5C","#C8354A"],
+    m:{ar:"ألعاب مشرقة بألوان الطفولة", en:"Bright toys in the colors of childhood"} },
+  { cat:"pastel", n:"The Devil Wears Prada 2 (2026)", a:"ذا ديفل ويرز برادا 2", c:["#2E5C8A","#0F0F12","#E8A8B4","#F2E8D8","#C8A05A"],
+    m:{ar:"سيرولين وأناقة لا ترحم", en:"Cerulean and merciless elegance"} },
+  { cat:"cool", n:"Project Hail Mary (2026)", a:"بروجكت هيل ماري", c:["#0A0E1E","#1E3A5C","#E8A845","#C87A2B","#D9E4F2"],
+    m:{ar:"عنبر دافئ في عتمة الفضاء البارد", en:"Warm amber in the cold dark of space"} },
+  { cat:"dark", n:"Obsession (2026)", a:"أوبسيشن", c:["#101014","#2E3A2E","#8A9A7A","#D9D2C8","#8A2E2E"],
+    m:{ar:"هوس يزحف في ضوء المنازل الباهت", en:"Obsession creeping through pale house-light"} },
+  { cat:"dark", n:"Backrooms (2026)", a:"باكرومز", c:["#C8B45A","#E8D88A","#8A7A45","#3E3A2E","#F2ECC8"],
+    m:{ar:"أصفر فلوريسنت لا نهاية له خلف الجدران", en:"Endless fluorescent yellow behind the walls"} },
+  { cat:"green", n:"Hoppers (2026)", a:"هوبرز", c:["#3E8A45","#8AC85C","#2E5C8A","#C8E8A8","#5C3A2B"],
+    m:{ar:"بِرك خضراء وعالم الحيوان من الداخل", en:"Green ponds and the animal world from within"} },
+  { cat:"desert", n:"The Mandalorian and Grogu (2026)", a:"ذا ماندالوريان آند غروغو", c:["#8A96A8","#C8A05A","#5C8A45","#3E342B","#12141E"],
+    m:{ar:"فولاذ البيسكار وصحراء وطفل أخضر", en:"Beskar steel, desert, and a green child"} },
+
+  /* ---- Modern & classic picks ---- */
+  { cat:"retro", n:"Star Wars (1977)", a:"ستار وورز", c:["#E8A845","#C8B48A","#2E3A5C","#0F1220","#C8354A"],
+    m:{ar:"غروب شمسين فوق رمال تاتوين", en:"Twin suns setting over Tatooine sands"} },
+  { cat:"dark", n:"Fury (2014)", a:"فيوري", c:["#3E3A2E","#5C5C45","#8A7A5C","#A8A89A","#C87A2B"],
+    m:{ar:"طين وفولاذ في قلب الحرب", en:"Mud and steel in the heart of war"} },
+  { cat:"dark", n:"Seven (1995)", a:"سفن", c:["#1E1A14","#5C4A2E","#8A7A45","#3E3E38","#C8B48A"],
+    m:{ar:"مدينة مطر لا تغفر خطاياها", en:"A rain-soaked city that forgives no sin"} },
+  { cat:"cool", n:"Terminator 2 (1991)", a:"تيرمينيتور 2", c:["#1E2A3E","#4A6B8A","#A8B4C8","#E8732B","#0F1214"],
+    m:{ar:"أزرق فولاذي ونار الآلات", en:"Steel blue and machine fire"} },
+  { cat:"retro", n:"Man on Wire (2008)", a:"مان أون واير", c:["#8A96A8","#C8D2D9","#5C5C5C","#2E3438","#D9CDB8"],
+    m:{ar:"خيط بين برجين في سماء رمادية", en:"A wire between two towers in a grey sky"} },
+  { cat:"warm", n:"Harry Potter (2001)", a:"هاري بوتر", c:["#1E2A45","#8A2E2E","#C8955A","#5C6B5C","#3E3A45"],
+    m:{ar:"قاعات مضاءة بالشموع وسحر قديم", en:"Candlelit halls and old magic"} },
+  { cat:"desert", n:"Django Unchained (2012)", a:"جانغو أنتشيند", c:["#C8955A","#8A2E22","#3E5C7A","#E8DCC8","#1E1A14"],
+    m:{ar:"غرب ملطخ بالشمس والدم", en:"A west stained with sun and blood"} },
+  { cat:"dark", n:"Sinners (2025)", a:"سينرز", c:["#12141E","#C87A2B","#8A2E2E","#3E3A2E","#E8C88A"],
+    m:{ar:"بلوز الدلتا وليل يشتهي الدم", en:"Delta blues and a night that thirsts for blood"} },
+  { cat:"green", n:"28 Years Later (2025)", a:"28 يرز ليتر", c:["#3E4A2E","#8A9A6B","#A82E22","#8A8A8A","#D9D2C0"],
+    m:{ar:"بريطانيا خاوية يسكنها الغضب", en:"An empty Britain inhabited by rage"} },
+
+  /* ---- Series ---- */
+  { cat:"series", n:"Breaking Bad (2008)", a:"بريكنغ باد", c:["#C8955A","#E8C845","#4AA8C8","#3E4A2E","#1E1A14"],
+    m:{ar:"صحراء ألبوكيركي وأزرق لا يُنسى", en:"Albuquerque desert and an unforgettable blue"} },
+  { cat:"series", n:"Game of Thrones (2011)", a:"غيم أوف ثرونز", c:["#3E4A55","#A8B4C0","#C8A05A","#8A2E2E","#1E2228"],
+    m:{ar:"ثلج الشمال وذهب العروش", en:"Northern snow and the gold of thrones"} },
+  { cat:"series", n:"House of the Dragon (2022)", a:"هاوس أوف ذا دراغون", c:["#12121A","#8A2E2E","#C8A05A","#5C5C6B","#E8732B"],
+    m:{ar:"نار التنانين وذهب آل تارغيريان", en:"Dragonfire and Targaryen gold"} },
+  { cat:"series", n:"The Sopranos (1999)", a:"ذا سوبرانوز", c:["#4A3A2E","#8A7A5C","#8A2E2E","#5C5C4A","#C8B48A"],
+    m:{ar:"نيوجيرسي بين العائلة والعتمة", en:"New Jersey between family and shadow"} },
+  { cat:"series", n:"Chernobyl (2019)", a:"تشيرنوبل", c:["#3E4A4A","#8A9A96","#5C6B45","#B4B4A8","#8A2E22"],
+    m:{ar:"رماد سوفييتي وضوء لا يجب أن يُرى", en:"Soviet ash and a light that should never be seen"} },
+  { cat:"series", n:"Friends (1994)", a:"فريندز", c:["#6B4A8A","#C87A2B","#E8C88A","#8A3A2E","#4A6B5C"],
+    m:{ar:"شقة نيويورك وباب بنفسجي وقهوة لا تنتهي", en:"A New York apartment, a purple door, endless coffee"} },
+  { cat:"series", n:"Suits (2011)", a:"سوتس", c:["#1E2A3E","#5C6B7A","#A8B4C8","#F2F2F2","#C8955A"],
+    m:{ar:"بدلات مانهاتن وزجاج ناطحات السحاب", en:"Manhattan suits and skyscraper glass"} },
+  { cat:"series", n:"Mad Men (2007)", a:"ماد مين", c:["#C8873F","#4A3A2E","#5C6B5C","#E8C88A","#3E4A55"],
+    m:{ar:"ويسكي وإعلانات وستينات أنيقة", en:"Whisky, ads, and sleek sixties style"} },
+  { cat:"series", n:"Lost (2004)", a:"لوست", c:["#2E5C3E","#4A8AA8","#D9C8A0","#5C5C5C","#C87A2B"],
+    m:{ar:"جزيرة خضراء تخفي أسراراً", en:"A green island hiding its secrets"} },
+  { cat:"series", n:"Fargo (2014)", a:"فارغو", c:["#E8ECF2","#A82E22","#C8B48A","#3E4A55","#12141A"],
+    m:{ar:"ثلج أبيض تلطخه جريمة", en:"White snow stained by crime"} },
+  { cat:"series", n:"Peaky Blinders (2013)", a:"بيكي بلايندرز", c:["#1E1E22","#5C5C5C","#8A7A6B","#C8732B","#A8967A"],
+    m:{ar:"دخان برمنغهام وقبعات لا ترحم", en:"Birmingham smoke and merciless caps"} },
+  { cat:"series", n:"The Crown (2016)", a:"ذا كراون", c:["#1E2A5C","#C8A05A","#6B2E3E","#E8E0D0","#5C6B7A"],
+    m:{ar:"ذهب القصر وثقل التاج", en:"Palace gold and the weight of the crown"} },
+  { cat:"series", n:"Narcos (2015)", a:"ناركوس", c:["#3E6B45","#C8A05A","#E8C88A","#8A2E2E","#4A3A2E"],
+    m:{ar:"أدغال كولومبيا وثمانينات محفوفة بالخطر", en:"Colombian jungle and dangerous eighties"} },
 ];
 
 /* ------------------------------------------------------------
