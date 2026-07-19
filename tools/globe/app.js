@@ -44,8 +44,8 @@ const TL = {
     tg_peryr: "/yr",
     tg_cta_lead: "This market grows {g}% every year — and you're still outside?",
     tg_cta_btn: "Start selling in {c}",
-    tg_cta_iraq: "The Iraq academy launches soon — 100% cash on delivery, built for the Iraqi market.",
-    tg_cta_iraq_btn: "Iraq e-Com Academy — coming soon",
+    tg_cta_iraq: "A full academy built for the Iraqi market — 100% cash on delivery, with Exporta handling sourcing and delivery.",
+    tg_cta_iraq_btn: "Learn it in Iraq e-Com — $49/mo",
     tg_share: "Share these numbers",
     tg_copied: "Link copied!",
     tg_nodata: "No detailed stats here yet — but trust us: people in this country are buying online every single day 😉",
@@ -78,8 +78,8 @@ const TL = {
     tg_peryr: "/سنة",
     tg_cta_lead: "هالسوق يكبر {g}٪ كل سنة — وأنت لسا برّا؟",
     tg_cta_btn: "ابدأ البيع في {c}",
-    tg_cta_iraq: "أكاديمية العراق تنطلق قريباً — دفع عند الاستلام ١٠٠٪، مبنية خصيصاً للسوق العراقي.",
-    tg_cta_iraq_btn: "أكاديمية التجارة الإلكترونية في العراق — قريباً",
+    tg_cta_iraq: "أكاديمية كاملة مبنية خصيصاً للسوق العراقي — ١٠٠٪ دفع عند الاستلام، وExporta تتكفل بالتوريد والتوصيل.",
+    tg_cta_iraq_btn: "تعلّمها في أكاديمية العراق — $49/شهر",
     tg_share: "شارك هالأرقام",
     tg_copied: "تم نسخ الرابط!",
     tg_nodata: "ما عندنا إحصائيات مفصلة لهالدولة بعد — بس صدقنا: الناس هنا يشترون أونلاين كل يوم 😉",
@@ -115,9 +115,10 @@ let curNiche = "all";
    ------------------------------------------------------------ */
 const JOIN_ECOM = "https://www.skool.com/ecomarabia/about";
 const JOIN_ZAMBEEL = "https://www.skool.com/dropshipping/about";
+const JOIN_IRAQ = "https://www.skool.com/iraq";
 const ZAMBEEL_ISO = ["SAU", "ARE", "KWT", "QAT", "OMN"];
 function ctaFor(c) {
-  if (c.iso === "IRQ") return { iraq: true };
+  if (c.iso === "IRQ") return { iraq: true, href: JOIN_IRAQ };
   if (ZAMBEEL_ISO.includes(c.iso)) return { href: JOIN_ZAMBEEL };
   return { href: JOIN_ECOM };
 }
@@ -559,9 +560,7 @@ function openPanel(hit) {
 
     <div class="tg-cta">
       <p><b>${cta.iraq ? t("tg_cta_iraq") : t("tg_cta_lead").replace("{g}", c.growth)}</b></p>
-      ${cta.iraq
-        ? `<span class="btn btn-gold tg-btn-soon">🔒 ${t("tg_cta_iraq_btn")}</span>`
-        : `<a class="btn btn-gold" href="${cta.href}" target="_blank" rel="noopener">${c.iso === "CHN" ? t("tg_cta_china") : t("tg_cta_btn").replace("{c}", name)}</a>`}
+      <a class="btn btn-gold" href="${cta.href}" target="_blank" rel="noopener">${cta.iraq ? t("tg_cta_iraq_btn") : c.iso === "CHN" ? t("tg_cta_china") : t("tg_cta_btn").replace("{c}", name)}</a>
       <button class="tg-share" id="tgShare" type="button">📤 ${t("tg_share")}</button>
     </div>
     <p class="tg-disc">${t("tg_disc")}</p>`;

@@ -91,9 +91,8 @@ const ACADEMIES = [
   {
     id: "iraq-ecom",
     color: "#4CBB6C",
-    logo: null,
+    logo: "assets/logos/skool-iraq.webp",
     mark: "iraq",
-    comingSoon: true,
     name: { en: "Iraq e-Com", ar: "التجارة الإلكترونية في العراق" },
     tag: {
       en: "E-commerce built for the Iraqi market — sourcing to doorstep",
@@ -108,7 +107,7 @@ const ACADEMIES = [
     stats: [
       { v: "2", l: { en: "weekly meetings", ar: "اجتماعان أسبوعيان" } },
       { v: "100%", l: { en: "cash on delivery", ar: "دفع عند الاستلام" } },
-      { v: "2026", l: { en: "opening", ar: "الافتتاح" } }
+      { v: "45M", l: { en: "potential buyers", ar: "مشترٍ محتمل" } }
     ],
     outline: [
       { en: "Picking winning products", ar: "اختيار المنتجات الرابحة" },
@@ -119,16 +118,16 @@ const ACADEMIES = [
       { en: "COD fulfillment with Exporta", ar: "التوصيل والدفع عند الاستلام مع Exporta" }
     ],
     includes: {
-      en: ["2 weekly follow-up Zoom meetings", "100% cash on delivery", "Warehousing in Iraq via Exporta", "Opening 2026"],
-      ar: ["اجتماعان أسبوعيان للمتابعة عبر زوم", "١٠٠٪ دفع عند الاستلام", "تخزين داخل العراق عبر Exporta", "الإطلاق 2026"]
+      en: ["2 weekly follow-up Zoom meetings", "100% cash on delivery", "Warehousing in Iraq via Exporta", "Almost zero competition"],
+      ar: ["اجتماعان أسبوعيان للمتابعة عبر زوم", "١٠٠٪ دفع عند الاستلام", "تخزين داخل العراق عبر Exporta", "منافسة شبه معدومة"]
     },
     collab: {
       name: "Exporta",
       url: "https://exporta.company/",
       note: { en: "In collaboration with Exporta — China → Iraq shipping & warehousing", ar: "بالتعاون مع Exporta — شحن وتخزين من الصين إلى العراق" }
     },
-    join: null,
-    badge: { en: "Coming soon", ar: "قريباً" }
+    join: "https://www.skool.com/iraq",
+    badge: { en: "New", ar: "جديد" }
   },
   {
     id: "ai-arabia",
@@ -525,8 +524,8 @@ const ROADMAP = [
 const FAQ = [
   {
     q: { en: "Which academy should I start with?", ar: "بأي أكاديمية أبدأ؟" },
-    a: { en: "For the full e-commerce and dropshipping road — local and international — start with eCom Arabia + ($1,860/year). If you want COD dropshipping with fulfillment handled for you, choose Zambeel Dropshipping ($99/month). Selling inside Iraq? Iraq e-Com opens in 2026 at $49/month. For AI skills, Ai Arabia is $9/month for a limited time. And ENE X eCom teaches Meta Ads lead generation — enrollment through Hassan's Instagram.",
-         ar: "لطريق التجارة الإلكترونية والدروبشيبينغ كاملاً — محلياً وعالمياً — ابدأ بـ eCom Arabia + (١٨٦٠$ سنوياً). إذا كنت تريد دروبشيبينغ الدفع عند الاستلام مع توصيل جاهز، اختر دروبشيبينغ زنبيل (٩٩$ شهرياً). تبيع داخل العراق؟ أكاديمية التجارة الإلكترونية في العراق تفتتح 2026 بـ ٤٩$ شهرياً. لمهارات الذكاء الاصطناعي، Ai Arabia بـ ٩$ شهرياً لفترة محدودة. أما ENE X eCom فتعلّمك توليد العملاء عبر إعلانات ميتا — والانضمام عبر إنستغرام حسان." }
+    a: { en: "For the full e-commerce and dropshipping road — local and international — start with eCom Arabia + ($1,860/year). If you want COD dropshipping with fulfillment handled for you, choose Zambeel Dropshipping ($99/month). Selling inside Iraq? Iraq e-Com is $49/month. For AI skills, Ai Arabia is $9/month for a limited time. And ENE X eCom teaches Meta Ads lead generation — enrollment through Hassan's Instagram.",
+         ar: "لطريق التجارة الإلكترونية والدروبشيبينغ كاملاً — محلياً وعالمياً — ابدأ بـ eCom Arabia + (١٨٦٠$ سنوياً). إذا كنت تريد دروبشيبينغ الدفع عند الاستلام مع توصيل جاهز، اختر دروبشيبينغ زنبيل (٩٩$ شهرياً). تبيع داخل العراق؟ أكاديمية التجارة الإلكترونية في العراق بـ ٤٩$ شهرياً. لمهارات الذكاء الاصطناعي، Ai Arabia بـ ٩$ شهرياً لفترة محدودة. أما ENE X eCom فتعلّمك توليد العملاء عبر إعلانات ميتا — والانضمام عبر إنستغرام حسان." }
   },
   {
     q: { en: "Are the courses in Arabic?", ar: "هل الكورسات باللغة العربية؟" },
@@ -549,9 +548,9 @@ const FAQ = [
          ar: "هذا أكثر ما يذكره الطلاب في تقييماتهم: حتى ٨ اجتماعات مباشرة أسبوعية في eCom Arabia +، و٣ اجتماعات زوم للمتابعة في دروبشيبينغ زنبيل، وإجابات مباشرة من محمد عند أي مشكلة — قبل إنهاء الكورسات وبعدها." }
   },
   {
-    q: { en: "When does Iraq e-Com open?", ar: "متى تفتتح أكاديمية التجارة الإلكترونية في العراق؟" },
-    a: { en: "Iraq e-Com launches in 2026 at $49/month, in collaboration with Exporta — sourcing and shipping from China into Iraq, 100% cash on delivery, with 2 weekly meetings. Until then, eCom Arabia + already covers Arab logistics — including Iraq.",
-         ar: "تنطلق أكاديمية العراق في 2026 بسعر ٤٩$ شهرياً، بالتعاون مع Exporta — توريد وشحن من الصين إلى داخل العراق، و١٠٠٪ دفع عند الاستلام، مع اجتماعين أسبوعيين. وحتى ذلك الحين، تغطي eCom Arabia + اللوجستيات العربية — بما فيها العراق." }
+    q: { en: "What is Iraq e-Com?", ar: "ما هي أكاديمية التجارة الإلكترونية في العراق؟" },
+    a: { en: "Iraq e-Com is now open at $49/month, in collaboration with Exporta — sourcing and shipping from China into Iraq, warehousing inside the country, 100% cash on delivery, and 2 weekly follow-up meetings. Built for a market of 45 million with almost no competition.",
+         ar: "أكاديمية العراق متاحة الآن بسعر ٤٩$ شهرياً، بالتعاون مع Exporta — توريد وشحن من الصين إلى داخل العراق، وتخزين داخل البلد، و١٠٠٪ دفع عند الاستلام، مع اجتماعين أسبوعيين للمتابعة. مصممة لسوق من ٤٥ مليون نسمة بمنافسة شبه معدومة." }
   }
 ];
 
