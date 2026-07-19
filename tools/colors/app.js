@@ -126,7 +126,7 @@ const PALS = [
   /* ---- Neon & Cyberpunk (11) ---- */
   { cat:"neon", n:"Blade Runner (1982)", a:"بليد رانر", c:["#1E2438","#E85C8A","#4AC8D9","#C8873F","#3E2E5C"],
     m:{ar:"مطر نيون في مدينة لا تنام", en:"Neon rain in a city that never sleeps"} },
-  { cat:"neon", n:"Blade Runner 2049 (2017)", a:"بليد رانر 2049", c:["#D97E2B","#8A4B2A","#4AC8D9","#2E3438","#E8B48A"],
+  { cat:"neon", img:"blade-runner-2049", n:"Blade Runner 2049 (2017)", a:"بليد رانر 2049", c:["#D97E2B","#8A4B2A","#4AC8D9","#2E3438","#E8B48A"],
     m:{ar:"ضباب برتقالي وسيان مستقبلي مهجور", en:"Orange smog and abandoned future cyan"} },
   { cat:"neon", n:"Drive (2011)", a:"درايف", c:["#E85C8A","#2E1E38","#4AC8D9","#F2C845","#1E2428"],
     m:{ar:"ليل لوس أنجلوس بوردي كهربائي", en:"L.A. nights in electric pink"} },
@@ -220,7 +220,7 @@ const PALS = [
     m:{ar:"لندن رمادية يقطعها أحمر الدم", en:"Grey London cut by blood red"} },
 
   /* ---- Green & Natural (11) ---- */
-  { cat:"green", n:"The Matrix (1999)", a:"ذا ماتريكس", c:["#3E7A45","#1E2E22","#8AC88A","#2E3438","#C8D9C8"],
+  { cat:"green", img:"the-matrix", n:"The Matrix (1999)", a:"ذا ماتريكس", c:["#3E7A45","#1E2E22","#8AC88A","#2E3438","#C8D9C8"],
     m:{ar:"واقع رقمي مصبوغ بأخضر الشيفرة", en:"A digital reality dyed in code green"} },
   { cat:"green", n:"The Shape of Water (2017)", a:"ذا شيب أوف ووتر", c:["#2E5C55","#4A8A7A","#C8873F","#1E3438","#8AC8B4"],
     m:{ar:"حكاية خرافية تحت ماء أخضر", en:"A fairy tale under green water"} },
@@ -284,7 +284,7 @@ function frameStyle(c) {
 function card(x, i) {
   return `
   <article class="cl-card" data-cat="${x.cat}">
-    <div class="cl-frame" style="${frameStyle(x.c)}"><i></i><b></b></div>
+    <div class="cl-frame" style="${frameStyle(x.c)}">${x.img ? `<img src="img/${x.img}.webp" alt="" loading="lazy" width="640" height="357">` : ""}<i></i><b></b></div>
     <div class="cl-body">
       <div class="cl-meta">
         <span class="cl-num">${t("cl_n")} ${String(i + 1).padStart(2, "0")}</span>
