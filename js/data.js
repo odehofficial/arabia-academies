@@ -91,7 +91,7 @@ const ACADEMIES = [
   {
     id: "iraq-ecom",
     color: "#4CBB6C",
-    logo: "assets/logos/skool-iraq.webp",
+    logo: "assets/logos/skool-iraq.svg",
     mark: "iraq",
     name: { en: "Iraq e-Com", ar: "التجارة الإلكترونية في العراق" },
     tag: {
