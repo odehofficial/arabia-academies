@@ -1,6 +1,6 @@
 /* ============================================================
    Movie Color Palettes — free reference for AI filmmakers
-   118 palettes inspired by films and series famous for their color grading.
+   114 palettes inspired by films and series famous for their color grading.
    Colors are our own curated approximations of each film's mood.
    ============================================================ */
 (() => {
@@ -70,18 +70,18 @@ const CATS = {
 };
 
 /* ------------------------------------------------------------
-   The 118 palettes — n: film · a: Arabic name · c: 5 hex colors
+   The 114 palettes — n: film · a: Arabic name · c: 5 hex colors
    m: one-line mood. Colors are our own curated approximations.
    ------------------------------------------------------------ */
 const PALS = [
   /* ---- Warm & Golden (11) ---- */
-  { cat:"warm", n:"Amélie (2001)", a:"أميلي", tt:{c:"amelie",h:"AMÉLIE"}, c:["#7A1F0C","#B8500F","#DA9A31","#3E7A45","#F2C879"],
+  { cat:"warm", img:"amelie", n:"Amélie (2001)", a:"أميلي", tt:{c:"amelie",h:"AMÉLIE"}, c:["#7A1F0C","#B8500F","#DA9A31","#3E7A45","#F2C879"],
     m:{ar:"باريس الحالمة بعدسة ذهبية وخضرة غامضة", en:"Dreamy Paris through gold and mysterious green"} },
-  { cat:"warm", n:"Her (2013)", a:"هير", tt:{c:"her",h:"her"}, c:["#E5573F","#F2A48E","#E8D8C8","#8C3A2B","#5C7A8A"],
+  { cat:"warm", img:"her", n:"Her (2013)", a:"هير", tt:{c:"her",h:"her"}, c:["#E5573F","#F2A48E","#E8D8C8","#8C3A2B","#5C7A8A"],
     m:{ar:"دفء المرجان والحنين في مستقبل ناعم", en:"Coral warmth and longing in a soft future"} },
-  { cat:"warm", n:"Once Upon a Time in Hollywood (2019)", a:"وانس أبون آ تايم إن هوليوود", tt:{c:"ouatih",h:"<span>ONCE UPON A TIME IN...</span>HOLLYWOOD"}, c:["#D98E32","#F2C879","#8A4B2A","#5C6B4F","#2E2417"],
+  { cat:"warm", img:"once-upon-a-time-in-hollywood", n:"Once Upon a Time in Hollywood (2019)", a:"وانس أبون آ تايم إن هوليوود", tt:{c:"ouatih",h:"<span>ONCE UPON A TIME IN...</span>HOLLYWOOD"}, c:["#D98E32","#F2C879","#8A4B2A","#5C6B4F","#2E2417"],
     m:{ar:"شمس كاليفورنيا الذهبية في نهاية الستينات", en:"Golden California sun at the end of the '60s"} },
-  { cat:"warm", n:"Gladiator (2000)", a:"غلادييتور", tt:{c:"glad",h:"GLADIATOR"}, c:["#C8873F","#8A5A2B","#3E3A45","#D9B48A","#6B1F14"],
+  { cat:"warm", img:"gladiator", n:"Gladiator (2000)", a:"غلادييتور", tt:{c:"glad",h:"GLADIATOR"}, c:["#C8873F","#8A5A2B","#3E3A45","#D9B48A","#6B1F14"],
     m:{ar:"ذهب روما وغبار الحلبة", en:"Rome's gold and the dust of the arena"} },
   { cat:"warm", n:"Midnight in Paris (2011)", a:"ميدنايت إن باريس", c:["#D9A441","#8A5A2B","#3E4A6B","#F2DCA8","#5C3A2B"],
     m:{ar:"باريس الليلية بدفء المصابيح القديمة", en:"Paris at night, warmed by old lamplight"} },
@@ -121,8 +121,6 @@ const PALS = [
     m:{ar:"شنغهاي الزجاجية وأزرق الليل الأنيق", en:"Glassy Shanghai and elegant night blue"} },
 
   /* ---- Neon & Cyberpunk (11) ---- */
-  { cat:"neon", n:"Blade Runner (1982)", a:"بليد رانر", c:["#1E2438","#E85C8A","#4AC8D9","#C8873F","#3E2E5C"],
-    m:{ar:"مطر نيون في مدينة لا تنام", en:"Neon rain in a city that never sleeps"} },
   { cat:"neon", img:"blade-runner-2049", n:"Blade Runner 2049 (2017)", a:"بليد رانر 2049", c:["#D97E2B","#8A4B2A","#4AC8D9","#2E3438","#E8B48A"],
     m:{ar:"ضباب برتقالي وسيان مستقبلي مهجور", en:"Orange smog and abandoned future cyan"} },
   { cat:"neon", n:"Drive (2011)", a:"درايف", c:["#E85C8A","#2E1E38","#4AC8D9","#F2C845","#1E2428"],
@@ -169,8 +167,6 @@ const PALS = [
     m:{ar:"حلم حلواني بألوان سحرية", en:"A confectioner's dream in magical color"} },
 
   /* ---- Desert & Earthy (11) ---- */
-  { cat:"desert", n:"Dune (2021)", a:"ديون", c:["#C8873F","#8A5A2B","#D9B48A","#41474F","#1E232B"],
-    m:{ar:"رمال شاسعة وظلال باردة — ملحمية صامتة", en:"Vast sands and cold shadows — a quiet epic"} },
   { cat:"desert", n:"Dune: Part Two (2024)", a:"ديون: بارت تو", c:["#B87A35","#D9A85C","#3E3438","#E8C89A","#6B4A2B"],
     m:{ar:"أراكيس أعمق وأقسى وأجمل", en:"Arrakis — deeper, harsher, more beautiful"} },
   { cat:"desert", n:"Mad Max: Fury Road (2015)", a:"ماد ماكس: فيوري رود", c:["#E8732B","#C84B2A","#4AA8C8","#8A5A2B","#F2C879"],
@@ -195,8 +191,6 @@ const PALS = [
   /* ---- Dark & Moody (11) ---- */
   { cat:"dark", n:"The Batman (2022)", a:"ذا باتمان", c:["#1E1E22","#C8354A","#8A6B3F","#3E3438","#5C5C6B"],
     m:{ar:"غوثام ممطرة بأحمر غاضب", en:"Rain-soaked Gotham in furious red"} },
-  { cat:"dark", n:"Batman Returns (1992)", a:"باتمان ريترنز", c:["#1E2428","#4A5C8A","#C8D2D9","#5C2E45","#2E3438"],
-    m:{ar:"شتاء قوطي بأزرق بارد وظلال", en:"A gothic winter in cold blue and shadow"} },
   { cat:"dark", n:"Joker (2019)", a:"جوكر", c:["#3E7A45","#C84B5C","#E8B84A","#2E2E38","#8A5A6B"],
     m:{ar:"مدينة مريضة بألوان مهرج حزين", en:"A sick city in a sad clown's colors"} },
   { cat:"dark", n:"Se7en (1995)", a:"سفن", c:["#2E2822","#5C5245","#8A7A5C","#1E1E1E","#C8B48A"],
@@ -235,8 +229,6 @@ const PALS = [
     m:{ar:"غابة الخيزران ورشاقة الحرير", en:"Bamboo forest and silken grace"} },
   { cat:"green", n:"The Secret Life of Walter Mitty (2013)", a:"ذا سيكرت لايف أوف والتر ميتي", c:["#4A8A7A","#8AC8C8","#C8873F","#5C6B4F","#D9E4E8"],
     m:{ar:"مغامرة آيسلندية بفيروزي منعش", en:"An Icelandic adventure in fresh teal"} },
-  { cat:"green", n:"Princess Mononoke (1997)", a:"برينسيس مونونوكي", c:["#4A7A55","#8AA86B","#C8735C","#2E3A28","#D9C8A8"],
-    m:{ar:"غابة مقدسة وروح الطبيعة", en:"Sacred forest and the spirit of nature"} },
   { cat:"green", n:"The Northman (2022)", a:"ذا نورثمان", c:["#3E4A38","#8A9A8A","#5C4A3A","#1E2422","#C8D2C8"],
     m:{ar:"شمال بارد بأخضر رمادي وحشي", en:"A cold north in savage grey-green"} },
 
