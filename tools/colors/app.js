@@ -83,7 +83,7 @@ const PALS = [
   { cat:"series", img:"friends", tt:{c:"frnd",h:"<span>F<i>&middot;</i>R<b>&middot;</b>I<u>&middot;</u>E<i>&middot;</i>N<b>&middot;</b>D<u>&middot;</u>S</span>"}, n:"Friends (1994)", a:"فريندز", c:["#6B4A8A","#C87A2B","#E8C88A","#8A3A2E","#4A6B5C"],
     m:{ar:"شقة نيويورك وباب بنفسجي وقهوة لا تنتهي", en:"A New York apartment, a purple door, endless coffee"},
     s:"bright three-camera sitcom warmth, purple-apartment coziness, even high-key lighting, coffee-house amber comfort" },
-  { cat:"warm", tt:{c:"hp",h:"HARRY POTTER"}, n:"Harry Potter", a:"هاري بوتر", c:["#1E2A45","#8A2E2E","#C8955A","#5C6B5C","#3E3A45"],
+  { cat:"warm", img:"harry-potter", tt:{c:"hp",h:"HARRY POTTER"}, n:"Harry Potter", a:"هاري بوتر", c:["#1E2A45","#8A2E2E","#C8955A","#5C6B5C","#3E3A45"],
     m:{ar:"قاعات مضاءة بالشموع وسحر قديم", en:"Candlelit halls and old magic"},
     s:"candlelit great-hall warmth, floating magical particles, gothic stone corridors, golden hearth glow against cold castle blue, wonder-filled push-ins" },
   { cat:"retro", img:"star-wars", tt:{c:"sw",h:"STAR<span>WARS</span>"}, n:"Star Wars (1977)", a:"ستار وورز", c:["#E8A845","#C8B48A","#2E3A5C","#0F1220","#C8354A"],
