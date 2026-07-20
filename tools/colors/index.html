@@ -127,15 +127,25 @@
     .sw:hover i{ transform:translateY(-2px) }
     .sw b{ font-size:8.5px; font-weight:700; color:var(--muted); letter-spacing:0 }
 
-    .cl-copy{
-      width:100%; margin-top:10px;
+    .cl-actions{ display:flex; flex-direction:column; gap:6px; margin-top:10px }
+    .cl-prompt{
+      width:100%;
       display:flex; align-items:center; justify-content:center;
       background:var(--gold); color:#080C1C; border-radius:9px;
       padding:8px 6px; font-size:12px; font-weight:800; font-family:var(--f-body);
       white-space:nowrap; transition:filter .2s;
     }
-    .cl-copy:hover{ filter:brightness(1.08) }
-    .cl-copy.ok{ background:#37C6A0 }
+    .cl-prompt:hover{ filter:brightness(1.08) }
+    .cl-prompt.ok{ background:#37C6A0 }
+    .cl-copy{
+      width:100%;
+      display:flex; align-items:center; justify-content:center;
+      background:transparent; color:var(--gold-2); border:1px solid var(--line-2); border-radius:9px;
+      padding:7px 6px; font-size:12px; font-weight:800; font-family:var(--f-body);
+      white-space:nowrap; transition:border-color .2s, color .2s, background .2s;
+    }
+    .cl-copy:hover{ border-color:var(--gold) }
+    .cl-copy.ok{ background:#37C6A0; color:#080C1C; border-color:#37C6A0 }
 
     /* ---------- bottom CTA ---------- */
     .cl-bottom{ text-align:center; padding:64px var(--pad) 72px; max-width:780px; margin-inline:auto }
@@ -233,7 +243,10 @@
           <i style="background:#F2C879"></i><b>#F2C879</b>
         </button>
       </div>
-      <button class="cl-copy" type="button" data-i="0">انسخ الباليت</button>
+      <div class="cl-actions">
+        <button class="cl-prompt" type="button" data-i="0">انسخ البرومبت</button>
+        <button class="cl-copy" type="button" data-i="0">انسخ الباليت</button>
+      </div>
     </div>
   </article>
   <article class="cl-card" data-cat="warm">
@@ -263,7 +276,10 @@
           <i style="background:#5C7A8A"></i><b>#5C7A8A</b>
         </button>
       </div>
-      <button class="cl-copy" type="button" data-i="1">انسخ الباليت</button>
+      <div class="cl-actions">
+        <button class="cl-prompt" type="button" data-i="1">انسخ البرومبت</button>
+        <button class="cl-copy" type="button" data-i="1">انسخ الباليت</button>
+      </div>
     </div>
   </article>
   <article class="cl-card" data-cat="warm">
@@ -293,7 +309,10 @@
           <i style="background:#2E2417"></i><b>#2E2417</b>
         </button>
       </div>
-      <button class="cl-copy" type="button" data-i="2">انسخ الباليت</button>
+      <div class="cl-actions">
+        <button class="cl-prompt" type="button" data-i="2">انسخ البرومبت</button>
+        <button class="cl-copy" type="button" data-i="2">انسخ الباليت</button>
+      </div>
     </div>
   </article>
   <article class="cl-card" data-cat="warm">
@@ -323,7 +342,10 @@
           <i style="background:#4A6B8A"></i><b>#4A6B8A</b>
         </button>
       </div>
-      <button class="cl-copy" type="button" data-i="3">انسخ الباليت</button>
+      <div class="cl-actions">
+        <button class="cl-prompt" type="button" data-i="3">انسخ البرومبت</button>
+        <button class="cl-copy" type="button" data-i="3">انسخ الباليت</button>
+      </div>
     </div>
   </article>
   <article class="cl-card" data-cat="warm">
@@ -353,7 +375,10 @@
           <i style="background:#6B1F14"></i><b>#6B1F14</b>
         </button>
       </div>
-      <button class="cl-copy" type="button" data-i="4">انسخ الباليت</button>
+      <div class="cl-actions">
+        <button class="cl-prompt" type="button" data-i="4">انسخ البرومبت</button>
+        <button class="cl-copy" type="button" data-i="4">انسخ الباليت</button>
+      </div>
     </div>
   </article>
   <article class="cl-card" data-cat="warm">
@@ -383,7 +408,10 @@
           <i style="background:#5C3A2B"></i><b>#5C3A2B</b>
         </button>
       </div>
-      <button class="cl-copy" type="button" data-i="5">انسخ الباليت</button>
+      <div class="cl-actions">
+        <button class="cl-prompt" type="button" data-i="5">انسخ البرومبت</button>
+        <button class="cl-copy" type="button" data-i="5">انسخ الباليت</button>
+      </div>
     </div>
   </article>
   <article class="cl-card" data-cat="warm">
@@ -413,7 +441,10 @@
           <i style="background:#4A5C7A"></i><b>#4A5C7A</b>
         </button>
       </div>
-      <button class="cl-copy" type="button" data-i="6">انسخ الباليت</button>
+      <div class="cl-actions">
+        <button class="cl-prompt" type="button" data-i="6">انسخ البرومبت</button>
+        <button class="cl-copy" type="button" data-i="6">انسخ الباليت</button>
+      </div>
     </div>
   </article>
   <article class="cl-card" data-cat="warm">
@@ -443,7 +474,10 @@
           <i style="background:#5C4A6B"></i><b>#5C4A6B</b>
         </button>
       </div>
-      <button class="cl-copy" type="button" data-i="7">انسخ الباليت</button>
+      <div class="cl-actions">
+        <button class="cl-prompt" type="button" data-i="7">انسخ البرومبت</button>
+        <button class="cl-copy" type="button" data-i="7">انسخ الباليت</button>
+      </div>
     </div>
   </article>
   <article class="cl-card" data-cat="warm">
@@ -473,7 +507,10 @@
           <i style="background:#2E2417"></i><b>#2E2417</b>
         </button>
       </div>
-      <button class="cl-copy" type="button" data-i="8">انسخ الباليت</button>
+      <div class="cl-actions">
+        <button class="cl-prompt" type="button" data-i="8">انسخ البرومبت</button>
+        <button class="cl-copy" type="button" data-i="8">انسخ الباليت</button>
+      </div>
     </div>
   </article>
   <article class="cl-card" data-cat="warm">
@@ -503,7 +540,10 @@
           <i style="background:#6B2E5C"></i><b>#6B2E5C</b>
         </button>
       </div>
-      <button class="cl-copy" type="button" data-i="9">انسخ الباليت</button>
+      <div class="cl-actions">
+        <button class="cl-prompt" type="button" data-i="9">انسخ البرومبت</button>
+        <button class="cl-copy" type="button" data-i="9">انسخ الباليت</button>
+      </div>
     </div>
   </article>
   <article class="cl-card" data-cat="warm">
@@ -533,7 +573,10 @@
           <i style="background:#E8D8B8"></i><b>#E8D8B8</b>
         </button>
       </div>
-      <button class="cl-copy" type="button" data-i="10">انسخ الباليت</button>
+      <div class="cl-actions">
+        <button class="cl-prompt" type="button" data-i="10">انسخ البرومبت</button>
+        <button class="cl-copy" type="button" data-i="10">انسخ الباليت</button>
+      </div>
     </div>
   </article>
   <article class="cl-card" data-cat="cool">
@@ -563,7 +606,10 @@
           <i style="background:#4A3A2E"></i><b>#4A3A2E</b>
         </button>
       </div>
-      <button class="cl-copy" type="button" data-i="11">انسخ الباليت</button>
+      <div class="cl-actions">
+        <button class="cl-prompt" type="button" data-i="11">انسخ البرومبت</button>
+        <button class="cl-copy" type="button" data-i="11">انسخ الباليت</button>
+      </div>
     </div>
   </article>
   <article class="cl-card" data-cat="cool">
@@ -593,7 +639,10 @@
           <i style="background:#5C4A3A"></i><b>#5C4A3A</b>
         </button>
       </div>
-      <button class="cl-copy" type="button" data-i="12">انسخ الباليت</button>
+      <div class="cl-actions">
+        <button class="cl-prompt" type="button" data-i="12">انسخ البرومبت</button>
+        <button class="cl-copy" type="button" data-i="12">انسخ الباليت</button>
+      </div>
     </div>
   </article>
   <article class="cl-card" data-cat="cool">
@@ -623,7 +672,10 @@
           <i style="background:#96A8B4"></i><b>#96A8B4</b>
         </button>
       </div>
-      <button class="cl-copy" type="button" data-i="13">انسخ الباليت</button>
+      <div class="cl-actions">
+        <button class="cl-prompt" type="button" data-i="13">انسخ البرومبت</button>
+        <button class="cl-copy" type="button" data-i="13">انسخ الباليت</button>
+      </div>
     </div>
   </article>
   <article class="cl-card" data-cat="cool">
@@ -653,7 +705,10 @@
           <i style="background:#8A96A8"></i><b>#8A96A8</b>
         </button>
       </div>
-      <button class="cl-copy" type="button" data-i="14">انسخ الباليت</button>
+      <div class="cl-actions">
+        <button class="cl-prompt" type="button" data-i="14">انسخ البرومبت</button>
+        <button class="cl-copy" type="button" data-i="14">انسخ الباليت</button>
+      </div>
     </div>
   </article>
   <article class="cl-card" data-cat="cool">
@@ -683,7 +738,10 @@
           <i style="background:#C8D2D9"></i><b>#C8D2D9</b>
         </button>
       </div>
-      <button class="cl-copy" type="button" data-i="15">انسخ الباليت</button>
+      <div class="cl-actions">
+        <button class="cl-prompt" type="button" data-i="15">انسخ البرومبت</button>
+        <button class="cl-copy" type="button" data-i="15">انسخ الباليت</button>
+      </div>
     </div>
   </article>
   <article class="cl-card" data-cat="cool">
@@ -713,7 +771,10 @@
           <i style="background:#96A8B4"></i><b>#96A8B4</b>
         </button>
       </div>
-      <button class="cl-copy" type="button" data-i="16">انسخ الباليت</button>
+      <div class="cl-actions">
+        <button class="cl-prompt" type="button" data-i="16">انسخ البرومبت</button>
+        <button class="cl-copy" type="button" data-i="16">انسخ الباليت</button>
+      </div>
     </div>
   </article>
   <article class="cl-card" data-cat="cool">
@@ -743,7 +804,10 @@
           <i style="background:#5C7A8A"></i><b>#5C7A8A</b>
         </button>
       </div>
-      <button class="cl-copy" type="button" data-i="17">انسخ الباليت</button>
+      <div class="cl-actions">
+        <button class="cl-prompt" type="button" data-i="17">انسخ البرومبت</button>
+        <button class="cl-copy" type="button" data-i="17">انسخ الباليت</button>
+      </div>
     </div>
   </article>
   <article class="cl-card" data-cat="cool">
@@ -773,7 +837,10 @@
           <i style="background:#C8D2D9"></i><b>#C8D2D9</b>
         </button>
       </div>
-      <button class="cl-copy" type="button" data-i="18">انسخ الباليت</button>
+      <div class="cl-actions">
+        <button class="cl-prompt" type="button" data-i="18">انسخ البرومبت</button>
+        <button class="cl-copy" type="button" data-i="18">انسخ الباليت</button>
+      </div>
     </div>
   </article>
   <article class="cl-card" data-cat="cool">
@@ -803,7 +870,10 @@
           <i style="background:#5C4A3A"></i><b>#5C4A3A</b>
         </button>
       </div>
-      <button class="cl-copy" type="button" data-i="19">انسخ الباليت</button>
+      <div class="cl-actions">
+        <button class="cl-prompt" type="button" data-i="19">انسخ البرومبت</button>
+        <button class="cl-copy" type="button" data-i="19">انسخ الباليت</button>
+      </div>
     </div>
   </article>
   <article class="cl-card" data-cat="cool">
@@ -833,7 +903,10 @@
           <i style="background:#A8C0B4"></i><b>#A8C0B4</b>
         </button>
       </div>
-      <button class="cl-copy" type="button" data-i="20">انسخ الباليت</button>
+      <div class="cl-actions">
+        <button class="cl-prompt" type="button" data-i="20">انسخ البرومبت</button>
+        <button class="cl-copy" type="button" data-i="20">انسخ الباليت</button>
+      </div>
     </div>
   </article>
   <article class="cl-card" data-cat="cool">
@@ -863,7 +936,10 @@
           <i style="background:#8AA8C8"></i><b>#8AA8C8</b>
         </button>
       </div>
-      <button class="cl-copy" type="button" data-i="21">انسخ الباليت</button>
+      <div class="cl-actions">
+        <button class="cl-prompt" type="button" data-i="21">انسخ البرومبت</button>
+        <button class="cl-copy" type="button" data-i="21">انسخ الباليت</button>
+      </div>
     </div>
   </article>
   <article class="cl-card" data-cat="neon">
@@ -893,7 +969,10 @@
           <i style="background:#3E2E5C"></i><b>#3E2E5C</b>
         </button>
       </div>
-      <button class="cl-copy" type="button" data-i="22">انسخ الباليت</button>
+      <div class="cl-actions">
+        <button class="cl-prompt" type="button" data-i="22">انسخ البرومبت</button>
+        <button class="cl-copy" type="button" data-i="22">انسخ الباليت</button>
+      </div>
     </div>
   </article>
   <article class="cl-card" data-cat="neon">
@@ -923,7 +1002,10 @@
           <i style="background:#E8B48A"></i><b>#E8B48A</b>
         </button>
       </div>
-      <button class="cl-copy" type="button" data-i="23">انسخ الباليت</button>
+      <div class="cl-actions">
+        <button class="cl-prompt" type="button" data-i="23">انسخ البرومبت</button>
+        <button class="cl-copy" type="button" data-i="23">انسخ الباليت</button>
+      </div>
     </div>
   </article>
   <article class="cl-card" data-cat="neon">
@@ -953,7 +1035,10 @@
           <i style="background:#1E2428"></i><b>#1E2428</b>
         </button>
       </div>
-      <button class="cl-copy" type="button" data-i="24">انسخ الباليت</button>
+      <div class="cl-actions">
+        <button class="cl-prompt" type="button" data-i="24">انسخ البرومبت</button>
+        <button class="cl-copy" type="button" data-i="24">انسخ الباليت</button>
+      </div>
     </div>
   </article>
   <article class="cl-card" data-cat="neon">
@@ -983,7 +1068,10 @@
           <i style="background:#C84B5C"></i><b>#C84B5C</b>
         </button>
       </div>
-      <button class="cl-copy" type="button" data-i="25">انسخ الباليت</button>
+      <div class="cl-actions">
+        <button class="cl-prompt" type="button" data-i="25">انسخ البرومبت</button>
+        <button class="cl-copy" type="button" data-i="25">انسخ الباليت</button>
+      </div>
     </div>
   </article>
   <article class="cl-card" data-cat="neon">
@@ -1013,7 +1101,10 @@
           <i style="background:#C8D2D9"></i><b>#C8D2D9</b>
         </button>
       </div>
-      <button class="cl-copy" type="button" data-i="26">انسخ الباليت</button>
+      <div class="cl-actions">
+        <button class="cl-prompt" type="button" data-i="26">انسخ البرومبت</button>
+        <button class="cl-copy" type="button" data-i="26">انسخ الباليت</button>
+      </div>
     </div>
   </article>
   <article class="cl-card" data-cat="neon">
@@ -1043,7 +1134,10 @@
           <i style="background:#4AC8D9"></i><b>#4AC8D9</b>
         </button>
       </div>
-      <button class="cl-copy" type="button" data-i="27">انسخ الباليت</button>
+      <div class="cl-actions">
+        <button class="cl-prompt" type="button" data-i="27">انسخ البرومبت</button>
+        <button class="cl-copy" type="button" data-i="27">انسخ الباليت</button>
+      </div>
     </div>
   </article>
   <article class="cl-card" data-cat="neon">
@@ -1073,7 +1167,10 @@
           <i style="background:#1E2428"></i><b>#1E2428</b>
         </button>
       </div>
-      <button class="cl-copy" type="button" data-i="28">انسخ الباليت</button>
+      <div class="cl-actions">
+        <button class="cl-prompt" type="button" data-i="28">انسخ البرومبت</button>
+        <button class="cl-copy" type="button" data-i="28">انسخ الباليت</button>
+      </div>
     </div>
   </article>
   <article class="cl-card" data-cat="neon">
@@ -1103,7 +1200,10 @@
           <i style="background:#2E2E45"></i><b>#2E2E45</b>
         </button>
       </div>
-      <button class="cl-copy" type="button" data-i="29">انسخ الباليت</button>
+      <div class="cl-actions">
+        <button class="cl-prompt" type="button" data-i="29">انسخ البرومبت</button>
+        <button class="cl-copy" type="button" data-i="29">انسخ الباليت</button>
+      </div>
     </div>
   </article>
   <article class="cl-card" data-cat="neon">
@@ -1133,7 +1233,10 @@
           <i style="background:#F2C845"></i><b>#F2C845</b>
         </button>
       </div>
-      <button class="cl-copy" type="button" data-i="30">انسخ الباليت</button>
+      <div class="cl-actions">
+        <button class="cl-prompt" type="button" data-i="30">انسخ البرومبت</button>
+        <button class="cl-copy" type="button" data-i="30">انسخ الباليت</button>
+      </div>
     </div>
   </article>
   <article class="cl-card" data-cat="neon">
@@ -1163,7 +1266,10 @@
           <i style="background:#8A3A2B"></i><b>#8A3A2B</b>
         </button>
       </div>
-      <button class="cl-copy" type="button" data-i="31">انسخ الباليت</button>
+      <div class="cl-actions">
+        <button class="cl-prompt" type="button" data-i="31">انسخ البرومبت</button>
+        <button class="cl-copy" type="button" data-i="31">انسخ الباليت</button>
+      </div>
     </div>
   </article>
   <article class="cl-card" data-cat="neon">
@@ -1193,7 +1299,10 @@
           <i style="background:#1E2428"></i><b>#1E2428</b>
         </button>
       </div>
-      <button class="cl-copy" type="button" data-i="32">انسخ الباليت</button>
+      <div class="cl-actions">
+        <button class="cl-prompt" type="button" data-i="32">انسخ البرومبت</button>
+        <button class="cl-copy" type="button" data-i="32">انسخ الباليت</button>
+      </div>
     </div>
   </article>
   <article class="cl-card" data-cat="pastel">
@@ -1223,7 +1332,10 @@
           <i style="background:#5C3A45"></i><b>#5C3A45</b>
         </button>
       </div>
-      <button class="cl-copy" type="button" data-i="33">انسخ الباليت</button>
+      <div class="cl-actions">
+        <button class="cl-prompt" type="button" data-i="33">انسخ البرومبت</button>
+        <button class="cl-copy" type="button" data-i="33">انسخ الباليت</button>
+      </div>
     </div>
   </article>
   <article class="cl-card" data-cat="pastel">
@@ -1253,7 +1365,10 @@
           <i style="background:#5C6B4F"></i><b>#5C6B4F</b>
         </button>
       </div>
-      <button class="cl-copy" type="button" data-i="34">انسخ الباليت</button>
+      <div class="cl-actions">
+        <button class="cl-prompt" type="button" data-i="34">انسخ البرومبت</button>
+        <button class="cl-copy" type="button" data-i="34">انسخ الباليت</button>
+      </div>
     </div>
   </article>
   <article class="cl-card" data-cat="pastel">
@@ -1283,7 +1398,10 @@
           <i style="background:#5C5C6B"></i><b>#5C5C6B</b>
         </button>
       </div>
-      <button class="cl-copy" type="button" data-i="35">انسخ الباليت</button>
+      <div class="cl-actions">
+        <button class="cl-prompt" type="button" data-i="35">انسخ البرومبت</button>
+        <button class="cl-copy" type="button" data-i="35">انسخ الباليت</button>
+      </div>
     </div>
   </article>
   <article class="cl-card" data-cat="pastel">
@@ -1313,7 +1431,10 @@
           <i style="background:#8A5A6B"></i><b>#8A5A6B</b>
         </button>
       </div>
-      <button class="cl-copy" type="button" data-i="36">انسخ الباليت</button>
+      <div class="cl-actions">
+        <button class="cl-prompt" type="button" data-i="36">انسخ البرومبت</button>
+        <button class="cl-copy" type="button" data-i="36">انسخ الباليت</button>
+      </div>
     </div>
   </article>
   <article class="cl-card" data-cat="pastel">
@@ -1343,7 +1464,10 @@
           <i style="background:#C84B8A"></i><b>#C84B8A</b>
         </button>
       </div>
-      <button class="cl-copy" type="button" data-i="37">انسخ الباليت</button>
+      <div class="cl-actions">
+        <button class="cl-prompt" type="button" data-i="37">انسخ البرومبت</button>
+        <button class="cl-copy" type="button" data-i="37">انسخ الباليت</button>
+      </div>
     </div>
   </article>
   <article class="cl-card" data-cat="pastel">
@@ -1373,7 +1497,10 @@
           <i style="background:#8AA88A"></i><b>#8AA88A</b>
         </button>
       </div>
-      <button class="cl-copy" type="button" data-i="38">انسخ الباليت</button>
+      <div class="cl-actions">
+        <button class="cl-prompt" type="button" data-i="38">انسخ البرومبت</button>
+        <button class="cl-copy" type="button" data-i="38">انسخ الباليت</button>
+      </div>
     </div>
   </article>
   <article class="cl-card" data-cat="pastel">
@@ -1403,7 +1530,10 @@
           <i style="background:#4A6B8A"></i><b>#4A6B8A</b>
         </button>
       </div>
-      <button class="cl-copy" type="button" data-i="39">انسخ الباليت</button>
+      <div class="cl-actions">
+        <button class="cl-prompt" type="button" data-i="39">انسخ البرومبت</button>
+        <button class="cl-copy" type="button" data-i="39">انسخ الباليت</button>
+      </div>
     </div>
   </article>
   <article class="cl-card" data-cat="pastel">
@@ -1433,7 +1563,10 @@
           <i style="background:#3E3A45"></i><b>#3E3A45</b>
         </button>
       </div>
-      <button class="cl-copy" type="button" data-i="40">انسخ الباليت</button>
+      <div class="cl-actions">
+        <button class="cl-prompt" type="button" data-i="40">انسخ البرومبت</button>
+        <button class="cl-copy" type="button" data-i="40">انسخ الباليت</button>
+      </div>
     </div>
   </article>
   <article class="cl-card" data-cat="pastel">
@@ -1463,7 +1596,10 @@
           <i style="background:#C8735C"></i><b>#C8735C</b>
         </button>
       </div>
-      <button class="cl-copy" type="button" data-i="41">انسخ الباليت</button>
+      <div class="cl-actions">
+        <button class="cl-prompt" type="button" data-i="41">انسخ البرومبت</button>
+        <button class="cl-copy" type="button" data-i="41">انسخ الباليت</button>
+      </div>
     </div>
   </article>
   <article class="cl-card" data-cat="pastel">
@@ -1493,7 +1629,10 @@
           <i style="background:#5C4A3A"></i><b>#5C4A3A</b>
         </button>
       </div>
-      <button class="cl-copy" type="button" data-i="42">انسخ الباليت</button>
+      <div class="cl-actions">
+        <button class="cl-prompt" type="button" data-i="42">انسخ البرومبت</button>
+        <button class="cl-copy" type="button" data-i="42">انسخ الباليت</button>
+      </div>
     </div>
   </article>
   <article class="cl-card" data-cat="pastel">
@@ -1523,7 +1662,10 @@
           <i style="background:#F2DCA8"></i><b>#F2DCA8</b>
         </button>
       </div>
-      <button class="cl-copy" type="button" data-i="43">انسخ الباليت</button>
+      <div class="cl-actions">
+        <button class="cl-prompt" type="button" data-i="43">انسخ البرومبت</button>
+        <button class="cl-copy" type="button" data-i="43">انسخ الباليت</button>
+      </div>
     </div>
   </article>
   <article class="cl-card" data-cat="desert">
@@ -1553,7 +1695,10 @@
           <i style="background:#1E232B"></i><b>#1E232B</b>
         </button>
       </div>
-      <button class="cl-copy" type="button" data-i="44">انسخ الباليت</button>
+      <div class="cl-actions">
+        <button class="cl-prompt" type="button" data-i="44">انسخ البرومبت</button>
+        <button class="cl-copy" type="button" data-i="44">انسخ الباليت</button>
+      </div>
     </div>
   </article>
   <article class="cl-card" data-cat="desert">
@@ -1583,7 +1728,10 @@
           <i style="background:#6B4A2B"></i><b>#6B4A2B</b>
         </button>
       </div>
-      <button class="cl-copy" type="button" data-i="45">انسخ الباليت</button>
+      <div class="cl-actions">
+        <button class="cl-prompt" type="button" data-i="45">انسخ البرومبت</button>
+        <button class="cl-copy" type="button" data-i="45">انسخ الباليت</button>
+      </div>
     </div>
   </article>
   <article class="cl-card" data-cat="desert">
@@ -1613,7 +1761,10 @@
           <i style="background:#F2C879"></i><b>#F2C879</b>
         </button>
       </div>
-      <button class="cl-copy" type="button" data-i="46">انسخ الباليت</button>
+      <div class="cl-actions">
+        <button class="cl-prompt" type="button" data-i="46">انسخ البرومبت</button>
+        <button class="cl-copy" type="button" data-i="46">انسخ الباليت</button>
+      </div>
     </div>
   </article>
   <article class="cl-card" data-cat="desert">
@@ -1643,7 +1794,10 @@
           <i style="background:#8A5A2B"></i><b>#8A5A2B</b>
         </button>
       </div>
-      <button class="cl-copy" type="button" data-i="47">انسخ الباليت</button>
+      <div class="cl-actions">
+        <button class="cl-prompt" type="button" data-i="47">انسخ البرومبت</button>
+        <button class="cl-copy" type="button" data-i="47">انسخ الباليت</button>
+      </div>
     </div>
   </article>
   <article class="cl-card" data-cat="desert">
@@ -1673,7 +1827,10 @@
           <i style="background:#2E2822"></i><b>#2E2822</b>
         </button>
       </div>
-      <button class="cl-copy" type="button" data-i="48">انسخ الباليت</button>
+      <div class="cl-actions">
+        <button class="cl-prompt" type="button" data-i="48">انسخ البرومبت</button>
+        <button class="cl-copy" type="button" data-i="48">انسخ الباليت</button>
+      </div>
     </div>
   </article>
   <article class="cl-card" data-cat="desert">
@@ -1703,7 +1860,10 @@
           <i style="background:#8A4B2A"></i><b>#8A4B2A</b>
         </button>
       </div>
-      <button class="cl-copy" type="button" data-i="49">انسخ الباليت</button>
+      <div class="cl-actions">
+        <button class="cl-prompt" type="button" data-i="49">انسخ البرومبت</button>
+        <button class="cl-copy" type="button" data-i="49">انسخ الباليت</button>
+      </div>
     </div>
   </article>
   <article class="cl-card" data-cat="desert">
@@ -1733,7 +1893,10 @@
           <i style="background:#3E3438"></i><b>#3E3438</b>
         </button>
       </div>
-      <button class="cl-copy" type="button" data-i="50">انسخ الباليت</button>
+      <div class="cl-actions">
+        <button class="cl-prompt" type="button" data-i="50">انسخ البرومبت</button>
+        <button class="cl-copy" type="button" data-i="50">انسخ الباليت</button>
+      </div>
     </div>
   </article>
   <article class="cl-card" data-cat="desert">
@@ -1763,7 +1926,10 @@
           <i style="background:#D9C8A8"></i><b>#D9C8A8</b>
         </button>
       </div>
-      <button class="cl-copy" type="button" data-i="51">انسخ الباليت</button>
+      <div class="cl-actions">
+        <button class="cl-prompt" type="button" data-i="51">انسخ البرومبت</button>
+        <button class="cl-copy" type="button" data-i="51">انسخ الباليت</button>
+      </div>
     </div>
   </article>
   <article class="cl-card" data-cat="desert">
@@ -1793,7 +1959,10 @@
           <i style="background:#4A5C6B"></i><b>#4A5C6B</b>
         </button>
       </div>
-      <button class="cl-copy" type="button" data-i="52">انسخ الباليت</button>
+      <div class="cl-actions">
+        <button class="cl-prompt" type="button" data-i="52">انسخ البرومبت</button>
+        <button class="cl-copy" type="button" data-i="52">انسخ الباليت</button>
+      </div>
     </div>
   </article>
   <article class="cl-card" data-cat="desert">
@@ -1823,7 +1992,10 @@
           <i style="background:#2E2822"></i><b>#2E2822</b>
         </button>
       </div>
-      <button class="cl-copy" type="button" data-i="53">انسخ الباليت</button>
+      <div class="cl-actions">
+        <button class="cl-prompt" type="button" data-i="53">انسخ البرومبت</button>
+        <button class="cl-copy" type="button" data-i="53">انسخ الباليت</button>
+      </div>
     </div>
   </article>
   <article class="cl-card" data-cat="desert">
@@ -1853,7 +2025,10 @@
           <i style="background:#3E3A2E"></i><b>#3E3A2E</b>
         </button>
       </div>
-      <button class="cl-copy" type="button" data-i="54">انسخ الباليت</button>
+      <div class="cl-actions">
+        <button class="cl-prompt" type="button" data-i="54">انسخ البرومبت</button>
+        <button class="cl-copy" type="button" data-i="54">انسخ الباليت</button>
+      </div>
     </div>
   </article>
   <article class="cl-card" data-cat="dark">
@@ -1883,7 +2058,10 @@
           <i style="background:#5C5C6B"></i><b>#5C5C6B</b>
         </button>
       </div>
-      <button class="cl-copy" type="button" data-i="55">انسخ الباليت</button>
+      <div class="cl-actions">
+        <button class="cl-prompt" type="button" data-i="55">انسخ البرومبت</button>
+        <button class="cl-copy" type="button" data-i="55">انسخ الباليت</button>
+      </div>
     </div>
   </article>
   <article class="cl-card" data-cat="dark">
@@ -1913,7 +2091,10 @@
           <i style="background:#2E3438"></i><b>#2E3438</b>
         </button>
       </div>
-      <button class="cl-copy" type="button" data-i="56">انسخ الباليت</button>
+      <div class="cl-actions">
+        <button class="cl-prompt" type="button" data-i="56">انسخ البرومبت</button>
+        <button class="cl-copy" type="button" data-i="56">انسخ الباليت</button>
+      </div>
     </div>
   </article>
   <article class="cl-card" data-cat="dark">
@@ -1943,7 +2124,10 @@
           <i style="background:#8A5A6B"></i><b>#8A5A6B</b>
         </button>
       </div>
-      <button class="cl-copy" type="button" data-i="57">انسخ الباليت</button>
+      <div class="cl-actions">
+        <button class="cl-prompt" type="button" data-i="57">انسخ البرومبت</button>
+        <button class="cl-copy" type="button" data-i="57">انسخ الباليت</button>
+      </div>
     </div>
   </article>
   <article class="cl-card" data-cat="dark">
@@ -1973,7 +2157,10 @@
           <i style="background:#C8B48A"></i><b>#C8B48A</b>
         </button>
       </div>
-      <button class="cl-copy" type="button" data-i="58">انسخ الباليت</button>
+      <div class="cl-actions">
+        <button class="cl-prompt" type="button" data-i="58">انسخ البرومبت</button>
+        <button class="cl-copy" type="button" data-i="58">انسخ الباليت</button>
+      </div>
     </div>
   </article>
   <article class="cl-card" data-cat="dark">
@@ -2003,7 +2190,10 @@
           <i style="background:#D9B48A"></i><b>#D9B48A</b>
         </button>
       </div>
-      <button class="cl-copy" type="button" data-i="59">انسخ الباليت</button>
+      <div class="cl-actions">
+        <button class="cl-prompt" type="button" data-i="59">انسخ البرومبت</button>
+        <button class="cl-copy" type="button" data-i="59">انسخ الباليت</button>
+      </div>
     </div>
   </article>
   <article class="cl-card" data-cat="dark">
@@ -2033,7 +2223,10 @@
           <i style="background:#5C6B5C"></i><b>#5C6B5C</b>
         </button>
       </div>
-      <button class="cl-copy" type="button" data-i="60">انسخ الباليت</button>
+      <div class="cl-actions">
+        <button class="cl-prompt" type="button" data-i="60">انسخ البرومبت</button>
+        <button class="cl-copy" type="button" data-i="60">انسخ الباليت</button>
+      </div>
     </div>
   </article>
   <article class="cl-card" data-cat="dark">
@@ -2063,7 +2256,10 @@
           <i style="background:#C8D2C8"></i><b>#C8D2C8</b>
         </button>
       </div>
-      <button class="cl-copy" type="button" data-i="61">انسخ الباليت</button>
+      <div class="cl-actions">
+        <button class="cl-prompt" type="button" data-i="61">انسخ البرومبت</button>
+        <button class="cl-copy" type="button" data-i="61">انسخ الباليت</button>
+      </div>
     </div>
   </article>
   <article class="cl-card" data-cat="dark">
@@ -2093,7 +2289,10 @@
           <i style="background:#5C6B5C"></i><b>#5C6B5C</b>
         </button>
       </div>
-      <button class="cl-copy" type="button" data-i="62">انسخ الباليت</button>
+      <div class="cl-actions">
+        <button class="cl-prompt" type="button" data-i="62">انسخ البرومبت</button>
+        <button class="cl-copy" type="button" data-i="62">انسخ الباليت</button>
+      </div>
     </div>
   </article>
   <article class="cl-card" data-cat="dark">
@@ -2123,7 +2322,10 @@
           <i style="background:#3E3438"></i><b>#3E3438</b>
         </button>
       </div>
-      <button class="cl-copy" type="button" data-i="63">انسخ الباليت</button>
+      <div class="cl-actions">
+        <button class="cl-prompt" type="button" data-i="63">انسخ البرومبت</button>
+        <button class="cl-copy" type="button" data-i="63">انسخ الباليت</button>
+      </div>
     </div>
   </article>
   <article class="cl-card" data-cat="dark">
@@ -2153,7 +2355,10 @@
           <i style="background:#1E2428"></i><b>#1E2428</b>
         </button>
       </div>
-      <button class="cl-copy" type="button" data-i="64">انسخ الباليت</button>
+      <div class="cl-actions">
+        <button class="cl-prompt" type="button" data-i="64">انسخ البرومبت</button>
+        <button class="cl-copy" type="button" data-i="64">انسخ الباليت</button>
+      </div>
     </div>
   </article>
   <article class="cl-card" data-cat="dark">
@@ -2183,7 +2388,10 @@
           <i style="background:#5C5C6B"></i><b>#5C5C6B</b>
         </button>
       </div>
-      <button class="cl-copy" type="button" data-i="65">انسخ الباليت</button>
+      <div class="cl-actions">
+        <button class="cl-prompt" type="button" data-i="65">انسخ البرومبت</button>
+        <button class="cl-copy" type="button" data-i="65">انسخ الباليت</button>
+      </div>
     </div>
   </article>
   <article class="cl-card" data-cat="green">
@@ -2213,7 +2421,10 @@
           <i style="background:#C8D9C8"></i><b>#C8D9C8</b>
         </button>
       </div>
-      <button class="cl-copy" type="button" data-i="66">انسخ الباليت</button>
+      <div class="cl-actions">
+        <button class="cl-prompt" type="button" data-i="66">انسخ البرومبت</button>
+        <button class="cl-copy" type="button" data-i="66">انسخ الباليت</button>
+      </div>
     </div>
   </article>
   <article class="cl-card" data-cat="green">
@@ -2243,7 +2454,10 @@
           <i style="background:#8AC8B4"></i><b>#8AC8B4</b>
         </button>
       </div>
-      <button class="cl-copy" type="button" data-i="67">انسخ الباليت</button>
+      <div class="cl-actions">
+        <button class="cl-prompt" type="button" data-i="67">انسخ البرومبت</button>
+        <button class="cl-copy" type="button" data-i="67">انسخ الباليت</button>
+      </div>
     </div>
   </article>
   <article class="cl-card" data-cat="green">
@@ -2273,7 +2487,10 @@
           <i style="background:#8AE8B4"></i><b>#8AE8B4</b>
         </button>
       </div>
-      <button class="cl-copy" type="button" data-i="68">انسخ الباليت</button>
+      <div class="cl-actions">
+        <button class="cl-prompt" type="button" data-i="68">انسخ البرومبت</button>
+        <button class="cl-copy" type="button" data-i="68">انسخ الباليت</button>
+      </div>
     </div>
   </article>
   <article class="cl-card" data-cat="green">
@@ -2303,7 +2520,10 @@
           <i style="background:#D9C8A8"></i><b>#D9C8A8</b>
         </button>
       </div>
-      <button class="cl-copy" type="button" data-i="69">انسخ الباليت</button>
+      <div class="cl-actions">
+        <button class="cl-prompt" type="button" data-i="69">انسخ البرومبت</button>
+        <button class="cl-copy" type="button" data-i="69">انسخ الباليت</button>
+      </div>
     </div>
   </article>
   <article class="cl-card" data-cat="green">
@@ -2333,7 +2553,10 @@
           <i style="background:#5C4A6B"></i><b>#5C4A6B</b>
         </button>
       </div>
-      <button class="cl-copy" type="button" data-i="70">انسخ الباليت</button>
+      <div class="cl-actions">
+        <button class="cl-prompt" type="button" data-i="70">انسخ البرومبت</button>
+        <button class="cl-copy" type="button" data-i="70">انسخ الباليت</button>
+      </div>
     </div>
   </article>
   <article class="cl-card" data-cat="green">
@@ -2363,7 +2586,10 @@
           <i style="background:#E8DCA8"></i><b>#E8DCA8</b>
         </button>
       </div>
-      <button class="cl-copy" type="button" data-i="71">انسخ الباليت</button>
+      <div class="cl-actions">
+        <button class="cl-prompt" type="button" data-i="71">انسخ البرومبت</button>
+        <button class="cl-copy" type="button" data-i="71">انسخ الباليت</button>
+      </div>
     </div>
   </article>
   <article class="cl-card" data-cat="green">
@@ -2393,7 +2619,10 @@
           <i style="background:#5C7A45"></i><b>#5C7A45</b>
         </button>
       </div>
-      <button class="cl-copy" type="button" data-i="72">انسخ الباليت</button>
+      <div class="cl-actions">
+        <button class="cl-prompt" type="button" data-i="72">انسخ البرومبت</button>
+        <button class="cl-copy" type="button" data-i="72">انسخ الباليت</button>
+      </div>
     </div>
   </article>
   <article class="cl-card" data-cat="green">
@@ -2423,7 +2652,10 @@
           <i style="background:#3E4A38"></i><b>#3E4A38</b>
         </button>
       </div>
-      <button class="cl-copy" type="button" data-i="73">انسخ الباليت</button>
+      <div class="cl-actions">
+        <button class="cl-prompt" type="button" data-i="73">انسخ البرومبت</button>
+        <button class="cl-copy" type="button" data-i="73">انسخ الباليت</button>
+      </div>
     </div>
   </article>
   <article class="cl-card" data-cat="green">
@@ -2453,7 +2685,10 @@
           <i style="background:#D9E4E8"></i><b>#D9E4E8</b>
         </button>
       </div>
-      <button class="cl-copy" type="button" data-i="74">انسخ الباليت</button>
+      <div class="cl-actions">
+        <button class="cl-prompt" type="button" data-i="74">انسخ البرومبت</button>
+        <button class="cl-copy" type="button" data-i="74">انسخ الباليت</button>
+      </div>
     </div>
   </article>
   <article class="cl-card" data-cat="green">
@@ -2483,7 +2718,10 @@
           <i style="background:#D9C8A8"></i><b>#D9C8A8</b>
         </button>
       </div>
-      <button class="cl-copy" type="button" data-i="75">انسخ الباليت</button>
+      <div class="cl-actions">
+        <button class="cl-prompt" type="button" data-i="75">انسخ البرومبت</button>
+        <button class="cl-copy" type="button" data-i="75">انسخ الباليت</button>
+      </div>
     </div>
   </article>
   <article class="cl-card" data-cat="green">
@@ -2513,7 +2751,10 @@
           <i style="background:#C8D2C8"></i><b>#C8D2C8</b>
         </button>
       </div>
-      <button class="cl-copy" type="button" data-i="76">انسخ الباليت</button>
+      <div class="cl-actions">
+        <button class="cl-prompt" type="button" data-i="76">انسخ البرومبت</button>
+        <button class="cl-copy" type="button" data-i="76">انسخ الباليت</button>
+      </div>
     </div>
   </article>
   <article class="cl-card" data-cat="retro">
@@ -2543,7 +2784,10 @@
           <i style="background:#E8DCC9"></i><b>#E8DCC9</b>
         </button>
       </div>
-      <button class="cl-copy" type="button" data-i="77">انسخ الباليت</button>
+      <div class="cl-actions">
+        <button class="cl-prompt" type="button" data-i="77">انسخ البرومبت</button>
+        <button class="cl-copy" type="button" data-i="77">انسخ الباليت</button>
+      </div>
     </div>
   </article>
   <article class="cl-card" data-cat="retro">
@@ -2573,7 +2817,10 @@
           <i style="background:#8A3A2B"></i><b>#8A3A2B</b>
         </button>
       </div>
-      <button class="cl-copy" type="button" data-i="78">انسخ الباليت</button>
+      <div class="cl-actions">
+        <button class="cl-prompt" type="button" data-i="78">انسخ البرومبت</button>
+        <button class="cl-copy" type="button" data-i="78">انسخ الباليت</button>
+      </div>
     </div>
   </article>
   <article class="cl-card" data-cat="retro">
@@ -2603,7 +2850,10 @@
           <i style="background:#F2C845"></i><b>#F2C845</b>
         </button>
       </div>
-      <button class="cl-copy" type="button" data-i="79">انسخ الباليت</button>
+      <div class="cl-actions">
+        <button class="cl-prompt" type="button" data-i="79">انسخ البرومبت</button>
+        <button class="cl-copy" type="button" data-i="79">انسخ الباليت</button>
+      </div>
     </div>
   </article>
   <article class="cl-card" data-cat="retro">
@@ -2633,7 +2883,10 @@
           <i style="background:#1E1E1E"></i><b>#1E1E1E</b>
         </button>
       </div>
-      <button class="cl-copy" type="button" data-i="80">انسخ الباليت</button>
+      <div class="cl-actions">
+        <button class="cl-prompt" type="button" data-i="80">انسخ البرومبت</button>
+        <button class="cl-copy" type="button" data-i="80">انسخ الباليت</button>
+      </div>
     </div>
   </article>
   <article class="cl-card" data-cat="retro">
@@ -2663,7 +2916,10 @@
           <i style="background:#8A9A8A"></i><b>#8A9A8A</b>
         </button>
       </div>
-      <button class="cl-copy" type="button" data-i="81">انسخ الباليت</button>
+      <div class="cl-actions">
+        <button class="cl-prompt" type="button" data-i="81">انسخ البرومبت</button>
+        <button class="cl-copy" type="button" data-i="81">انسخ الباليت</button>
+      </div>
     </div>
   </article>
   <article class="cl-card" data-cat="retro">
@@ -2693,7 +2949,10 @@
           <i style="background:#2E3438"></i><b>#2E3438</b>
         </button>
       </div>
-      <button class="cl-copy" type="button" data-i="82">انسخ الباليت</button>
+      <div class="cl-actions">
+        <button class="cl-prompt" type="button" data-i="82">انسخ البرومبت</button>
+        <button class="cl-copy" type="button" data-i="82">انسخ الباليت</button>
+      </div>
     </div>
   </article>
   <article class="cl-card" data-cat="retro">
@@ -2723,7 +2982,10 @@
           <i style="background:#D9C8A8"></i><b>#D9C8A8</b>
         </button>
       </div>
-      <button class="cl-copy" type="button" data-i="83">انسخ الباليت</button>
+      <div class="cl-actions">
+        <button class="cl-prompt" type="button" data-i="83">انسخ البرومبت</button>
+        <button class="cl-copy" type="button" data-i="83">انسخ الباليت</button>
+      </div>
     </div>
   </article>
   <article class="cl-card" data-cat="retro">
@@ -2753,7 +3015,10 @@
           <i style="background:#D9B48A"></i><b>#D9B48A</b>
         </button>
       </div>
-      <button class="cl-copy" type="button" data-i="84">انسخ الباليت</button>
+      <div class="cl-actions">
+        <button class="cl-prompt" type="button" data-i="84">انسخ البرومبت</button>
+        <button class="cl-copy" type="button" data-i="84">انسخ الباليت</button>
+      </div>
     </div>
   </article>
   <article class="cl-card" data-cat="retro">
@@ -2783,7 +3048,10 @@
           <i style="background:#C8735C"></i><b>#C8735C</b>
         </button>
       </div>
-      <button class="cl-copy" type="button" data-i="85">انسخ الباليت</button>
+      <div class="cl-actions">
+        <button class="cl-prompt" type="button" data-i="85">انسخ البرومبت</button>
+        <button class="cl-copy" type="button" data-i="85">انسخ الباليت</button>
+      </div>
     </div>
   </article>
   <article class="cl-card" data-cat="retro">
@@ -2813,7 +3081,10 @@
           <i style="background:#A8A8B4"></i><b>#A8A8B4</b>
         </button>
       </div>
-      <button class="cl-copy" type="button" data-i="86">انسخ الباليت</button>
+      <div class="cl-actions">
+        <button class="cl-prompt" type="button" data-i="86">انسخ البرومبت</button>
+        <button class="cl-copy" type="button" data-i="86">انسخ الباليت</button>
+      </div>
     </div>
   </article>
   <article class="cl-card" data-cat="retro">
@@ -2843,7 +3114,10 @@
           <i style="background:#8A5AA8"></i><b>#8A5AA8</b>
         </button>
       </div>
-      <button class="cl-copy" type="button" data-i="87">انسخ الباليت</button>
+      <div class="cl-actions">
+        <button class="cl-prompt" type="button" data-i="87">انسخ البرومبت</button>
+        <button class="cl-copy" type="button" data-i="87">انسخ الباليت</button>
+      </div>
     </div>
   </article>
   <article class="cl-card" data-cat="warm">
@@ -2873,7 +3147,10 @@
           <i style="background:#E8D8B8"></i><b>#E8D8B8</b>
         </button>
       </div>
-      <button class="cl-copy" type="button" data-i="88">انسخ الباليت</button>
+      <div class="cl-actions">
+        <button class="cl-prompt" type="button" data-i="88">انسخ البرومبت</button>
+        <button class="cl-copy" type="button" data-i="88">انسخ الباليت</button>
+      </div>
     </div>
   </article>
   <article class="cl-card" data-cat="retro">
@@ -2903,7 +3180,10 @@
           <i style="background:#F2F2F2"></i><b>#F2F2F2</b>
         </button>
       </div>
-      <button class="cl-copy" type="button" data-i="89">انسخ الباليت</button>
+      <div class="cl-actions">
+        <button class="cl-prompt" type="button" data-i="89">انسخ البرومبت</button>
+        <button class="cl-copy" type="button" data-i="89">انسخ الباليت</button>
+      </div>
     </div>
   </article>
   <article class="cl-card" data-cat="neon">
@@ -2933,7 +3213,10 @@
           <i style="background:#8AD2F8"></i><b>#8AD2F8</b>
         </button>
       </div>
-      <button class="cl-copy" type="button" data-i="90">انسخ الباليت</button>
+      <div class="cl-actions">
+        <button class="cl-prompt" type="button" data-i="90">انسخ البرومبت</button>
+        <button class="cl-copy" type="button" data-i="90">انسخ الباليت</button>
+      </div>
     </div>
   </article>
   <article class="cl-card" data-cat="pastel">
@@ -2963,7 +3246,10 @@
           <i style="background:#C8354A"></i><b>#C8354A</b>
         </button>
       </div>
-      <button class="cl-copy" type="button" data-i="91">انسخ الباليت</button>
+      <div class="cl-actions">
+        <button class="cl-prompt" type="button" data-i="91">انسخ البرومبت</button>
+        <button class="cl-copy" type="button" data-i="91">انسخ الباليت</button>
+      </div>
     </div>
   </article>
   <article class="cl-card" data-cat="pastel">
@@ -2993,7 +3279,10 @@
           <i style="background:#C8A05A"></i><b>#C8A05A</b>
         </button>
       </div>
-      <button class="cl-copy" type="button" data-i="92">انسخ الباليت</button>
+      <div class="cl-actions">
+        <button class="cl-prompt" type="button" data-i="92">انسخ البرومبت</button>
+        <button class="cl-copy" type="button" data-i="92">انسخ الباليت</button>
+      </div>
     </div>
   </article>
   <article class="cl-card" data-cat="cool">
@@ -3023,7 +3312,10 @@
           <i style="background:#D9E4F2"></i><b>#D9E4F2</b>
         </button>
       </div>
-      <button class="cl-copy" type="button" data-i="93">انسخ الباليت</button>
+      <div class="cl-actions">
+        <button class="cl-prompt" type="button" data-i="93">انسخ البرومبت</button>
+        <button class="cl-copy" type="button" data-i="93">انسخ الباليت</button>
+      </div>
     </div>
   </article>
   <article class="cl-card" data-cat="dark">
@@ -3053,7 +3345,10 @@
           <i style="background:#8A2E2E"></i><b>#8A2E2E</b>
         </button>
       </div>
-      <button class="cl-copy" type="button" data-i="94">انسخ الباليت</button>
+      <div class="cl-actions">
+        <button class="cl-prompt" type="button" data-i="94">انسخ البرومبت</button>
+        <button class="cl-copy" type="button" data-i="94">انسخ الباليت</button>
+      </div>
     </div>
   </article>
   <article class="cl-card" data-cat="dark">
@@ -3083,7 +3378,10 @@
           <i style="background:#F2ECC8"></i><b>#F2ECC8</b>
         </button>
       </div>
-      <button class="cl-copy" type="button" data-i="95">انسخ الباليت</button>
+      <div class="cl-actions">
+        <button class="cl-prompt" type="button" data-i="95">انسخ البرومبت</button>
+        <button class="cl-copy" type="button" data-i="95">انسخ الباليت</button>
+      </div>
     </div>
   </article>
   <article class="cl-card" data-cat="green">
@@ -3113,7 +3411,10 @@
           <i style="background:#5C3A2B"></i><b>#5C3A2B</b>
         </button>
       </div>
-      <button class="cl-copy" type="button" data-i="96">انسخ الباليت</button>
+      <div class="cl-actions">
+        <button class="cl-prompt" type="button" data-i="96">انسخ البرومبت</button>
+        <button class="cl-copy" type="button" data-i="96">انسخ الباليت</button>
+      </div>
     </div>
   </article>
   <article class="cl-card" data-cat="desert">
@@ -3143,7 +3444,10 @@
           <i style="background:#12141E"></i><b>#12141E</b>
         </button>
       </div>
-      <button class="cl-copy" type="button" data-i="97">انسخ الباليت</button>
+      <div class="cl-actions">
+        <button class="cl-prompt" type="button" data-i="97">انسخ البرومبت</button>
+        <button class="cl-copy" type="button" data-i="97">انسخ الباليت</button>
+      </div>
     </div>
   </article>
   <article class="cl-card" data-cat="retro">
@@ -3173,7 +3477,10 @@
           <i style="background:#C8354A"></i><b>#C8354A</b>
         </button>
       </div>
-      <button class="cl-copy" type="button" data-i="98">انسخ الباليت</button>
+      <div class="cl-actions">
+        <button class="cl-prompt" type="button" data-i="98">انسخ البرومبت</button>
+        <button class="cl-copy" type="button" data-i="98">انسخ الباليت</button>
+      </div>
     </div>
   </article>
   <article class="cl-card" data-cat="dark">
@@ -3203,7 +3510,10 @@
           <i style="background:#C87A2B"></i><b>#C87A2B</b>
         </button>
       </div>
-      <button class="cl-copy" type="button" data-i="99">انسخ الباليت</button>
+      <div class="cl-actions">
+        <button class="cl-prompt" type="button" data-i="99">انسخ البرومبت</button>
+        <button class="cl-copy" type="button" data-i="99">انسخ الباليت</button>
+      </div>
     </div>
   </article>
   <article class="cl-card" data-cat="dark">
@@ -3233,7 +3543,10 @@
           <i style="background:#C8B48A"></i><b>#C8B48A</b>
         </button>
       </div>
-      <button class="cl-copy" type="button" data-i="100">انسخ الباليت</button>
+      <div class="cl-actions">
+        <button class="cl-prompt" type="button" data-i="100">انسخ البرومبت</button>
+        <button class="cl-copy" type="button" data-i="100">انسخ الباليت</button>
+      </div>
     </div>
   </article>
   <article class="cl-card" data-cat="cool">
@@ -3263,7 +3576,10 @@
           <i style="background:#0F1214"></i><b>#0F1214</b>
         </button>
       </div>
-      <button class="cl-copy" type="button" data-i="101">انسخ الباليت</button>
+      <div class="cl-actions">
+        <button class="cl-prompt" type="button" data-i="101">انسخ البرومبت</button>
+        <button class="cl-copy" type="button" data-i="101">انسخ الباليت</button>
+      </div>
     </div>
   </article>
   <article class="cl-card" data-cat="retro">
@@ -3293,7 +3609,10 @@
           <i style="background:#D9CDB8"></i><b>#D9CDB8</b>
         </button>
       </div>
-      <button class="cl-copy" type="button" data-i="102">انسخ الباليت</button>
+      <div class="cl-actions">
+        <button class="cl-prompt" type="button" data-i="102">انسخ البرومبت</button>
+        <button class="cl-copy" type="button" data-i="102">انسخ الباليت</button>
+      </div>
     </div>
   </article>
   <article class="cl-card" data-cat="warm">
@@ -3323,7 +3642,10 @@
           <i style="background:#3E3A45"></i><b>#3E3A45</b>
         </button>
       </div>
-      <button class="cl-copy" type="button" data-i="103">انسخ الباليت</button>
+      <div class="cl-actions">
+        <button class="cl-prompt" type="button" data-i="103">انسخ البرومبت</button>
+        <button class="cl-copy" type="button" data-i="103">انسخ الباليت</button>
+      </div>
     </div>
   </article>
   <article class="cl-card" data-cat="desert">
@@ -3353,7 +3675,10 @@
           <i style="background:#1E1A14"></i><b>#1E1A14</b>
         </button>
       </div>
-      <button class="cl-copy" type="button" data-i="104">انسخ الباليت</button>
+      <div class="cl-actions">
+        <button class="cl-prompt" type="button" data-i="104">انسخ البرومبت</button>
+        <button class="cl-copy" type="button" data-i="104">انسخ الباليت</button>
+      </div>
     </div>
   </article>
   <article class="cl-card" data-cat="dark">
@@ -3383,7 +3708,10 @@
           <i style="background:#E8C88A"></i><b>#E8C88A</b>
         </button>
       </div>
-      <button class="cl-copy" type="button" data-i="105">انسخ الباليت</button>
+      <div class="cl-actions">
+        <button class="cl-prompt" type="button" data-i="105">انسخ البرومبت</button>
+        <button class="cl-copy" type="button" data-i="105">انسخ الباليت</button>
+      </div>
     </div>
   </article>
   <article class="cl-card" data-cat="green">
@@ -3413,7 +3741,10 @@
           <i style="background:#D9D2C0"></i><b>#D9D2C0</b>
         </button>
       </div>
-      <button class="cl-copy" type="button" data-i="106">انسخ الباليت</button>
+      <div class="cl-actions">
+        <button class="cl-prompt" type="button" data-i="106">انسخ البرومبت</button>
+        <button class="cl-copy" type="button" data-i="106">انسخ الباليت</button>
+      </div>
     </div>
   </article>
   <article class="cl-card" data-cat="series">
@@ -3443,7 +3774,10 @@
           <i style="background:#1E1A14"></i><b>#1E1A14</b>
         </button>
       </div>
-      <button class="cl-copy" type="button" data-i="107">انسخ الباليت</button>
+      <div class="cl-actions">
+        <button class="cl-prompt" type="button" data-i="107">انسخ البرومبت</button>
+        <button class="cl-copy" type="button" data-i="107">انسخ الباليت</button>
+      </div>
     </div>
   </article>
   <article class="cl-card" data-cat="series">
@@ -3473,7 +3807,10 @@
           <i style="background:#1E2228"></i><b>#1E2228</b>
         </button>
       </div>
-      <button class="cl-copy" type="button" data-i="108">انسخ الباليت</button>
+      <div class="cl-actions">
+        <button class="cl-prompt" type="button" data-i="108">انسخ البرومبت</button>
+        <button class="cl-copy" type="button" data-i="108">انسخ الباليت</button>
+      </div>
     </div>
   </article>
   <article class="cl-card" data-cat="series">
@@ -3503,7 +3840,10 @@
           <i style="background:#E8732B"></i><b>#E8732B</b>
         </button>
       </div>
-      <button class="cl-copy" type="button" data-i="109">انسخ الباليت</button>
+      <div class="cl-actions">
+        <button class="cl-prompt" type="button" data-i="109">انسخ البرومبت</button>
+        <button class="cl-copy" type="button" data-i="109">انسخ الباليت</button>
+      </div>
     </div>
   </article>
   <article class="cl-card" data-cat="series">
@@ -3533,7 +3873,10 @@
           <i style="background:#C8B48A"></i><b>#C8B48A</b>
         </button>
       </div>
-      <button class="cl-copy" type="button" data-i="110">انسخ الباليت</button>
+      <div class="cl-actions">
+        <button class="cl-prompt" type="button" data-i="110">انسخ البرومبت</button>
+        <button class="cl-copy" type="button" data-i="110">انسخ الباليت</button>
+      </div>
     </div>
   </article>
   <article class="cl-card" data-cat="series">
@@ -3563,7 +3906,10 @@
           <i style="background:#8A2E22"></i><b>#8A2E22</b>
         </button>
       </div>
-      <button class="cl-copy" type="button" data-i="111">انسخ الباليت</button>
+      <div class="cl-actions">
+        <button class="cl-prompt" type="button" data-i="111">انسخ البرومبت</button>
+        <button class="cl-copy" type="button" data-i="111">انسخ الباليت</button>
+      </div>
     </div>
   </article>
   <article class="cl-card" data-cat="series">
@@ -3593,7 +3939,10 @@
           <i style="background:#4A6B5C"></i><b>#4A6B5C</b>
         </button>
       </div>
-      <button class="cl-copy" type="button" data-i="112">انسخ الباليت</button>
+      <div class="cl-actions">
+        <button class="cl-prompt" type="button" data-i="112">انسخ البرومبت</button>
+        <button class="cl-copy" type="button" data-i="112">انسخ الباليت</button>
+      </div>
     </div>
   </article>
   <article class="cl-card" data-cat="series">
@@ -3623,7 +3972,10 @@
           <i style="background:#C8955A"></i><b>#C8955A</b>
         </button>
       </div>
-      <button class="cl-copy" type="button" data-i="113">انسخ الباليت</button>
+      <div class="cl-actions">
+        <button class="cl-prompt" type="button" data-i="113">انسخ البرومبت</button>
+        <button class="cl-copy" type="button" data-i="113">انسخ الباليت</button>
+      </div>
     </div>
   </article>
   <article class="cl-card" data-cat="series">
@@ -3653,7 +4005,10 @@
           <i style="background:#3E4A55"></i><b>#3E4A55</b>
         </button>
       </div>
-      <button class="cl-copy" type="button" data-i="114">انسخ الباليت</button>
+      <div class="cl-actions">
+        <button class="cl-prompt" type="button" data-i="114">انسخ البرومبت</button>
+        <button class="cl-copy" type="button" data-i="114">انسخ الباليت</button>
+      </div>
     </div>
   </article>
   <article class="cl-card" data-cat="series">
@@ -3683,7 +4038,10 @@
           <i style="background:#C87A2B"></i><b>#C87A2B</b>
         </button>
       </div>
-      <button class="cl-copy" type="button" data-i="115">انسخ الباليت</button>
+      <div class="cl-actions">
+        <button class="cl-prompt" type="button" data-i="115">انسخ البرومبت</button>
+        <button class="cl-copy" type="button" data-i="115">انسخ الباليت</button>
+      </div>
     </div>
   </article>
   <article class="cl-card" data-cat="series">
@@ -3713,7 +4071,10 @@
           <i style="background:#12141A"></i><b>#12141A</b>
         </button>
       </div>
-      <button class="cl-copy" type="button" data-i="116">انسخ الباليت</button>
+      <div class="cl-actions">
+        <button class="cl-prompt" type="button" data-i="116">انسخ البرومبت</button>
+        <button class="cl-copy" type="button" data-i="116">انسخ الباليت</button>
+      </div>
     </div>
   </article>
   <article class="cl-card" data-cat="series">
@@ -3743,7 +4104,10 @@
           <i style="background:#A8967A"></i><b>#A8967A</b>
         </button>
       </div>
-      <button class="cl-copy" type="button" data-i="117">انسخ الباليت</button>
+      <div class="cl-actions">
+        <button class="cl-prompt" type="button" data-i="117">انسخ البرومبت</button>
+        <button class="cl-copy" type="button" data-i="117">انسخ الباليت</button>
+      </div>
     </div>
   </article>
   <article class="cl-card" data-cat="series">
@@ -3773,7 +4137,10 @@
           <i style="background:#5C6B7A"></i><b>#5C6B7A</b>
         </button>
       </div>
-      <button class="cl-copy" type="button" data-i="118">انسخ الباليت</button>
+      <div class="cl-actions">
+        <button class="cl-prompt" type="button" data-i="118">انسخ البرومبت</button>
+        <button class="cl-copy" type="button" data-i="118">انسخ الباليت</button>
+      </div>
     </div>
   </article>
   <article class="cl-card" data-cat="series">
@@ -3803,7 +4170,10 @@
           <i style="background:#4A3A2E"></i><b>#4A3A2E</b>
         </button>
       </div>
-      <button class="cl-copy" type="button" data-i="119">انسخ الباليت</button>
+      <div class="cl-actions">
+        <button class="cl-prompt" type="button" data-i="119">انسخ البرومبت</button>
+        <button class="cl-copy" type="button" data-i="119">انسخ الباليت</button>
+      </div>
     </div>
   </article></div>
 

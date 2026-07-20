@@ -28,7 +28,7 @@ const TL = {
     f_privacy: "Privacy Policy", f_terms: "Terms of Use",
     cookie_text: "We use cookies — including Meta's tools — to improve your experience and measure how the site is used.",
     cookie_ok: "OK",
-    cl_all: "All", cl_copy: "Copy palette", cl_copied: "Copied!",
+    cl_all: "All", cl_copy: "Copy palette", cl_prompt: "Copy AI prompt", cl_copied: "Copied!",
     cl_search_ph: "Search movies… (e.g. Dune, Batman, Matrix)",
     cl_noresults: "No palettes match your search.",
     cl_n: "Palette",
@@ -46,7 +46,7 @@ const TL = {
     f_privacy: "سياسة الخصوصية", f_terms: "شروط الاستخدام",
     cookie_text: "نستخدم ملفات تعريف الارتباط (كوكيز) — بما فيها أدوات ميتا — لتحسين تجربتك وقياس كيفية استخدام الموقع.",
     cookie_ok: "حسناً",
-    cl_all: "الكل", cl_copy: "انسخ الباليت", cl_copied: "تم النسخ!",
+    cl_all: "الكل", cl_copy: "انسخ الباليت", cl_prompt: "انسخ البرومبت", cl_copied: "تم النسخ!",
     cl_search_ph: "ابحث عن فيلم… (مثلاً: Dune، Batman، Matrix)",
     cl_noresults: "لا يوجد باليت يطابق بحثك.",
     cl_n: "باليت",
@@ -350,6 +350,93 @@ function frameStyle(c) {
     `linear-gradient(158deg, ${c[0]} 0%, ${c[1]} 55%, ${c[4]} 100%)`;
 }
 
+/* ------------------------------------------------------------
+   AI prompt builder — generators follow color WORDS far better
+   than hex codes, so we name every color descriptively.
+   ------------------------------------------------------------ */
+function hsl(hex) {
+  const r = parseInt(hex.slice(1, 3), 16) / 255,
+        g = parseInt(hex.slice(3, 5), 16) / 255,
+        b = parseInt(hex.slice(5, 7), 16) / 255;
+  const mx = Math.max(r, g, b), mn = Math.min(r, g, b), d = mx - mn;
+  const l = (mx + mn) / 2;
+  const s = d === 0 ? 0 : d / (1 - Math.abs(2 * l - 1));
+  let h = 0;
+  if (d) {
+    if (mx === r) h = ((g - b) / d + 6) % 6;
+    else if (mx === g) h = (b - r) / d + 2;
+    else h = (r - g) / d + 4;
+    h *= 60;
+  }
+  return { h, s, l, lum: 0.2126 * r + 0.7152 * g + 0.0722 * b };
+}
+
+function colorName(hex) {
+  const { h, s, l } = hsl(hex);
+  if (s < 0.1) {
+    const tint = s < 0.04 ? "" : (h >= 190 && h <= 270 ? "cool " : (h < 70 || h >= 330 ? "warm " : ""));
+    if (l < 0.09) return tint + "cinematic near-black";
+    if (l < 0.2) return tint + "charcoal black";
+    if (l < 0.35) return tint + "dark grey";
+    if (l < 0.55) return tint + "neutral grey";
+    if (l < 0.75) return tint + "silver grey";
+    if (l < 0.9) return tint + "soft off-white";
+    return "bright white";
+  }
+  if (h >= 15 && h < 55 && l < 0.55 && s < 0.62)
+    return l < 0.18 ? "very dark coffee brown" : l < 0.32 ? "deep chocolate brown" : l < 0.45 ? "earthy bronze brown" : "warm caramel brown";
+  if (h >= 15 && h < 60 && l >= 0.55 && s < 0.55)
+    return l > 0.8 ? "pale warm cream" : "warm sand beige";
+  if (h >= 200 && h < 260 && l < 0.2) return "midnight navy blue";
+  let base;
+  if (h < 15 || h >= 350) base = l < 0.45 ? "blood red" : "red";
+  else if (h < 30) base = "orange";
+  else if (h < 55) base = l >= 0.6 ? "golden yellow" : "amber";
+  else if (h < 70) base = "yellow";
+  else if (h < 95) base = "olive green";
+  else if (h < 150) base = "green";
+  else if (h < 180) base = "teal";
+  else if (h < 210) base = "cyan blue";
+  else if (h < 250) base = "blue";
+  else if (h < 290) base = "violet";
+  else if (h < 330) base = "purple";
+  else base = "magenta pink";
+  let mod;
+  if (l < 0.14) mod = "very dark";
+  else if (l < 0.28) mod = "deep";
+  else if (l < 0.45) mod = s > 0.55 ? "rich" : "muted";
+  else if (l < 0.65) mod = s > 0.6 ? "vivid" : "dusty";
+  else if (l < 0.82) mod = s > 0.5 ? "bright" : "soft";
+  else mod = "pale";
+  return mod + " " + base;
+}
+
+function buildPrompt(x) {
+  const sorted = [...x.c].sort((a, b) => hsl(a).lum - hsl(b).lum);
+  const nm = sorted.map(h => colorName(h) + " (" + h + ")");
+  let warm = 0, cool = 0;
+  for (const c of x.c) {
+    const { h, s } = hsl(c);
+    if (s < 0.12) continue;
+    if (h < 70 || h >= 330) warm++;
+    else if (h >= 150 && h < 330) cool++;
+  }
+  const balance =
+    warm >= 3 && cool === 0 ? "Overall warm color balance." :
+    cool >= 3 && warm === 0 ? "Overall cool color balance." :
+    warm >= 1 && cool >= 1 ? "Warm-against-cool cinematic contrast." :
+    "Neutral tonal balance.";
+  const mood = x.cat === "series"
+    ? "the show's signature look"
+    : CATS[x.cat].en.toLowerCase() + " mood";
+  return "Color grade: the exact five-color palette of " + x.n +
+    " \u2014 " + mood + ": " + x.m.en + ". " +
+    "Deep shadows in " + nm[0] + ", shadow tones in " + nm[1] +
+    ", midtones in " + nm[2] + ", highlights in " + nm[3] +
+    ", brightest accents in " + nm[4] + ". " + balance +
+    " Keep the entire frame within these five colors \u2014 cinematic film-still contrast, rich color depth, professional movie color grading.";
+}
+
 function card(x, i) {
   return `
   <article class="cl-card" data-cat="${x.cat}">
@@ -367,7 +454,10 @@ function card(x, i) {
           <i style="background:${h}"></i><b>${h}</b>
         </button>`).join("")}
       </div>
-      <button class="cl-copy" type="button" data-i="${i}">${t("cl_copy")}</button>
+      <div class="cl-actions">
+        <button class="cl-prompt" type="button" data-i="${i}">${t("cl_prompt")}</button>
+        <button class="cl-copy" type="button" data-i="${i}">${t("cl_copy")}</button>
+      </div>
     </div>
   </article>`;
 }
@@ -422,6 +512,14 @@ grid.addEventListener("click", async e => {
     const b = sw.querySelector("b"), old = b.textContent;
     b.textContent = "✓";
     setTimeout(() => { b.textContent = old; }, 900);
+    return;
+  }
+  const pr = e.target.closest(".cl-prompt");
+  if (pr) {
+    await copyText(buildPrompt(PALS[+pr.dataset.i]));
+    pr.classList.add("ok");
+    pr.textContent = "\u2713 " + t("cl_copied");
+    setTimeout(() => { pr.classList.remove("ok"); pr.textContent = t("cl_prompt"); }, 1500);
     return;
   }
   const cp = e.target.closest(".cl-copy");
