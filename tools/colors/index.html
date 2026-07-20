@@ -111,6 +111,107 @@
       display:flex; flex-direction:column; align-items:center; justify-content:center;
       text-align:center; pointer-events:none; padding:0 6%; line-height:1.06;
     }
+    @font-face{ font-family:"TT Jost"; src:url("/assets/fonts/tt-jost3.woff2") format("woff2"); font-weight:300; font-style:normal; font-display:swap }
+    @font-face{ font-family:"TT Jost"; src:url("/assets/fonts/tt-jost5.woff2") format("woff2"); font-weight:500; font-style:normal; font-display:swap }
+    @font-face{ font-family:"TT Cinzel Full"; src:url("/assets/fonts/tt-cinzel4.woff2") format("woff2"); font-weight:400; font-style:normal; font-display:swap }
+    @font-face{ font-family:"TT Cinzel Full"; src:url("/assets/fonts/tt-cinzel7.woff2") format("woff2"); font-weight:700; font-style:normal; font-display:swap }
+    @font-face{ font-family:"TT Play"; src:url("/assets/fonts/tt-play7.woff2") format("woff2"); font-weight:700; font-style:normal; font-display:swap }
+    @font-face{ font-family:"TT Play"; src:url("/assets/fonts/tt-play9.woff2") format("woff2"); font-weight:900; font-style:normal; font-display:swap }
+    @font-face{ font-family:"TT Play Italic"; src:url("/assets/fonts/tt-playi.woff2") format("woff2"); font-weight:700; font-style:italic; font-display:swap }
+    @font-face{ font-family:"TT Oswald Full"; src:url("/assets/fonts/tt-oswald.woff2") format("woff2"); font-weight:600; font-style:normal; font-display:swap }
+    @font-face{ font-family:"TT Orbitron"; src:url("/assets/fonts/tt-orbitron.woff2") format("woff2"); font-weight:600; font-style:normal; font-display:swap }
+    @font-face{ font-family:"TT Michroma"; src:url("/assets/fonts/tt-michroma.woff2") format("woff2"); font-weight:400; font-style:normal; font-display:swap }
+    @font-face{ font-family:"TT Alfa"; src:url("/assets/fonts/tt-alfa.woff2") format("woff2"); font-weight:400; font-style:normal; font-display:swap }
+    @font-face{ font-family:"TT Kaushan"; src:url("/assets/fonts/tt-kaushan.woff2") format("woff2"); font-weight:400; font-style:normal; font-display:swap }
+    @font-face{ font-family:"TT Vibes"; src:url("/assets/fonts/tt-vibes.woff2") format("woff2"); font-weight:400; font-style:normal; font-display:swap }
+    @font-face{ font-family:"TT Pacifico"; src:url("/assets/fonts/tt-pacifico.woff2") format("woff2"); font-weight:400; font-style:normal; font-display:swap }
+    @font-face{ font-family:"TT Bangers"; src:url("/assets/fonts/tt-bangers.woff2") format("woff2"); font-weight:400; font-style:normal; font-display:swap }
+    @font-face{ font-family:"TT Berkshire"; src:url("/assets/fonts/tt-berkshire.woff2") format("woff2"); font-weight:400; font-style:normal; font-display:swap }
+    @font-face{ font-family:"TT Marker"; src:url("/assets/fonts/tt-marker.woff2") format("woff2"); font-weight:400; font-style:normal; font-display:swap }
+    @font-face{ font-family:"TT Yellowtail"; src:url("/assets/fonts/tt-yellowtail.woff2") format("woff2"); font-weight:400; font-style:normal; font-display:swap }
+    @font-face{ font-family:"TT Pirata"; src:url("/assets/fonts/tt-pirata.woff2") format("woff2"); font-weight:400; font-style:normal; font-display:swap }
+    .cl-tt-arr{ font-family:"TT Jost",sans-serif; font-weight:300; font-size:9cqw; letter-spacing:.45em; text-indent:.45em; color:#D9E4E8; text-shadow:0 2px 16px rgba(0,0,0,.75), 0 1px 3px rgba(0,0,0,.55) }
+    .cl-tt-ac{ font-family:"TT Jost",sans-serif; font-weight:500; font-size:8cqw; letter-spacing:.16em; text-indent:.16em; color:#4AC8B8; text-shadow:0 2px 14px rgba(0,0,0,.5), 0 0 18px rgba(74,200,184,.35) }
+    .cl-tt-ab{ font-family:"TT Oswald Full",sans-serif; font-weight:600; font-size:8cqw; letter-spacing:.08em; text-indent:.08em; color:#FF8AD5; text-shadow:0 0 22px rgba(255,107,213,.8), 0 0 8px rgba(138,210,248,.6), 0 2px 4px rgba(0,0,0,.5) }
+    .cl-tt-ava{ font-family:Papyrus,"TT Cinzel Full",fantasy; font-size:10.5cqw; letter-spacing:.12em; text-indent:.12em; color:#8AE8F8; text-shadow:0 0 26px rgba(74,200,217,.75), 0 0 10px rgba(138,232,248,.5), 0 2px 4px rgba(0,0,0,.5) }
+    .cl-tt-ban{ font-family:"TT Play",serif; font-weight:700; font-size:8cqw; letter-spacing:.08em; color:#E8C84A; text-shadow:0 2px 16px rgba(0,0,0,.75), 0 1px 3px rgba(0,0,0,.55) }
+    .cl-tt-bar{ font-family:"TT Pacifico",cursive; font-size:14cqw; color:#FF8AC8; text-shadow:0 0 24px rgba(255,138,200,.65), 0 3px 6px rgba(180,40,120,.5) }
+    .cl-tt-bb{ font-family:"TT Cinzel Full",serif; font-weight:400; font-size:6.5cqw; letter-spacing:.06em; color:#E8DCC8; gap:1cqw; text-shadow:0 2px 16px rgba(0,0,0,.75), 0 1px 3px rgba(0,0,0,.55) }
+    .cl-tt-bs{ font-family:"TT Cinzel Full",serif; font-weight:400; font-size:8.5cqw; letter-spacing:.2em; text-indent:.2em; color:#F2E4E8; text-shadow:0 2px 16px rgba(0,0,0,.75), 0 1px 3px rgba(0,0,0,.55) }
+    .cl-tt-br49{ font-family:"TT Michroma",sans-serif; font-size:12cqw; letter-spacing:.1em; text-indent:.1em; color:#E8894A; gap:.8cqw; text-shadow:0 0 26px rgba(232,115,43,.7), 0 2px 5px rgba(0,0,0,.6) }
+    .cl-tt-cas{ font-family:"TT Yellowtail",cursive; font-size:12cqw; color:#F2EFE2; text-shadow:0 2px 16px rgba(0,0,0,.75), 0 1px 3px rgba(0,0,0,.55) }
+    .cl-tt-cho{ font-family:"TT Play Italic",serif; font-style:italic; font-weight:700; font-size:10cqw; color:#E8B88A; text-shadow:0 2px 16px rgba(0,0,0,.75), 0 1px 3px rgba(0,0,0,.55) }
+    .cl-tt-cp{ font-family:"TT Play Italic",serif; font-style:italic; font-weight:700; font-size:8cqw; color:#F2C879; text-shadow:0 2px 16px rgba(0,0,0,.75), 0 1px 3px rgba(0,0,0,.55) }
+    .cl-tt-ct{ font-family:"TT Kaushan",cursive; font-size:7.5cqw; color:#A8E0B8; gap:1cqw; text-shadow:0 0 20px rgba(62,122,69,.6), 0 2px 5px rgba(0,0,0,.65) }
+    .cl-tt-dl{ font-family:"TT Jost",sans-serif; font-weight:500; font-size:7.2cqw; letter-spacing:.1em; color:#F2C845; gap:.5cqw; text-shadow:0 2px 16px rgba(0,0,0,.75), 0 1px 3px rgba(0,0,0,.55) }
+    .cl-tt-drv{ font-family:"TT Kaushan",cursive; font-size:15cqw; color:#F26BC8; transform:rotate(-4deg); text-shadow:0 0 24px rgba(242,107,200,.55), 0 2px 4px rgba(0,0,0,.6) }
+    .cl-tt-dpt{ font-family:"TT Jost",sans-serif; font-weight:300; font-size:13cqw; letter-spacing:.34em; text-indent:.34em; color:#E8D2B0; gap:.4cqw; text-shadow:0 2px 16px rgba(0,0,0,.75), 0 1px 3px rgba(0,0,0,.55) }
+    .cl-tt-es{ font-family:"TT Pirata",cursive; font-size:8.5cqw; color:#C8D8E8; text-shadow:0 0 20px rgba(138,168,200,.5), 0 2px 5px rgba(0,0,0,.7) }
+    .cl-tt-ess{ font-family:"TT Kaushan",cursive; font-size:6.8cqw; color:#8AD2F8; line-height:1.25; text-shadow:0 2px 16px rgba(0,0,0,.75), 0 1px 3px rgba(0,0,0,.55) }
+    .cl-tt-fc{ font-family:"TT Oswald Full",sans-serif; font-weight:600; font-size:9.5cqw; letter-spacing:.06em; text-indent:.06em; color:#F26B98; text-shadow:0 0 22px rgba(242,107,152,.6), 0 2px 5px rgba(0,0,0,.65) }
+    .cl-tt-gdt{ font-family:"TT Jost",sans-serif; font-weight:300; font-size:7cqw; letter-spacing:.14em; color:#D9E848; gap:1cqw; text-shadow:0 2px 16px rgba(0,0,0,.75), 0 1px 3px rgba(0,0,0,.55) }
+    .cl-tt-gg{ font-family:"TT Jost",sans-serif; font-weight:300; font-size:8.5cqw; letter-spacing:.3em; text-indent:.3em; color:#C8D2D9; text-shadow:0 2px 16px rgba(0,0,0,.75), 0 1px 3px rgba(0,0,0,.55) }
+    .cl-tt-gbh{ font-family:"TT Jost",sans-serif; font-weight:500; font-size:6.8cqw; letter-spacing:.12em; color:#F2A8C8; gap:.6cqw; text-shadow:0 2px 16px rgba(0,0,0,.75), 0 1px 3px rgba(0,0,0,.55) }
+    .cl-tt-gog{ font-family:"TT Oswald Full",sans-serif; font-weight:600; font-size:8.5cqw; letter-spacing:.06em; color:#F2C845; gap:.6cqw; text-shadow:0 0 20px rgba(232,115,43,.55), 0 2px 5px rgba(0,0,0,.65) }
+    .cl-tt-inc{ font-family:"TT Jost",sans-serif; font-weight:500; font-size:8.5cqw; letter-spacing:.18em; text-indent:.18em; color:#C8D8E8; text-shadow:0 0 20px rgba(138,168,200,.5), 0 2px 4px rgba(0,0,0,.65) }
+    .cl-tt-int{ font-family:"TT Jost",sans-serif; font-weight:300; font-size:7.5cqw; letter-spacing:.32em; text-indent:.32em; color:#F2F6F8; text-shadow:0 2px 16px rgba(0,0,0,.75), 0 1px 3px rgba(0,0,0,.55) }
+    .cl-tt-jw{ font-family:"TT Cinzel Full",serif; font-weight:400; font-size:9cqw; letter-spacing:.22em; text-indent:.22em; color:#E8ECF2; text-shadow:0 0 18px rgba(94,120,199,.5), 0 2px 4px rgba(0,0,0,.65) }
+    .cl-tt-jok{ font-family:"TT Marker",cursive; font-size:12cqw; letter-spacing:.04em; color:#F2F2E8; transform:rotate(-3deg); text-shadow:0 0 20px rgba(62,122,69,.6), 0 2px 5px rgba(0,0,0,.7) }
+    .cl-tt-lll{ font-family:"TT Vibes",cursive; font-size:13cqw; color:#F8F4F0; text-shadow:0 0 22px rgba(232,180,74,.55), 0 2px 5px rgba(0,0,0,.6) }
+    .cl-tt-loa{ font-family:"TT Cinzel Full",serif; font-weight:700; font-size:9cqw; letter-spacing:.1em; color:#E8C87A; gap:.6cqw; text-shadow:0 2px 16px rgba(0,0,0,.75), 0 1px 3px rgba(0,0,0,.55) }
+    .cl-tt-lw{ font-family:"TT Play",serif; font-weight:700; font-size:8cqw; letter-spacing:.12em; text-indent:.12em; color:#F2E8D8; text-shadow:0 2px 16px rgba(0,0,0,.75), 0 1px 3px rgba(0,0,0,.55) }
+    .cl-tt-lotr{ font-family:"TT Cinzel Full",serif; font-weight:700; font-size:9cqw; letter-spacing:.08em; color:#E8C87A; gap:.5cqw; text-shadow:0 0 20px rgba(200,160,90,.5), 0 2px 5px rgba(0,0,0,.7) }
+    .cl-tt-mmfr{ font-family:"TT Oswald Full",sans-serif; font-weight:600; font-size:10cqw; letter-spacing:.06em; background:linear-gradient(180deg,#F8F8F8 0%,#C8CDD2 45%,#8A9098 55%,#E8ECF0 100%); -webkit-background-clip:text; background-clip:text; color:transparent; gap:.5cqw; filter:drop-shadow(0 0 14px rgba(232,115,43,.6)) drop-shadow(0 2px 3px rgba(0,0,0,.7)) }
+    .cl-tt-ma{ font-family:"TT Oswald Full",sans-serif; font-weight:600; font-size:7.8cqw; letter-spacing:.1em; text-indent:.1em; color:#F25CA8; text-shadow:0 2px 16px rgba(0,0,0,.55), 0 0 20px rgba(242,92,168,.4) }
+    .cl-tt-mip{ font-family:"TT Play",serif; font-weight:700; font-size:7.5cqw; color:#F2DCA8; text-shadow:0 2px 16px rgba(0,0,0,.75), 0 1px 3px rgba(0,0,0,.55) }
+    .cl-tt-mid{ font-family:"TT Play",serif; font-weight:700; font-size:8.5cqw; letter-spacing:.18em; text-indent:.18em; color:#F8F6F0; text-shadow:0 2px 18px rgba(120,90,40,.6), 0 1px 3px rgba(0,0,0,.4) }
+    .cl-tt-mk{ font-family:"TT Yellowtail",cursive; font-size:10cqw; color:#F2E45C; transform:rotate(-2deg); text-shadow:0 2px 16px rgba(0,0,0,.75), 0 1px 3px rgba(0,0,0,.55) }
+    .cl-tt-nc{ font-family:"TT Jost",sans-serif; font-weight:300; font-size:8.5cqw; letter-spacing:.14em; color:#E8493E; text-shadow:0 2px 16px rgba(0,0,0,.75), 0 1px 3px rgba(0,0,0,.55) }
+    .cl-tt-ncfom{ font-family:"TT Jost",sans-serif; font-weight:300; font-size:8cqw; letter-spacing:.18em; color:#E8E4D8; gap:.8cqw; text-shadow:0 2px 16px rgba(0,0,0,.75), 0 1px 3px rgba(0,0,0,.55) }
+    .cl-tt-old{ font-family:"TT Kaushan",cursive; font-size:11cqw; color:#C87AE8; transform:rotate(-2deg); text-shadow:0 0 22px rgba(180,74,232,.55), 0 2px 5px rgba(0,0,0,.65) }
+    .cl-tt-pl{ font-family:"TT Play Italic",serif; font-style:italic; font-weight:700; font-size:8.5cqw; color:#C8E8C8; text-shadow:0 0 20px rgba(62,122,69,.55), 0 2px 5px rgba(0,0,0,.7) }
+    .cl-tt-pri{ font-family:"TT Jost",sans-serif; font-weight:500; font-size:8.5cqw; letter-spacing:.22em; text-indent:.22em; color:#E8ECF0; text-shadow:0 2px 16px rgba(0,0,0,.75), 0 1px 3px rgba(0,0,0,.55) }
+    .cl-tt-pf{ font-family:"TT Alfa",serif; font-size:9cqw; color:#F2C845; text-shadow:.04em .04em 0 #8A2E22, 0 3px 10px rgba(0,0,0,.65) }
+    .cl-tt-rola{ font-family:"TT Alfa",serif; font-size:8cqw; color:#E8B84A; gap:.6cqw; text-shadow:.05em .05em 0 #8A2E22, 0 3px 10px rgba(0,0,0,.6) }
+    .cl-tt-rom{ font-family:"TT Jost",sans-serif; font-weight:300; font-size:16cqw; letter-spacing:.5em; text-indent:.5em; color:#F2F2F0; text-shadow:0 2px 16px rgba(0,0,0,.75), 0 1px 3px rgba(0,0,0,.55) }
+    .cl-tt-sic{ font-family:"TT Jost",sans-serif; font-weight:500; font-size:9.5cqw; letter-spacing:.3em; text-indent:.3em; color:#E8E8E4; text-shadow:0 2px 16px rgba(0,0,0,.75), 0 1px 3px rgba(0,0,0,.55) }
+    .cl-tt-sotl{ font-family:"TT Play",serif; font-weight:700; font-size:8cqw; letter-spacing:.1em; color:#F2F0EC; gap:.7cqw; text-shadow:0 2px 16px rgba(0,0,0,.75), 0 1px 3px rgba(0,0,0,.55) }
+    .cl-tt-sin{ font-family:"TT Bangers",cursive; font-size:12cqw; letter-spacing:.06em; color:#F2F2F2; flex-direction:row; gap:2.5cqw; text-shadow:0 3px 12px rgba(0,0,0,.8) }
+    .cl-tt-sky{ font-family:"TT Jost",sans-serif; font-weight:500; font-size:9cqw; letter-spacing:.28em; text-indent:.28em; color:#F2F2F0; text-shadow:0 2px 16px rgba(0,0,0,.75), 0 1px 3px rgba(0,0,0,.55) }
+    .cl-tt-slum{ font-family:"TT Oswald Full",sans-serif; font-weight:600; font-size:7.5cqw; letter-spacing:.04em; color:#F2A23A; text-shadow:0 0 18px rgba(232,115,43,.6), 0 2px 4px rgba(0,0,0,.6) }
+    .cl-tt-sv{ font-family:"TT Bangers",cursive; font-size:7.6cqw; letter-spacing:.05em; color:#F2F2F2; gap:.8cqw; text-shadow:.06em .06em 0 #E8393E, -.06em -.06em 0 #4AA8E8, 0 3px 10px rgba(0,0,0,.5) }
+    .cl-tt-sus{ font-family:"TT Play",serif; font-weight:900; font-size:10cqw; letter-spacing:.1em; text-indent:.1em; color:#E8392E; text-shadow:0 0 26px rgba(200,53,46,.7), 0 2px 5px rgba(0,0,0,.6) }
+    .cl-tt-st{ font-family:"TT Pirata",cursive; font-size:10cqw; color:#C8352E; text-shadow:0 0 20px rgba(200,53,46,.5), 0 2px 5px rgba(0,0,0,.75) }
+    .cl-tt-tb{ font-family:"TT Play",serif; font-weight:900; font-size:9cqw; letter-spacing:.08em; text-indent:.08em; color:#C8352E; text-shadow:0 0 24px rgba(200,53,46,.5), 0 2px 6px rgba(0,0,0,.8) }
+    .cl-tt-tdk{ font-family:"TT Oswald Full",sans-serif; font-weight:600; font-size:8cqw; letter-spacing:.1em; text-indent:.1em; color:#C8D8E8; text-shadow:0 0 22px rgba(94,150,199,.55), 0 2px 5px rgba(0,0,0,.7) }
+    .cl-tt-tep{ font-family:"TT Play Italic",serif; font-style:italic; font-weight:700; font-size:7.5cqw; color:#F2E4C9; text-shadow:0 2px 16px rgba(0,0,0,.75), 0 1px 3px rgba(0,0,0,.55) }
+    .cl-tt-tfd{ font-family:"TT Jost",sans-serif; font-weight:500; font-size:8cqw; letter-spacing:.1em; color:#F2ECD8; gap:.5cqw; text-shadow:0 2px 16px rgba(0,0,0,.75), 0 1px 3px rgba(0,0,0,.55) }
+    .cl-tt-gf{ font-family:"TT Play",serif; font-weight:900; font-size:9.5cqw; letter-spacing:.04em; color:#F2F2F0; gap:.5cqw; text-shadow:0 2px 16px rgba(0,0,0,.75), 0 1px 3px rgba(0,0,0,.55) }
+    .cl-tt-mar{ font-family:"TT Oswald Full",sans-serif; font-weight:600; font-size:11cqw; letter-spacing:.08em; color:#F2F2F0; gap:.4cqw; text-shadow:0 0 20px rgba(200,90,42,.6), 0 2px 5px rgba(0,0,0,.6) }
+    .cl-tt-mtx{ font-family:"TT Michroma",sans-serif; font-size:8cqw; letter-spacing:.14em; text-indent:.14em; color:#4AE84A; text-shadow:0 0 24px rgba(74,232,74,.7), 0 0 8px rgba(74,232,74,.4), 0 2px 4px rgba(0,0,0,.6) }
+    .cl-tt-mum{ font-family:"TT Cinzel Full",serif; font-weight:700; font-size:9cqw; letter-spacing:.12em; text-indent:.12em; color:#E8C84A; text-shadow:0 0 22px rgba(200,150,60,.55), 0 2px 5px rgba(0,0,0,.65) }
+    .cl-tt-tn{ font-family:"TT Cinzel Full",serif; font-weight:700; font-size:8cqw; letter-spacing:.14em; text-indent:.14em; color:#C8D2D9; text-shadow:0 0 20px rgba(94,120,140,.55), 0 2px 5px rgba(0,0,0,.75) }
+    .cl-tt-rev{ font-family:"TT Cinzel Full",serif; font-weight:400; font-size:7.5cqw; letter-spacing:.2em; text-indent:.2em; color:#E8F0F2; text-shadow:0 2px 16px rgba(0,0,0,.75), 0 1px 3px rgba(0,0,0,.55) }
+    .cl-tt-sow{ font-family:"TT Vibes",cursive; font-size:9.5cqw; color:#8AE0D9; text-shadow:0 0 22px rgba(74,200,217,.6), 0 2px 5px rgba(0,10,10,.6) }
+    .cl-tt-tsn{ font-family:"TT Jost",sans-serif; font-weight:500; font-size:8cqw; letter-spacing:.08em; color:#E8F0F8; gap:.5cqw; text-shadow:0 2px 16px rgba(0,0,0,.75), 0 1px 3px rgba(0,0,0,.55) }
+    .cl-tt-tts{ font-family:"TT Play",serif; font-weight:700; font-size:8cqw; color:#F2F6F8; text-shadow:0 2px 16px rgba(0,0,0,.75), 0 1px 3px rgba(0,0,0,.55) }
+    .cl-tt-twbb{ font-family:"TT Play",serif; font-weight:900; font-size:10cqw; letter-spacing:.06em; color:#E8E0D0; gap:.6cqw; text-shadow:0 2px 16px rgba(0,0,0,.75), 0 1px 3px rgba(0,0,0,.55) }
+    .cl-tt-tron{ font-family:"TT Orbitron",sans-serif; font-weight:600; font-size:11cqw; letter-spacing:.14em; text-indent:.14em; color:#8AE8F2; gap:.6cqw; text-shadow:0 0 24px rgba(74,232,242,.75), 0 0 8px rgba(74,232,242,.5) }
+    .cl-tt-wm{ font-family:"TT Jost",sans-serif; font-weight:300; font-size:7.5cqw; letter-spacing:.16em; color:#C8E4F2; gap:1cqw; text-shadow:0 2px 16px rgba(0,0,0,.75), 0 1px 3px rgba(0,0,0,.55) }
+    .cl-tt-won{ font-family:"TT Berkshire",cursive; font-size:13cqw; color:#E8A0C8; text-shadow:0 0 22px rgba(200,120,180,.55), 0 2px 5px rgba(60,20,50,.6) }
+
+    .cl-tt-bb span,.cl-tt-ban span,.cl-tt-tsn span,.cl-tt-gdt span,.cl-tt-gbh span,
+    .cl-tt-tfd span,.cl-tt-dl span,.cl-tt-gog span,.cl-tt-mmfr span,.cl-tt-loa span,
+    .cl-tt-ncfom span,.cl-tt-mar span,.cl-tt-twbb span,.cl-tt-rola span,.cl-tt-gf span,
+    .cl-tt-sotl span,.cl-tt-lotr span,.cl-tt-ct span,.cl-tt-wm span,.cl-tt-sv span{
+      display:block; font-size:.42em; letter-spacing:.3em; text-indent:.3em; line-height:1.3;
+    }
+    .cl-tt-tron span,.cl-tt-dpt span,.cl-tt-br49 span{
+      display:block; font-size:.34em; letter-spacing:.55em; text-indent:.55em; line-height:1.4;
+    }
+    .cl-tt-sin .c2{ color:#E8392E; font-size:1em; display:inline }
+    .cl-tt-mmfr{ line-height:1 }
+    .cl-tt-ess span{ display:block; font-size:.82em; line-height:1.2 }
     .cl-tt-def{
       font-family:"Montserrat",sans-serif; font-weight:800;
       letter-spacing:.1em; text-indent:.1em; text-transform:uppercase;
@@ -391,7 +492,7 @@
     </div>
   </article>
   <article class="cl-card" data-cat="warm">
-    <div class="cl-frame" style="background:radial-gradient(95% 130% at 80% 15%, #F2DCA8cc, transparent 60%),radial-gradient(85% 110% at 12% 88%, #3E4A6Bbb, transparent 55%),linear-gradient(158deg, #D9A441 0%, #8A5A2B 55%, #5C3A2B 100%)"><img src="img/midnight-in-paris.webp" alt="" loading="lazy" width="640" height="357"><span class="cl-title cl-tt-def" style="font-size:8cqw">Midnight in Paris</span><i></i><b></b></div>
+    <div class="cl-frame" style="background:radial-gradient(95% 130% at 80% 15%, #F2DCA8cc, transparent 60%),radial-gradient(85% 110% at 12% 88%, #3E4A6Bbb, transparent 55%),linear-gradient(158deg, #D9A441 0%, #8A5A2B 55%, #5C3A2B 100%)"><img src="img/midnight-in-paris.webp" alt="" loading="lazy" width="640" height="357"><span class="cl-title cl-tt-mip">Midnight in Paris</span><i></i><b></b></div>
     <div class="cl-body">
       <div class="cl-meta">
         <span class="cl-num">باليت 05</span>
@@ -424,7 +525,7 @@
     </div>
   </article>
   <article class="cl-card" data-cat="warm">
-    <div class="cl-frame" style="background:radial-gradient(95% 130% at 80% 15%, #F2E4C9cc, transparent 60%),radial-gradient(85% 110% at 12% 88%, #B85C3Fbb, transparent 55%),linear-gradient(158deg, #D9B48A 0%, #8A9A6B 55%, #4A5C7A 100%)"><img src="img/little-women.webp" alt="" loading="lazy" width="640" height="357"><span class="cl-title cl-tt-def" style="font-size:8cqw">Little Women</span><i></i><b></b></div>
+    <div class="cl-frame" style="background:radial-gradient(95% 130% at 80% 15%, #F2E4C9cc, transparent 60%),radial-gradient(85% 110% at 12% 88%, #B85C3Fbb, transparent 55%),linear-gradient(158deg, #D9B48A 0%, #8A9A6B 55%, #4A5C7A 100%)"><img src="img/little-women.webp" alt="" loading="lazy" width="640" height="357"><span class="cl-title cl-tt-lw">LITTLE WOMEN</span><i></i><b></b></div>
     <div class="cl-body">
       <div class="cl-meta">
         <span class="cl-num">باليت 06</span>
@@ -457,7 +558,7 @@
     </div>
   </article>
   <article class="cl-card" data-cat="warm">
-    <div class="cl-frame" style="background:radial-gradient(95% 130% at 80% 15%, #D9C8A8cc, transparent 60%),radial-gradient(85% 110% at 12% 88%, #3E2E22bb, transparent 55%),linear-gradient(158deg, #C8A05A 0%, #7A5C3A 55%, #5C4A6B 100%)"><img src="img/benjamin-button.webp" alt="" loading="lazy" width="640" height="357"><span class="cl-title cl-tt-def" style="font-size:5.5cqw">The Curious Case of Benjamin Button</span><i></i><b></b></div>
+    <div class="cl-frame" style="background:radial-gradient(95% 130% at 80% 15%, #D9C8A8cc, transparent 60%),radial-gradient(85% 110% at 12% 88%, #3E2E22bb, transparent 55%),linear-gradient(158deg, #C8A05A 0%, #7A5C3A 55%, #5C4A6B 100%)"><img src="img/benjamin-button.webp" alt="" loading="lazy" width="640" height="357"><span class="cl-title cl-tt-bb"><span>THE CURIOUS CASE OF</span>BENJAMIN BUTTON</span><i></i><b></b></div>
     <div class="cl-body">
       <div class="cl-meta">
         <span class="cl-num">باليت 07</span>
@@ -490,7 +591,7 @@
     </div>
   </article>
   <article class="cl-card" data-cat="warm">
-    <div class="cl-frame" style="background:radial-gradient(95% 130% at 80% 15%, #5C4A3Acc, transparent 60%),radial-gradient(85% 110% at 12% 88%, #F2DCA8bb, transparent 55%),linear-gradient(158deg, #D98E32 0%, #8A5A2B 55%, #2E2417 100%)"><img src="img/cinema-paradiso.webp" alt="" loading="lazy" width="640" height="357"><span class="cl-title cl-tt-def" style="font-size:8cqw">Cinema Paradiso</span><i></i><b></b></div>
+    <div class="cl-frame" style="background:radial-gradient(95% 130% at 80% 15%, #5C4A3Acc, transparent 60%),radial-gradient(85% 110% at 12% 88%, #F2DCA8bb, transparent 55%),linear-gradient(158deg, #D98E32 0%, #8A5A2B 55%, #2E2417 100%)"><img src="img/cinema-paradiso.webp" alt="" loading="lazy" width="640" height="357"><span class="cl-title cl-tt-cp">Cinema Paradiso</span><i></i><b></b></div>
     <div class="cl-body">
       <div class="cl-meta">
         <span class="cl-num">باليت 08</span>
@@ -523,7 +624,7 @@
     </div>
   </article>
   <article class="cl-card" data-cat="warm">
-    <div class="cl-frame" style="background:radial-gradient(95% 130% at 80% 15%, #3E7A8Acc, transparent 60%),radial-gradient(85% 110% at 12% 88%, #F2C845bb, transparent 55%),linear-gradient(158deg, #E87E2B 0%, #C84B2A 55%, #6B2E5C 100%)"><img src="img/slumdog-millionaire.webp" alt="" loading="lazy" width="640" height="357"><span class="cl-title cl-tt-def" style="font-size:6.5cqw">Slumdog Millionaire</span><i></i><b></b></div>
+    <div class="cl-frame" style="background:radial-gradient(95% 130% at 80% 15%, #3E7A8Acc, transparent 60%),radial-gradient(85% 110% at 12% 88%, #F2C845bb, transparent 55%),linear-gradient(158deg, #E87E2B 0%, #C84B2A 55%, #6B2E5C 100%)"><img src="img/slumdog-millionaire.webp" alt="" loading="lazy" width="640" height="357"><span class="cl-title cl-tt-slum">SLUMDOG MILLIONAIRE</span><i></i><b></b></div>
     <div class="cl-body">
       <div class="cl-meta">
         <span class="cl-num">باليت 09</span>
@@ -556,7 +657,7 @@
     </div>
   </article>
   <article class="cl-card" data-cat="warm">
-    <div class="cl-frame" style="background:radial-gradient(95% 130% at 80% 15%, #3E3A2Ecc, transparent 60%),radial-gradient(85% 110% at 12% 88%, #8A9AA8bb, transparent 55%),linear-gradient(158deg, #C8873F 0%, #5C7A6B 55%, #E8D8B8 100%)"><img src="img/banshees-of-inisherin.webp" alt="" loading="lazy" width="640" height="357"><span class="cl-title cl-tt-def" style="font-size:6.5cqw">The Banshees of Inisherin</span><i></i><b></b></div>
+    <div class="cl-frame" style="background:radial-gradient(95% 130% at 80% 15%, #3E3A2Ecc, transparent 60%),radial-gradient(85% 110% at 12% 88%, #8A9AA8bb, transparent 55%),linear-gradient(158deg, #C8873F 0%, #5C7A6B 55%, #E8D8B8 100%)"><img src="img/banshees-of-inisherin.webp" alt="" loading="lazy" width="640" height="357"><span class="cl-title cl-tt-ban"><span>THE BANSHEES OF</span>INISHERIN</span><i></i><b></b></div>
     <div class="cl-body">
       <div class="cl-meta">
         <span class="cl-num">باليت 10</span>
@@ -589,7 +690,7 @@
     </div>
   </article>
   <article class="cl-card" data-cat="cool">
-    <div class="cl-frame" style="background:radial-gradient(95% 130% at 80% 15%, #D9E4E8cc, transparent 60%),radial-gradient(85% 110% at 12% 88%, #2E3E45bb, transparent 55%),linear-gradient(158deg, #5C7A8A 0%, #A8BCC8 55%, #4A3A2E 100%)"><img src="img/the-revenant.webp" alt="" loading="lazy" width="640" height="357"><span class="cl-title cl-tt-def" style="font-size:8cqw">The Revenant</span><i></i><b></b></div>
+    <div class="cl-frame" style="background:radial-gradient(95% 130% at 80% 15%, #D9E4E8cc, transparent 60%),radial-gradient(85% 110% at 12% 88%, #2E3E45bb, transparent 55%),linear-gradient(158deg, #5C7A8A 0%, #A8BCC8 55%, #4A3A2E 100%)"><img src="img/the-revenant.webp" alt="" loading="lazy" width="640" height="357"><span class="cl-title cl-tt-rev">THE REVENANT</span><i></i><b></b></div>
     <div class="cl-body">
       <div class="cl-meta">
         <span class="cl-num">باليت 11</span>
@@ -622,7 +723,7 @@
     </div>
   </article>
   <article class="cl-card" data-cat="cool">
-    <div class="cl-frame" style="background:radial-gradient(95% 130% at 80% 15%, #C8D2D9cc, transparent 60%),radial-gradient(85% 110% at 12% 88%, #2E3438bb, transparent 55%),linear-gradient(158deg, #4A5C6B 0%, #8A9AA8 55%, #5C4A3A 100%)"><img src="img/arrival.webp" alt="" loading="lazy" width="640" height="357"><span class="cl-title cl-tt-def" style="font-size:10cqw">Arrival</span><i></i><b></b></div>
+    <div class="cl-frame" style="background:radial-gradient(95% 130% at 80% 15%, #C8D2D9cc, transparent 60%),radial-gradient(85% 110% at 12% 88%, #2E3438bb, transparent 55%),linear-gradient(158deg, #4A5C6B 0%, #8A9AA8 55%, #5C4A3A 100%)"><img src="img/arrival.webp" alt="" loading="lazy" width="640" height="357"><span class="cl-title cl-tt-arr">ARRIVAL</span><i></i><b></b></div>
     <div class="cl-body">
       <div class="cl-meta">
         <span class="cl-num">باليت 12</span>
@@ -655,7 +756,7 @@
     </div>
   </article>
   <article class="cl-card" data-cat="cool">
-    <div class="cl-frame" style="background:radial-gradient(95% 130% at 80% 15%, #1E2428cc, transparent 60%),radial-gradient(85% 110% at 12% 88%, #C8B48Abb, transparent 55%),linear-gradient(158deg, #3E4A55 0%, #7A8A96 55%, #96A8B4 100%)"><img src="img/gone-girl.webp" alt="" loading="lazy" width="640" height="357"><span class="cl-title cl-tt-def" style="font-size:10cqw">Gone Girl</span><i></i><b></b></div>
+    <div class="cl-frame" style="background:radial-gradient(95% 130% at 80% 15%, #1E2428cc, transparent 60%),radial-gradient(85% 110% at 12% 88%, #C8B48Abb, transparent 55%),linear-gradient(158deg, #3E4A55 0%, #7A8A96 55%, #96A8B4 100%)"><img src="img/gone-girl.webp" alt="" loading="lazy" width="640" height="357"><span class="cl-title cl-tt-gg">GONE GIRL</span><i></i><b></b></div>
     <div class="cl-body">
       <div class="cl-meta">
         <span class="cl-num">باليت 13</span>
@@ -688,7 +789,7 @@
     </div>
   </article>
   <article class="cl-card" data-cat="cool">
-    <div class="cl-frame" style="background:radial-gradient(95% 130% at 80% 15%, #1E2422cc, transparent 60%),radial-gradient(85% 110% at 12% 88%, #C8A05Abb, transparent 55%),linear-gradient(158deg, #3E4A45 0%, #6B7A6B 55%, #8A96A8 100%)"><img src="img/the-social-network.webp" alt="" loading="lazy" width="640" height="357"><span class="cl-title cl-tt-def" style="font-size:8cqw">The Social Network</span><i></i><b></b></div>
+    <div class="cl-frame" style="background:radial-gradient(95% 130% at 80% 15%, #1E2422cc, transparent 60%),radial-gradient(85% 110% at 12% 88%, #C8A05Abb, transparent 55%),linear-gradient(158deg, #3E4A45 0%, #6B7A6B 55%, #8A96A8 100%)"><img src="img/the-social-network.webp" alt="" loading="lazy" width="640" height="357"><span class="cl-title cl-tt-tsn"><span>THE</span>SOCIAL NETWORK</span><i></i><b></b></div>
     <div class="cl-body">
       <div class="cl-meta">
         <span class="cl-num">باليت 14</span>
@@ -721,7 +822,7 @@
     </div>
   </article>
   <article class="cl-card" data-cat="cool">
-    <div class="cl-frame" style="background:radial-gradient(95% 130% at 80% 15%, #5C4A3Acc, transparent 60%),radial-gradient(85% 110% at 12% 88%, #8A9AA8bb, transparent 55%),linear-gradient(158deg, #4A5560 0%, #2E3438 55%, #C8D2D9 100%)"><img src="img/prisoners.webp" alt="" loading="lazy" width="640" height="357"><span class="cl-title cl-tt-def" style="font-size:10cqw">Prisoners</span><i></i><b></b></div>
+    <div class="cl-frame" style="background:radial-gradient(95% 130% at 80% 15%, #5C4A3Acc, transparent 60%),radial-gradient(85% 110% at 12% 88%, #8A9AA8bb, transparent 55%),linear-gradient(158deg, #4A5560 0%, #2E3438 55%, #C8D2D9 100%)"><img src="img/prisoners.webp" alt="" loading="lazy" width="640" height="357"><span class="cl-title cl-tt-pri">PRISONERS</span><i></i><b></b></div>
     <div class="cl-body">
       <div class="cl-meta">
         <span class="cl-num">باليت 15</span>
@@ -754,7 +855,7 @@
     </div>
   </article>
   <article class="cl-card" data-cat="cool">
-    <div class="cl-frame" style="background:radial-gradient(95% 130% at 80% 15%, #C8873Fcc, transparent 60%),radial-gradient(85% 110% at 12% 88%, #2E3438bb, transparent 55%),linear-gradient(158deg, #3E5C7A 0%, #8AA8C8 55%, #96A8B4 100%)"><img src="img/inception.webp" alt="" loading="lazy" width="640" height="357"><span class="cl-title cl-tt-def" style="font-size:10cqw">Inception</span><i></i><b></b></div>
+    <div class="cl-frame" style="background:radial-gradient(95% 130% at 80% 15%, #C8873Fcc, transparent 60%),radial-gradient(85% 110% at 12% 88%, #2E3438bb, transparent 55%),linear-gradient(158deg, #3E5C7A 0%, #8AA8C8 55%, #96A8B4 100%)"><img src="img/inception.webp" alt="" loading="lazy" width="640" height="357"><span class="cl-title cl-tt-inc">INCEPTION</span><i></i><b></b></div>
     <div class="cl-body">
       <div class="cl-meta">
         <span class="cl-num">باليت 16</span>
@@ -787,7 +888,7 @@
     </div>
   </article>
   <article class="cl-card" data-cat="cool">
-    <div class="cl-frame" style="background:radial-gradient(95% 130% at 80% 15%, #1E2428cc, transparent 60%),radial-gradient(85% 110% at 12% 88%, #D9C8A8bb, transparent 55%),linear-gradient(158deg, #4A5C6B 0%, #8A9AA8 55%, #5C7A8A 100%)"><img src="img/interstellar.webp" alt="" loading="lazy" width="640" height="357"><span class="cl-title cl-tt-def" style="font-size:8cqw">Interstellar</span><i></i><b></b></div>
+    <div class="cl-frame" style="background:radial-gradient(95% 130% at 80% 15%, #1E2428cc, transparent 60%),radial-gradient(85% 110% at 12% 88%, #D9C8A8bb, transparent 55%),linear-gradient(158deg, #4A5C6B 0%, #8A9AA8 55%, #5C7A8A 100%)"><img src="img/interstellar.webp" alt="" loading="lazy" width="640" height="357"><span class="cl-title cl-tt-int">INTERSTELLAR</span><i></i><b></b></div>
     <div class="cl-body">
       <div class="cl-meta">
         <span class="cl-num">باليت 17</span>
@@ -820,7 +921,7 @@
     </div>
   </article>
   <article class="cl-card" data-cat="cool">
-    <div class="cl-frame" style="background:radial-gradient(95% 130% at 80% 15%, #5C6B7Acc, transparent 60%),radial-gradient(85% 110% at 12% 88%, #8A96A8bb, transparent 55%),linear-gradient(158deg, #3E4A55 0%, #1E2428 55%, #C8D2D9 100%)"><img src="img/the-dark-knight.webp" alt="" loading="lazy" width="640" height="357"><span class="cl-title cl-tt-def" style="font-size:8cqw">The Dark Knight</span><i></i><b></b></div>
+    <div class="cl-frame" style="background:radial-gradient(95% 130% at 80% 15%, #5C6B7Acc, transparent 60%),radial-gradient(85% 110% at 12% 88%, #8A96A8bb, transparent 55%),linear-gradient(158deg, #3E4A55 0%, #1E2428 55%, #C8D2D9 100%)"><img src="img/the-dark-knight.webp" alt="" loading="lazy" width="640" height="357"><span class="cl-title cl-tt-tdk">THE DARK KNIGHT</span><i></i><b></b></div>
     <div class="cl-body">
       <div class="cl-meta">
         <span class="cl-num">باليت 18</span>
@@ -853,7 +954,7 @@
     </div>
   </article>
   <article class="cl-card" data-cat="cool">
-    <div class="cl-frame" style="background:radial-gradient(95% 130% at 80% 15%, #C8D2D9cc, transparent 60%),radial-gradient(85% 110% at 12% 88%, #2E3438bb, transparent 55%),linear-gradient(158deg, #3E4A45 0%, #96A8B4 55%, #5C4A3A 100%)"><img src="img/girl-with-the-dragon-tattoo.webp" alt="" loading="lazy" width="640" height="357"><span class="cl-title cl-tt-def" style="font-size:5.5cqw">The Girl with the Dragon Tattoo</span><i></i><b></b></div>
+    <div class="cl-frame" style="background:radial-gradient(95% 130% at 80% 15%, #C8D2D9cc, transparent 60%),radial-gradient(85% 110% at 12% 88%, #2E3438bb, transparent 55%),linear-gradient(158deg, #3E4A45 0%, #96A8B4 55%, #5C4A3A 100%)"><img src="img/girl-with-the-dragon-tattoo.webp" alt="" loading="lazy" width="640" height="357"><span class="cl-title cl-tt-gdt"><span>THE GIRL WITH THE</span>DRAGON TATTOO</span><i></i><b></b></div>
     <div class="cl-body">
       <div class="cl-meta">
         <span class="cl-num">باليت 19</span>
@@ -886,7 +987,7 @@
     </div>
   </article>
   <article class="cl-card" data-cat="cool">
-    <div class="cl-frame" style="background:radial-gradient(95% 130% at 80% 15%, #3E4A55cc, transparent 60%),radial-gradient(85% 110% at 12% 88%, #E8734Abb, transparent 55%),linear-gradient(158deg, #6B8AA8 0%, #C8D2D9 55%, #A8C0B4 100%)"><img src="img/eternal-sunshine.webp" alt="" loading="lazy" width="640" height="357"><span class="cl-title cl-tt-def" style="font-size:5.5cqw">Eternal Sunshine of the Spotless Mind</span><i></i><b></b></div>
+    <div class="cl-frame" style="background:radial-gradient(95% 130% at 80% 15%, #3E4A55cc, transparent 60%),radial-gradient(85% 110% at 12% 88%, #E8734Abb, transparent 55%),linear-gradient(158deg, #6B8AA8 0%, #C8D2D9 55%, #A8C0B4 100%)"><img src="img/eternal-sunshine.webp" alt="" loading="lazy" width="640" height="357"><span class="cl-title cl-tt-ess">eternal sunshine<span>of the spotless mind</span></span><i></i><b></b></div>
     <div class="cl-body">
       <div class="cl-meta">
         <span class="cl-num">باليت 20</span>
@@ -919,7 +1020,7 @@
     </div>
   </article>
   <article class="cl-card" data-cat="cool">
-    <div class="cl-frame" style="background:radial-gradient(95% 130% at 80% 15%, #1E2428cc, transparent 60%),radial-gradient(85% 110% at 12% 88%, #C8A05Abb, transparent 55%),linear-gradient(158deg, #2E3E55 0%, #6B8AA8 55%, #8AA8C8 100%)"><img src="img/skyfall.webp" alt="" loading="lazy" width="640" height="357"><span class="cl-title cl-tt-def" style="font-size:10cqw">Skyfall</span><i></i><b></b></div>
+    <div class="cl-frame" style="background:radial-gradient(95% 130% at 80% 15%, #1E2428cc, transparent 60%),radial-gradient(85% 110% at 12% 88%, #C8A05Abb, transparent 55%),linear-gradient(158deg, #2E3E55 0%, #6B8AA8 55%, #8AA8C8 100%)"><img src="img/skyfall.webp" alt="" loading="lazy" width="640" height="357"><span class="cl-title cl-tt-sky">SKYFALL</span><i></i><b></b></div>
     <div class="cl-body">
       <div class="cl-meta">
         <span class="cl-num">باليت 21</span>
@@ -952,7 +1053,7 @@
     </div>
   </article>
   <article class="cl-card" data-cat="neon">
-    <div class="cl-frame" style="background:radial-gradient(95% 130% at 80% 15%, #2E3438cc, transparent 60%),radial-gradient(85% 110% at 12% 88%, #4AC8D9bb, transparent 55%),linear-gradient(158deg, #D97E2B 0%, #8A4B2A 55%, #E8B48A 100%)"><img src="img/blade-runner-2049.webp" alt="" loading="lazy" width="640" height="357"><span class="cl-title cl-tt-def" style="font-size:8cqw">Blade Runner 2049</span><i></i><b></b></div>
+    <div class="cl-frame" style="background:radial-gradient(95% 130% at 80% 15%, #2E3438cc, transparent 60%),radial-gradient(85% 110% at 12% 88%, #4AC8D9bb, transparent 55%),linear-gradient(158deg, #D97E2B 0%, #8A4B2A 55%, #E8B48A 100%)"><img src="img/blade-runner-2049.webp" alt="" loading="lazy" width="640" height="357"><span class="cl-title cl-tt-br49"><span>BLADE RUNNER</span>2049</span><i></i><b></b></div>
     <div class="cl-body">
       <div class="cl-meta">
         <span class="cl-num">باليت 22</span>
@@ -985,7 +1086,7 @@
     </div>
   </article>
   <article class="cl-card" data-cat="neon">
-    <div class="cl-frame" style="background:radial-gradient(95% 130% at 80% 15%, #F2C845cc, transparent 60%),radial-gradient(85% 110% at 12% 88%, #4AC8D9bb, transparent 55%),linear-gradient(158deg, #E85C8A 0%, #2E1E38 55%, #1E2428 100%)"><img src="img/drive.webp" alt="" loading="lazy" width="640" height="357"><span class="cl-title cl-tt-def" style="font-size:10cqw">Drive</span><i></i><b></b></div>
+    <div class="cl-frame" style="background:radial-gradient(95% 130% at 80% 15%, #F2C845cc, transparent 60%),radial-gradient(85% 110% at 12% 88%, #4AC8D9bb, transparent 55%),linear-gradient(158deg, #E85C8A 0%, #2E1E38 55%, #1E2428 100%)"><img src="img/drive.webp" alt="" loading="lazy" width="640" height="357"><span class="cl-title cl-tt-drv">Drive</span><i></i><b></b></div>
     <div class="cl-body">
       <div class="cl-meta">
         <span class="cl-num">باليت 23</span>
@@ -1018,7 +1119,7 @@
     </div>
   </article>
   <article class="cl-card" data-cat="neon">
-    <div class="cl-frame" style="background:radial-gradient(95% 130% at 80% 15%, #1E2428cc, transparent 60%),radial-gradient(85% 110% at 12% 88%, #4A8AC8bb, transparent 55%),linear-gradient(158deg, #3E2E5C 0%, #E85C8A 55%, #C84B5C 100%)"><img src="img/john-wick.webp" alt="" loading="lazy" width="640" height="357"><span class="cl-title cl-tt-def" style="font-size:10cqw">John Wick</span><i></i><b></b></div>
+    <div class="cl-frame" style="background:radial-gradient(95% 130% at 80% 15%, #1E2428cc, transparent 60%),radial-gradient(85% 110% at 12% 88%, #4A8AC8bb, transparent 55%),linear-gradient(158deg, #3E2E5C 0%, #E85C8A 55%, #C84B5C 100%)"><img src="img/john-wick.webp" alt="" loading="lazy" width="640" height="357"><span class="cl-title cl-tt-jw">JOHN WICK</span><i></i><b></b></div>
     <div class="cl-body">
       <div class="cl-meta">
         <span class="cl-num">باليت 24</span>
@@ -1051,7 +1152,7 @@
     </div>
   </article>
   <article class="cl-card" data-cat="neon">
-    <div class="cl-frame" style="background:radial-gradient(95% 130% at 80% 15%, #2E3E55cc, transparent 60%),radial-gradient(85% 110% at 12% 88%, #E8732Bbb, transparent 55%),linear-gradient(158deg, #4AC8D9 0%, #1E2428 55%, #C8D2D9 100%)"><img src="img/tron-legacy.webp" alt="" loading="lazy" width="640" height="357"><span class="cl-title cl-tt-def" style="font-size:8cqw">Tron: Legacy</span><i></i><b></b></div>
+    <div class="cl-frame" style="background:radial-gradient(95% 130% at 80% 15%, #2E3E55cc, transparent 60%),radial-gradient(85% 110% at 12% 88%, #E8732Bbb, transparent 55%),linear-gradient(158deg, #4AC8D9 0%, #1E2428 55%, #C8D2D9 100%)"><img src="img/tron-legacy.webp" alt="" loading="lazy" width="640" height="357"><span class="cl-title cl-tt-tron">TRON<span>LEGACY</span></span><i></i><b></b></div>
     <div class="cl-body">
       <div class="cl-meta">
         <span class="cl-num">باليت 25</span>
@@ -1084,7 +1185,7 @@
     </div>
   </article>
   <article class="cl-card" data-cat="neon">
-    <div class="cl-frame" style="background:radial-gradient(95% 130% at 80% 15%, #6B3A8Acc, transparent 60%),radial-gradient(85% 110% at 12% 88%, #F2C845bb, transparent 55%),linear-gradient(158deg, #3E4A8A 0%, #E85C8A 55%, #4AC8D9 100%)"><img src="img/la-la-land.webp" alt="" loading="lazy" width="640" height="357"><span class="cl-title cl-tt-def" style="font-size:10cqw">La La Land</span><i></i><b></b></div>
+    <div class="cl-frame" style="background:radial-gradient(95% 130% at 80% 15%, #6B3A8Acc, transparent 60%),radial-gradient(85% 110% at 12% 88%, #F2C845bb, transparent 55%),linear-gradient(158deg, #3E4A8A 0%, #E85C8A 55%, #4AC8D9 100%)"><img src="img/la-la-land.webp" alt="" loading="lazy" width="640" height="357"><span class="cl-title cl-tt-lll">La La Land</span><i></i><b></b></div>
     <div class="cl-body">
       <div class="cl-meta">
         <span class="cl-num">باليت 26</span>
@@ -1117,7 +1218,7 @@
     </div>
   </article>
   <article class="cl-card" data-cat="neon">
-    <div class="cl-frame" style="background:radial-gradient(95% 130% at 80% 15%, #E85C8Acc, transparent 60%),radial-gradient(85% 110% at 12% 88%, #F2C845bb, transparent 55%),linear-gradient(158deg, #E8354A 0%, #2E3EC8 55%, #1E2428 100%)"><img src="img/spider-verse.webp" alt="" loading="lazy" width="640" height="357"><span class="cl-title cl-tt-def" style="font-size:5.5cqw">Spider-Man: Into the Spider-Verse</span><i></i><b></b></div>
+    <div class="cl-frame" style="background:radial-gradient(95% 130% at 80% 15%, #E85C8Acc, transparent 60%),radial-gradient(85% 110% at 12% 88%, #F2C845bb, transparent 55%),linear-gradient(158deg, #E8354A 0%, #2E3EC8 55%, #1E2428 100%)"><img src="img/spider-verse.webp" alt="" loading="lazy" width="640" height="357"><span class="cl-title cl-tt-sv"><span>SPIDER-MAN</span>INTO THE SPIDER-VERSE</span><i></i><b></b></div>
     <div class="cl-body">
       <div class="cl-meta">
         <span class="cl-num">باليت 27</span>
@@ -1150,7 +1251,7 @@
     </div>
   </article>
   <article class="cl-card" data-cat="neon">
-    <div class="cl-frame" style="background:radial-gradient(95% 130% at 80% 15%, #E85C8Acc, transparent 60%),radial-gradient(85% 110% at 12% 88%, #4AC8D9bb, transparent 55%),linear-gradient(158deg, #6B3A8A 0%, #E8732B 55%, #2E2E45 100%)"><img src="img/guardians-of-the-galaxy.webp" alt="" loading="lazy" width="640" height="357"><span class="cl-title cl-tt-def" style="font-size:6.5cqw">Guardians of the Galaxy</span><i></i><b></b></div>
+    <div class="cl-frame" style="background:radial-gradient(95% 130% at 80% 15%, #E85C8Acc, transparent 60%),radial-gradient(85% 110% at 12% 88%, #4AC8D9bb, transparent 55%),linear-gradient(158deg, #6B3A8A 0%, #E8732B 55%, #2E2E45 100%)"><img src="img/guardians-of-the-galaxy.webp" alt="" loading="lazy" width="640" height="357"><span class="cl-title cl-tt-gog"><span>GUARDIANS</span>OF THE GALAXY</span><i></i><b></b></div>
     <div class="cl-body">
       <div class="cl-meta">
         <span class="cl-num">باليت 28</span>
@@ -1183,7 +1284,7 @@
     </div>
   </article>
   <article class="cl-card" data-cat="neon">
-    <div class="cl-frame" style="background:radial-gradient(95% 130% at 80% 15%, #8A96A8cc, transparent 60%),radial-gradient(85% 110% at 12% 88%, #1E2428bb, transparent 55%),linear-gradient(158deg, #4AC8D9 0%, #E85C8A 55%, #F2C845 100%)"><img src="img/atomic-blonde.webp" alt="" loading="lazy" width="640" height="357"><span class="cl-title cl-tt-def" style="font-size:8cqw">Atomic Blonde</span><i></i><b></b></div>
+    <div class="cl-frame" style="background:radial-gradient(95% 130% at 80% 15%, #8A96A8cc, transparent 60%),radial-gradient(85% 110% at 12% 88%, #1E2428bb, transparent 55%),linear-gradient(158deg, #4AC8D9 0%, #E85C8A 55%, #F2C845 100%)"><img src="img/atomic-blonde.webp" alt="" loading="lazy" width="640" height="357"><span class="cl-title cl-tt-ab">ATOMIC BLONDE</span><i></i><b></b></div>
     <div class="cl-body">
       <div class="cl-meta">
         <span class="cl-num">باليت 29</span>
@@ -1216,7 +1317,7 @@
     </div>
   </article>
   <article class="cl-card" data-cat="neon">
-    <div class="cl-frame" style="background:radial-gradient(95% 130% at 80% 15%, #C8D2D9cc, transparent 60%),radial-gradient(85% 110% at 12% 88%, #4A5C8Abb, transparent 55%),linear-gradient(158deg, #1E2428 0%, #E8732B 55%, #8A3A2B 100%)"><img src="img/nightcrawler.webp" alt="" loading="lazy" width="640" height="357"><span class="cl-title cl-tt-def" style="font-size:8cqw">Nightcrawler</span><i></i><b></b></div>
+    <div class="cl-frame" style="background:radial-gradient(95% 130% at 80% 15%, #C8D2D9cc, transparent 60%),radial-gradient(85% 110% at 12% 88%, #4A5C8Abb, transparent 55%),linear-gradient(158deg, #1E2428 0%, #E8732B 55%, #8A3A2B 100%)"><img src="img/nightcrawler.webp" alt="" loading="lazy" width="640" height="357"><span class="cl-title cl-tt-nc">nightcrawler</span><i></i><b></b></div>
     <div class="cl-body">
       <div class="cl-meta">
         <span class="cl-num">باليت 30</span>
@@ -1249,7 +1350,7 @@
     </div>
   </article>
   <article class="cl-card" data-cat="neon">
-    <div class="cl-frame" style="background:radial-gradient(95% 130% at 80% 15%, #E8B4C8cc, transparent 60%),radial-gradient(85% 110% at 12% 88%, #4A8AC8bb, transparent 55%),linear-gradient(158deg, #C8354A 0%, #2E1E38 55%, #1E2428 100%)"><img src="img/suspiria.webp" alt="" loading="lazy" width="640" height="357"><span class="cl-title cl-tt-def" style="font-size:10cqw">Suspiria</span><i></i><b></b></div>
+    <div class="cl-frame" style="background:radial-gradient(95% 130% at 80% 15%, #E8B4C8cc, transparent 60%),radial-gradient(85% 110% at 12% 88%, #4A8AC8bb, transparent 55%),linear-gradient(158deg, #C8354A 0%, #2E1E38 55%, #1E2428 100%)"><img src="img/suspiria.webp" alt="" loading="lazy" width="640" height="357"><span class="cl-title cl-tt-sus">SUSPIRIA</span><i></i><b></b></div>
     <div class="cl-body">
       <div class="cl-meta">
         <span class="cl-num">باليت 31</span>
@@ -1282,7 +1383,7 @@
     </div>
   </article>
   <article class="cl-card" data-cat="pastel">
-    <div class="cl-frame" style="background:radial-gradient(95% 130% at 80% 15%, #8AA8C8cc, transparent 60%),radial-gradient(85% 110% at 12% 88%, #F2DCA8bb, transparent 55%),linear-gradient(158deg, #E8A8B8 0%, #B85C6B 55%, #5C3A45 100%)"><img src="img/grand-budapest-hotel.webp" alt="" loading="lazy" width="640" height="357"><span class="cl-title cl-tt-def" style="font-size:6.5cqw">The Grand Budapest Hotel</span><i></i><b></b></div>
+    <div class="cl-frame" style="background:radial-gradient(95% 130% at 80% 15%, #8AA8C8cc, transparent 60%),radial-gradient(85% 110% at 12% 88%, #F2DCA8bb, transparent 55%),linear-gradient(158deg, #E8A8B8 0%, #B85C6B 55%, #5C3A45 100%)"><img src="img/grand-budapest-hotel.webp" alt="" loading="lazy" width="640" height="357"><span class="cl-title cl-tt-gbh"><span>THE</span>GRAND BUDAPEST HOTEL</span><i></i><b></b></div>
     <div class="cl-body">
       <div class="cl-meta">
         <span class="cl-num">باليت 32</span>
@@ -1315,7 +1416,7 @@
     </div>
   </article>
   <article class="cl-card" data-cat="pastel">
-    <div class="cl-frame" style="background:radial-gradient(95% 130% at 80% 15%, #D9B48Acc, transparent 60%),radial-gradient(85% 110% at 12% 88%, #8A9A6Bbb, transparent 55%),linear-gradient(158deg, #E8D8A8 0%, #C8873F 55%, #5C6B4F 100%)"><img src="img/moonrise-kingdom.webp" alt="" loading="lazy" width="640" height="357"><span class="cl-title cl-tt-def" style="font-size:8cqw">Moonrise Kingdom</span><i></i><b></b></div>
+    <div class="cl-frame" style="background:radial-gradient(95% 130% at 80% 15%, #D9B48Acc, transparent 60%),radial-gradient(85% 110% at 12% 88%, #8A9A6Bbb, transparent 55%),linear-gradient(158deg, #E8D8A8 0%, #C8873F 55%, #5C6B4F 100%)"><img src="img/moonrise-kingdom.webp" alt="" loading="lazy" width="640" height="357"><span class="cl-title cl-tt-mk">Moonrise Kingdom</span><i></i><b></b></div>
     <div class="cl-body">
       <div class="cl-meta">
         <span class="cl-num">باليت 33</span>
@@ -1348,7 +1449,7 @@
     </div>
   </article>
   <article class="cl-card" data-cat="pastel">
-    <div class="cl-frame" style="background:radial-gradient(95% 130% at 80% 15%, #F2E4C9cc, transparent 60%),radial-gradient(85% 110% at 12% 88%, #C85C4Abb, transparent 55%),linear-gradient(158deg, #E8C8A8 0%, #8AA8C8 55%, #5C5C6B 100%)"><img src="img/the-french-dispatch.webp" alt="" loading="lazy" width="640" height="357"><span class="cl-title cl-tt-def" style="font-size:6.5cqw">The French Dispatch</span><i></i><b></b></div>
+    <div class="cl-frame" style="background:radial-gradient(95% 130% at 80% 15%, #F2E4C9cc, transparent 60%),radial-gradient(85% 110% at 12% 88%, #C85C4Abb, transparent 55%),linear-gradient(158deg, #E8C8A8 0%, #8AA8C8 55%, #5C5C6B 100%)"><img src="img/the-french-dispatch.webp" alt="" loading="lazy" width="640" height="357"><span class="cl-title cl-tt-tfd"><span>THE</span>FRENCH DISPATCH</span><i></i><b></b></div>
     <div class="cl-body">
       <div class="cl-meta">
         <span class="cl-num">باليت 34</span>
@@ -1381,7 +1482,7 @@
     </div>
   </article>
   <article class="cl-card" data-cat="pastel">
-    <div class="cl-frame" style="background:radial-gradient(95% 130% at 80% 15%, #F2DCA8cc, transparent 60%),radial-gradient(85% 110% at 12% 88%, #C8735Cbb, transparent 55%),linear-gradient(158deg, #4AA8C8 0%, #E8B84A 55%, #8A5A6B 100%)"><img src="img/darjeeling-limited.webp" alt="" loading="lazy" width="640" height="357"><span class="cl-title cl-tt-def" style="font-size:6.5cqw">The Darjeeling Limited</span><i></i><b></b></div>
+    <div class="cl-frame" style="background:radial-gradient(95% 130% at 80% 15%, #F2DCA8cc, transparent 60%),radial-gradient(85% 110% at 12% 88%, #C8735Cbb, transparent 55%),linear-gradient(158deg, #4AA8C8 0%, #E8B84A 55%, #8A5A6B 100%)"><img src="img/darjeeling-limited.webp" alt="" loading="lazy" width="640" height="357"><span class="cl-title cl-tt-dl"><span>THE</span>DARJEELING LIMITED</span><i></i><b></b></div>
     <div class="cl-body">
       <div class="cl-meta">
         <span class="cl-num">باليت 35</span>
@@ -1414,7 +1515,7 @@
     </div>
   </article>
   <article class="cl-card" data-cat="pastel">
-    <div class="cl-frame" style="background:radial-gradient(95% 130% at 80% 15%, #F2E45Ccc, transparent 60%),radial-gradient(85% 110% at 12% 88%, #4AC8D9bb, transparent 55%),linear-gradient(158deg, #E86BA8 0%, #F2B8D2 55%, #C84B8A 100%)"><img src="img/barbie.webp" alt="" loading="lazy" width="640" height="357"><span class="cl-title cl-tt-def" style="font-size:10cqw">Barbie</span><i></i><b></b></div>
+    <div class="cl-frame" style="background:radial-gradient(95% 130% at 80% 15%, #F2E45Ccc, transparent 60%),radial-gradient(85% 110% at 12% 88%, #4AC8D9bb, transparent 55%),linear-gradient(158deg, #E86BA8 0%, #F2B8D2 55%, #C84B8A 100%)"><img src="img/barbie.webp" alt="" loading="lazy" width="640" height="357"><span class="cl-title cl-tt-bar">Barbie</span><i></i><b></b></div>
     <div class="cl-body">
       <div class="cl-meta">
         <span class="cl-num">باليت 36</span>
@@ -1447,7 +1548,7 @@
     </div>
   </article>
   <article class="cl-card" data-cat="pastel">
-    <div class="cl-frame" style="background:radial-gradient(95% 130% at 80% 15%, #C88A9Acc, transparent 60%),radial-gradient(85% 110% at 12% 88%, #E8E4C9bb, transparent 55%),linear-gradient(158deg, #F2C8D2 0%, #A8D2E8 55%, #8AA88A 100%)"><img src="img/marie-antoinette.webp" alt="" loading="lazy" width="640" height="357"><span class="cl-title cl-tt-def" style="font-size:8cqw">Marie Antoinette</span><i></i><b></b></div>
+    <div class="cl-frame" style="background:radial-gradient(95% 130% at 80% 15%, #C88A9Acc, transparent 60%),radial-gradient(85% 110% at 12% 88%, #E8E4C9bb, transparent 55%),linear-gradient(158deg, #F2C8D2 0%, #A8D2E8 55%, #8AA88A 100%)"><img src="img/marie-antoinette.webp" alt="" loading="lazy" width="640" height="357"><span class="cl-title cl-tt-ma">MARIE ANTOINETTE</span><i></i><b></b></div>
     <div class="cl-body">
       <div class="cl-meta">
         <span class="cl-num">باليت 37</span>
@@ -1480,7 +1581,7 @@
     </div>
   </article>
   <article class="cl-card" data-cat="pastel">
-    <div class="cl-frame" style="background:radial-gradient(95% 130% at 80% 15%, #A8C08Acc, transparent 60%),radial-gradient(85% 110% at 12% 88%, #E8A85Cbb, transparent 55%),linear-gradient(158deg, #8AC8D9 0%, #F2E4C9 55%, #4A6B8A 100%)"><img src="img/the-truman-show.webp" alt="" loading="lazy" width="640" height="357"><span class="cl-title cl-tt-def" style="font-size:8cqw">The Truman Show</span><i></i><b></b></div>
+    <div class="cl-frame" style="background:radial-gradient(95% 130% at 80% 15%, #A8C08Acc, transparent 60%),radial-gradient(85% 110% at 12% 88%, #E8A85Cbb, transparent 55%),linear-gradient(158deg, #8AC8D9 0%, #F2E4C9 55%, #4A6B8A 100%)"><img src="img/the-truman-show.webp" alt="" loading="lazy" width="640" height="357"><span class="cl-title cl-tt-tts">The Truman Show</span><i></i><b></b></div>
     <div class="cl-body">
       <div class="cl-meta">
         <span class="cl-num">باليت 38</span>
@@ -1513,7 +1614,7 @@
     </div>
   </article>
   <article class="cl-card" data-cat="pastel">
-    <div class="cl-frame" style="background:radial-gradient(95% 130% at 80% 15%, #8A96C8cc, transparent 60%),radial-gradient(85% 110% at 12% 88%, #F2E48Abb, transparent 55%),linear-gradient(158deg, #A8D2C8 0%, #E8A8B8 55%, #3E3A45 100%)"><img src="img/edward-scissorhands.webp" alt="" loading="lazy" width="640" height="357"><span class="cl-title cl-tt-def" style="font-size:6.5cqw">Edward Scissorhands</span><i></i><b></b></div>
+    <div class="cl-frame" style="background:radial-gradient(95% 130% at 80% 15%, #8A96C8cc, transparent 60%),radial-gradient(85% 110% at 12% 88%, #F2E48Abb, transparent 55%),linear-gradient(158deg, #A8D2C8 0%, #E8A8B8 55%, #3E3A45 100%)"><img src="img/edward-scissorhands.webp" alt="" loading="lazy" width="640" height="357"><span class="cl-title cl-tt-es">Edward Scissorhands</span><i></i><b></b></div>
     <div class="cl-body">
       <div class="cl-meta">
         <span class="cl-num">باليت 39</span>
@@ -1546,7 +1647,7 @@
     </div>
   </article>
   <article class="cl-card" data-cat="pastel">
-    <div class="cl-frame" style="background:radial-gradient(95% 130% at 80% 15%, #F2E4C9cc, transparent 60%),radial-gradient(85% 110% at 12% 88%, #D9B48Abb, transparent 55%),linear-gradient(158deg, #8AC8D9 0%, #E8B84A 55%, #C8735C 100%)"><img src="img/asteroid-city.webp" alt="" loading="lazy" width="640" height="357"><span class="cl-title cl-tt-def" style="font-size:8cqw">Asteroid City</span><i></i><b></b></div>
+    <div class="cl-frame" style="background:radial-gradient(95% 130% at 80% 15%, #F2E4C9cc, transparent 60%),radial-gradient(85% 110% at 12% 88%, #D9B48Abb, transparent 55%),linear-gradient(158deg, #8AC8D9 0%, #E8B84A 55%, #C8735C 100%)"><img src="img/asteroid-city.webp" alt="" loading="lazy" width="640" height="357"><span class="cl-title cl-tt-ac">ASTEROID CITY</span><i></i><b></b></div>
     <div class="cl-body">
       <div class="cl-meta">
         <span class="cl-num">باليت 40</span>
@@ -1579,7 +1680,7 @@
     </div>
   </article>
   <article class="cl-card" data-cat="pastel">
-    <div class="cl-frame" style="background:radial-gradient(95% 130% at 80% 15%, #A85C6Bcc, transparent 60%),radial-gradient(85% 110% at 12% 88%, #E8C8A8bb, transparent 55%),linear-gradient(158deg, #C88A5C 0%, #8A5A45 55%, #5C4A3A 100%)"><img src="img/chocolat.webp" alt="" loading="lazy" width="640" height="357"><span class="cl-title cl-tt-def" style="font-size:10cqw">Chocolat</span><i></i><b></b></div>
+    <div class="cl-frame" style="background:radial-gradient(95% 130% at 80% 15%, #A85C6Bcc, transparent 60%),radial-gradient(85% 110% at 12% 88%, #E8C8A8bb, transparent 55%),linear-gradient(158deg, #C88A5C 0%, #8A5A45 55%, #5C4A3A 100%)"><img src="img/chocolat.webp" alt="" loading="lazy" width="640" height="357"><span class="cl-title cl-tt-cho">Chocolat</span><i></i><b></b></div>
     <div class="cl-body">
       <div class="cl-meta">
         <span class="cl-num">باليت 41</span>
@@ -1612,7 +1713,7 @@
     </div>
   </article>
   <article class="cl-card" data-cat="pastel">
-    <div class="cl-frame" style="background:radial-gradient(95% 130% at 80% 15%, #4AA8C8cc, transparent 60%),radial-gradient(85% 110% at 12% 88%, #C84B5Cbb, transparent 55%),linear-gradient(158deg, #8A5AA8 0%, #E8B84A 55%, #F2DCA8 100%)"><img src="img/wonka.webp" alt="" loading="lazy" width="640" height="357"><span class="cl-title cl-tt-def" style="font-size:10cqw">Wonka</span><i></i><b></b></div>
+    <div class="cl-frame" style="background:radial-gradient(95% 130% at 80% 15%, #4AA8C8cc, transparent 60%),radial-gradient(85% 110% at 12% 88%, #C84B5Cbb, transparent 55%),linear-gradient(158deg, #8A5AA8 0%, #E8B84A 55%, #F2DCA8 100%)"><img src="img/wonka.webp" alt="" loading="lazy" width="640" height="357"><span class="cl-title cl-tt-won">Wonka</span><i></i><b></b></div>
     <div class="cl-body">
       <div class="cl-meta">
         <span class="cl-num">باليت 42</span>
@@ -1645,7 +1746,7 @@
     </div>
   </article>
   <article class="cl-card" data-cat="desert">
-    <div class="cl-frame" style="background:radial-gradient(95% 130% at 80% 15%, #E8C89Acc, transparent 60%),radial-gradient(85% 110% at 12% 88%, #3E3438bb, transparent 55%),linear-gradient(158deg, #B87A35 0%, #D9A85C 55%, #6B4A2B 100%)"><img src="img/dune-part-two.webp" alt="" loading="lazy" width="640" height="357"><span class="cl-title cl-tt-def" style="font-size:8cqw">Dune: Part Two</span><i></i><b></b></div>
+    <div class="cl-frame" style="background:radial-gradient(95% 130% at 80% 15%, #E8C89Acc, transparent 60%),radial-gradient(85% 110% at 12% 88%, #3E3438bb, transparent 55%),linear-gradient(158deg, #B87A35 0%, #D9A85C 55%, #6B4A2B 100%)"><img src="img/dune-part-two.webp" alt="" loading="lazy" width="640" height="357"><span class="cl-title cl-tt-dpt">DUNE<span>PART TWO</span></span><i></i><b></b></div>
     <div class="cl-body">
       <div class="cl-meta">
         <span class="cl-num">باليت 43</span>
@@ -1678,7 +1779,7 @@
     </div>
   </article>
   <article class="cl-card" data-cat="desert">
-    <div class="cl-frame" style="background:radial-gradient(95% 130% at 80% 15%, #8A5A2Bcc, transparent 60%),radial-gradient(85% 110% at 12% 88%, #4AA8C8bb, transparent 55%),linear-gradient(158deg, #E8732B 0%, #C84B2A 55%, #F2C879 100%)"><img src="img/mad-max-fury-road.webp" alt="" loading="lazy" width="640" height="357"><span class="cl-title cl-tt-def" style="font-size:8cqw">Mad Max: Fury Road</span><i></i><b></b></div>
+    <div class="cl-frame" style="background:radial-gradient(95% 130% at 80% 15%, #8A5A2Bcc, transparent 60%),radial-gradient(85% 110% at 12% 88%, #4AA8C8bb, transparent 55%),linear-gradient(158deg, #E8732B 0%, #C84B2A 55%, #F2C879 100%)"><img src="img/mad-max-fury-road.webp" alt="" loading="lazy" width="640" height="357"><span class="cl-title cl-tt-mmfr"><span>MAD MAX</span>FURY ROAD</span><i></i><b></b></div>
     <div class="cl-body">
       <div class="cl-meta">
         <span class="cl-num">باليت 44</span>
@@ -1711,7 +1812,7 @@
     </div>
   </article>
   <article class="cl-card" data-cat="desert">
-    <div class="cl-frame" style="background:radial-gradient(95% 130% at 80% 15%, #4A6B8Acc, transparent 60%),radial-gradient(85% 110% at 12% 88%, #B87A35bb, transparent 55%),linear-gradient(158deg, #D9A85C 0%, #E8C89A 55%, #8A5A2B 100%)"><img src="img/lawrence-of-arabia.webp" alt="" loading="lazy" width="640" height="357"><span class="cl-title cl-tt-def" style="font-size:8cqw">Lawrence of Arabia</span><i></i><b></b></div>
+    <div class="cl-frame" style="background:radial-gradient(95% 130% at 80% 15%, #4A6B8Acc, transparent 60%),radial-gradient(85% 110% at 12% 88%, #B87A35bb, transparent 55%),linear-gradient(158deg, #D9A85C 0%, #E8C89A 55%, #8A5A2B 100%)"><img src="img/lawrence-of-arabia.webp" alt="" loading="lazy" width="640" height="357"><span class="cl-title cl-tt-loa"><span>LAWRENCE</span>OF ARABIA</span><i></i><b></b></div>
     <div class="cl-body">
       <div class="cl-meta">
         <span class="cl-num">باليت 45</span>
@@ -1744,7 +1845,7 @@
     </div>
   </article>
   <article class="cl-card" data-cat="desert">
-    <div class="cl-frame" style="background:radial-gradient(95% 130% at 80% 15%, #D9C8A8cc, transparent 60%),radial-gradient(85% 110% at 12% 88%, #5C4A3Abb, transparent 55%),linear-gradient(158deg, #C8A05A 0%, #8A7A5C 55%, #2E2822 100%)"><img src="img/no-country-for-old-men.webp" alt="" loading="lazy" width="640" height="357"><span class="cl-title cl-tt-def" style="font-size:6.5cqw">No Country for Old Men</span><i></i><b></b></div>
+    <div class="cl-frame" style="background:radial-gradient(95% 130% at 80% 15%, #D9C8A8cc, transparent 60%),radial-gradient(85% 110% at 12% 88%, #5C4A3Abb, transparent 55%),linear-gradient(158deg, #C8A05A 0%, #8A7A5C 55%, #2E2822 100%)"><img src="img/no-country-for-old-men.webp" alt="" loading="lazy" width="640" height="357"><span class="cl-title cl-tt-ncfom"><span>NO COUNTRY</span>FOR OLD MEN</span><i></i><b></b></div>
     <div class="cl-body">
       <div class="cl-meta">
         <span class="cl-num">باليت 46</span>
@@ -1777,7 +1878,7 @@
     </div>
   </article>
   <article class="cl-card" data-cat="desert">
-    <div class="cl-frame" style="background:radial-gradient(95% 130% at 80% 15%, #D9B48Acc, transparent 60%),radial-gradient(85% 110% at 12% 88%, #2E3438bb, transparent 55%),linear-gradient(158deg, #C8873F 0%, #5C5C55 55%, #8A4B2A 100%)"><img src="img/sicario.webp" alt="" loading="lazy" width="640" height="357"><span class="cl-title cl-tt-def" style="font-size:10cqw">Sicario</span><i></i><b></b></div>
+    <div class="cl-frame" style="background:radial-gradient(95% 130% at 80% 15%, #D9B48Acc, transparent 60%),radial-gradient(85% 110% at 12% 88%, #2E3438bb, transparent 55%),linear-gradient(158deg, #C8873F 0%, #5C5C55 55%, #8A4B2A 100%)"><img src="img/sicario.webp" alt="" loading="lazy" width="640" height="357"><span class="cl-title cl-tt-sic">SICARIO</span><i></i><b></b></div>
     <div class="cl-body">
       <div class="cl-meta">
         <span class="cl-num">باليت 47</span>
@@ -1810,7 +1911,7 @@
     </div>
   </article>
   <article class="cl-card" data-cat="desert">
-    <div class="cl-frame" style="background:radial-gradient(95% 130% at 80% 15%, #D9B48Acc, transparent 60%),radial-gradient(85% 110% at 12% 88%, #8A3A22bb, transparent 55%),linear-gradient(158deg, #C85C2B 0%, #E8955C 55%, #3E3438 100%)"><img src="img/the-martian.webp" alt="" loading="lazy" width="640" height="357"><span class="cl-title cl-tt-def" style="font-size:8cqw">The Martian</span><i></i><b></b></div>
+    <div class="cl-frame" style="background:radial-gradient(95% 130% at 80% 15%, #D9B48Acc, transparent 60%),radial-gradient(85% 110% at 12% 88%, #8A3A22bb, transparent 55%),linear-gradient(158deg, #C85C2B 0%, #E8955C 55%, #3E3438 100%)"><img src="img/the-martian.webp" alt="" loading="lazy" width="640" height="357"><span class="cl-title cl-tt-mar"><span>THE</span>MARTIAN</span><i></i><b></b></div>
     <div class="cl-body">
       <div class="cl-meta">
         <span class="cl-num">باليت 48</span>
@@ -1843,7 +1944,7 @@
     </div>
   </article>
   <article class="cl-card" data-cat="desert">
-    <div class="cl-frame" style="background:radial-gradient(95% 130% at 80% 15%, #2E2417cc, transparent 60%),radial-gradient(85% 110% at 12% 88%, #C8A05Abb, transparent 55%),linear-gradient(158deg, #8A5A2B 0%, #5C4A3A 55%, #D9C8A8 100%)"><img src="img/there-will-be-blood.webp" alt="" loading="lazy" width="640" height="357"><span class="cl-title cl-tt-def" style="font-size:6.5cqw">There Will Be Blood</span><i></i><b></b></div>
+    <div class="cl-frame" style="background:radial-gradient(95% 130% at 80% 15%, #2E2417cc, transparent 60%),radial-gradient(85% 110% at 12% 88%, #C8A05Abb, transparent 55%),linear-gradient(158deg, #8A5A2B 0%, #5C4A3A 55%, #D9C8A8 100%)"><img src="img/there-will-be-blood.webp" alt="" loading="lazy" width="640" height="357"><span class="cl-title cl-tt-twbb"><span>THERE WILL BE</span>BLOOD</span><i></i><b></b></div>
     <div class="cl-body">
       <div class="cl-meta">
         <span class="cl-num">باليت 49</span>
@@ -1876,7 +1977,7 @@
     </div>
   </article>
   <article class="cl-card" data-cat="desert">
-    <div class="cl-frame" style="background:radial-gradient(95% 130% at 80% 15%, #E8DCC9cc, transparent 60%),radial-gradient(85% 110% at 12% 88%, #8A6B4Abb, transparent 55%),linear-gradient(158deg, #D9B48A 0%, #C8873F 55%, #4A5C6B 100%)"><img src="img/the-english-patient.webp" alt="" loading="lazy" width="640" height="357"><span class="cl-title cl-tt-def" style="font-size:6.5cqw">The English Patient</span><i></i><b></b></div>
+    <div class="cl-frame" style="background:radial-gradient(95% 130% at 80% 15%, #E8DCC9cc, transparent 60%),radial-gradient(85% 110% at 12% 88%, #8A6B4Abb, transparent 55%),linear-gradient(158deg, #D9B48A 0%, #C8873F 55%, #4A5C6B 100%)"><img src="img/the-english-patient.webp" alt="" loading="lazy" width="640" height="357"><span class="cl-title cl-tt-tep">The English Patient</span><i></i><b></b></div>
     <div class="cl-body">
       <div class="cl-meta">
         <span class="cl-num">باليت 50</span>
@@ -1909,7 +2010,7 @@
     </div>
   </article>
   <article class="cl-card" data-cat="desert">
-    <div class="cl-frame" style="background:radial-gradient(95% 130% at 80% 15%, #D9A85Ccc, transparent 60%),radial-gradient(85% 110% at 12% 88%, #5C4A3Abb, transparent 55%),linear-gradient(158deg, #C8873F 0%, #8A5A2B 55%, #2E2822 100%)"><img src="img/raiders-of-the-lost-ark.webp" alt="" loading="lazy" width="640" height="357"><span class="cl-title cl-tt-def" style="font-size:6.5cqw">Raiders of the Lost Ark</span><i></i><b></b></div>
+    <div class="cl-frame" style="background:radial-gradient(95% 130% at 80% 15%, #D9A85Ccc, transparent 60%),radial-gradient(85% 110% at 12% 88%, #5C4A3Abb, transparent 55%),linear-gradient(158deg, #C8873F 0%, #8A5A2B 55%, #2E2822 100%)"><img src="img/raiders-of-the-lost-ark.webp" alt="" loading="lazy" width="640" height="357"><span class="cl-title cl-tt-rola"><span>RAIDERS OF</span>THE LOST ARK</span><i></i><b></b></div>
     <div class="cl-body">
       <div class="cl-meta">
         <span class="cl-num">باليت 51</span>
@@ -1942,7 +2043,7 @@
     </div>
   </article>
   <article class="cl-card" data-cat="desert">
-    <div class="cl-frame" style="background:radial-gradient(95% 130% at 80% 15%, #F2DCA8cc, transparent 60%),radial-gradient(85% 110% at 12% 88%, #8A5A2Bbb, transparent 55%),linear-gradient(158deg, #D9A85C 0%, #B87A35 55%, #3E3A2E 100%)"><img src="img/the-mummy.webp" alt="" loading="lazy" width="640" height="357"><span class="cl-title cl-tt-def" style="font-size:10cqw">The Mummy</span><i></i><b></b></div>
+    <div class="cl-frame" style="background:radial-gradient(95% 130% at 80% 15%, #F2DCA8cc, transparent 60%),radial-gradient(85% 110% at 12% 88%, #8A5A2Bbb, transparent 55%),linear-gradient(158deg, #D9A85C 0%, #B87A35 55%, #3E3A2E 100%)"><img src="img/the-mummy.webp" alt="" loading="lazy" width="640" height="357"><span class="cl-title cl-tt-mum">THE MUMMY</span><i></i><b></b></div>
     <div class="cl-body">
       <div class="cl-meta">
         <span class="cl-num">باليت 52</span>
@@ -1975,7 +2076,7 @@
     </div>
   </article>
   <article class="cl-card" data-cat="dark">
-    <div class="cl-frame" style="background:radial-gradient(95% 130% at 80% 15%, #3E3438cc, transparent 60%),radial-gradient(85% 110% at 12% 88%, #8A6B3Fbb, transparent 55%),linear-gradient(158deg, #1E1E22 0%, #C8354A 55%, #5C5C6B 100%)"><img src="img/the-batman.webp" alt="" loading="lazy" width="640" height="357"><span class="cl-title cl-tt-def" style="font-size:10cqw">The Batman</span><i></i><b></b></div>
+    <div class="cl-frame" style="background:radial-gradient(95% 130% at 80% 15%, #3E3438cc, transparent 60%),radial-gradient(85% 110% at 12% 88%, #8A6B3Fbb, transparent 55%),linear-gradient(158deg, #1E1E22 0%, #C8354A 55%, #5C5C6B 100%)"><img src="img/the-batman.webp" alt="" loading="lazy" width="640" height="357"><span class="cl-title cl-tt-tb">THE BATMAN</span><i></i><b></b></div>
     <div class="cl-body">
       <div class="cl-meta">
         <span class="cl-num">باليت 53</span>
@@ -2008,7 +2109,7 @@
     </div>
   </article>
   <article class="cl-card" data-cat="dark">
-    <div class="cl-frame" style="background:radial-gradient(95% 130% at 80% 15%, #2E2E38cc, transparent 60%),radial-gradient(85% 110% at 12% 88%, #E8B84Abb, transparent 55%),linear-gradient(158deg, #3E7A45 0%, #C84B5C 55%, #8A5A6B 100%)"><img src="img/joker.webp" alt="" loading="lazy" width="640" height="357"><span class="cl-title cl-tt-def" style="font-size:10cqw">Joker</span><i></i><b></b></div>
+    <div class="cl-frame" style="background:radial-gradient(95% 130% at 80% 15%, #2E2E38cc, transparent 60%),radial-gradient(85% 110% at 12% 88%, #E8B84Abb, transparent 55%),linear-gradient(158deg, #3E7A45 0%, #C84B5C 55%, #8A5A6B 100%)"><img src="img/joker.webp" alt="" loading="lazy" width="640" height="357"><span class="cl-title cl-tt-jok">JOKER</span><i></i><b></b></div>
     <div class="cl-body">
       <div class="cl-meta">
         <span class="cl-num">باليت 54</span>
@@ -2074,7 +2175,7 @@
     </div>
   </article>
   <article class="cl-card" data-cat="dark">
-    <div class="cl-frame" style="background:radial-gradient(95% 130% at 80% 15%, #1E1E1Ecc, transparent 60%),radial-gradient(85% 110% at 12% 88%, #8A5A2Bbb, transparent 55%),linear-gradient(158deg, #2E2417 0%, #C8873F 55%, #D9B48A 100%)"><img src="img/the-godfather.webp" alt="" loading="lazy" width="640" height="357"><span class="cl-title cl-tt-def" style="font-size:8cqw">The Godfather</span><i></i><b></b></div>
+    <div class="cl-frame" style="background:radial-gradient(95% 130% at 80% 15%, #1E1E1Ecc, transparent 60%),radial-gradient(85% 110% at 12% 88%, #8A5A2Bbb, transparent 55%),linear-gradient(158deg, #2E2417 0%, #C8873F 55%, #D9B48A 100%)"><img src="img/the-godfather.webp" alt="" loading="lazy" width="640" height="357"><span class="cl-title cl-tt-gf"><span>THE</span>GODFATHER</span><i></i><b></b></div>
     <div class="cl-body">
       <div class="cl-meta">
         <span class="cl-num">باليت 56</span>
@@ -2107,7 +2208,7 @@
     </div>
   </article>
   <article class="cl-card" data-cat="dark">
-    <div class="cl-frame" style="background:radial-gradient(95% 130% at 80% 15%, #1E2422cc, transparent 60%),radial-gradient(85% 110% at 12% 88%, #C8735Cbb, transparent 55%),linear-gradient(158deg, #3E4A45 0%, #8A7A5C 55%, #5C6B5C 100%)"><img src="img/fight-club.webp" alt="" loading="lazy" width="640" height="357"><span class="cl-title cl-tt-def" style="font-size:10cqw">Fight Club</span><i></i><b></b></div>
+    <div class="cl-frame" style="background:radial-gradient(95% 130% at 80% 15%, #1E2422cc, transparent 60%),radial-gradient(85% 110% at 12% 88%, #C8735Cbb, transparent 55%),linear-gradient(158deg, #3E4A45 0%, #8A7A5C 55%, #5C6B5C 100%)"><img src="img/fight-club.webp" alt="" loading="lazy" width="640" height="357"><span class="cl-title cl-tt-fc">FIGHT CLUB</span><i></i><b></b></div>
     <div class="cl-body">
       <div class="cl-meta">
         <span class="cl-num">باليت 57</span>
@@ -2140,7 +2241,7 @@
     </div>
   </article>
   <article class="cl-card" data-cat="dark">
-    <div class="cl-frame" style="background:radial-gradient(95% 130% at 80% 15%, #1E2422cc, transparent 60%),radial-gradient(85% 110% at 12% 88%, #5C4A3Abb, transparent 55%),linear-gradient(158deg, #3E4A45 0%, #8A9A8A 55%, #C8D2C8 100%)"><img src="img/silence-of-the-lambs.webp" alt="" loading="lazy" width="640" height="357"><span class="cl-title cl-tt-def" style="font-size:6.5cqw">The Silence of the Lambs</span><i></i><b></b></div>
+    <div class="cl-frame" style="background:radial-gradient(95% 130% at 80% 15%, #1E2422cc, transparent 60%),radial-gradient(85% 110% at 12% 88%, #5C4A3Abb, transparent 55%),linear-gradient(158deg, #3E4A45 0%, #8A9A8A 55%, #C8D2C8 100%)"><img src="img/silence-of-the-lambs.webp" alt="" loading="lazy" width="640" height="357"><span class="cl-title cl-tt-sotl"><span>THE SILENCE</span>OF THE LAMBS</span><i></i><b></b></div>
     <div class="cl-body">
       <div class="cl-meta">
         <span class="cl-num">باليت 58</span>
@@ -2206,7 +2307,7 @@
     </div>
   </article>
   <article class="cl-card" data-cat="dark">
-    <div class="cl-frame" style="background:radial-gradient(95% 130% at 80% 15%, #8A96A8cc, transparent 60%),radial-gradient(85% 110% at 12% 88%, #C84B5Cbb, transparent 55%),linear-gradient(158deg, #1E1E22 0%, #E8E4E8 55%, #3E3438 100%)"><img src="img/black-swan.webp" alt="" loading="lazy" width="640" height="357"><span class="cl-title cl-tt-def" style="font-size:10cqw">Black Swan</span><i></i><b></b></div>
+    <div class="cl-frame" style="background:radial-gradient(95% 130% at 80% 15%, #8A96A8cc, transparent 60%),radial-gradient(85% 110% at 12% 88%, #C84B5Cbb, transparent 55%),linear-gradient(158deg, #1E1E22 0%, #E8E4E8 55%, #3E3438 100%)"><img src="img/black-swan.webp" alt="" loading="lazy" width="640" height="357"><span class="cl-title cl-tt-bs">BLACK SWAN</span><i></i><b></b></div>
     <div class="cl-body">
       <div class="cl-meta">
         <span class="cl-num">باليت 60</span>
@@ -2239,7 +2340,7 @@
     </div>
   </article>
   <article class="cl-card" data-cat="dark">
-    <div class="cl-frame" style="background:radial-gradient(95% 130% at 80% 15%, #8A5A2Bcc, transparent 60%),radial-gradient(85% 110% at 12% 88%, #3E3438bb, transparent 55%),linear-gradient(158deg, #5C2E45 0%, #C8735C 55%, #1E2428 100%)"><img src="img/oldboy.webp" alt="" loading="lazy" width="640" height="357"><span class="cl-title cl-tt-def" style="font-size:10cqw">Oldboy</span><i></i><b></b></div>
+    <div class="cl-frame" style="background:radial-gradient(95% 130% at 80% 15%, #8A5A2Bcc, transparent 60%),radial-gradient(85% 110% at 12% 88%, #3E3438bb, transparent 55%),linear-gradient(158deg, #5C2E45 0%, #C8735C 55%, #1E2428 100%)"><img src="img/oldboy.webp" alt="" loading="lazy" width="640" height="357"><span class="cl-title cl-tt-old">OLDBOY</span><i></i><b></b></div>
     <div class="cl-body">
       <div class="cl-meta">
         <span class="cl-num">باليت 61</span>
@@ -2272,7 +2373,7 @@
     </div>
   </article>
   <article class="cl-card" data-cat="dark">
-    <div class="cl-frame" style="background:radial-gradient(95% 130% at 80% 15%, #1E1E22cc, transparent 60%),radial-gradient(85% 110% at 12% 88%, #8A96A8bb, transparent 55%),linear-gradient(158deg, #2E3438 0%, #C8354A 55%, #5C5C6B 100%)"><img src="img/sweeney-todd.webp" alt="" loading="lazy" width="640" height="357"><span class="cl-title cl-tt-def" style="font-size:8cqw">Sweeney Todd</span><i></i><b></b></div>
+    <div class="cl-frame" style="background:radial-gradient(95% 130% at 80% 15%, #1E1E22cc, transparent 60%),radial-gradient(85% 110% at 12% 88%, #8A96A8bb, transparent 55%),linear-gradient(158deg, #2E3438 0%, #C8354A 55%, #5C5C6B 100%)"><img src="img/sweeney-todd.webp" alt="" loading="lazy" width="640" height="357"><span class="cl-title cl-tt-st">Sweeney Todd</span><i></i><b></b></div>
     <div class="cl-body">
       <div class="cl-meta">
         <span class="cl-num">باليت 62</span>
@@ -2305,7 +2406,7 @@
     </div>
   </article>
   <article class="cl-card" data-cat="green">
-    <div class="cl-frame" style="background:radial-gradient(95% 130% at 80% 15%, #2E3438cc, transparent 60%),radial-gradient(85% 110% at 12% 88%, #8AC88Abb, transparent 55%),linear-gradient(158deg, #3E7A45 0%, #1E2E22 55%, #C8D9C8 100%)"><img src="img/the-matrix.webp" alt="" loading="lazy" width="640" height="357"><span class="cl-title cl-tt-def" style="font-size:10cqw">The Matrix</span><i></i><b></b></div>
+    <div class="cl-frame" style="background:radial-gradient(95% 130% at 80% 15%, #2E3438cc, transparent 60%),radial-gradient(85% 110% at 12% 88%, #8AC88Abb, transparent 55%),linear-gradient(158deg, #3E7A45 0%, #1E2E22 55%, #C8D9C8 100%)"><img src="img/the-matrix.webp" alt="" loading="lazy" width="640" height="357"><span class="cl-title cl-tt-mtx">THE MATRIX</span><i></i><b></b></div>
     <div class="cl-body">
       <div class="cl-meta">
         <span class="cl-num">باليت 63</span>
@@ -2338,7 +2439,7 @@
     </div>
   </article>
   <article class="cl-card" data-cat="green">
-    <div class="cl-frame" style="background:radial-gradient(95% 130% at 80% 15%, #1E3438cc, transparent 60%),radial-gradient(85% 110% at 12% 88%, #C8873Fbb, transparent 55%),linear-gradient(158deg, #2E5C55 0%, #4A8A7A 55%, #8AC8B4 100%)"><img src="img/the-shape-of-water.webp" alt="" loading="lazy" width="640" height="357"><span class="cl-title cl-tt-def" style="font-size:8cqw">The Shape of Water</span><i></i><b></b></div>
+    <div class="cl-frame" style="background:radial-gradient(95% 130% at 80% 15%, #1E3438cc, transparent 60%),radial-gradient(85% 110% at 12% 88%, #C8873Fbb, transparent 55%),linear-gradient(158deg, #2E5C55 0%, #4A8A7A 55%, #8AC8B4 100%)"><img src="img/the-shape-of-water.webp" alt="" loading="lazy" width="640" height="357"><span class="cl-title cl-tt-sow">The Shape of Water</span><i></i><b></b></div>
     <div class="cl-body">
       <div class="cl-meta">
         <span class="cl-num">باليت 64</span>
@@ -2371,7 +2472,7 @@
     </div>
   </article>
   <article class="cl-card" data-cat="green">
-    <div class="cl-frame" style="background:radial-gradient(95% 130% at 80% 15%, #1E3428cc, transparent 60%),radial-gradient(85% 110% at 12% 88%, #8A3AC8bb, transparent 55%),linear-gradient(158deg, #2E7A55 0%, #4AC8D9 55%, #8AE8B4 100%)"><img src="img/avatar.webp" alt="" loading="lazy" width="640" height="357"><span class="cl-title cl-tt-def" style="font-size:10cqw">Avatar</span><i></i><b></b></div>
+    <div class="cl-frame" style="background:radial-gradient(95% 130% at 80% 15%, #1E3428cc, transparent 60%),radial-gradient(85% 110% at 12% 88%, #8A3AC8bb, transparent 55%),linear-gradient(158deg, #2E7A55 0%, #4AC8D9 55%, #8AE8B4 100%)"><img src="img/avatar.webp" alt="" loading="lazy" width="640" height="357"><span class="cl-title cl-tt-ava">AVATAR</span><i></i><b></b></div>
     <div class="cl-body">
       <div class="cl-meta">
         <span class="cl-num">باليت 65</span>
@@ -2404,7 +2505,7 @@
     </div>
   </article>
   <article class="cl-card" data-cat="green">
-    <div class="cl-frame" style="background:radial-gradient(95% 130% at 80% 15%, #2E3A28cc, transparent 60%),radial-gradient(85% 110% at 12% 88%, #C8A05Abb, transparent 55%),linear-gradient(158deg, #5C7A45 0%, #8A9A6B 55%, #D9C8A8 100%)"><img src="img/lord-of-the-rings.webp" alt="" loading="lazy" width="640" height="357"><span class="cl-title cl-tt-def" style="font-size:6.5cqw">The Lord of the Rings</span><i></i><b></b></div>
+    <div class="cl-frame" style="background:radial-gradient(95% 130% at 80% 15%, #2E3A28cc, transparent 60%),radial-gradient(85% 110% at 12% 88%, #C8A05Abb, transparent 55%),linear-gradient(158deg, #5C7A45 0%, #8A9A6B 55%, #D9C8A8 100%)"><img src="img/lord-of-the-rings.webp" alt="" loading="lazy" width="640" height="357"><span class="cl-title cl-tt-lotr"><span>THE LORD OF</span>THE RINGS</span><i></i><b></b></div>
     <div class="cl-body">
       <div class="cl-meta">
         <span class="cl-num">باليت 66</span>
@@ -2437,7 +2538,7 @@
     </div>
   </article>
   <article class="cl-card" data-cat="green">
-    <div class="cl-frame" style="background:radial-gradient(95% 130% at 80% 15%, #2E3438cc, transparent 60%),radial-gradient(85% 110% at 12% 88%, #C8873Fbb, transparent 55%),linear-gradient(158deg, #3E5C45 0%, #8A9A6B 55%, #5C4A6B 100%)"><img src="img/pans-labyrinth.webp" alt="" loading="lazy" width="640" height="357"><span class="cl-title cl-tt-def" style="font-size:8cqw">Pan's Labyrinth</span><i></i><b></b></div>
+    <div class="cl-frame" style="background:radial-gradient(95% 130% at 80% 15%, #2E3438cc, transparent 60%),radial-gradient(85% 110% at 12% 88%, #C8873Fbb, transparent 55%),linear-gradient(158deg, #3E5C45 0%, #8A9A6B 55%, #5C4A6B 100%)"><img src="img/pans-labyrinth.webp" alt="" loading="lazy" width="640" height="357"><span class="cl-title cl-tt-pl">Pan's Labyrinth</span><i></i><b></b></div>
     <div class="cl-body">
       <div class="cl-meta">
         <span class="cl-num">باليت 67</span>
@@ -2503,7 +2604,7 @@
     </div>
   </article>
   <article class="cl-card" data-cat="green">
-    <div class="cl-frame" style="background:radial-gradient(95% 130% at 80% 15%, #C87E8Acc, transparent 60%),radial-gradient(85% 110% at 12% 88%, #F2D2A8bb, transparent 55%),linear-gradient(158deg, #E8E4C9 0%, #A8C08A 55%, #5C7A45 100%)"><img src="img/midsommar.webp" alt="" loading="lazy" width="640" height="357"><span class="cl-title cl-tt-def" style="font-size:10cqw">Midsommar</span><i></i><b></b></div>
+    <div class="cl-frame" style="background:radial-gradient(95% 130% at 80% 15%, #C87E8Acc, transparent 60%),radial-gradient(85% 110% at 12% 88%, #F2D2A8bb, transparent 55%),linear-gradient(158deg, #E8E4C9 0%, #A8C08A 55%, #5C7A45 100%)"><img src="img/midsommar.webp" alt="" loading="lazy" width="640" height="357"><span class="cl-title cl-tt-mid">MIDSOMMAR</span><i></i><b></b></div>
     <div class="cl-body">
       <div class="cl-meta">
         <span class="cl-num">باليت 69</span>
@@ -2536,7 +2637,7 @@
     </div>
   </article>
   <article class="cl-card" data-cat="green">
-    <div class="cl-frame" style="background:radial-gradient(95% 130% at 80% 15%, #D9C8A8cc, transparent 60%),radial-gradient(85% 110% at 12% 88%, #5C7A5Cbb, transparent 55%),linear-gradient(158deg, #8AA86B 0%, #C8D9A8 55%, #3E4A38 100%)"><img src="img/crouching-tiger.webp" alt="" loading="lazy" width="640" height="357"><span class="cl-title cl-tt-def" style="font-size:5.5cqw">Crouching Tiger, Hidden Dragon</span><i></i><b></b></div>
+    <div class="cl-frame" style="background:radial-gradient(95% 130% at 80% 15%, #D9C8A8cc, transparent 60%),radial-gradient(85% 110% at 12% 88%, #5C7A5Cbb, transparent 55%),linear-gradient(158deg, #8AA86B 0%, #C8D9A8 55%, #3E4A38 100%)"><img src="img/crouching-tiger.webp" alt="" loading="lazy" width="640" height="357"><span class="cl-title cl-tt-ct"><span>CROUCHING TIGER</span>HIDDEN DRAGON</span><i></i><b></b></div>
     <div class="cl-body">
       <div class="cl-meta">
         <span class="cl-num">باليت 70</span>
@@ -2569,7 +2670,7 @@
     </div>
   </article>
   <article class="cl-card" data-cat="green">
-    <div class="cl-frame" style="background:radial-gradient(95% 130% at 80% 15%, #5C6B4Fcc, transparent 60%),radial-gradient(85% 110% at 12% 88%, #C8873Fbb, transparent 55%),linear-gradient(158deg, #4A8A7A 0%, #8AC8C8 55%, #D9E4E8 100%)"><img src="img/walter-mitty.webp" alt="" loading="lazy" width="640" height="357"><span class="cl-title cl-tt-def" style="font-size:5.5cqw">The Secret Life of Walter Mitty</span><i></i><b></b></div>
+    <div class="cl-frame" style="background:radial-gradient(95% 130% at 80% 15%, #5C6B4Fcc, transparent 60%),radial-gradient(85% 110% at 12% 88%, #C8873Fbb, transparent 55%),linear-gradient(158deg, #4A8A7A 0%, #8AC8C8 55%, #D9E4E8 100%)"><img src="img/walter-mitty.webp" alt="" loading="lazy" width="640" height="357"><span class="cl-title cl-tt-wm"><span>THE SECRET LIFE OF</span>WALTER MITTY</span><i></i><b></b></div>
     <div class="cl-body">
       <div class="cl-meta">
         <span class="cl-num">باليت 71</span>
@@ -2602,7 +2703,7 @@
     </div>
   </article>
   <article class="cl-card" data-cat="green">
-    <div class="cl-frame" style="background:radial-gradient(95% 130% at 80% 15%, #1E2422cc, transparent 60%),radial-gradient(85% 110% at 12% 88%, #5C4A3Abb, transparent 55%),linear-gradient(158deg, #3E4A38 0%, #8A9A8A 55%, #C8D2C8 100%)"><img src="img/the-northman.webp" alt="" loading="lazy" width="640" height="357"><span class="cl-title cl-tt-def" style="font-size:8cqw">The Northman</span><i></i><b></b></div>
+    <div class="cl-frame" style="background:radial-gradient(95% 130% at 80% 15%, #1E2422cc, transparent 60%),radial-gradient(85% 110% at 12% 88%, #5C4A3Abb, transparent 55%),linear-gradient(158deg, #3E4A38 0%, #8A9A8A 55%, #C8D2C8 100%)"><img src="img/the-northman.webp" alt="" loading="lazy" width="640" height="357"><span class="cl-title cl-tt-tn">THE NORTHMAN</span><i></i><b></b></div>
     <div class="cl-body">
       <div class="cl-meta">
         <span class="cl-num">باليت 72</span>
@@ -2635,7 +2736,7 @@
     </div>
   </article>
   <article class="cl-card" data-cat="retro">
-    <div class="cl-frame" style="background:radial-gradient(95% 130% at 80% 15%, #5C5245cc, transparent 60%),radial-gradient(85% 110% at 12% 88%, #C8B48Abb, transparent 55%),linear-gradient(158deg, #2E2822 0%, #8A7A5C 55%, #E8DCC9 100%)"><img src="img/casablanca.webp" alt="" loading="lazy" width="640" height="357"><span class="cl-title cl-tt-def" style="font-size:10cqw">Casablanca</span><i></i><b></b></div>
+    <div class="cl-frame" style="background:radial-gradient(95% 130% at 80% 15%, #5C5245cc, transparent 60%),radial-gradient(85% 110% at 12% 88%, #C8B48Abb, transparent 55%),linear-gradient(158deg, #2E2822 0%, #8A7A5C 55%, #E8DCC9 100%)"><img src="img/casablanca.webp" alt="" loading="lazy" width="640" height="357"><span class="cl-title cl-tt-cas">Casablanca</span><i></i><b></b></div>
     <div class="cl-body">
       <div class="cl-meta">
         <span class="cl-num">باليت 73</span>
@@ -2668,7 +2769,7 @@
     </div>
   </article>
   <article class="cl-card" data-cat="retro">
-    <div class="cl-frame" style="background:radial-gradient(95% 130% at 80% 15%, #5C5C5Ccc, transparent 60%),radial-gradient(85% 110% at 12% 88%, #C8354Abb, transparent 55%),linear-gradient(158deg, #1E1E1E 0%, #E8E4E8 55%, #F2C845 100%)"><img src="img/sin-city.webp" alt="" loading="lazy" width="640" height="357"><span class="cl-title cl-tt-def" style="font-size:10cqw">Sin City</span><i></i><b></b></div>
+    <div class="cl-frame" style="background:radial-gradient(95% 130% at 80% 15%, #5C5C5Ccc, transparent 60%),radial-gradient(85% 110% at 12% 88%, #C8354Abb, transparent 55%),linear-gradient(158deg, #1E1E1E 0%, #E8E4E8 55%, #F2C845 100%)"><img src="img/sin-city.webp" alt="" loading="lazy" width="640" height="357"><span class="cl-title cl-tt-sin">SIN <span class='c2'>CITY</span></span><i></i><b></b></div>
     <div class="cl-body">
       <div class="cl-meta">
         <span class="cl-num">باليت 74</span>
@@ -2701,7 +2802,7 @@
     </div>
   </article>
   <article class="cl-card" data-cat="retro">
-    <div class="cl-frame" style="background:radial-gradient(95% 130% at 80% 15%, #E8E4E8cc, transparent 60%),radial-gradient(85% 110% at 12% 88%, #C8C8C8bb, transparent 55%),linear-gradient(158deg, #3E3E3E 0%, #8A8A8A 55%, #1E1E1E 100%)"><img src="img/roma.webp" alt="" loading="lazy" width="640" height="357"><span class="cl-title cl-tt-def" style="font-size:10cqw">Roma</span><i></i><b></b></div>
+    <div class="cl-frame" style="background:radial-gradient(95% 130% at 80% 15%, #E8E4E8cc, transparent 60%),radial-gradient(85% 110% at 12% 88%, #C8C8C8bb, transparent 55%),linear-gradient(158deg, #3E3E3E 0%, #8A8A8A 55%, #1E1E1E 100%)"><img src="img/roma.webp" alt="" loading="lazy" width="640" height="357"><span class="cl-title cl-tt-rom">ROMA</span><i></i><b></b></div>
     <div class="cl-body">
       <div class="cl-meta">
         <span class="cl-num">باليت 75</span>
@@ -2734,7 +2835,7 @@
     </div>
   </article>
   <article class="cl-card" data-cat="retro">
-    <div class="cl-frame" style="background:radial-gradient(95% 130% at 80% 15%, #5C4A3Acc, transparent 60%),radial-gradient(85% 110% at 12% 88%, #E8B84Abb, transparent 55%),linear-gradient(158deg, #2E2822 0%, #C8354A 55%, #8A9A8A 100%)"><img src="img/pulp-fiction.webp" alt="" loading="lazy" width="640" height="357"><span class="cl-title cl-tt-def" style="font-size:8cqw">Pulp Fiction</span><i></i><b></b></div>
+    <div class="cl-frame" style="background:radial-gradient(95% 130% at 80% 15%, #5C4A3Acc, transparent 60%),radial-gradient(85% 110% at 12% 88%, #E8B84Abb, transparent 55%),linear-gradient(158deg, #2E2822 0%, #C8354A 55%, #8A9A8A 100%)"><img src="img/pulp-fiction.webp" alt="" loading="lazy" width="640" height="357"><span class="cl-title cl-tt-pf">PULP FICTION</span><i></i><b></b></div>
     <div class="cl-body">
       <div class="cl-meta">
         <span class="cl-num">باليت 76</span>
