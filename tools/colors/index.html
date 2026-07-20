@@ -90,7 +90,7 @@
       content:""; position:absolute; inset:0;
       box-shadow:inset 0 0 70px 18px rgba(4,6,14,.55);
     }
-    .cl-frame img{
+    .cl-frame > img{
       position:absolute; inset:0; width:100%; height:100%;
       object-fit:cover; display:block;
     }
@@ -280,6 +280,12 @@
     .cl-tt-frnd i{ color:#E8393E } .cl-tt-frnd b{ color:#4AA8E8 } .cl-tt-frnd u{ color:#F2C845 }
     .cl-tt-brba span,.cl-tt-sop span,.cl-tt-frnd span{ display:block; font-size:1em; letter-spacing:inherit; text-indent:0; line-height:1.1 }
     .cl-tt-frnd i,.cl-tt-frnd b,.cl-tt-frnd u{ font-size:.65em; vertical-align:.12em; padding:0 .04em }
+    .cl-ttv img{ width:72%; max-height:58%; object-fit:contain; filter:drop-shadow(0 3px 10px rgba(0,0,0,.8)) drop-shadow(0 0 22px rgba(0,0,0,.45)) }
+    .cl-tt-mj2{
+      font-family:"TT Cinzel Full",serif; font-weight:400; font-size:9.5cqw;
+      letter-spacing:.3em; text-indent:.3em; color:#F2F2F0;
+      text-shadow:0 0 22px rgba(200,53,74,.55), 0 2px 5px rgba(0,0,0,.7);
+    }
     .cl-tt-def{
       font-family:"Montserrat",sans-serif; font-weight:800;
       letter-spacing:.1em; text-indent:.1em; text-transform:uppercase;
@@ -428,7 +434,7 @@
     <div class="cl-filters" id="clFilters"><button type="button" data-cat="all" class="active">الكل</button><button type="button" data-cat="warm" class="">دافئ وذهبي</button><button type="button" data-cat="cool" class="">بارد وأزرق</button><button type="button" data-cat="neon" class="">نيون وسايبربانك</button><button type="button" data-cat="pastel" class="">باستيل وحالم</button><button type="button" data-cat="desert" class="">صحراوي وترابي</button><button type="button" data-cat="dark" class="">داكن ودرامي</button><button type="button" data-cat="green" class="">أخضر وطبيعي</button><button type="button" data-cat="retro" class="">كلاسيكي وريترو</button><button type="button" data-cat="series" class="">مسلسلات</button></div>
     <div class="cl-grid" id="clGrid">
   <article class="cl-card" data-cat="series">
-    <div class="cl-frame" style="background:radial-gradient(95% 130% at 80% 15%, #8A2E2Ecc, transparent 60%),radial-gradient(85% 110% at 12% 88%, #C8A05Abb, transparent 55%),linear-gradient(158deg, #3E4A55 0%, #A8B4C0 55%, #1E2228 100%)"><img src="img/game-of-thrones.webp" alt="" loading="eager" fetchpriority="high" width="640" height="357"><span class="cl-title cl-tt-got"><span>GAME OF</span>THRONES</span><i></i><b></b></div>
+    <div class="cl-frame" style="background:radial-gradient(95% 130% at 80% 15%, #8A2E2Ecc, transparent 60%),radial-gradient(85% 110% at 12% 88%, #C8A05Abb, transparent 55%),linear-gradient(158deg, #3E4A55 0%, #A8B4C0 55%, #1E2228 100%)"><img src="img/game-of-thrones.webp" alt="" loading="eager" fetchpriority="high" width="640" height="357"><span class="cl-title cl-ttv"><img src="/assets/titles/game-of-thrones.svg" alt="" loading="lazy"></span><i></i><b></b></div>
     <div class="cl-body">
       <div class="cl-meta">
         <span class="cl-num">باليت 01</span>
@@ -494,7 +500,7 @@
     </div>
   </article>
   <article class="cl-card" data-cat="series">
-    <div class="cl-frame" style="background:radial-gradient(95% 130% at 80% 15%, #8A3A2Ecc, transparent 60%),radial-gradient(85% 110% at 12% 88%, #E8C88Abb, transparent 55%),linear-gradient(158deg, #6B4A8A 0%, #C87A2B 55%, #4A6B5C 100%)"><img src="img/friends.webp" alt="" loading="eager" width="640" height="357"><span class="cl-title cl-tt-frnd"><span>F<i>&middot;</i>R<b>&middot;</b>I<u>&middot;</u>E<i>&middot;</i>N<b>&middot;</b>D<u>&middot;</u>S</span></span><i></i><b></b></div>
+    <div class="cl-frame" style="background:radial-gradient(95% 130% at 80% 15%, #8A3A2Ecc, transparent 60%),radial-gradient(85% 110% at 12% 88%, #E8C88Abb, transparent 55%),linear-gradient(158deg, #6B4A8A 0%, #C87A2B 55%, #4A6B5C 100%)"><img src="img/friends.webp" alt="" loading="eager" width="640" height="357"><span class="cl-title cl-ttv"><img src="/assets/titles/friends.svg" alt="" loading="lazy"></span><i></i><b></b></div>
     <div class="cl-body">
       <div class="cl-meta">
         <span class="cl-num">باليت 03</span>
@@ -527,7 +533,7 @@
     </div>
   </article>
   <article class="cl-card" data-cat="warm">
-    <div class="cl-frame" style="background:radial-gradient(95% 130% at 80% 15%, #5C6B5Ccc, transparent 60%),radial-gradient(85% 110% at 12% 88%, #C8955Abb, transparent 55%),linear-gradient(158deg, #1E2A45 0%, #8A2E2E 55%, #3E3A45 100%)"><img src="img/harry-potter.webp" alt="" loading="eager" width="640" height="357"><span class="cl-title cl-tt-hp">Harry Potter</span><i></i><b></b></div>
+    <div class="cl-frame" style="background:radial-gradient(95% 130% at 80% 15%, #5C6B5Ccc, transparent 60%),radial-gradient(85% 110% at 12% 88%, #C8955Abb, transparent 55%),linear-gradient(158deg, #1E2A45 0%, #8A2E2E 55%, #3E3A45 100%)"><img src="img/harry-potter.webp" alt="" loading="eager" width="640" height="357"><span class="cl-title cl-ttv"><img src="/assets/titles/harry-potter.svg" alt="" loading="lazy"></span><i></i><b></b></div>
     <div class="cl-body">
       <div class="cl-meta">
         <span class="cl-num">باليت 04</span>
@@ -560,7 +566,7 @@
     </div>
   </article>
   <article class="cl-card" data-cat="retro">
-    <div class="cl-frame" style="background:radial-gradient(95% 130% at 80% 15%, #0F1220cc, transparent 60%),radial-gradient(85% 110% at 12% 88%, #2E3A5Cbb, transparent 55%),linear-gradient(158deg, #E8A845 0%, #C8B48A 55%, #C8354A 100%)"><img src="img/star-wars.webp" alt="" loading="lazy" width="640" height="357"><span class="cl-title cl-tt-sw">STAR<span>WARS</span></span><i></i><b></b></div>
+    <div class="cl-frame" style="background:radial-gradient(95% 130% at 80% 15%, #0F1220cc, transparent 60%),radial-gradient(85% 110% at 12% 88%, #2E3A5Cbb, transparent 55%),linear-gradient(158deg, #E8A845 0%, #C8B48A 55%, #C8354A 100%)"><img src="img/star-wars.webp" alt="" loading="lazy" width="640" height="357"><span class="cl-title cl-ttv"><img src="/assets/titles/star-wars.svg" alt="" loading="lazy"></span><i></i><b></b></div>
     <div class="cl-body">
       <div class="cl-meta">
         <span class="cl-num">باليت 05</span>
@@ -593,7 +599,7 @@
     </div>
   </article>
   <article class="cl-card" data-cat="green">
-    <div class="cl-frame" style="background:radial-gradient(95% 130% at 80% 15%, #1E3428cc, transparent 60%),radial-gradient(85% 110% at 12% 88%, #8A3AC8bb, transparent 55%),linear-gradient(158deg, #2E7A55 0%, #4AC8D9 55%, #8AE8B4 100%)"><img src="img/avatar.webp" alt="" loading="lazy" width="640" height="357"><span class="cl-title cl-tt-ava">AVATAR</span><i></i><b></b></div>
+    <div class="cl-frame" style="background:radial-gradient(95% 130% at 80% 15%, #1E3428cc, transparent 60%),radial-gradient(85% 110% at 12% 88%, #8A3AC8bb, transparent 55%),linear-gradient(158deg, #2E7A55 0%, #4AC8D9 55%, #8AE8B4 100%)"><img src="img/avatar.webp" alt="" loading="lazy" width="640" height="357"><span class="cl-title cl-ttv"><img src="/assets/titles/avatar.svg" alt="" loading="lazy"></span><i></i><b></b></div>
     <div class="cl-body">
       <div class="cl-meta">
         <span class="cl-num">باليت 06</span>
@@ -626,7 +632,7 @@
     </div>
   </article>
   <article class="cl-card" data-cat="dark">
-    <div class="cl-frame" style="background:radial-gradient(95% 130% at 80% 15%, #1E1E1Ecc, transparent 60%),radial-gradient(85% 110% at 12% 88%, #8A5A2Bbb, transparent 55%),linear-gradient(158deg, #2E2417 0%, #C8873F 55%, #D9B48A 100%)"><img src="img/the-godfather.webp" alt="" loading="lazy" width="640" height="357"><span class="cl-title cl-tt-gf"><span>THE</span>GODFATHER</span><i></i><b></b></div>
+    <div class="cl-frame" style="background:radial-gradient(95% 130% at 80% 15%, #1E1E1Ecc, transparent 60%),radial-gradient(85% 110% at 12% 88%, #8A5A2Bbb, transparent 55%),linear-gradient(158deg, #2E2417 0%, #C8873F 55%, #D9B48A 100%)"><img src="img/the-godfather.webp" alt="" loading="lazy" width="640" height="357"><span class="cl-title cl-ttv"><img src="/assets/titles/the-godfather.svg" alt="" loading="lazy"></span><i></i><b></b></div>
     <div class="cl-body">
       <div class="cl-meta">
         <span class="cl-num">باليت 07</span>
@@ -725,7 +731,7 @@
     </div>
   </article>
   <article class="cl-card" data-cat="cool">
-    <div class="cl-frame" style="background:radial-gradient(95% 130% at 80% 15%, #C8873Fcc, transparent 60%),radial-gradient(85% 110% at 12% 88%, #2E3438bb, transparent 55%),linear-gradient(158deg, #3E5C7A 0%, #8AA8C8 55%, #96A8B4 100%)"><img src="img/inception.webp" alt="" loading="lazy" width="640" height="357"><span class="cl-title cl-tt-inc">INCEPTION</span><i></i><b></b></div>
+    <div class="cl-frame" style="background:radial-gradient(95% 130% at 80% 15%, #C8873Fcc, transparent 60%),radial-gradient(85% 110% at 12% 88%, #2E3438bb, transparent 55%),linear-gradient(158deg, #3E5C7A 0%, #8AA8C8 55%, #96A8B4 100%)"><img src="img/inception.webp" alt="" loading="lazy" width="640" height="357"><span class="cl-title cl-ttv"><img src="/assets/titles/inception.svg" alt="" loading="lazy"></span><i></i><b></b></div>
     <div class="cl-body">
       <div class="cl-meta">
         <span class="cl-num">باليت 10</span>
@@ -791,7 +797,7 @@
     </div>
   </article>
   <article class="cl-card" data-cat="green">
-    <div class="cl-frame" style="background:radial-gradient(95% 130% at 80% 15%, #2E3438cc, transparent 60%),radial-gradient(85% 110% at 12% 88%, #8AC88Abb, transparent 55%),linear-gradient(158deg, #3E7A45 0%, #1E2E22 55%, #C8D9C8 100%)"><img src="img/the-matrix.webp" alt="" loading="lazy" width="640" height="357"><span class="cl-title cl-tt-mtx">THE MATRIX</span><i></i><b></b></div>
+    <div class="cl-frame" style="background:radial-gradient(95% 130% at 80% 15%, #2E3438cc, transparent 60%),radial-gradient(85% 110% at 12% 88%, #8AC88Abb, transparent 55%),linear-gradient(158deg, #3E7A45 0%, #1E2E22 55%, #C8D9C8 100%)"><img src="img/the-matrix.webp" alt="" loading="lazy" width="640" height="357"><span class="cl-title cl-ttv"><img src="/assets/titles/the-matrix.svg" alt="" loading="lazy"></span><i></i><b></b></div>
     <div class="cl-body">
       <div class="cl-meta">
         <span class="cl-num">باليت 12</span>
@@ -824,7 +830,7 @@
     </div>
   </article>
   <article class="cl-card" data-cat="retro">
-    <div class="cl-frame" style="background:radial-gradient(95% 130% at 80% 15%, #5C4A3Acc, transparent 60%),radial-gradient(85% 110% at 12% 88%, #E8B84Abb, transparent 55%),linear-gradient(158deg, #2E2822 0%, #C8354A 55%, #8A9A8A 100%)"><img src="img/pulp-fiction.webp" alt="" loading="lazy" width="640" height="357"><span class="cl-title cl-tt-pf">PULP FICTION</span><i></i><b></b></div>
+    <div class="cl-frame" style="background:radial-gradient(95% 130% at 80% 15%, #5C4A3Acc, transparent 60%),radial-gradient(85% 110% at 12% 88%, #E8B84Abb, transparent 55%),linear-gradient(158deg, #2E2822 0%, #C8354A 55%, #8A9A8A 100%)"><img src="img/pulp-fiction.webp" alt="" loading="lazy" width="640" height="357"><span class="cl-title cl-ttv"><img src="/assets/titles/pulp-fiction.svg" alt="" loading="lazy"></span><i></i><b></b></div>
     <div class="cl-body">
       <div class="cl-meta">
         <span class="cl-num">باليت 13</span>
@@ -923,7 +929,7 @@
     </div>
   </article>
   <article class="cl-card" data-cat="green">
-    <div class="cl-frame" style="background:radial-gradient(95% 130% at 80% 15%, #2E3A28cc, transparent 60%),radial-gradient(85% 110% at 12% 88%, #C8A05Abb, transparent 55%),linear-gradient(158deg, #5C7A45 0%, #8A9A6B 55%, #D9C8A8 100%)"><img src="img/lord-of-the-rings.webp" alt="" loading="lazy" width="640" height="357"><span class="cl-title cl-tt-lotr"><span>THE LORD OF</span>THE RINGS</span><i></i><b></b></div>
+    <div class="cl-frame" style="background:radial-gradient(95% 130% at 80% 15%, #2E3A28cc, transparent 60%),radial-gradient(85% 110% at 12% 88%, #C8A05Abb, transparent 55%),linear-gradient(158deg, #5C7A45 0%, #8A9A6B 55%, #D9C8A8 100%)"><img src="img/lord-of-the-rings.webp" alt="" loading="lazy" width="640" height="357"><span class="cl-title cl-ttv"><img src="/assets/titles/lord-of-the-rings.svg" alt="" loading="lazy"></span><i></i><b></b></div>
     <div class="cl-body">
       <div class="cl-meta">
         <span class="cl-num">باليت 16</span>
@@ -989,7 +995,7 @@
     </div>
   </article>
   <article class="cl-card" data-cat="green">
-    <div class="cl-frame" style="background:radial-gradient(95% 130% at 80% 15%, #2E3A28cc, transparent 60%),radial-gradient(85% 110% at 12% 88%, #C8B48Abb, transparent 55%),linear-gradient(158deg, #3E7A45 0%, #8A9A5C 55%, #E8DCA8 100%)"><img src="img/jurassic-park.webp" alt="" loading="lazy" width="640" height="357"><span class="cl-title cl-tt-jp">JURASSIC PARK</span><i></i><b></b></div>
+    <div class="cl-frame" style="background:radial-gradient(95% 130% at 80% 15%, #2E3A28cc, transparent 60%),radial-gradient(85% 110% at 12% 88%, #C8B48Abb, transparent 55%),linear-gradient(158deg, #3E7A45 0%, #8A9A5C 55%, #E8DCA8 100%)"><img src="img/jurassic-park.webp" alt="" loading="lazy" width="640" height="357"><span class="cl-title cl-ttv"><img src="/assets/titles/jurassic-park.svg" alt="" loading="lazy"></span><i></i><b></b></div>
     <div class="cl-body">
       <div class="cl-meta">
         <span class="cl-num">باليت 18</span>
@@ -1022,7 +1028,7 @@
     </div>
   </article>
   <article class="cl-card" data-cat="retro">
-    <div class="cl-frame" style="background:radial-gradient(95% 130% at 80% 15%, #8A8AB4cc, transparent 60%),radial-gradient(85% 110% at 12% 88%, #E8C84Abb, transparent 55%),linear-gradient(158deg, #0F0F14 0%, #C8354A 55%, #F2F2F2 100%)"><img src="img/michael.webp" alt="" loading="lazy" width="640" height="357"><span class="cl-title cl-tt-mj">Michael</span><i></i><b></b></div>
+    <div class="cl-frame" style="background:radial-gradient(95% 130% at 80% 15%, #8A8AB4cc, transparent 60%),radial-gradient(85% 110% at 12% 88%, #E8C84Abb, transparent 55%),linear-gradient(158deg, #0F0F14 0%, #C8354A 55%, #F2F2F2 100%)"><img src="img/michael.webp" alt="" loading="lazy" width="640" height="357"><span class="cl-title cl-tt-mj2">MICHAEL</span><i></i><b></b></div>
     <div class="cl-body">
       <div class="cl-meta">
         <span class="cl-num">باليت 19</span>
