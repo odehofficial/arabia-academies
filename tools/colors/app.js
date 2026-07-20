@@ -428,7 +428,7 @@ function buildPrompt(x) {
 function card(x, i) {
   return `
   <article class="cl-card" data-cat="${x.cat}">
-    <div class="cl-frame" style="${frameStyle(x.c)}">${x.img ? `<img src="img/${x.img}.webp" alt="" loading="lazy" width="640" height="357">` : ""}${x.tt ? `<span class="cl-title cl-tt-${x.tt.c}">${x.tt.h}</span>` : ""}<i></i><b></b></div>
+    <div class="cl-frame" style="${frameStyle(x.c)}">${x.img ? `<img src="img/${x.img}.webp" alt="" loading="${i < 4 ? "eager" : "lazy"}"${i === 0 ? ' fetchpriority="high"' : ""} width="640" height="357">` : ""}${x.tt ? `<span class="cl-title cl-tt-${x.tt.c}">${x.tt.h}</span>` : ""}<i></i><b></b></div>
     <div class="cl-body">
       <div class="cl-meta">
         <span class="cl-num">${t("cl_n")} ${String(i + 1).padStart(2, "0")}</span>
