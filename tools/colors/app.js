@@ -89,7 +89,7 @@ const PALS = [
   { cat:"retro", img:"star-wars", tt:{v:"star-wars"}, n:"Star Wars (1977)", a:"ستار وورز", c:["#E8A845","#C8B48A","#2E3A5C","#0F1220","#C8354A"],
     m:{ar:"غروب شمسين فوق رمال تاتوين", en:"Twin suns setting over Tatooine sands"},
     s:"used-universe practical grit, twin-sunset silhouettes, sweeping space-opera model shots, saber glow in dark corridors, mythic frontier framing" },
-  { cat:"green", img:"avatar", tt:{v:"avatar"}, n:"Avatar (2009)", a:"أفاتار", c:["#2E7A55","#4AC8D9","#8A3AC8","#1E3428","#8AE8B4"],
+  { cat:"green", img:"avatar", tt:{c:"ava",h:"AVATAR"}, n:"Avatar (2009)", a:"أفاتار", c:["#2E7A55","#4AC8D9","#8A3AC8","#1E3428","#8AE8B4"],
     m:{ar:"غابة مضيئة من عالم آخر", en:"A glowing forest from another world"},
     s:"bioluminescent jungle glow, floating dream-like camera, deep 3D layering, cyan-and-magenta night forest, ethereal scale" },
   { cat:"dark", img:"the-godfather", tt:{v:"the-godfather"}, n:"The Godfather (1972)", a:"ذا غودفاذر", c:["#2E2417","#C8873F","#8A5A2B","#1E1E1E","#D9B48A"],
