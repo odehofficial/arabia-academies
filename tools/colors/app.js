@@ -1,6 +1,6 @@
 /* ============================================================
    Movie Color Palettes — free reference for AI filmmakers
-   120 palettes inspired by films and series famous for their color grading.
+   119 palettes inspired by films and series famous for their color grading.
    Colors are our own curated approximations of each film's mood.
    ============================================================ */
 (() => {
@@ -70,7 +70,7 @@ const CATS = {
 };
 
 /* ------------------------------------------------------------
-   The 120 palettes — n: film · a: Arabic name · c: 5 hex colors
+   The 119 palettes — n: film · a: Arabic name · c: 5 hex colors
    m: one-line mood. Colors are our own curated approximations.
    ------------------------------------------------------------ */
 const PALS = [
@@ -245,8 +245,6 @@ const PALS = [
   /* ---- Classic & Retro (11) ---- */
   { cat:"retro", n:"Casablanca (1942)", a:"كازابلانكا", c:["#2E2822","#8A7A5C","#C8B48A","#5C5245","#E8DCC9"],
     m:{ar:"أبيض وأسود بدفء الحنين", en:"Black and white with nostalgic warmth"} },
-  { cat:"retro", n:"Schindler's List (1993)", a:"شندلرز ليست", c:["#1E1E1E","#5C5C5C","#A8A8A8","#E8E4E8","#8A3A2B"],
-    m:{ar:"رمادي التاريخ ومعطف أحمر واحد", en:"History's grey and a single red coat"} },
   { cat:"retro", n:"Sin City (2005)", a:"سين سيتي", c:["#1E1E1E","#E8E4E8","#C8354A","#5C5C5C","#F2C845"],
     m:{ar:"كوميكس نوار بلمسات لون صادمة", en:"Noir comics with shocking color accents"} },
   { cat:"retro", n:"Roma (2018)", a:"روما", c:["#3E3E3E","#8A8A8A","#C8C8C8","#E8E4E8","#1E1E1E"],
