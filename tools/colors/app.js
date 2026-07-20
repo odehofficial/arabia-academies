@@ -1,6 +1,6 @@
 /* ============================================================
    Movie Color Palettes — free reference for AI filmmakers
-   119 palettes inspired by films and series famous for their color grading.
+   118 palettes inspired by films and series famous for their color grading.
    Colors are our own curated approximations of each film's mood.
    ============================================================ */
 (() => {
@@ -70,7 +70,7 @@ const CATS = {
 };
 
 /* ------------------------------------------------------------
-   The 119 palettes — n: film · a: Arabic name · c: 5 hex colors
+   The 118 palettes — n: film · a: Arabic name · c: 5 hex colors
    m: one-line mood. Colors are our own curated approximations.
    ------------------------------------------------------------ */
 const PALS = [
@@ -81,8 +81,6 @@ const PALS = [
     m:{ar:"دفء المرجان والحنين في مستقبل ناعم", en:"Coral warmth and longing in a soft future"} },
   { cat:"warm", n:"Once Upon a Time in Hollywood (2019)", a:"وانس أبون آ تايم إن هوليوود", c:["#D98E32","#F2C879","#8A4B2A","#5C6B4F","#2E2417"],
     m:{ar:"شمس كاليفورنيا الذهبية في نهاية الستينات", en:"Golden California sun at the end of the '60s"} },
-  { cat:"warm", n:"Call Me by Your Name (2017)", a:"كول مي باي يور نيم", c:["#E8C46B","#A8C08A","#D97E4A","#F2E4C9","#4A6B8A"],
-    m:{ar:"صيف إيطالي طويل بضوء العسل", en:"A long Italian summer in honey light"} },
   { cat:"warm", n:"Gladiator (2000)", a:"غلادييتور", c:["#C8873F","#8A5A2B","#3E3A45","#D9B48A","#6B1F14"],
     m:{ar:"ذهب روما وغبار الحلبة", en:"Rome's gold and the dust of the arena"} },
   { cat:"warm", n:"Midnight in Paris (2011)", a:"ميدنايت إن باريس", c:["#D9A441","#8A5A2B","#3E4A6B","#F2DCA8","#5C3A2B"],
