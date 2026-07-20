@@ -75,13 +75,13 @@ const CATS = {
    ------------------------------------------------------------ */
 const PALS = [
   /* ---- Warm & Golden (11) ---- */
-  { cat:"warm", n:"Amélie (2001)", a:"أميلي", c:["#7A1F0C","#B8500F","#DA9A31","#3E7A45","#F2C879"],
+  { cat:"warm", n:"Amélie (2001)", a:"أميلي", tt:{c:"amelie",h:"AMÉLIE"}, c:["#7A1F0C","#B8500F","#DA9A31","#3E7A45","#F2C879"],
     m:{ar:"باريس الحالمة بعدسة ذهبية وخضرة غامضة", en:"Dreamy Paris through gold and mysterious green"} },
-  { cat:"warm", n:"Her (2013)", a:"هير", c:["#E5573F","#F2A48E","#E8D8C8","#8C3A2B","#5C7A8A"],
+  { cat:"warm", n:"Her (2013)", a:"هير", tt:{c:"her",h:"her"}, c:["#E5573F","#F2A48E","#E8D8C8","#8C3A2B","#5C7A8A"],
     m:{ar:"دفء المرجان والحنين في مستقبل ناعم", en:"Coral warmth and longing in a soft future"} },
-  { cat:"warm", n:"Once Upon a Time in Hollywood (2019)", a:"وانس أبون آ تايم إن هوليوود", c:["#D98E32","#F2C879","#8A4B2A","#5C6B4F","#2E2417"],
+  { cat:"warm", n:"Once Upon a Time in Hollywood (2019)", a:"وانس أبون آ تايم إن هوليوود", tt:{c:"ouatih",h:"<span>ONCE UPON A TIME IN...</span>HOLLYWOOD"}, c:["#D98E32","#F2C879","#8A4B2A","#5C6B4F","#2E2417"],
     m:{ar:"شمس كاليفورنيا الذهبية في نهاية الستينات", en:"Golden California sun at the end of the '60s"} },
-  { cat:"warm", n:"Gladiator (2000)", a:"غلادييتور", c:["#C8873F","#8A5A2B","#3E3A45","#D9B48A","#6B1F14"],
+  { cat:"warm", n:"Gladiator (2000)", a:"غلادييتور", tt:{c:"glad",h:"GLADIATOR"}, c:["#C8873F","#8A5A2B","#3E3A45","#D9B48A","#6B1F14"],
     m:{ar:"ذهب روما وغبار الحلبة", en:"Rome's gold and the dust of the arena"} },
   { cat:"warm", n:"Midnight in Paris (2011)", a:"ميدنايت إن باريس", c:["#D9A441","#8A5A2B","#3E4A6B","#F2DCA8","#5C3A2B"],
     m:{ar:"باريس الليلية بدفء المصابيح القديمة", en:"Paris at night, warmed by old lamplight"} },
@@ -436,7 +436,7 @@ function buildPrompt(x) {
 function card(x, i) {
   return `
   <article class="cl-card" data-cat="${x.cat}">
-    <div class="cl-frame" style="${frameStyle(x.c)}">${x.img ? `<img src="img/${x.img}.webp" alt="" loading="lazy" width="640" height="357">` : ""}<i></i><b></b></div>
+    <div class="cl-frame" style="${frameStyle(x.c)}">${x.img ? `<img src="img/${x.img}.webp" alt="" loading="lazy" width="640" height="357">` : ""}${x.tt ? `<span class="cl-title cl-tt-${x.tt.c}">${x.tt.h}</span>` : ""}<i></i><b></b></div>
     <div class="cl-body">
       <div class="cl-meta">
         <span class="cl-num">${t("cl_n")} ${String(i + 1).padStart(2, "0")}</span>

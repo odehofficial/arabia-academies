@@ -84,6 +84,7 @@
     .cl-frame{
       position:relative; aspect-ratio:16/9; overflow:hidden;
       border-bottom:1px solid var(--line);
+      container-type:inline-size;
     }
     .cl-frame::after{ /* vignette */
       content:""; position:absolute; inset:0;
@@ -98,6 +99,41 @@
       background:#04060E;
     }
     .cl-frame i{ top:0 } .cl-frame b{ bottom:0 }
+
+
+    /* ---------- poster-style title treatments ---------- */
+    @font-face{ font-family:"TT Cinzel"; src:url("/assets/fonts/cinzel-glad.woff2") format("woff2"); font-weight:700; font-display:swap }
+    @font-face{ font-family:"TT Playfair"; src:url("/assets/fonts/playfair-amelie.woff2") format("woff2"); font-weight:700; font-display:swap }
+    @font-face{ font-family:"TT Oswald"; src:url("/assets/fonts/oswald-ouatih.woff2") format("woff2"); font-weight:600; font-display:swap }
+    @font-face{ font-family:"TT Zilla"; src:url("/assets/fonts/zilla-her.woff2") format("woff2"); font-weight:600; font-display:swap }
+    .cl-title{
+      position:absolute; inset:9% 0; z-index:2; direction:ltr;
+      display:flex; flex-direction:column; align-items:center; justify-content:center;
+      text-align:center; pointer-events:none; padding:0 6%; line-height:1.06;
+    }
+    .cl-tt-glad{
+      font-family:"TT Cinzel",serif; font-weight:700; font-size:10.5cqw;
+      letter-spacing:.13em; text-indent:.13em; color:#EAD9B0;
+      text-shadow:0 0 22px rgba(0,0,0,.7), 0 2px 4px rgba(0,0,0,.55);
+    }
+    .cl-tt-amelie{
+      font-family:"TT Playfair",serif; font-weight:700; font-size:13cqw;
+      letter-spacing:.05em; text-indent:.05em; color:#F2C879;
+      text-shadow:0 2px 20px rgba(58,10,4,.85);
+    }
+    .cl-tt-her{
+      font-family:"TT Zilla",serif; font-weight:600; font-size:19cqw;
+      color:#F2E4D8; text-shadow:0 2px 22px rgba(92,26,14,.6);
+    }
+    .cl-tt-ouatih{
+      font-family:"TT Oswald",sans-serif; font-weight:600; font-size:11.5cqw;
+      letter-spacing:.06em; color:#F2C845; gap:1.8cqw;
+      text-shadow:.045em .045em 0 #C8354A, 0 3px 18px rgba(0,0,0,.55);
+    }
+    .cl-tt-ouatih span{
+      font-size:4.4cqw; letter-spacing:.32em; text-indent:.32em;
+      color:#F2E8D8; text-shadow:0 2px 10px rgba(0,0,0,.6);
+    }
 
     .cl-body{ padding:13px 15px 15px }
     .cl-meta{ display:flex; align-items:center; gap:8px; margin-bottom:5px }
@@ -217,7 +253,7 @@
     <div class="cl-filters" id="clFilters"><button type="button" data-cat="all" class="active">الكل</button><button type="button" data-cat="warm" class="">دافئ وذهبي</button><button type="button" data-cat="cool" class="">بارد وأزرق</button><button type="button" data-cat="neon" class="">نيون وسايبربانك</button><button type="button" data-cat="pastel" class="">باستيل وحالم</button><button type="button" data-cat="desert" class="">صحراوي وترابي</button><button type="button" data-cat="dark" class="">داكن ودرامي</button><button type="button" data-cat="green" class="">أخضر وطبيعي</button><button type="button" data-cat="retro" class="">كلاسيكي وريترو</button><button type="button" data-cat="series" class="">مسلسلات</button></div>
     <div class="cl-grid" id="clGrid">
   <article class="cl-card" data-cat="warm">
-    <div class="cl-frame" style="background:radial-gradient(95% 130% at 80% 15%, #3E7A45cc, transparent 60%),radial-gradient(85% 110% at 12% 88%, #DA9A31bb, transparent 55%),linear-gradient(158deg, #7A1F0C 0%, #B8500F 55%, #F2C879 100%)"><i></i><b></b></div>
+    <div class="cl-frame" style="background:radial-gradient(95% 130% at 80% 15%, #3E7A45cc, transparent 60%),radial-gradient(85% 110% at 12% 88%, #DA9A31bb, transparent 55%),linear-gradient(158deg, #7A1F0C 0%, #B8500F 55%, #F2C879 100%)"><span class="cl-title cl-tt-amelie">AMÉLIE</span><i></i><b></b></div>
     <div class="cl-body">
       <div class="cl-meta">
         <span class="cl-num">باليت 01</span>
@@ -250,7 +286,7 @@
     </div>
   </article>
   <article class="cl-card" data-cat="warm">
-    <div class="cl-frame" style="background:radial-gradient(95% 130% at 80% 15%, #8C3A2Bcc, transparent 60%),radial-gradient(85% 110% at 12% 88%, #E8D8C8bb, transparent 55%),linear-gradient(158deg, #E5573F 0%, #F2A48E 55%, #5C7A8A 100%)"><i></i><b></b></div>
+    <div class="cl-frame" style="background:radial-gradient(95% 130% at 80% 15%, #8C3A2Bcc, transparent 60%),radial-gradient(85% 110% at 12% 88%, #E8D8C8bb, transparent 55%),linear-gradient(158deg, #E5573F 0%, #F2A48E 55%, #5C7A8A 100%)"><span class="cl-title cl-tt-her">her</span><i></i><b></b></div>
     <div class="cl-body">
       <div class="cl-meta">
         <span class="cl-num">باليت 02</span>
@@ -283,7 +319,7 @@
     </div>
   </article>
   <article class="cl-card" data-cat="warm">
-    <div class="cl-frame" style="background:radial-gradient(95% 130% at 80% 15%, #5C6B4Fcc, transparent 60%),radial-gradient(85% 110% at 12% 88%, #8A4B2Abb, transparent 55%),linear-gradient(158deg, #D98E32 0%, #F2C879 55%, #2E2417 100%)"><i></i><b></b></div>
+    <div class="cl-frame" style="background:radial-gradient(95% 130% at 80% 15%, #5C6B4Fcc, transparent 60%),radial-gradient(85% 110% at 12% 88%, #8A4B2Abb, transparent 55%),linear-gradient(158deg, #D98E32 0%, #F2C879 55%, #2E2417 100%)"><span class="cl-title cl-tt-ouatih"><span>ONCE UPON A TIME IN...</span>HOLLYWOOD</span><i></i><b></b></div>
     <div class="cl-body">
       <div class="cl-meta">
         <span class="cl-num">باليت 03</span>
@@ -316,7 +352,7 @@
     </div>
   </article>
   <article class="cl-card" data-cat="warm">
-    <div class="cl-frame" style="background:radial-gradient(95% 130% at 80% 15%, #D9B48Acc, transparent 60%),radial-gradient(85% 110% at 12% 88%, #3E3A45bb, transparent 55%),linear-gradient(158deg, #C8873F 0%, #8A5A2B 55%, #6B1F14 100%)"><i></i><b></b></div>
+    <div class="cl-frame" style="background:radial-gradient(95% 130% at 80% 15%, #D9B48Acc, transparent 60%),radial-gradient(85% 110% at 12% 88%, #3E3A45bb, transparent 55%),linear-gradient(158deg, #C8873F 0%, #8A5A2B 55%, #6B1F14 100%)"><span class="cl-title cl-tt-glad">GLADIATOR</span><i></i><b></b></div>
     <div class="cl-body">
       <div class="cl-meta">
         <span class="cl-num">باليت 04</span>
