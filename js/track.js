@@ -6,7 +6,7 @@
 (() => {
 "use strict";
 
-const WEBSITE_ID = "";  /* <- paste Umami website ID here */
+const WEBSITE_ID = "58342e7d-dac3-4034-98c0-1e323510918a";  /* <- paste Umami website ID here */
 if (!WEBSITE_ID) return;
 
 const s = document.createElement("script");
