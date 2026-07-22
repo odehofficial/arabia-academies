@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow">
+  <title>لوحة التحكم | Arabia Academies</title>
+  <link rel="icon" type="image/png" href="/assets/favicon.png">
+  <link rel="stylesheet" href="/css/style.css">
+  <style>
+    html, body{ height:100% }
+    body{ background:#080C1C; margin:0; overflow:hidden }
+    .dl-gate{
+      position:fixed; inset:0; display:flex; align-items:center; justify-content:center;
+      background:radial-gradient(120% 90% at 50% 0%, #0D1330 0%, #080C1C 60%);
+      z-index:10; padding:20px;
+    }
+    .dl-card{
+      width:min(400px, 92vw); text-align:center;
+      background:rgba(13,19,42,.85); border:1px solid rgba(227,169,79,.25);
+      border-radius:20px; padding:38px 30px 32px;
+      box-shadow:0 30px 80px rgba(0,0,0,.55);
+    }
+    .dl-star{ font-size:34px; color:#E3A94F; margin-bottom:10px }
+    .dl-card h1{ font-family:var(--f-display, sans-serif); font-size:22px; font-weight:800; color:#F4EFE2 }
+    .dl-card p{ color:#A9B0C5; font-size:13px; margin:8px 0 20px; line-height:1.8 }
+    .dl-card input[type="password"]{
+      width:100%; box-sizing:border-box; background:#0E1530; color:#F4EFE2;
+      border:1px solid rgba(244,239,226,.18); border-radius:11px;
+      padding:12px 14px; font-size:15px; text-align:center; letter-spacing:.06em;
+      font-family:var(--f-body, sans-serif); direction:ltr;
+    }
+    .dl-card input[type="password"]:focus{ outline:2px solid #E3A94F }
+    .dl-btn{
+      width:100%; margin-top:12px; background:#E3A94F; color:#080C1C;
+      border:none; border-radius:11px; padding:12px; font-size:15px; font-weight:800;
+      font-family:var(--f-body, sans-serif); cursor:pointer; transition:filter .2s;
+    }
+    .dl-btn:hover{ filter:brightness(1.08) }
+    .dl-remember{
+      display:flex; align-items:center; justify-content:center; gap:8px;
+      margin-top:14px; color:#A9B0C5; font-size:12.5px; cursor:pointer;
+    }
+    .dl-err{ color:#E8695C; font-size:13px; margin-top:12px; min-height:18px }
+    .dl-frame{ position:fixed; inset:0; border:0; width:100%; height:100%; z-index:5; background:#080C1C }
+    .dl-bar{
+      position:fixed; bottom:14px; inset-inline-start:14px; z-index:20; display:none; gap:8px;
+    }
+    .dl-bar a, .dl-bar button{
+      background:rgba(13,19,42,.92); color:#A9B0C5; border:1px solid rgba(244,239,226,.18);
+      border-radius:9px; padding:7px 13px; font-size:12px; font-weight:700;
+      font-family:var(--f-body, sans-serif); cursor:pointer; text-decoration:none;
+    }
+    .dl-bar a:hover, .dl-bar button:hover{ color:#E3A94F; border-color:#E3A94F }
+  </style>
+</head>
+<body>
+
+  <div class="dl-gate" id="gate">
+    <div class="dl-card">
+      <div class="dl-star">✦</div>
+      <h1>لوحة تحكم أكاديميات أرابيا</h1>
+      <p>هذه الصفحة خاصة بالمالك فقط.<br>أدخل كلمة المرور لعرض إحصائيات الموقع.<br><span style="font-size:11.5px">Owner-only analytics dashboard</span></p>
+      <input type="password" id="pw" placeholder="Password" autocomplete="current-password" autofocus>
+      <button class="dl-btn" id="go">فتح اللوحة · Unlock</button>
+      <label class="dl-remember"><input type="checkbox" id="rem" checked> تذكرني على هذا الجهاز</label>
+      <div class="dl-err" id="err"></div>
+    </div>
+  </div>
+
+  <iframe class="dl-frame" id="frame" style="display:none" allow="fullscreen"></iframe>
+  <div class="dl-bar" id="bar">
+    <a id="full" href="#" target="_blank" rel="noopener">فتح في نافذة كاملة ↗</a>
+    <button id="lock">🔒 قفل</button>
+  </div>
+
+<script>
+(() => {
+"use strict";
+/* AES-GCM encrypted dashboard URL — the password is the only key. */
+const BLOB = {
+  salt: "S7I4jl7ETA3yT/ZbLXK++g==",
+  iv: "sgYtQHUsufVm7Stn",
+  ct: "fHNQnKGvYbzDawXB3vo5RadJyEyXoO6LMpOLLwTpBCHdqcK+zFIKShKp2ZuDCwcBVhbm2h12DG5AIqZ53Q=="
+};
+const KEY_LS = "aa-dash-url";
+const $ = id => document.getElementById(id);
+const b64d = s => Uint8Array.from(atob(s), c => c.charCodeAt(0));
+
+async function decrypt(pw) {
+  const enc = new TextEncoder();
+  const km = await crypto.subtle.importKey("raw", enc.encode(pw), "PBKDF2", false, ["deriveKey"]);
+  const key = await crypto.subtle.deriveKey(
+    { name: "PBKDF2", salt: b64d(BLOB.salt), iterations: 310000, hash: "SHA-256" },
+    km, { name: "AES-GCM", length: 256 }, false, ["decrypt"]);
+  const pt = await crypto.subtle.decrypt({ name: "AES-GCM", iv: b64d(BLOB.iv) }, key, b64d(BLOB.ct));
+  return new TextDecoder().decode(pt);
+}
+
+function show(url) {
+  /* exclude the owner's own visits from analytics on this device */
+  try { localStorage.setItem("umami.disabled", "1"); } catch (e) {}
+  $("gate").style.display = "none";
+  $("frame").src = url;
+  $("frame").style.display = "block";
+  $("bar").style.display = "flex";
+  $("full").href = url;
+}
+
+async function unlock() {
+  const pw = $("pw").value.trim();
+  if (!pw) return;
+  $("err").textContent = "";
+  $("go").textContent = "...";
+  try {
+    const url = await decrypt(pw);
+    if ($("rem").checked) { try { localStorage.setItem(KEY_LS, url); } catch (e) {} }
+    show(url);
+  } catch (e) {
+    $("go").textContent = "فتح اللوحة · Unlock";
+    $("err").textContent = "كلمة المرور غير صحيحة · Wrong password";
+  }
+}
+
+$("go").addEventListener("click", unlock);
+$("pw").addEventListener("keydown", e => { if (e.key === "Enter") unlock(); });
+$("lock").addEventListener("click", () => {
+  try { localStorage.removeItem(KEY_LS); } catch (e) {}
+  location.reload();
+});
+
+try {
+  const saved = localStorage.getItem(KEY_LS);
+  if (saved && saved.indexOf("https://cloud.umami.is/") === 0) show(saved);
+} catch (e) {}
+})();
+</script>
+</body>
+</html>
